@@ -11,11 +11,13 @@ public class MovementSystem : MonoBehaviour
 	private void OnEnable()
 	{
 		input.onChange.AddResponse(Move);
+		gameObject.GetComponent<Animation>().Play("Run");
 	}
 
 	private void OnDisable()
 	{
 		input.onChange.RemoveResponse(Move);
+		gameObject.GetComponent<Animation>().Play("Idle");
 	}
 
 	private void Awake()
