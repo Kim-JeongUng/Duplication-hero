@@ -23,6 +23,11 @@ public class GameController : MonoBehaviour
     public void Restart()
     {
         gameState.value = GameState.INIT;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("GameScene");
+    }
+    public void GoMain()
+    {
+        gameState.value = GameState.INIT;
+        SceneManager.LoadScene("MainScene");
     }
 }

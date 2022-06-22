@@ -4,6 +4,7 @@ using ThirteenPixels.Soda;
 public class MovementSystem : MonoBehaviour
 {
 	[SerializeField] private GlobalVector2 input;
+	[SerializeField] private Animator Anim;
 	private Vector3 direction;
 	Entity thisBody;
 	Rigidbody rigidbody;
@@ -11,13 +12,11 @@ public class MovementSystem : MonoBehaviour
 	private void OnEnable()
 	{
 		input.onChange.AddResponse(Move);
-		gameObject.GetComponent<Animation>().Play("Run");
 	}
 
 	private void OnDisable()
 	{
 		input.onChange.RemoveResponse(Move);
-		gameObject.GetComponent<Animation>().Play("Idle");
 	}
 
 	private void Awake()
@@ -34,6 +33,11 @@ public class MovementSystem : MonoBehaviour
 	/// <param name="input"></param>
 	private void Move(Vector2 input)
 	{
+		Debug.Log(input);
+		if (input != new Vector2(0,0))
+			Anim.Play("Run");
+		else
+			Anim.Play("Idle");
 		float temp = Mathf.Max(Mathf.Abs(input.x), Mathf.Abs(input.y));
 		input.Normalize();
 		input *= temp;

@@ -3,13 +3,14 @@ using ThirteenPixels.Soda;
 
 public class Player : Entity
 {
+	[SerializeField] bool isEditorMode;
 	[SerializeField] GameEvent onPlayerDeath;
 	[SerializeField] GlobalVector2 input;
 	[SerializeField] Shooter shooter;
 	[SerializeField] PlayerAimer aimer;
 	[SerializeField][ReadOnly] long coins = 0;
 	float lastShootTime;
-
+	private void EditorMode() => hp = isEditorMode ? 10000 : 100; //체력 10000
 	private void OnEnable()
 	{
 		input.onChange.AddResponse(CheckMovementState);
@@ -27,6 +28,7 @@ public class Player : Entity
 			shooter = GetComponentInChildren<Shooter>();
 		if (aimer == null)
 			aimer = GetComponentInChildren<PlayerAimer>();
+		EditorMode();
 	}
 
 	protected override void Death(Entity killer)
