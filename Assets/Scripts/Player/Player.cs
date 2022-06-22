@@ -24,6 +24,15 @@ public class Player : Entity
 	protected new void Awake()
 	{
 		base.Awake();
+
+		CharacterDatas character = CharacterData.instance.Load();
+		speed = character.Speed;
+		maxHp = character.HP;
+		attackSpeed = character.AS;
+		damage = character.AD;
+		ap = character.AP;
+		coin = character.Coin;
+
 		if (shooter == null)
 			shooter = GetComponentInChildren<Shooter>();
 		if (aimer == null)

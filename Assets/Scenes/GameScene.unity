@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.48319906, g: 0.5256333, b: 0.5460428, a: 1}
+  m_IndirectSpecularColor: {r: 0.48319817, g: 0.52563226, b: 0.5460423, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1339,6 +1339,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182106829}
   m_CullTransparentMesh: 0
+--- !u!1 &1215584936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1215584938}
+  - component: {fileID: 1215584937}
+  m_Layer: 0
+  m_Name: DataManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1215584937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215584936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017f409ac3aac744d902503caff53f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1215584938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215584936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 85.9551, y: 1303.3624, z: -56.759247}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1264636702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2453,7 @@ PrefabInstance:
       objectReference: {fileID: 7983287317589892046}
     - target: {fileID: 7983287318220017035, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: speed
-      value: 35
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7983287318220017035, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: isEditorMode

@@ -13,6 +13,8 @@ public abstract class Entity : MonoBehaviour
 	[SerializeField] [ReadOnly] protected float hp;
 	[SerializeField] protected float attackSpeed;
 	[SerializeField] protected float damage;
+	[SerializeField] protected float ap;
+	[SerializeField] protected int coin;
 	protected MovingState walkingState = MovingState.STAYING;
 
 	public float Speed
@@ -34,6 +36,14 @@ public abstract class Entity : MonoBehaviour
 	public float Damage
 	{
 		get { return damage; }
+	}
+	public float Ap
+	{
+		get { return ap; }
+	}
+	public float Coin
+	{
+		get { return coin; }
 	}
 
 	protected void Awake()

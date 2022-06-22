@@ -33,7 +33,6 @@ public class MovementSystem : MonoBehaviour
 	/// <param name="input"></param>
 	private void Move(Vector2 input)
 	{
-		Debug.Log(input);
 		if (input != new Vector2(0,0))
 			Anim.Play("Run");
 		else
