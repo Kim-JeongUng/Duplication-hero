@@ -23,6 +23,7 @@ public class CharacterData : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            Debug.Log("HI");
             DontDestroyOnLoad(gameObject);
         }
         else

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using ThirteenPixels.Soda;
+using UnityEngine.UI;
 
 public class Player : Entity
 {
@@ -9,8 +10,33 @@ public class Player : Entity
 	[SerializeField] Shooter shooter;
 	[SerializeField] PlayerAimer aimer;
 	[SerializeField][ReadOnly] long coins = 0;
+	public Image SkillImage;
+	public Sprite DefaultSkillImage;
+	public string mySkill;
+
 	float lastShootTime;
 	private void EditorMode() => hp = isEditorMode ? 10000 : 100; //체력 10000
+
+	public void UseSkill()
+    {
+		SkillImage.sprite = DefaultSkillImage;
+        switch (mySkill)
+        {
+			case "Fire":
+				Debug.Log(mySkill);
+				break;
+			case "Water":
+				Debug.Log(mySkill);
+				break;
+			case "Punch":
+				Debug.Log(mySkill);
+				break;
+			default:
+				Debug.Log("ERROR");
+				Debug.Log(mySkill);
+				break;
+        }
+	}
 	private void OnEnable()
 	{
 		input.onChange.AddResponse(CheckMovementState);
