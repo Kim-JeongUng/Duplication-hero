@@ -13,6 +13,21 @@ public class CharacterDatas
     public int HP;
     public int Coin;
 }
+[System.Serializable]
+public class UserItemData
+{
+    public string ItemName;
+    public string type;
+    public float value;
+    public bool isEquip;
+}
+
+[System.Serializable]
+public class UserItemDatas
+{
+    public List<UserItemData> ItemRows;
+}
+
 public class CharacterData : MonoBehaviour
 {
     public static CharacterData instance;
