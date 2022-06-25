@@ -7,14 +7,19 @@ using UnityEngine.UI;
 public class MyItems : MonoBehaviour
 {
     public UserItemData itemData;
+    public GameObject Check;
     
     public void Awake()
     {
+        Check.SetActive(itemData.isEquip);
     }
     public void Equip()
     {
         CharacterDatas character = CharacterData.instance.Load();
-        
+        itemData.isEquip = itemData.isEquip ? false : true;
+
+        Check.SetActive(itemData.isEquip);
+
         switch (itemData.type)
         {
             case "Weapon":
@@ -33,7 +38,8 @@ public class MyItems : MonoBehaviour
                 Debug.Log("NoneItemType");
                 break;
         }
-
+        CharacterData.instance.UserChangeItem(itemData, itemData.ItemIndex);
         CharacterData.instance.Save(character);
+        EquipController.SaveAndReferesh();
     }
 }

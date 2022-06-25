@@ -126,33 +126,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2831829058040843709}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2831829057792017799}
         m_TargetAssemblyTypeName: MyItems, Assembly-CSharp
         m_MethodName: Equip
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EquipController, Assembly-CSharp
-        m_MethodName: SaveData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -175,9 +151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0949cf90a89b24eae3bbbf221ea53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemName: 
-  type: Weapon
-  value: 15
+  itemData:
+    ItemIndex: 0
+    ItemName: 
+    type: 
+    value: 0
+    isEquip: 0
+  Check: {fileID: 2831829058040843709}
 --- !u!1 &2831829057818736276
 GameObject:
   m_ObjectHideFlags: 0

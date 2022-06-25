@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 [System.Serializable]
 public class UIText
@@ -28,6 +29,7 @@ public class EquipController : MonoBehaviour
     public UIText texts;
     public EquipData equipData;
     CharacterDatas characterDatas;
+    public static Action SaveAndReferesh;
 
     [SerializeField]
     private GameObject presetItem;
@@ -46,7 +48,7 @@ public class EquipController : MonoBehaviour
             if (instance != this)
                 Destroy(this.gameObject);
         }
-
+        SaveAndReferesh = () => { SaveData(); };
         characterDatas =CharacterData.instance.Load();
         RefreshState();
         SetItems();
@@ -71,10 +73,11 @@ public class EquipController : MonoBehaviour
     public void SetItems()
     {
         UserItemDatas items = CharacterData.instance.ItemDatasLoad();
-        for(int i=0; i<items.ItemRows.Count; i++)
+        for (int i=0; i<items.ItemRows.Count; i++)
         {
             var item = Instantiate(presetItem, Inventory);
             item.GetComponent<MyItems>().itemData = items.ItemRows[i];
+            item.GetComponent<MyItems>().Check.SetActive(items.ItemRows[i].isEquip);
         }
     }
 }

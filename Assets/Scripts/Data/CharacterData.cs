@@ -16,6 +16,7 @@ public class CharacterDatas
 [System.Serializable]
 public class UserItemData
 {
+    public int ItemIndex;
     public string ItemName;
     public string type;
     public float value;
@@ -84,13 +85,48 @@ public class CharacterData : MonoBehaviour
     {
         return JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((Application.dataPath + "/Data/UserItemData.json")));
     }
-    /*public UserItemDatas ItemDatasSave()
+    public void UserGetItem(UserItemData NewItem)
     {
-        return JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((Application.dataPath + "/Data/UserItemData.json")));
-    }*/
-    // Update is called once per frame
-    void Update()
+        Debug.Log("ItemAdd");
+        UserItemDatas UserItem = ItemDatasLoad();
+        NewItem.ItemIndex = UserItem.ItemRows.Count;
+        UserItem.ItemRows.Add(NewItem);
+        UserItemDataSave(UserItem);
+    }
+    public void UserGetItem(UserItemData NewItem, int ItemIndex)
     {
-        
+        Debug.Log("ItemAdd");
+        UserItemDatas UserItem = ItemDatasLoad();
+        NewItem.ItemIndex = ItemIndex;
+        UserItem.ItemRows.Add(NewItem);
+        UserItemDataSave(UserItem);
+    }
+    public void UserRemoveItem(int ItemIndex)
+    {
+        //미완성
+        Debug.Log("ItemRemove");
+        UserItemDatas UserItem = ItemDatasLoad();
+        //인덱스로 찾아야 하나? -> 아이템 하나 삭제 후 나머지 인덱스는 어떻게 처리?
+        UserItem.ItemRows.Remove(UserItem.ItemRows[ItemIndex]);
+        UserItemDataSave(UserItem);
+    }
+    public void UserChangeItem(UserItemData Item, int ItemIndex)
+    {
+        Debug.Log("ItemChange");
+        UserItemDatas UserItem = ItemDatasLoad();
+        UserItem.ItemRows[ItemIndex] = Item;
+        UserItemDataSave(UserItem);
+    }
+
+    public void UserItemDataSave(UserItemDatas Items)
+    {
+        Debug.Log("ItemSave");
+        string itemDatas = JsonUtility.ToJson(Items);
+        File.WriteAllText(Application.dataPath + "/Data/UserItemData.json", itemDatas);
+    }
+    public void UserItemDataSave(string itemDatas)
+    {
+        Debug.Log("ItemSave");
+        File.WriteAllText(Application.dataPath + "/Data/UserItemData.json", itemDatas);
     }
 }
