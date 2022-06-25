@@ -6,10 +6,29 @@ public class Archer : WalkingEnemy
 	[SerializeField] EnemyAimer aimer;
 	float lastShootTime;
 
+	//드랍아이템 코드
+	public GameObject itemPrefab;
+	public System.Action onDie;
+	private Rigidbody rb;
+
 	protected override void Death(Entity killer)
 	{
 		shooter.Dispose();
+		this.DropItem();  // 아이템 드랍
 		base.Death(killer);
+		this.onDie();
+	}
+	public void DropItem()
+	{
+		var itemGo = Instantiate<GameObject>(this.itemPrefab);
+		itemGo.transform.position = this.gameObject.transform.position;
+		rb = itemGo.GetComponent<Rigidbody>();
+		rb.AddForce(transform.up * 5f, ForceMode.Impulse);
+		//itemGo.SetActive(false);
+		this.onDie = () =>
+		{
+			itemGo.SetActive(true);
+		};
 	}
 
 	protected new void Awake()

@@ -477,6 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 6d1c5bd22173b2143982ce521d8b002e, type: 2}
+  Anim: {fileID: 0}
 --- !u!114 &7983287318220017035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,11 +495,18 @@ MonoBehaviour:
   hp: 0
   attackSpeed: 1
   damage: 35
+  ap: 0
+  coin: 0
+  itemPrefab: {fileID: 6665197759910832397, guid: 5df374a24316a5e4a96c79efe46efc52, type: 3}
+  isEditorMode: 0
   onPlayerDeath: {fileID: 0}
   input: {fileID: 11400000, guid: 6d1c5bd22173b2143982ce521d8b002e, type: 2}
   shooter: {fileID: 7983287318372470294}
   aimer: {fileID: 1844242923}
   coins: 0
+  SkillImage: {fileID: 0}
+  DefaultSkillImage: {fileID: 0}
+  mySkill: 
 --- !u!1 &7983287318372470292
 GameObject:
   m_ObjectHideFlags: 0

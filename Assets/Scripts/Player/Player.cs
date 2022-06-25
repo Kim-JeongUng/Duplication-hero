@@ -14,13 +14,16 @@ public class Player : Entity
 	public Sprite DefaultSkillImage;
 	public string mySkill;
 
+	private Image change_skill;
+
 	float lastShootTime;
 	private void EditorMode() => hp = isEditorMode ? 10000 : 100; //체력 10000
 
 	public void UseSkill()
     {
 		SkillImage.sprite = DefaultSkillImage;
-        switch (mySkill)
+
+		switch (mySkill)
         {
 			case "Fire":
 				Debug.Log(mySkill);
@@ -32,10 +35,11 @@ public class Player : Entity
 				Debug.Log(mySkill);
 				break;
 			default:
-				Debug.Log("ERROR");
+				//Debug.Log("ERROR");
 				Debug.Log(mySkill);
 				break;
         }
+		mySkill = "NullSkill";
 	}
 	private void OnEnable()
 	{
@@ -119,4 +123,14 @@ public class Player : Entity
 		else if (!aimer.IsVisible())
 			aimer.ResetTarget();
 	}
+    public void OnColliderEnter(Collider other)
+    {
+       if(other.gameObject.tag == "Item")
+        {
+			mySkill = other.gameObject.name;
+			//change_skill = other.transform.GetChild(0).gameObject.GetComponent<Image>();
+			SkillImage.sprite = other.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite;
+			Destroy(other.gameObject);
+        }
+    }
 }

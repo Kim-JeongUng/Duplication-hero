@@ -17,6 +17,9 @@ public abstract class Entity : MonoBehaviour
 	[SerializeField] protected int coin;
 	protected MovingState walkingState = MovingState.STAYING;
 
+	//public GameObject itemPrefab;
+	//public System.Action onDie;
+
 	public float Speed
 	{
 		get { return speed; }
@@ -51,16 +54,30 @@ public abstract class Entity : MonoBehaviour
 		hp = maxHp;
 	}
 
-	public bool TakeDamage(DamageReport damageReport)
+	public bool TakeDamage(DamageReport damageReport)  // 데미지 받음
 	{
 		hp -= damageReport.damage;
-		if (hp <= 0)
+		if (hp <= 0)  // 죽은경우
 		{
+			//this.DropItem();
 			Death(damageReport.attacker);
+			//this.onDie();
+
 			return true;
 		}
 		return false;
 	}
+	/*
+	public void DropItem()
+	{
+		var itemGo = Instantiate<GameObject>(this.itemPrefab);
+		itemGo.transform.position = this.gameObject.transform.position;
+		itemGo.SetActive(false);
+		this.onDie = () =>
+		{
+			itemGo.SetActive(true);
+		};
+	}*/
 
 	/// <summary>
 	/// Execute on Entity death

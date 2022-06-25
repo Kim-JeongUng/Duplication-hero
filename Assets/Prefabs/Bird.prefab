@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3073001307824271112}
   - component: {fileID: 8672001936249414126}
   - component: {fileID: 1473269766696018917}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,6 +60,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0.85882354, g: 0.22352941, b: 0.2784314, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -84,7 +86,7 @@ GameObject:
   - component: {fileID: 6749978274178372991}
   - component: {fileID: 6093631810093388383}
   - component: {fileID: 3520734486063020117}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,6 +135,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -158,7 +162,7 @@ GameObject:
   - component: {fileID: 8626025296991337883}
   - component: {fileID: 6802963239524517660}
   - component: {fileID: 1614598818269502753}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,6 +233,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1614598818269502753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +260,7 @@ GameObject:
   - component: {fileID: 1533691676}
   - component: {fileID: 366893895024994781}
   - component: {fileID: 7353507372084205653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bird
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -325,6 +330,8 @@ MonoBehaviour:
   hp: 0
   attackSpeed: 0
   damage: 30
+  ap: 0
+  coin: 0
   player: {fileID: 11400000, guid: c114e99e45cdb4c4484290ea37e03d0b, type: 2}
   enemyHandler: {fileID: 11400000, guid: 844697ca1887009458f7eab66bdc9b91, type: 2}
   onPlayerDeath: {fileID: 11400000, guid: 29380a14d0da7914dafb8a405f2918f4, type: 2}
@@ -344,7 +351,7 @@ GameObject:
   - component: {fileID: 1686099896645081554}
   - component: {fileID: 7139272182218303584}
   - component: {fileID: 3271375759242579934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mesh_147989978
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,10 +391,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -412,6 +421,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6827116804180752789
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +433,7 @@ GameObject:
   - component: {fileID: 3393811066457476969}
   - component: {fileID: 3392404421635706516}
   - component: {fileID: 7658848076348532187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mesh_1413948878
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,10 +473,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -491,3 +503,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
