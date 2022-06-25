@@ -6,38 +6,28 @@ using UnityEngine.UI;
 
 public class MyItems : MonoBehaviour
 {
-    public string ItemName;
-
-    [SerializeField]
-    private string type;
-
-    [SerializeField]
-    public float value;
-
-    public bool isEquip=> GetComponent<Toggle>().isOn;
+    public UserItemData itemData;
+    
     public void Awake()
     {
     }
-    public void SetType(string type) => this.type = type;
-    public void SetValue(int value) => this.value = value;
-
     public void Equip()
     {
         CharacterDatas character = CharacterData.instance.Load();
         
-        switch (type)
+        switch (itemData.type)
         {
             case "Weapon":
-                character.AD += isEquip ? (int)this.value:-(int)this.value;
+                character.AD += itemData.isEquip ? (int)itemData.value:-(int)itemData.value;
                 break; 
             case "Helmet":
-                character.AS += isEquip ? this.value : -this.value;
+                character.AS += itemData.isEquip ? itemData.value : -itemData.value;
                 break;
             case "Armor":
-                character.HP += isEquip ? (int)this.value : -(int)this.value;
+                character.HP += itemData.isEquip ? (int)itemData.value : -(int)itemData.value;
                 break;
             case "Shoes":
-                character.Speed += isEquip ? (int)this.value : -(int)this.value;
+                character.Speed += itemData.isEquip ? (int)itemData.value : -(int)itemData.value;
                 break;
             default:
                 Debug.Log("NoneItemType");

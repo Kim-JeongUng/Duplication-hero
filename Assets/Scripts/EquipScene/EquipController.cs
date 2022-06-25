@@ -28,6 +28,12 @@ public class EquipController : MonoBehaviour
     public UIText texts;
     public EquipData equipData;
     CharacterDatas characterDatas;
+
+    [SerializeField]
+    private GameObject presetItem;
+    [SerializeField]
+    private Transform Inventory;
+
     // Start is called before the first frame update
     public void Awake()
     {
@@ -42,7 +48,8 @@ public class EquipController : MonoBehaviour
         }
 
         characterDatas =CharacterData.instance.Load();
-        SetState();
+        RefreshState();
+        SetItems();
     }
     public void GoHome()
     {
@@ -50,15 +57,24 @@ public class EquipController : MonoBehaviour
     }
     public void SaveData(){
         characterDatas = CharacterData.instance.Load();
-        SetState();
+        RefreshState();
         CharacterData.instance.Save(characterDatas); 
     }
-    public void SetState() {
+    public void RefreshState() {
         texts.AD.text = characterDatas.AD.ToString();
         texts.AP.text = characterDatas.AP.ToString();
         texts.AS.text = characterDatas.AS.ToString("F1");
         texts.Speed.text = characterDatas.Speed.ToString();
         texts.HP.text = characterDatas.HP.ToString();
         texts.Coin.text = characterDatas.Coin.ToString();
+    }
+    public void SetItems()
+    {
+        UserItemDatas items = CharacterData.instance.ItemDatasLoad();
+        for(int i=0; i<items.ItemRows.Count; i++)
+        {
+            var item = Instantiate(presetItem, Inventory);
+            item.GetComponent<MyItems>().itemData = items.ItemRows[i];
+        }
     }
 }

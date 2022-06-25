@@ -1,0 +1,22 @@
+{
+  "ItemRows": [
+    {
+      "ItemName": "public",
+      "type": "Weapon",
+      "value": 10,
+      "isEquip": true
+    },
+    {
+      "ItemName": "aaa",
+      "type": "Weapon",
+      "value": 20,
+      "isEquip": true
+    },
+    {
+      "ItemName": "bbbb",
+      "type": "Weapon",
+      "value": 30,
+      "isEquip": true
+    }
+  ]
+}

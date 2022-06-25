@@ -48,6 +48,7 @@ public class CharacterData : MonoBehaviour
         }
         //Save();
         Load();
+        ItemDatasLoad();
     }
     public void NewData()
     {
@@ -79,6 +80,14 @@ public class CharacterData : MonoBehaviour
         }
         return characters;
     }
+    public UserItemDatas ItemDatasLoad()
+    {
+        return JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((Application.dataPath + "/Data/UserItemData.json")));
+    }
+    /*public UserItemDatas ItemDatasSave()
+    {
+        return JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((Application.dataPath + "/Data/UserItemData.json")));
+    }*/
     // Update is called once per frame
     void Update()
     {
