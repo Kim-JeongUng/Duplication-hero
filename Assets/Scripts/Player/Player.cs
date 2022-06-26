@@ -14,32 +14,40 @@ public class Player : Entity
 	public Sprite DefaultSkillImage;
 	public string mySkill;
 
-	private Image change_skill;
+	private bool isSkill;
 
 	float lastShootTime;
 	private void EditorMode() => hp = isEditorMode ? 10000 : 100; //체력 10000
 
-	public void UseSkill()
+	public void UseSkill()  // 스킬 버튼 입력 시
     {
-		SkillImage.sprite = DefaultSkillImage;
+		if (isSkill)  // 현재 스킬을 획득한 상태이면
+		{
+			SkillImage.sprite = DefaultSkillImage;  // 스킬버튼 이미지 변경
 
-		switch (mySkill)
-        {
-			case "Fire":
-				Debug.Log(mySkill);
-				break;
-			case "Water":
-				Debug.Log(mySkill);
-				break;
-			case "Punch":
-				Debug.Log(mySkill);
-				break;
-			default:
-				//Debug.Log("ERROR");
-				Debug.Log(mySkill);
-				break;
-        }
-		mySkill = "NullSkill";
+			switch (mySkill)  // 획득한 스킬의 이벤트 발생
+			{
+				case "Fire":
+					Debug.Log(mySkill);
+					break;
+				case "Water":
+					Debug.Log(mySkill);
+					break;
+				case "Punch":
+					Debug.Log(mySkill);
+					break;
+				default:
+					//Debug.Log("ERROR");
+					Debug.Log(mySkill);
+					break;
+			}
+			isSkill = false;
+		}
+		else
+		{
+			mySkill = "NullSkill";
+			Debug.Log(mySkill);
+		}
 	}
 	private void OnEnable()
 	{
@@ -123,14 +131,20 @@ public class Player : Entity
 		else if (!aimer.IsVisible())
 			aimer.ResetTarget();
 	}
-    public void OnColliderEnter(Collider other)
+
+    public void OnTriggerEnter(Collider other)
     {
        if(other.gameObject.tag == "Item")
         {
-			mySkill = other.gameObject.name;
-			//change_skill = other.transform.GetChild(0).gameObject.GetComponent<Image>();
-			SkillImage.sprite = other.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite;
-			Destroy(other.gameObject);
+			if (isSkill)  // 현재 스킬을 획득한 상태이면 무시
+				return;
+			else
+			{
+				mySkill = other.gameObject.name;  // 획득한 스킬의 이름 저장
+				SkillImage.sprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
+				isSkill = true;  // 스킬 획득한 상태
+				Destroy(other.transform.parent.gameObject);
+			}
         }
     }
 }
