@@ -33,7 +33,7 @@ public class MyItems : MonoBehaviour
             case "Armor":
                 character.HP += itemData.isEquip ? (int)itemData.value : -(int)itemData.value;
                 break;
-            case "Shoes":
+            case "Boots":
                 character.Speed += itemData.isEquip ? (int)itemData.value : -(int)itemData.value;
                 break;
             default:
