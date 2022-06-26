@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 
 public class Archer : WalkingEnemy
 {
@@ -11,6 +12,8 @@ public class Archer : WalkingEnemy
 	public System.Action onDie;
 	private Rigidbody rb;
 
+	private Sprite skillitem;
+
 	protected override void Death(Entity killer)
 	{
 		shooter.Dispose();
@@ -19,9 +22,17 @@ public class Archer : WalkingEnemy
 		this.onDie();
 	}
 	public void DropItem()
-	{
+	{	
+		// bubble
 		var itemGo = Instantiate<GameObject>(this.itemPrefab);
 		itemGo.transform.position = this.gameObject.transform.position;
+
+		// Skill Image
+		skillitem = Instantiate(Resources.Load<Sprite>("Skills/Fire"), itemGo.gameObject.transform.position, Quaternion.Euler(70, 0, 0));
+		//skillitem.(GameObejct)sprite.SetParent(itemGo.transform, false);
+
+		// 스킬이미지 생성해서 버블에 넣는거
+
 		rb = itemGo.GetComponent<Rigidbody>();
 		rb.AddForce(transform.up * 5f, ForceMode.Impulse);
 		//itemGo.SetActive(false);
