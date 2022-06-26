@@ -8,7 +8,9 @@ public class MyItems : MonoBehaviour
 {
     public UserItemData itemData;
     public GameObject Check;
-    
+    public GameObject ItemImageObject;
+
+
     public void Awake()
     {
         Check.SetActive(itemData.isEquip);
