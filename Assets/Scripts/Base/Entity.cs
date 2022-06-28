@@ -67,17 +67,6 @@ public abstract class Entity : MonoBehaviour
 		}
 		return false;
 	}
-	/*
-	public void DropItem()
-	{
-		var itemGo = Instantiate<GameObject>(this.itemPrefab);
-		itemGo.transform.position = this.gameObject.transform.position;
-		itemGo.SetActive(false);
-		this.onDie = () =>
-		{
-			itemGo.SetActive(true);
-		};
-	}*/
 
 	/// <summary>
 	/// Execute on Entity death

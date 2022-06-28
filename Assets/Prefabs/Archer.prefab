@@ -1285,6 +1285,7 @@ MonoBehaviour:
   shooter: {fileID: 5117843574253354938}
   aimer: {fileID: 5371552464047986266}
   itemPrefab: {fileID: 7263099708958967464, guid: 1cd01eb8184758c45aa1aec17c29a7cc, type: 3}
+  getSkill: {fileID: 7263099708958967464, guid: 1cd01eb8184758c45aa1aec17c29a7cc, type: 3}
 --- !u!1 &3738630275334420280
 GameObject:
   m_ObjectHideFlags: 0

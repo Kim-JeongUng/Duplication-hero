@@ -140,7 +140,7 @@ public class Player : Entity
 				return;
 			else
 			{
-				mySkill = other.gameObject.name;  // 획득한 스킬의 이름 저장
+				mySkill = other.gameObject.name + " Skill";  // 획득한 스킬구슬의 스킬이미지 이름 저장
 				SkillImage.sprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
 				isSkill = true;  // 스킬 획득한 상태
 				Destroy(other.transform.parent.gameObject);
