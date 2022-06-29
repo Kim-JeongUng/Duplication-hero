@@ -5,6 +5,8 @@ public class Archer : WalkingEnemy
 {
 	[SerializeField] Shooter shooter;
 	[SerializeField] EnemyAimer aimer;
+	MultipleObjectPooling multiop;
+
 	float lastShootTime;
 
 	//드랍아이템 코드
@@ -26,9 +28,12 @@ public class Archer : WalkingEnemy
 	}
 	public void DropItem()
 	{
+		//var n = Random.Range(0, multiop.poolPrefabs.Length);
+		// 오브젝트풀을 이용한 스킬구슬 생성
+		//var itemGo = multiop.GetPooledObject("Fire(Clone)");
 		// bubble
 		var itemGo = Instantiate<GameObject>(this.itemPrefab);
-		itemGo.transform.position = this.gameObject.transform.position;
+		itemGo.transform.position = this.gameObject.transform.position;  // 스킬구슬 생성 위치 설정
 
 		// Skill Image
 		//skillitem = Instantiate(Resources.Load<Sprite>("Skills/Fire"), itemGo.gameObject.transform.position, Quaternion.Euler(70, 0, 0));

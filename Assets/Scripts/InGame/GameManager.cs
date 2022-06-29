@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameData
 {
     public string nowSkillName = "";
-    public bool haveSkill() => nowSkillName == "" ? false : true;
+    public bool haveSkill() => nowSkillName == "" ? false : true;  // 현재 스킬을 보유하고있는지
 
     public List<string> SkillNameSet = new List<string> { };
     public GameObject[] SkillResource;

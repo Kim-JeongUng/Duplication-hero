@@ -3,22 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class DropItem : MonoBehaviour
-{
-    private Vector3 direction;
-    public void Shoot(Vector3 direction)
-    {
-        this.direction = direction;
-        Destroy(gameObject, 5f);
-    }
-
-    void Update()
-    {
-        transform.Translate(direction);
-    }
-}
-
-
+// 한개의 오브젝트를 풀링 할때 사용
+// 여러 오브젝트를 사용함으로 Dictionary를 통한 다중풀링이 필요하다
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool Instance;
@@ -31,7 +17,6 @@ public class ObjectPool : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-
         Initialize(10);
     }
 

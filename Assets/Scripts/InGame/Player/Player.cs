@@ -152,8 +152,22 @@ public class Player : Entity
 			{
 				GameManager.instance.gameData.nowSkillName = other.gameObject.name;  // 획득한 스킬구슬의 스킬이미지 이름 저장
 				SkillImage.sprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
-				Destroy(other.transform.parent.gameObject);
+				Destroy(other.transform.parent.gameObject);  // 드랍된 스킬구슬 파괴
 			}
         }
     }
+    public void OnTriggerStay(Collider other)
+    {
+		if (other.gameObject.tag == "Item")
+		{
+			if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면 무시
+				return;
+			else
+			{
+				GameManager.instance.gameData.nowSkillName = other.gameObject.name;  // 획득한 스킬구슬의 스킬이미지 이름 저장
+				SkillImage.sprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
+				Destroy(other.transform.parent.gameObject);   // 드랍된 스킬구슬 파괴
+			}
+		}
+	}
 }
