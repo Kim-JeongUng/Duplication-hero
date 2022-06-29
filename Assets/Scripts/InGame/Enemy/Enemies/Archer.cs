@@ -12,7 +12,7 @@ public class Archer : WalkingEnemy
 	public System.Action onDie;
 	private Rigidbody rb;
 
-	public GameObject getSkill;  // Archer가 보유한 스킬\
+	public GameObject getSkill;  // Archer가 보유한 스킬
 
 
 	protected override void Death(Entity killer)

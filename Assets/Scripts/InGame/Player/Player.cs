@@ -12,9 +12,6 @@ public class Player : Entity
 	[SerializeField][ReadOnly] long coins = 0;
 	public Image SkillImage;
 	public Sprite DefaultSkillImage;
-	public string mySkill;
-
-	private bool isSkill;
 
 	[SerializeField]
 	private Animator animator;
@@ -24,32 +21,35 @@ public class Player : Entity
 
 	public void UseSkill()  // 스킬 버튼 입력 시
     {
-		if (isSkill)  // 현재 스킬을 획득한 상태이면
+		if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면
 		{
-			SkillImage.sprite = DefaultSkillImage;  // 스킬버튼 이미지 변경
-
-			switch (mySkill)  // 획득한 스킬의 이벤트 발생
+			int num = 0;
+			switch (GameManager.instance.gameData.nowSkillName)  // 획득한 스킬의 이벤트 발생
 			{
 				case "Fire":
-					Debug.Log(mySkill);
+					Debug.Log("Fire");
+					num = 0;
+					break;
+				case "Barrier":
+					Debug.Log("Barrier");
+					num = 1;
 					break;
 				case "Water":
-					Debug.Log(mySkill);
-					break;
-				case "Punch":
-					Debug.Log(mySkill);
+					Debug.Log("Water");
+					num = 2;
 					break;
 				default:
 					//Debug.Log("ERROR");
-					Debug.Log(mySkill);
+					Debug.Log(GameManager.instance.gameData.nowSkillName);
 					break;
 			}
-			isSkill = false;
+			Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
+			SkillImage.sprite = DefaultSkillImage;  // 스킬버튼 이미지 변경
+			GameManager.instance.gameData.nowSkillName = "";
 		}
 		else
 		{
-			mySkill = "NullSkill";
-			Debug.Log(mySkill);
+			Debug.Log("스킬없음");
 		}
 	}
 	private void OnEnable()
@@ -122,7 +122,6 @@ public class Player : Entity
 			if (aimer.Target != null)
 			{
 				aimer.FollowTarget();
-				Debug.Log(Vector3.Distance(aimer.Target.position, this.transform.position));
 				if (Vector3.Distance(aimer.Target.position, this.transform.position) < 2f)
 				{
 					if (Time.time - lastShootTime >= (1 / attackSpeed))
@@ -147,13 +146,12 @@ public class Player : Entity
     {
        if(other.gameObject.tag == "Item")
         {
-			if (isSkill)  // 현재 스킬을 획득한 상태이면 무시
+			if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면 무시
 				return;
 			else
 			{
-				mySkill = other.gameObject.name + " Skill";  // 획득한 스킬구슬의 스킬이미지 이름 저장
+				GameManager.instance.gameData.nowSkillName = other.gameObject.name;  // 획득한 스킬구슬의 스킬이미지 이름 저장
 				SkillImage.sprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
-				isSkill = true;  // 스킬 획득한 상태
 				Destroy(other.transform.parent.gameObject);
 			}
         }
