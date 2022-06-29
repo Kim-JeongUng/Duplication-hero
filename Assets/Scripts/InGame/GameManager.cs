@@ -30,15 +30,13 @@ public class GameManager : MonoBehaviour
         }
         gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water" } };
         gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
+        ResourceLoad();
+    }
+    public void ResourceLoad()
+    {
         for (int i = 0; i < gameData.SkillNameSet.Count; i++)
         {
             gameData.SkillResource[i] = Resources.Load<GameObject>(string.Format("SkillEffect/{0}", gameData.SkillNameSet[i]));
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
