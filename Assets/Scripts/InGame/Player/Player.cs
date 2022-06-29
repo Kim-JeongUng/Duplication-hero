@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using ThirteenPixels.Soda;
 using UnityEngine.UI;
+using System;
 
 public class Player : Entity
 {
@@ -23,26 +24,25 @@ public class Player : Entity
     {
 		if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면
 		{
-			int num = 0;
 			switch (GameManager.instance.gameData.nowSkillName)  // 획득한 스킬의 이벤트 발생
 			{
 				case "Fire":
 					Debug.Log("Fire");
-					num = 0;
 					break;
 				case "Barrier":
 					Debug.Log("Barrier");
-					num = 1;
 					break;
 				case "Water":
 					Debug.Log("Water");
-					num = 2;
 					break;
 				default:
 					//Debug.Log("ERROR");
 					Debug.Log(GameManager.instance.gameData.nowSkillName);
 					break;
 			}
+			int num = GameManager.instance.gameData.SkillNameSet.IndexOf(GameManager.instance.gameData.nowSkillName);
+			Debug.Log(num);
+			num = num == -1? 0 : num;
 			Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
 			SkillImage.sprite = DefaultSkillImage;  // 스킬버튼 이미지 변경
 			GameManager.instance.gameData.nowSkillName = "";
