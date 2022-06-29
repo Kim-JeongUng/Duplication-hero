@@ -16,6 +16,9 @@ public class Player : Entity
 
 	private bool isSkill;
 
+	[SerializeField]
+	private Animator animator;
+
 	float lastShootTime;
 	private void EditorMode() => hp = isEditorMode ? 10000 : 100; //체력 10000
 
@@ -71,10 +74,13 @@ public class Player : Entity
 		ap = character.AP;
 		coin = character.Coin;
 
+		if(animator != null)
+			animator = GetComponentInChildren<Animator>();
 		if (shooter == null)
 			shooter = GetComponentInChildren<Shooter>();
 		if (aimer == null)
 			aimer = GetComponentInChildren<PlayerAimer>();
+
 		EditorMode();
 	}
 
@@ -116,10 +122,15 @@ public class Player : Entity
 			if (aimer.Target != null)
 			{
 				aimer.FollowTarget();
-				if (Time.time - lastShootTime >= (1 / attackSpeed))
+				Debug.Log(Vector3.Distance(aimer.Target.position, this.transform.position));
+				if (Vector3.Distance(aimer.Target.position, this.transform.position) < 2f)
 				{
-					lastShootTime = Time.time;
-					shooter.Shoot(new DamageReport(damage, this));
+					if (Time.time - lastShootTime >= (1 / attackSpeed))
+					{
+						animator.PlayInFixedTime("Slash");
+						lastShootTime = Time.time;
+						shooter.Shoot(new DamageReport(damage, this));
+					}
 				}
 			}
 		}

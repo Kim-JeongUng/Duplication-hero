@@ -12,7 +12,8 @@ public class Archer : WalkingEnemy
 	public System.Action onDie;
 	private Rigidbody rb;
 
-	public GameObject getSkill;  // Archer가 보유한 스킬
+	public GameObject getSkill;  // Archer가 보유한 스킬\
+
 
 	protected override void Death(Entity killer)
 	{
@@ -49,6 +50,7 @@ public class Archer : WalkingEnemy
 	protected new void Awake()
 	{
 		base.Awake();
+		
 		if (shooter == null)
 			shooter = GetComponentInChildren<Shooter>();
 		if (aimer == null)

@@ -6,18 +6,19 @@ using UnityEngine.UI;
 
 public class FloatingJoystick : Joystick
 {
-    
 
     protected override void Start()
     {
         base.Start();
         background.gameObject.SetActive(false);
-        movePointer.SetActive(false);
+        if(movePointer != null)
+            movePointer.SetActive(false);
     }
 
     public override void OnPointerDown(PointerEventData eventData)
     {
-        movePointer.SetActive(true);
+        if (movePointer != null)
+            movePointer.SetActive(true);
         background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
         background.gameObject.SetActive(true);
         base.OnPointerDown(eventData);
@@ -25,7 +26,8 @@ public class FloatingJoystick : Joystick
 
     public override void OnPointerUp(PointerEventData eventData)
     {
-        movePointer.SetActive(false);
+        if (movePointer != null)
+            movePointer.SetActive(false);
         background.gameObject.SetActive(false);
         base.OnPointerUp(eventData);
     }
