@@ -327,6 +327,8 @@ MonoBehaviour:
     nowSkillName: 
     SkillNameSet: []
     SkillResource: []
+    nowProgressLevel: 0
+  player: {fileID: 7983287317589892047}
 --- !u!4 &349648879
 Transform:
   m_ObjectHideFlags: 0
@@ -3765,6 +3767,10 @@ PrefabInstance:
     - target: {fileID: 7802605081451364986, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802605081451364986, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 7873832232964141393, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: m_Layer

@@ -10,11 +10,13 @@ public class GameData
 
     public List<string> SkillNameSet = new List<string> { };
     public GameObject[] SkillResource;
+    public int nowProgressLevel;
 }
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameData gameData;
+    public Player player;
     // Start is called before the first frame update
     void Awake()
     {
@@ -28,7 +30,7 @@ public class GameManager : MonoBehaviour
             if (instance != this)
                 Destroy(this.gameObject);
         }
-        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water" } };
+        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water" }, nowProgressLevel = 0 };
         gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
         ResourceLoad();
     }
