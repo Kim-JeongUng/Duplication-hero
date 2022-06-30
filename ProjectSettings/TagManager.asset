@@ -8,6 +8,7 @@ TagManager:
   - Environment
   - Item
   - Weapon
+  - Gate
   layers:
   - Default
   - TransparentFX

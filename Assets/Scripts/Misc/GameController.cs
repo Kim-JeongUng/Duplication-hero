@@ -7,6 +7,7 @@ public enum GameState
     INIT,
     STARTED
 }
+
 public class GameController : MonoBehaviour
 {
     [SerializeField] GlobalGameState gameState;

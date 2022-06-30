@@ -16,6 +16,7 @@ public class Player : Entity
 
 	[SerializeField]
 	private Animator animator;
+	[SerializeField] private MapCtrl mapctrl;
 
 	float lastShootTime;
 	private void EditorMode() => hp = isEditorMode ? 10000 : 100; //체력 10000
@@ -144,7 +145,7 @@ public class Player : Entity
 
     public void OnTriggerEnter(Collider other)
     {
-       if(other.gameObject.tag == "Item")
+       if(other.gameObject.CompareTag("Item"))
         {
 			if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면 무시
 				return;
@@ -155,10 +156,14 @@ public class Player : Entity
 				Destroy(other.transform.parent.gameObject);  // 드랍된 스킬구슬 파괴
 			}
         }
+		else if(other.gameObject.CompareTag("Gate")){
+			GameManager.instance.gameData.nowProgressLevel++;
+			mapctrl.MapChange(GameManager.instance.gameData.nowProgressLevel);
+		}
     }
     public void OnTriggerStay(Collider other)
     {
-		if (other.gameObject.tag == "Item")
+		if (other.gameObject.CompareTag("Item"))
 		{
 			if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면 무시
 				return;
