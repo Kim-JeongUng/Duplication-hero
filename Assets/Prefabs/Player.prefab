@@ -173,6 +173,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4838265383807283993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059831383521869645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b234e19e470fe4790b255096e47c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 7802605081451364986}
 --- !u!1 &6257630970480018861
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +261,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!65 &2013292259464009282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7802605081451364986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06766751, y: 0.26777864, z: 0.9}
+  m_Center: {x: 0.00000006307384, y: -0.00000015628055, z: 0.45}
 --- !u!1 &7983287317669529817
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +523,6 @@ MonoBehaviour:
   damage: 35
   ap: 0
   coin: 0
-  itemPrefab: {fileID: 6665197759910832397, guid: 5df374a24316a5e4a96c79efe46efc52, type: 3}
   isEditorMode: 0
   onPlayerDeath: {fileID: 0}
   input: {fileID: 11400000, guid: 6d1c5bd22173b2143982ce521d8b002e, type: 2}
@@ -506,7 +531,8 @@ MonoBehaviour:
   coins: 0
   SkillImage: {fileID: 0}
   DefaultSkillImage: {fileID: 0}
-  mySkill: 
+  animator: {fileID: 0}
+  mapctrl: {fileID: 0}
 --- !u!1 &7983287318372470292
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,5 +668,15 @@ PrefabInstance:
 --- !u!4 &2030540375386443102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8955967620725984396, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
+  m_PrefabInstance: {fileID: 6945694870153101778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3059831383521869645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5337509658344242847, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
+  m_PrefabInstance: {fileID: 6945694870153101778}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7802605081451364986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 877211630137213864, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
   m_PrefabInstance: {fileID: 6945694870153101778}
   m_PrefabAsset: {fileID: 0}

@@ -3797,6 +3797,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7983287318220017035, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7983287318220017035, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: mySkill
       value: Fire
       objectReference: {fileID: 0}

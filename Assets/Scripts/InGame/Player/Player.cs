@@ -66,7 +66,7 @@ public class Player : Entity
 	protected new void Awake()
 	{
 		base.Awake();
-
+		GameManager.instance.player = this;
 		CharacterDatas character = CharacterData.instance.Load();
 		speed = character.Speed;
 		maxHp = character.HP;
@@ -129,7 +129,7 @@ public class Player : Entity
 					{
 						animator.PlayInFixedTime("Slash");
 						lastShootTime = Time.time;
-						shooter.Shoot(new DamageReport(damage, this));
+						//shooter.Shoot(new DamageReport(damage, this));
 					}
 				}
 			}

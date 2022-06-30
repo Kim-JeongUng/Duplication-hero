@@ -43,6 +43,11 @@ public class Enemy : Entity
             touchingPlayer = player;
             player.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this));
         }
+
+        if (other.CompareTag("Weapon"))
+        {
+            TakeDamage(new DamageReport(GameManager.instance.player.Damage * touchDamageMultiplier, GameManager.instance.player));
+        }
     }
 
     protected void OnTriggerExit(Collider other)

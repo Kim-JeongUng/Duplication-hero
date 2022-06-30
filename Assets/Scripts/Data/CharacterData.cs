@@ -53,7 +53,7 @@ public class CharacterData : MonoBehaviour
     }
     public void NewData()
     {
-        characters = new CharacterDatas { AD = 100, AP = 0, AS = 1.5f, Speed = 3, HP = 100, Coin = 0 };
+        characters = new CharacterDatas { AD = 10, AP = 0, AS = 1.5f, Speed = 3, HP = 100, Coin = 0 };
         Save();
     }
     public void Save()
