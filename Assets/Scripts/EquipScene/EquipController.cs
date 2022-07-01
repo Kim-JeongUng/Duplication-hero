@@ -78,8 +78,38 @@ public class EquipController : MonoBehaviour
             item.GetComponent<MyItems>().ItemImageObject.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
 
             //이미지 장착 스프라이트
-            if(items.ItemRows[i].isEquip)
+            if (items.ItemRows[i].isEquip && items.ItemRows[i].type == "Shoes")
+            {
+                if(null!=equipData.Shoes)
+                    equipData.Shoes.GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
+
+                equipData.Shoes = item;
                 equipData.ShoesPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
+            }
+            if (items.ItemRows[i].isEquip && items.ItemRows[i].type == "Weapon")
+            {
+                if (null != equipData.Weapon)
+                    equipData.Weapon.GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
+
+                equipData.Weapon = item;
+                equipData.WeaponPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
+            }
+            if (items.ItemRows[i].isEquip && items.ItemRows[i].type == "Armor")
+            {
+                if (null != equipData.Armor)
+                    equipData.Armor.GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
+
+                equipData.Armor = item;
+                equipData.ArmorPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
+            }
+            if (items.ItemRows[i].isEquip && items.ItemRows[i].type == "Shoes")
+            {
+                if (null != equipData.Shoes)
+                    equipData.Shoes.GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
+
+                equipData.Shoes = item;
+                equipData.ShoesPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
+            }
         }
     }
     public void EquipPlayer()
