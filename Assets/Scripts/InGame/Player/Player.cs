@@ -19,7 +19,7 @@ public class Player : Entity
 	[SerializeField] private MapCtrl mapctrl;
 
 	float lastShootTime;
-	private void EditorMode() => hp = isEditorMode ? 10000 : 100; //체력 10000
+	private void EditorMode() => hp = isEditorMode ? 10000 : hp; //체력 10000
 
 	public void UseSkill()  // 스킬 버튼 입력 시
     {
@@ -68,8 +68,10 @@ public class Player : Entity
 		base.Awake();
 		GameManager.instance.player = this;
 		CharacterDatas character = CharacterData.instance.Load();
+
 		speed = character.Speed;
 		maxHp = character.HP;
+		hp = character.HP;
 		attackSpeed = character.AS;
 		damage = character.AD;
 		ap = character.AP;
@@ -132,7 +134,7 @@ public class Player : Entity
 					{
 						animator.PlayInFixedTime("Slash");
 						lastShootTime = Time.time;
-						//shooter.Shoot(new DamageReport(damage, this));
+						//shooter.Shoot(new DamageReport(damage, this)); (원거리)
 					}
 				}
 				else
