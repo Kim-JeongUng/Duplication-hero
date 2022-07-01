@@ -55,4 +55,9 @@ public class MultipleObjectPooling : MonoBehaviour
             return null;
         }
     }
+
+    public static void ReturnPooled(string _name)
+    {
+
+    }
 }
