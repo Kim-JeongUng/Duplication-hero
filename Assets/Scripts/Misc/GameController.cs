@@ -38,8 +38,7 @@ public class GameController : MonoBehaviour
         GameManager.instance.gameData.nowProgressLevel++;
         
         gameState.value = GameState.INIT;
-        //SceneManager.LoadScene("GameScene");
-        SceneManager.LoadScene("TEST");
+        SceneManager.LoadScene("GameScene");
     }
     public void GoMain()
     {
