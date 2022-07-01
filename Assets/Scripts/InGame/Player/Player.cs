@@ -132,8 +132,11 @@ public class Player : Entity
 						//shooter.Shoot(new DamageReport(damage, this));
 					}
 				}
+				else
+					aimer.ResetTarget();
 			}
 		}
+		// 가장 가까운 적
 	}
 	private void FixedUpdate()
 	{
