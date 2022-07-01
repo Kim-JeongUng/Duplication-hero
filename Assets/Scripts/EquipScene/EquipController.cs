@@ -18,6 +18,11 @@ public class UIText
 [System.Serializable]
 public class EquipData
 {
+    public GameObject WeaponPlace;
+    public GameObject HelmetPlace;
+    public GameObject ArmorPlace;
+    public GameObject ShoesPlace;
+
     public GameObject Weapon;
     public GameObject Helmet;
     public GameObject Armor;
@@ -39,15 +44,7 @@ public class EquipController : MonoBehaviour
     // Start is called before the first frame update
     public void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            if (instance != this)
-                Destroy(this.gameObject);
-        }
+        instance = this;
         SaveAndReferesh = () => { SaveData(); };
         characterDatas =CharacterData.instance.Load();
         RefreshState();
@@ -79,6 +76,16 @@ public class EquipController : MonoBehaviour
             item.GetComponent<MyItems>().itemData = items.ItemRows[i];
             item.GetComponent<MyItems>().Check.SetActive(items.ItemRows[i].isEquip);
             item.GetComponent<MyItems>().ItemImageObject.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
+
+            //이미지 장착 스프라이트
+            if(items.ItemRows[i].isEquip)
+                equipData.ShoesPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
         }
+    }
+    public void EquipPlayer()
+    {
+        // 텍스쳐 변경
+
+        // 
     }
 }
