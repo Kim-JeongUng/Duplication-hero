@@ -74,6 +74,9 @@ public class Player : Entity
 		damage = character.AD;
 		ap = character.AP;
 		coin = character.Coin;
+		animator.SetFloat("Speed", speed / 3);
+		animator.SetFloat("AttackSpeed", attackSpeed);
+		Debug.Log("HIgame");
 
 		if(animator != null)
 			animator = GetComponentInChildren<Animator>();
