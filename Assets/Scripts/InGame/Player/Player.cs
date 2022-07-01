@@ -16,7 +16,7 @@ public class Player : Entity
 
 	[SerializeField]
 	private Animator animator;
-	[SerializeField] private MapCtrl mapctrl;
+	[SerializeField] private GameController gameController;
 
 	float lastShootTime;
 	private void EditorMode() => hp = isEditorMode ? 10000 : hp; //체력 10000
@@ -165,8 +165,7 @@ public class Player : Entity
 			}
         }
 		else if(other.gameObject.CompareTag("Gate")){
-			GameManager.instance.gameData.nowProgressLevel++;
-			mapctrl.MapChange(GameManager.instance.gameData.nowProgressLevel);
+			gameController.nextStage();
 		}
     }
     public void OnTriggerStay(Collider other)
