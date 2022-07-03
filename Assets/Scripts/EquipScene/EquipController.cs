@@ -18,15 +18,8 @@ public class UIText
 [System.Serializable]
 public class EquipData
 {
-    public GameObject WeaponPlace;
-    public GameObject HelmetPlace;
-    public GameObject ArmorPlace;
-    public GameObject ShoesPlace;
-
-    public GameObject Weapon;
-    public GameObject Helmet;
-    public GameObject Armor;
-    public GameObject Shoes;
+    public GameObject [] EquipmentPlace = new GameObject[4];
+    public GameObject [] EquipmentInfo = new GameObject[4];
 }
 public class EquipController : MonoBehaviour
 {
@@ -35,6 +28,13 @@ public class EquipController : MonoBehaviour
     public EquipData equipData;
     CharacterDatas characterDatas;
     public static Action SaveAndReferesh;
+    public enum Equipment
+    {
+        Weapon,
+        Helmet,
+        Armor,
+        Shoes
+    }
 
     [SerializeField]
     private GameObject presetItem;
@@ -70,52 +70,44 @@ public class EquipController : MonoBehaviour
     public void SetItems()
     {
         UserItemDatas items = CharacterData.instance.ItemDatasLoad();
-        for (int i=0; i<items.ItemRows.Count; i++)
+        for (int i = 0; i < items.ItemRows.Count; i++)
         {
             var item = Instantiate(presetItem, Inventory);
             item.GetComponent<MyItems>().itemData = items.ItemRows[i];
             item.GetComponent<MyItems>().Check.SetActive(items.ItemRows[i].isEquip);
             item.GetComponent<MyItems>().ItemImageObject.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
 
-            //이미지 장착 스프라이트
-            if (items.ItemRows[i].isEquip && items.ItemRows[i].type == "Shoes")
-            {
-                if(null!=equipData.Shoes)
-                    equipData.Shoes.GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
-
-                equipData.Shoes = item;
-                equipData.ShoesPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
-            }
-            if (items.ItemRows[i].isEquip && items.ItemRows[i].type == "Weapon")
-            {
-                if (null != equipData.Weapon)
-                    equipData.Weapon.GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
-
-                equipData.Weapon = item;
-                equipData.WeaponPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
-            }
-            if (items.ItemRows[i].isEquip && items.ItemRows[i].type == "Armor")
-            {
-                if (null != equipData.Armor)
-                    equipData.Armor.GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
-
-                equipData.Armor = item;
-                equipData.ArmorPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
-            }
-            if (items.ItemRows[i].isEquip && items.ItemRows[i].type == "Shoes")
-            {
-                if (null != equipData.Shoes)
-                    equipData.Shoes.GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
-
-                equipData.Shoes = item;
-                equipData.ShoesPlace.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
+            //인벤토리 아이템 장착
+            if (items.ItemRows[i].isEquip) { 
+                int varNum = 0;
+                switch (items.ItemRows[i].type)
+                {
+                    case "Weapon":
+                        varNum = (int)Equipment.Weapon;
+                        break;
+                    case "Helmet":
+                        varNum = (int)Equipment.Helmet;
+                        break;
+                    case "Armor":
+                        varNum = (int)Equipment.Armor;
+                        break;
+                    case "Shoes":
+                        varNum = (int)Equipment.Shoes;
+                        break;
+                    default:
+                        Debug.Log("NoneType");
+                        break;
+                }
+                if (null != equipData.EquipmentInfo[varNum])
+                    equipData.EquipmentInfo[varNum].GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
+                equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
+                equipData.EquipmentInfo[varNum] = item;
             }
         }
     }
     public void EquipPlayer()
     {
         // 텍스쳐 변경
-
-        // 
+        
     }
 }

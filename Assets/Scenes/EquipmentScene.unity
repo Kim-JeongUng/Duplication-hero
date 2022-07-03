@@ -3104,14 +3104,16 @@ MonoBehaviour:
     HP: {fileID: 1153105862}
     Coin: {fileID: 807945469}
   equipData:
-    WeaponPlace: {fileID: 223722802}
-    HelmetPlace: {fileID: 434176093}
-    ArmorPlace: {fileID: 1259057741}
-    ShoesPlace: {fileID: 806524763}
-    Weapon: {fileID: 0}
-    Helmet: {fileID: 0}
-    Armor: {fileID: 0}
-    Shoes: {fileID: 0}
+    EquipmentPlace:
+    - {fileID: 223722802}
+    - {fileID: 434176093}
+    - {fileID: 1259057741}
+    - {fileID: 806524763}
+    EquipmentInfo:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   presetItem: {fileID: 2831829057792017792, guid: 0cfbdac0b48d03f4b8bc5dd0f1188cf0, type: 3}
   Inventory: {fileID: 2115123303}
 --- !u!4 &1682251867
