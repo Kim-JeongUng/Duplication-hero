@@ -33,6 +33,7 @@ public class CharacterData : MonoBehaviour
 {
     public static CharacterData instance;
     public CharacterDatas characters;
+    public UserItemDatas userItemDatas;
     // Start is called before the first frame update
     void Awake()
     {
@@ -49,6 +50,7 @@ public class CharacterData : MonoBehaviour
         }
         //Save();
         Load();
+        Debug.Log(Application.persistentDataPath);
         ItemDatasLoad();
     }
     public void NewData()
@@ -60,19 +62,19 @@ public class CharacterData : MonoBehaviour
     {
         Debug.Log("save");
         string CharacterDatas = JsonUtility.ToJson(characters);
-        File.WriteAllText(Application.dataPath + "/Data/CharacterData.json", CharacterDatas);
+        File.WriteAllText(Application.persistentDataPath + "/CharacterData.json", CharacterDatas);
     }
     public void Save(CharacterDatas characters)
     {
         Debug.Log("save");
         string CharacterDatas = JsonUtility.ToJson(characters);
-        File.WriteAllText(Application.dataPath + "/Data/CharacterData.json", CharacterDatas);
+        File.WriteAllText(Application.persistentDataPath + "/CharacterData.json", CharacterDatas);
     }
     public CharacterDatas Load()
     {
         try
         {
-            characters = JsonUtility.FromJson<CharacterDatas>(File.ReadAllText((Application.dataPath + "/Data/CharacterData.json")));
+            characters = JsonUtility.FromJson<CharacterDatas>(File.ReadAllText((Application.persistentDataPath + "/CharacterData.json")));
         }
         catch (FileNotFoundException f)
         {
@@ -83,7 +85,27 @@ public class CharacterData : MonoBehaviour
     }
     public UserItemDatas ItemDatasLoad()
     {
-        return JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((Application.dataPath + "/Data/UserItemData.json")));
+        try
+        {
+            userItemDatas = JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((Application.persistentDataPath + "/UserItemData.json")));
+        }
+        catch (FileNotFoundException f)
+        {
+            NewItemData();
+            ItemDatasLoad();
+        }
+        return userItemDatas;
+    }
+    public void NewItemData()
+    {
+        userItemDatas = new UserItemDatas { ItemRows = { new UserItemData { ItemIndex = 0, ItemName = "Weapon0", type = "Weapon", value = 5.0f, isEquip = false } ,
+                                                         new UserItemData { ItemIndex = 0, ItemName = "Armor0", type = "Armor", value = 5.0f, isEquip = false }  ,
+                                                         new UserItemData { ItemIndex = 0, ItemName = "Helmet0", type = "Helmet", value = 5.0f, isEquip = false } ,
+                                                         new UserItemData { ItemIndex = 0, ItemName = "Helmet1", type = "Helmet", value = 10.0f, isEquip = false } ,
+                                                         new UserItemData { ItemIndex = 0, ItemName = "Helmet2", type = "Helmet", value = 15.0f, isEquip = false } ,
+                                                         new UserItemData { ItemIndex = 0, ItemName = "Shoes0", type = "Shoes", value = 5.0f, isEquip = false }}
+        };
+        UserItemDataSave(userItemDatas);
     }
     public void UserGetItem(UserItemData NewItem)
     {
@@ -122,11 +144,11 @@ public class CharacterData : MonoBehaviour
     {
         Debug.Log("ItemSave");
         string itemDatas = JsonUtility.ToJson(Items);
-        File.WriteAllText(Application.dataPath + "/Data/UserItemData.json", itemDatas);
+        File.WriteAllText(Application.persistentDataPath + "/UserItemData.json", itemDatas);
     }
     public void UserItemDataSave(string itemDatas)
     {
         Debug.Log("ItemSave");
-        File.WriteAllText(Application.dataPath + "/Data/UserItemData.json", itemDatas);
+        File.WriteAllText(Application.persistentDataPath + "/UserItemData.json", itemDatas);
     }
 }
