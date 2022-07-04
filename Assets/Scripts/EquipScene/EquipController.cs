@@ -35,7 +35,6 @@ public class EquipController : MonoBehaviour
     public EquipData equipData;
     CharacterDatas characterDatas;
     public static Action SaveAndReferesh;
-    Equipment Equpment;
 
     [SerializeField]
     private GameObject presetItem;
