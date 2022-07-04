@@ -70,6 +70,10 @@ public class ObjectMoveDestroy : MonoBehaviour
 
     void HitObj(RaycastHit hit)
     {
+        if (hit.transform.CompareTag("Enemy"))
+        {
+            hit.transform.GetComponent<Enemy>().TakeDamage(new DamageReport(GameManager.instance.player.Damage*0.2f * (GameManager.instance.player.Ap*0.01f+1), GameManager.instance.player));
+        }
         if (isCheckHitTag)
             if (hit.transform.tag != mtag)
                 return;

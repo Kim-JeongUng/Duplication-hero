@@ -7857,7 +7857,7 @@ PrefabInstance:
       objectReference: {fileID: 2103245296}
     - target: {fileID: 7983287318220017035, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: isEditorMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7983287318220017035, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: onPlayerDies
