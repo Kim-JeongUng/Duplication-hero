@@ -3161,6 +3161,7 @@ MonoBehaviour:
   - {fileID: 3343400541712103999, guid: d30fa9e0effe02f4aa76328243863b83, type: 3}
   - {fileID: 3343400541712103999, guid: 4b96f1c68b5decd45af8e94c8a943039, type: 3}
   - {fileID: 3343400541712103999, guid: ffbb99046d5feac459f07b7521a68fc7, type: 3}
+  multipleobjectpooling: {fileID: 1969683696}
 --- !u!114 &759118182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4385,6 +4386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017f409ac3aac744d902503caff53f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userItemDatas:
+    ItemRows: []
 --- !u!4 &1215584938
 Transform:
   m_ObjectHideFlags: 0

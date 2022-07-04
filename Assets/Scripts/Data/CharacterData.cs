@@ -34,9 +34,16 @@ public class CharacterData : MonoBehaviour
     public static CharacterData instance;
     public CharacterDatas characters;
     public UserItemDatas userItemDatas;
+    string path;
     // Start is called before the first frame update
     void Awake()
     {
+#if UNITY_EDITOR
+        path = Application.dataPath;
+#elif UNITY_ANDROID
+        path = Application.persistentDataPath;
+#endif
+
         if (instance == null)
         {
             instance = this;
@@ -99,11 +106,11 @@ public class CharacterData : MonoBehaviour
     public void NewItemData()
     {
         userItemDatas = new UserItemDatas { ItemRows = { new UserItemData { ItemIndex = 0, ItemName = "Weapon0", type = "Weapon", value = 5.0f, isEquip = false } ,
-                                                         new UserItemData { ItemIndex = 0, ItemName = "Armor0", type = "Armor", value = 5.0f, isEquip = false }  ,
-                                                         new UserItemData { ItemIndex = 0, ItemName = "Helmet0", type = "Helmet", value = 5.0f, isEquip = false } ,
-                                                         new UserItemData { ItemIndex = 0, ItemName = "Helmet1", type = "Helmet", value = 10.0f, isEquip = false } ,
-                                                         new UserItemData { ItemIndex = 0, ItemName = "Helmet2", type = "Helmet", value = 15.0f, isEquip = false } ,
-                                                         new UserItemData { ItemIndex = 0, ItemName = "Shoes0", type = "Shoes", value = 5.0f, isEquip = false }}
+                                                         new UserItemData { ItemIndex = 1, ItemName = "Armor0", type = "Armor", value = 5.0f, isEquip = false }  ,
+                                                         new UserItemData { ItemIndex = 2, ItemName = "Helmet0", type = "Helmet", value = 5.0f, isEquip = false } ,
+                                                         new UserItemData { ItemIndex = 3, ItemName = "Helmet1", type = "Helmet", value = 10.0f, isEquip = false } ,
+                                                         new UserItemData { ItemIndex = 4, ItemName = "Helmet2", type = "Helmet", value = 15.0f, isEquip = false } ,
+                                                         new UserItemData { ItemIndex = 5, ItemName = "Shoes0", type = "Shoes", value = 5.0f, isEquip = false }}
         };
         UserItemDataSave(userItemDatas);
     }

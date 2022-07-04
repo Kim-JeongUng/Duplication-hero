@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int enemyCount;
     [SerializeField] private List<GameObject> enemies;
     private EnemyHandler enemyHandler;
-
+    [SerializeField] private MultipleObjectPooling multipleobjectpooling;
     private void Awake()
     {
         if(enemyHandler==null)
@@ -33,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
                 var newEnemy = Instantiate(enemies[Random.Range(0, enemies.Count)], transform);
                 newEnemy.transform.position = spawnPos;
                 enemyHandler.AddEnemy(newEnemy.GetComponent<Enemy>());
+                newEnemy.GetComponent<Enemy>().multipleobjectpooling = multipleobjectpooling;
             }
         }
     }
