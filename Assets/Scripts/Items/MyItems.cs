@@ -9,7 +9,6 @@ public class MyItems : MonoBehaviour
     public UserItemData itemData;
     public GameObject Check;
     public GameObject ItemImageObject;
-    Equipment Equipment;
     
     int varNum = 0;
     public void Awake()
