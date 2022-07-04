@@ -9,7 +9,8 @@ public class MyItems : MonoBehaviour
     public UserItemData itemData;
     public GameObject Check;
     public GameObject ItemImageObject;
-
+    Equipment Equipment;
+    
     int varNum = 0;
     public void Awake()
     {
@@ -26,19 +27,19 @@ public class MyItems : MonoBehaviour
         {
             case "Weapon":
                 character.AD += itemData.isEquip ? (int)itemData.value:-(int)itemData.value;
-                varNum = 0;
+                varNum = (int)Equipment.Weapon;
                 break; 
             case "Helmet":
                 character.AS += itemData.isEquip ? itemData.value : -itemData.value; 
-                varNum = 1;
+                varNum = (int)Equipment.Helmet;
                 break;
             case "Armor":
                 character.HP += itemData.isEquip ? (int)itemData.value : -(int)itemData.value;
-                varNum = 2;
+                varNum = (int)Equipment.Armor;
                 break;
             case "Shoes":
                 character.Speed += itemData.isEquip ? (int)itemData.value : -(int)itemData.value;
-                varNum = 3;
+                varNum = (int)Equipment.Shoes;
                 break;
             default:
                 Debug.Log("NoneItemType");
@@ -51,16 +52,18 @@ public class MyItems : MonoBehaviour
     }
     public void EquipCheck()
     {
-        if (itemData.isEquip)
+        if (itemData.isEquip) // ¿Â¬¯
         {
             if (null != EquipController.instance.equipData.EquipmentInfo[varNum])
                 EquipController.instance.equipData.EquipmentInfo[varNum].GetComponent<MyItems>().Equip(); // ∞∞¿∫ ≈∏¿‘ ¿Â¬¯«ÿ¡¶
             EquipController.instance.equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", itemData.type, itemData.ItemName));
+            EquipController.instance.equipData.EquipmentPlace[varNum].transform.SetAsLastSibling();
             EquipController.instance.equipData.EquipmentInfo[varNum] = this.gameObject;
         }
-        else
+        else // ¿Â¬¯ «ÿ¡¶
         {
             EquipController.instance.equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = null;
+            EquipController.instance.equipData.EquipmentPlace[varNum].transform.SetAsFirstSibling();
             EquipController.instance.equipData.EquipmentInfo[varNum] = null;
         }
     }

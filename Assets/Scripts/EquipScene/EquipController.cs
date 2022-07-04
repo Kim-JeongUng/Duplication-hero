@@ -21,6 +21,13 @@ public class EquipData
     public GameObject [] EquipmentPlace = new GameObject[4];
     public GameObject [] EquipmentInfo = new GameObject[4];
 }
+public enum Equipment
+{
+    Weapon,
+    Helmet,
+    Armor,
+    Shoes
+}
 public class EquipController : MonoBehaviour
 {
     public static EquipController instance;
@@ -28,13 +35,7 @@ public class EquipController : MonoBehaviour
     public EquipData equipData;
     CharacterDatas characterDatas;
     public static Action SaveAndReferesh;
-    public enum Equipment
-    {
-        Weapon,
-        Helmet,
-        Armor,
-        Shoes
-    }
+    Equipment Equpment;
 
     [SerializeField]
     private GameObject presetItem;
@@ -101,6 +102,7 @@ public class EquipController : MonoBehaviour
                 if (null != equipData.EquipmentInfo[varNum])
                     equipData.EquipmentInfo[varNum].GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
                 equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
+                equipData.EquipmentPlace[varNum].transform.SetAsLastSibling();
                 equipData.EquipmentInfo[varNum] = item;
             }
         }
