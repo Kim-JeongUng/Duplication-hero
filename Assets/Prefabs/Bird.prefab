@@ -332,6 +332,7 @@ MonoBehaviour:
   damage: 30
   ap: 0
   coin: 0
+  OnDie: 0
   player: {fileID: 11400000, guid: c114e99e45cdb4c4484290ea37e03d0b, type: 2}
   enemyHandler: {fileID: 11400000, guid: 844697ca1887009458f7eab66bdc9b91, type: 2}
   onPlayerDeath: {fileID: 11400000, guid: 29380a14d0da7914dafb8a405f2918f4, type: 2}
@@ -340,6 +341,7 @@ MonoBehaviour:
   randomTime: 2
   touchDamageMultiplier: 1
   coinsToDrop: 100
+  multipleobjectpooling: {fileID: 0}
 --- !u!1 &3738630275334420280
 GameObject:
   m_ObjectHideFlags: 0

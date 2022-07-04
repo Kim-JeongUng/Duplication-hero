@@ -1274,6 +1274,7 @@ MonoBehaviour:
   damage: 20
   ap: 0
   coin: 0
+  OnDie: 0
   player: {fileID: 11400000, guid: c114e99e45cdb4c4484290ea37e03d0b, type: 2}
   enemyHandler: {fileID: 11400000, guid: 844697ca1887009458f7eab66bdc9b91, type: 2}
   onPlayerDeath: {fileID: 11400000, guid: 29380a14d0da7914dafb8a405f2918f4, type: 2}
@@ -1282,10 +1283,10 @@ MonoBehaviour:
   randomTime: 1
   touchDamageMultiplier: 1
   coinsToDrop: 100
+  multipleobjectpooling: {fileID: 0}
   shooter: {fileID: 5117843574253354938}
   aimer: {fileID: 5371552464047986266}
-  itemPrefab: {fileID: 7263099708958967464, guid: 1cd01eb8184758c45aa1aec17c29a7cc, type: 3}
-  getSkill: {fileID: 7263099708958967464, guid: 1cd01eb8184758c45aa1aec17c29a7cc, type: 3}
+  getSkill: {fileID: 9047419557792030501, guid: f538754753dfbd94e8c58cd1c3764308, type: 3}
 --- !u!1 &3738630275334420280
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,12 +5,16 @@ public class Enemy : Entity
     [SerializeField] protected GlobalTransform player;
     [SerializeField] protected GlobalEnemyHandler enemyHandler;
     [SerializeField] protected GameEvent onPlayerDeath;
-    [SerializeField] protected float movingTime;  // Время движения противника
-    [SerializeField] protected float waitingTime; // Время простоя противника
-    [SerializeField] protected float randomTime;  // Рандомное время от 0 до значения будет добавлятся к времени движения
-    [SerializeField] protected float touchDamageMultiplier = 1; // Модификатор базового урона при соприкосновении
-    [SerializeField] protected int coinsToDrop = 100; // Сколько монет будет падать за убийство
-    protected Player touchingPlayer; // Нужен для оптеделения, остался ли игрок в области поражения после кулдауна атаки от прикосновения
+    [SerializeField] protected float movingTime;  // 적 이동 시간
+    [SerializeField] protected float waitingTime; // 적 다운타임
+    [SerializeField] protected float randomTime;  // 랜덤값이 이동 시간에 추가됩니다.
+    [SerializeField] protected float touchDamageMultiplier = 1; // 접촉 시 피해
+    [SerializeField] protected int coinsToDrop = 100; // 킬을 위해 얼마나 많은 동전이 떨어질 것인지
+    protected Player touchingPlayer; // 터치 공격 쿨다운 후 플레이어가 여전히 효과 범위에 있는지 확인하는 데 필요
+
+    [SerializeField] protected MultipleObjectPooling multipleobjectpooling;
+
+    private Rigidbody rb;  // 아이템구슬
 
     protected void OnEnable()
     {
@@ -26,13 +30,22 @@ public class Enemy : Entity
         touchingPlayer = null;
     }
 
-    protected override void Death(Entity killer)
+    protected override void Death(Entity killer)  // 몬스터 Death 처리
     {
         Player player = killer as Player;
         if(player!=null)
             player.AddCoins(coinsToDrop);
         enemyHandler.componentCache.RemoveEnemy(this);
         Destroy(gameObject);
+    }
+
+    public void DropItem(GameObject getSkill)  // 아이템 구슬 생성
+    {
+        var itemGo = multipleobjectpooling.GetPooledObject(getSkill.name);
+        itemGo.transform.position = this.gameObject.transform.position;  // 스킬구슬 생성 위치 설정
+
+        rb = itemGo.GetComponent<Rigidbody>();
+        rb.AddForce(transform.up * 5f, ForceMode.Impulse);
     }
 
     protected void OnTriggerEnter(Collider other)

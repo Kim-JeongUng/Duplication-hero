@@ -18,7 +18,7 @@ public abstract class Entity : MonoBehaviour
 	protected MovingState walkingState = MovingState.STAYING;
 
 	//public GameObject itemPrefab;
-	//public System.Action onDie;
+	public bool OnDie = false;
 
 	public float Speed
 	{
@@ -59,10 +59,10 @@ public abstract class Entity : MonoBehaviour
 		hp -= damageReport.damage;
 		if (hp <= 0)  // 죽은경우
 		{
-			//this.DropItem();
-			Death(damageReport.attacker);
-			//this.onDie();
+			OnDie = true;
 
+			Death(damageReport.attacker);
+			
 			return true;
 		}
 		return false;

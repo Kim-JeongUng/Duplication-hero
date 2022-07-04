@@ -5,52 +5,10 @@ public class Archer : WalkingEnemy
 {
 	[SerializeField] Shooter shooter;
 	[SerializeField] EnemyAimer aimer;
-	MultipleObjectPooling multiop;
 
 	float lastShootTime;
 
-	//드랍아이템 코드
-	public GameObject itemPrefab;  // 스킬드랍 버블 아이템
-	public System.Action onDie;
-	private Rigidbody rb;
-
-	public GameObject getSkill;  // Archer가 보유한 스킬
-
-
-	protected override void Death(Entity killer)
-	{
-		shooter.Dispose();
-		// 확률에따라 스킬구슬, 장비아이템, 꽝 3가지 중에서 랜덤 실행
-		this.DropItem();  // 스킬아이템 드랍
-
-		base.Death(killer);
-		this.onDie();
-	}
-	public void DropItem()
-	{
-		//var n = Random.Range(0, multiop.poolPrefabs.Length);
-		// 오브젝트풀을 이용한 스킬구슬 생성
-		//var itemGo = multiop.GetPooledObject("Fire(Clone)");
-		// bubble
-		var itemGo = Instantiate<GameObject>(this.itemPrefab);
-		itemGo.transform.position = this.gameObject.transform.position;  // 스킬구슬 생성 위치 설정
-
-		// Skill Image
-		//skillitem = Instantiate(Resources.Load<Sprite>("Skills/Fire"), itemGo.gameObject.transform.position, Quaternion.Euler(70, 0, 0));
-		//skillitem.(GameObejct)sprite.SetParent(itemGo.transform, false);
-
-		// 스킬이미지 생성해서 버블에 넣는거
-		//itemPrefab = Instantiate(Resources.Load<GameObject>("Prefabs/Bubble"));  // 버블생성
-		//getSkill.gameObject.transform.GetChild(0).gameObject.SetActive(true);  // 스킬이미지 활성화
-
-		rb = itemGo.GetComponent<Rigidbody>();
-		rb.AddForce(transform.up * 5f, ForceMode.Impulse);
-		//itemGo.SetActive(false);
-		this.onDie = () =>
-		{
-			itemGo.SetActive(true);
-		};
-	}
+	public GameObject getSkill;  // Archer가 보유한 스킬공격
 
 	protected new void Awake()
 	{
@@ -86,5 +44,16 @@ public class Archer : WalkingEnemy
 				aimer.ResetTarget();
 		}
 		
+	}
+	protected override void Death(Entity killer)
+	{
+		Debug.Log("------------Monster Dead-------------");
+		shooter.Dispose();
+		// 확률에따라 스킬구슬, 장비아이템, 꽝 3가지 중에서 랜덤 실행
+
+		base.Death(killer);
+
+		if(OnDie == true)
+			DropItem(getSkill); // 스킬아이템 드랍
 	}
 }

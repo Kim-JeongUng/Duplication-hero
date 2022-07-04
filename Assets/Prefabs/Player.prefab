@@ -523,6 +523,7 @@ MonoBehaviour:
   damage: 35
   ap: 0
   coin: 0
+  OnDie: 0
   isEditorMode: 0
   onPlayerDeath: {fileID: 0}
   input: {fileID: 11400000, guid: 6d1c5bd22173b2143982ce521d8b002e, type: 2}
@@ -532,7 +533,7 @@ MonoBehaviour:
   SkillImage: {fileID: 0}
   DefaultSkillImage: {fileID: 0}
   animator: {fileID: 0}
-  mapctrl: {fileID: 0}
+  gameController: {fileID: 0}
 --- !u!1 &7983287318372470292
 GameObject:
   m_ObjectHideFlags: 0

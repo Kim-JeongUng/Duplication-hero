@@ -2,6 +2,8 @@
 using ThirteenPixels.Soda;
 using UnityEngine.UI;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Player : Entity
 {
@@ -19,6 +21,10 @@ public class Player : Entity
 	[SerializeField] private GameController gameController;
 
 	float lastShootTime;
+
+	//[SerializeField] MultipleObjectPooling dropItemPooling;
+	[SerializeField] protected MultipleObjectPooling skillPooling;
+	private GameObject skill;
 	private void EditorMode() => hp = isEditorMode ? 10000 : hp; //체력 10000
 
 	public void UseSkill()  // 스킬 버튼 입력 시
@@ -41,18 +47,37 @@ public class Player : Entity
 					Debug.Log(GameManager.instance.gameData.nowSkillName);
 					break;
 			}
+			/*
 			int num = GameManager.instance.gameData.SkillNameSet.IndexOf(GameManager.instance.gameData.nowSkillName);
 			Debug.Log(num);
 			num = num == -1? 0 : num;
-			Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
+			var skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
+			*/
+			
+			// 스킬오브젝트 오브젝트 풀에서 꺼내옴
+			skill = skillPooling.GetPooledObject(GameManager.instance.gameData.nowSkillName);
+			Debug.Log(skill.name);
+			skill.transform.position = this.gameObject.transform.position;  // 스킬구슬 생성 위치 설정
+			skill.transform.rotation = this.transform.rotation;
+			
 			SkillImage.sprite = DefaultSkillImage;  // 스킬버튼 이미지 변경
 			GameManager.instance.gameData.nowSkillName = "";
+
+			//StartCoroutine(endskill());
+			//skill.SetActive(false);
+			//Destroy(skill);
+			Invoke("Returnskillpool", 1f);
 		}
 		else
 		{
 			Debug.Log("스킬없음");
 		}
 	}
+	public void Returnskillpool()  // 사용한 스킬이펙트 비활성화
+    {
+		skill.SetActive(false);
+	}
+	
 	private void OnEnable()
 	{
 		input.onChange.AddResponse(CheckMovementState);
@@ -161,7 +186,8 @@ public class Player : Entity
 			{
 				GameManager.instance.gameData.nowSkillName = other.gameObject.name;  // 획득한 스킬구슬의 스킬이미지 이름 저장
 				SkillImage.sprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
-				Destroy(other.transform.parent.gameObject);  // 드랍된 스킬구슬 파괴
+				//Destroy(other.transform.parent.gameObject);  // 드랍된 스킬구슬 파괴
+				other.transform.parent.gameObject.SetActive(false);  // 오브젝트 풀링
 			}
         }
 		else if(other.gameObject.CompareTag("Gate")){
@@ -178,7 +204,8 @@ public class Player : Entity
 			{
 				GameManager.instance.gameData.nowSkillName = other.gameObject.name;  // 획득한 스킬구슬의 스킬이미지 이름 저장
 				SkillImage.sprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
-				Destroy(other.transform.parent.gameObject);   // 드랍된 스킬구슬 파괴
+				//Destroy(other.transform.parent.gameObject);   // 드랍된 스킬구슬 파괴
+				other.transform.parent.gameObject.SetActive(false);
 			}
 		}
 	}
