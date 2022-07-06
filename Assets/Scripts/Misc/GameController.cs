@@ -16,16 +16,21 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject[] normalMaps;
     [SerializeField] private GameObject[] BossMaps;
     [SerializeField] private GameObject[] SpecialMaps;
-    [SerializeField] private GameObject[] BaseMap;
-    
+    [SerializeField] private GameObject BaseMap;
+    private Vector3 MapPos;
     private GameObject curMap;
-    private Vector3 CurMapPos;
 
     private void Awake() {
-        
+        MapPos = BaseMap.transform.position;
     }
     private void Start()
     {
+        GenerateMapWithNavmesh();
+
+        enemySpawner.componentCache.SpawnEnemies();
+        gameState.value = GameState.STARTED;
+    }
+    private void GenerateMapWithNavmesh(){
         if(GameManager.instance.gameData.nowProgressLevel != 0 && 
             GameManager.instance.gameData.nowProgressLevel % 10 == 0){
             //boss stage
@@ -34,12 +39,14 @@ public class GameController : MonoBehaviour
         else{  //normal stage   (need add special stage - if needed)
             curMap = normalMaps[Random.Range(0, normalMaps.Length)];
         }
-        CurMapPos = curMap.transform.position;
+        curMap.transform.position = MapPos;
         curMap.SetActive(true);
+        
+        NavMeshSurface navsurface = curMap.GetComponentInChildren<NavMeshSurface>();
+        navsurface.RemoveData();
+        navsurface.BuildNavMesh();
 
-
-        enemySpawner.componentCache.SpawnEnemies();
-        gameState.value = GameState.STARTED;
+        
     }
 
     public void nextStage()
