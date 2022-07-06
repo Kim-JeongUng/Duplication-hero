@@ -58,6 +58,7 @@ MonoBehaviour:
   mtag: 
   isShieldActive: 0
   isHitMake: 1
+  damageMultipler: 1
 --- !u!1 &7997195828659953103
 GameObject:
   m_ObjectHideFlags: 0
