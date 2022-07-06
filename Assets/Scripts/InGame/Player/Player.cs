@@ -23,7 +23,7 @@ public class Player : Entity
 	float lastShootTime;
 
 	//[SerializeField] protected MultipleObjectPooling skillPooling;  스킬 오브젝트 풀
-	//private GameObject skill;
+	private GameObject skill;
 
 	private void EditorMode() => hp = isEditorMode ? 10000 : hp; //체력 10000
 
@@ -51,7 +51,7 @@ public class Player : Entity
 			int num = GameManager.instance.gameData.SkillNameSet.IndexOf(GameManager.instance.gameData.nowSkillName);
 			Debug.Log(num);
 			num = num == -1? 0 : num;
-			var skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
+			skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
 			
 			/*
 			// 스킬오브젝트 오브젝트 풀에서 꺼내옴
@@ -65,7 +65,8 @@ public class Player : Entity
 
 			//StartCoroutine(endskill());
 			//skill.SetActive(false);
-			Destroy(skill); // 사용한 스킬 삭제
+			
+			Invoke("DestroySkill", 1f);  // 사용한 스킬이팩트 삭제
 
 			//Invoke("Returnskillpool", 1f);
 		}
@@ -80,6 +81,10 @@ public class Player : Entity
 		skill.SetActive(false);
 	}
 	*/
+	public void DestroySkill()  // 사용한 스킬이펙트 삭제
+	{
+		Destroy(skill);
+	}
 	private void OnEnable()
 	{
 		input.onChange.AddResponse(CheckMovementState);
