@@ -3175,7 +3175,7 @@ GameObject:
   - component: {fileID: 1969683695}
   - component: {fileID: 1969683696}
   m_Layer: 0
-  m_Name: DropItemPool
+  m_Name: DropSkillBubblePool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3212,6 +3212,7 @@ MonoBehaviour:
   - {fileID: 7263099708958967464, guid: b32c883e0edd1d345abb0100f7150ae8, type: 3}
   - {fileID: 7263099708958967464, guid: d6447c577786dde45ae19567fa75ce0d, type: 3}
   - {fileID: 9047419557792030501, guid: f538754753dfbd94e8c58cd1c3764308, type: 3}
+  - {fileID: 7263099708958967464, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
   poolingCount: 3
 --- !u!850595691 &1995969775
 LightingSettings:
