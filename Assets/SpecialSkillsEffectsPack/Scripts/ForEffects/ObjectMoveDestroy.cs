@@ -19,6 +19,8 @@ public class ObjectMoveDestroy : MonoBehaviour
     public string mtag;
     public bool isShieldActive = false;
     public bool isHitMake = true;
+    [SerializeField]
+    private float SkillDamageMultipler = 1.0f;
 
     float time;
     bool ishit;
@@ -73,7 +75,7 @@ public class ObjectMoveDestroy : MonoBehaviour
         if (hit.transform.CompareTag("Enemy"))
         {
             Debug.Log("ASD222");
-            hit.transform.GetComponent<Enemy>().TakeDamage(new DamageReport(GameManager.instance.player.Damage*0.2f * (GameManager.instance.player.Ap*0.01f+1), GameManager.instance.player));
+            hit.transform.GetComponent<Enemy>().TakeDamage(new DamageReport(GameManager.instance.player.Damage*0.2f * (GameManager.instance.player.Ap*0.01f+1) * SkillDamageMultipler, GameManager.instance.player));
         }
         if (isCheckHitTag)
             if (hit.transform.tag != mtag)
