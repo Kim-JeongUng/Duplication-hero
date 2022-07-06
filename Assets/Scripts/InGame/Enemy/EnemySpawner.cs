@@ -33,7 +33,6 @@ public class EnemySpawner : MonoBehaviour
                 var newEnemy = Instantiate(enemies[Random.Range(0, enemies.Count)], transform);
                 newEnemy.transform.position = spawnPos;
                 enemyHandler.AddEnemy(newEnemy.GetComponent<Enemy>());
-                newEnemy.GetComponent<Enemy>().multipleobjectpooling = multipleobjectpooling;
             }
         }
     }

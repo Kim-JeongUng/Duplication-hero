@@ -5,6 +5,7 @@ using UnityEngine;
 public class MultipleObjectPooling : MonoBehaviour
 {
     //public int SkillNum;
+    public static MultipleObjectPooling instance;
     public GameObject[] poolPrefabs;
     public int poolingCount;
 
@@ -12,6 +13,7 @@ public class MultipleObjectPooling : MonoBehaviour
 
     public void Awake()
     {
+        instance = this;
         //poolPrefabs = new GameObject[SkillNum];
         //poolingCount = new int[SkillNum];
 

@@ -31,7 +31,14 @@ public class GameManager : MonoBehaviour
             if (instance != this)
                 Destroy(this.gameObject);
         }
-        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw" }, nowProgressLevel = 0 };
+        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw" ,"PulseShot"}, nowProgressLevel = 0 };
+        MultipleObjectPooling.instance.AddObject("PulseShot");
+        gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
+        ResourceLoad();
+    }
+    public void LoadGameData(GameData gameData)
+    {
+        this.gameData = gameData; 
         gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
         ResourceLoad();
     }

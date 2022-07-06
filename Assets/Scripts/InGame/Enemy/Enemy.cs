@@ -12,7 +12,6 @@ public class Enemy : Entity
     [SerializeField] protected int coinsToDrop = 100; // 킬을 위해 얼마나 많은 동전이 떨어질 것인지
     protected Player touchingPlayer; // 터치 공격 쿨다운 후 플레이어가 여전히 효과 범위에 있는지 확인하는 데 필요
 
-    [SerializeField] public MultipleObjectPooling multipleobjectpooling;
 
     private Rigidbody rb;  // 아이템구슬
 
@@ -41,7 +40,7 @@ public class Enemy : Entity
 
     public void DropItem(GameObject getSkill)  // 아이템 구슬 생성
     {
-        var itemGo = multipleobjectpooling.GetPooledObject(getSkill.name);
+        var itemGo = MultipleObjectPooling.instance.GetPooledObject(getSkill.name);
         itemGo.transform.position = this.gameObject.transform.position;  // 스킬구슬 생성 위치 설정
 
         rb = itemGo.GetComponent<Rigidbody>();
