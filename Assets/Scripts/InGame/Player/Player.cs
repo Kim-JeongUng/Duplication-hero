@@ -22,9 +22,9 @@ public class Player : Entity
 
 	float lastShootTime;
 
-	//[SerializeField] MultipleObjectPooling dropItemPooling;
-	[SerializeField] protected MultipleObjectPooling skillPooling;
-	private GameObject skill;
+	//[SerializeField] protected MultipleObjectPooling skillPooling;  스킬 오브젝트 풀
+	//private GameObject skill;
+
 	private void EditorMode() => hp = isEditorMode ? 10000 : hp; //체력 10000
 
 	public void UseSkill()  // 스킬 버튼 입력 시
@@ -47,37 +47,39 @@ public class Player : Entity
 					Debug.Log(GameManager.instance.gameData.nowSkillName);
 					break;
 			}
-			/*
+			
 			int num = GameManager.instance.gameData.SkillNameSet.IndexOf(GameManager.instance.gameData.nowSkillName);
 			Debug.Log(num);
 			num = num == -1? 0 : num;
 			var skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
-			*/
 			
+			/*
 			// 스킬오브젝트 오브젝트 풀에서 꺼내옴
 			skill = skillPooling.GetPooledObject(GameManager.instance.gameData.nowSkillName);
 			Debug.Log(skill.name);
 			skill.transform.position = this.gameObject.transform.position;  // 스킬구슬 생성 위치 설정
 			skill.transform.rotation = this.transform.rotation;
-			
+			*/
 			SkillImage.sprite = DefaultSkillImage;  // 스킬버튼 이미지 변경
 			GameManager.instance.gameData.nowSkillName = "";
 
 			//StartCoroutine(endskill());
 			//skill.SetActive(false);
-			//Destroy(skill);
-			Invoke("Returnskillpool", 1f);
+			Destroy(skill); // 사용한 스킬 삭제
+
+			//Invoke("Returnskillpool", 1f);
 		}
 		else
 		{
 			Debug.Log("스킬없음");
 		}
 	}
+	/* 스킬 오브젝트 풀
 	public void Returnskillpool()  // 사용한 스킬이펙트 비활성화
     {
 		skill.SetActive(false);
 	}
-	
+	*/
 	private void OnEnable()
 	{
 		input.onChange.AddResponse(CheckMovementState);
