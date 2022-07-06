@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using ThirteenPixels.Soda;
+using UnityEngine.AI;
 
 public enum GameState
 {
@@ -12,11 +13,17 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] GlobalGameState gameState;
     [SerializeField] private GlobalEnemySpawner enemySpawner;
-
     [SerializeField] private GameObject[] normalMaps;
     [SerializeField] private GameObject[] BossMaps;
     [SerializeField] private GameObject[] SpecialMaps;
+    [SerializeField] private GameObject[] BaseMap;
+    
     private GameObject curMap;
+    private Vector3 CurMapPos;
+
+    private void Awake() {
+        
+    }
     private void Start()
     {
         if(GameManager.instance.gameData.nowProgressLevel != 0 && 
@@ -27,7 +34,9 @@ public class GameController : MonoBehaviour
         else{  //normal stage   (need add special stage - if needed)
             curMap = normalMaps[Random.Range(0, normalMaps.Length)];
         }
+        CurMapPos = curMap.transform.position;
         curMap.SetActive(true);
+
 
         enemySpawner.componentCache.SpawnEnemies();
         gameState.value = GameState.STARTED;
