@@ -56,13 +56,13 @@ public class MyItems : MonoBehaviour
             if (null != EquipController.instance.equipData.EquipmentInfo[varNum])
                 EquipController.instance.equipData.EquipmentInfo[varNum].GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
             EquipController.instance.equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", itemData.type, itemData.ItemName));
-            EquipController.instance.equipData.EquipmentPlace[varNum].transform.SetAsLastSibling();
+            EquipController.instance.equipData.EquipmentPlace[varNum].SetActive(true);
             EquipController.instance.equipData.EquipmentInfo[varNum] = this.gameObject;
         }
         else // 장착 해제
         {
             EquipController.instance.equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = null;
-            EquipController.instance.equipData.EquipmentPlace[varNum].transform.SetAsFirstSibling();
+            EquipController.instance.equipData.EquipmentPlace[varNum].SetActive(false);
             EquipController.instance.equipData.EquipmentInfo[varNum] = null;
         }
     }
