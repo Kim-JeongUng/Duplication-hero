@@ -5,12 +5,13 @@ public class EnemySpawner : MonoBehaviour
 {
     private const float overlapSphereRadius = 0.5f;
     [Header("Spawn settings")]
-    [SerializeField] private int enemyCount;
-    [SerializeField] private List<GameObject> enemies;
+    [SerializeField] public int enemyCount;
+    [SerializeField] public List<GameObject> enemies;
     private EnemyHandler enemyHandler;
     [SerializeField] private MultipleObjectPooling multipleobjectpooling;
     private void Awake()
     {
+        GameManager.instance.enemySpawner = this;
         if(enemyHandler==null)
             enemyHandler = GetComponent<EnemyHandler>();
     }

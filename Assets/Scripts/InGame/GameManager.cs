@@ -7,7 +7,7 @@ public class GameData
 {
     public string nowSkillName = "";
     public bool haveSkill() => nowSkillName == "" ? false : true;  // 현재 스킬을 보유하고있는지
-
+    public List<string> EnemySet = new List<string> { };
     public List<string> SkillNameSet = new List<string> { };
     public GameObject[] SkillResource;
     public int nowProgressLevel;
@@ -16,8 +16,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameData gameData;
-    public Player player;
 
+    public EnemySpawner enemySpawner;
+    public List<GameObject> EnemyPrefabs;
+
+    public Player player;
     // Start is called before the first frame update
     void Awake()
     {
@@ -47,5 +50,24 @@ public class GameManager : MonoBehaviour
         {
             gameData.SkillResource[i] = Resources.Load<GameObject>(string.Format("SkillEffect/{0}", gameData.SkillNameSet[i]));
         }
+    }
+    public void StartNextStage() // 다음스테이지
+    {
+        //새로운 몬스터
+        if (gameData.EnemySet.Count >= 1)
+        {
+            enemySpawner.enemies = new List<GameObject> { };
+            foreach (GameObject EnemyPrefab in EnemyPrefabs)
+            {
+                if (gameData.EnemySet.Contains(EnemyPrefab.name))
+                {
+                    enemySpawner.enemies.Add(EnemyPrefab);
+                }
+            }
+        }
+        //새로운 스킬
+
+        //리소스 로드
+        ResourceLoad();
     }
 }

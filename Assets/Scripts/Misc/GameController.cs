@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 using ThirteenPixels.Soda;
 using UnityEngine.AI;
 
@@ -26,7 +27,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         GenerateMapWithNavmesh();
-
+        GameManager.instance.StartNextStage();
         enemySpawner.componentCache.SpawnEnemies();
         gameState.value = GameState.STARTED;
     }
@@ -52,7 +53,10 @@ public class GameController : MonoBehaviour
     public void nextStage()
     {   //다음 스테이지 값 수정 위치
         GameManager.instance.gameData.nowProgressLevel++;
-        
+
+        //다음스테이지 나올 몬스터 ( 레벨 및 구현 필요 또는 랜덤? )
+        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "Bird" };
+
         gameState.value = GameState.INIT;
         SceneManager.LoadScene("GameScene");
     }
