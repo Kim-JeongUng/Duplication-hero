@@ -68,10 +68,11 @@ public class Enemy : Entity
             canUseSkill = false;  // 스킬을 사용하면 쿨타임으로 스킬을 사용할 수 없는 상태
         }
     }
-    IEnumerator CoolTime(float cool)
+    IEnumerator CoolTime()
     {
+        var cool = skillcool;
         print("몬스터 스킬 쿨타임 실행");
-
+        
         while (cool > 0)
         {
             cool -= Time.deltaTime;
