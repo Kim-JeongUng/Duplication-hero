@@ -39,7 +39,7 @@ public class CharacterData : MonoBehaviour
     void Awake()
     {
 #if UNITY_EDITOR
-        path = Application.dataPath;
+        path = Application.dataPath+"/Data";
 #elif UNITY_ANDROID
         path = Application.persistentDataPath;
 #endif
@@ -57,7 +57,6 @@ public class CharacterData : MonoBehaviour
         }
         //Save();
         Load();
-        Debug.Log(Application.persistentDataPath);
         ItemDatasLoad();
     }
     public void NewData()
@@ -69,19 +68,19 @@ public class CharacterData : MonoBehaviour
     {
         Debug.Log("save");
         string CharacterDatas = JsonUtility.ToJson(characters);
-        File.WriteAllText(Application.persistentDataPath + "/CharacterData.json", CharacterDatas);
+        File.WriteAllText(path + "/CharacterData.json", CharacterDatas);
     }
     public void Save(CharacterDatas characters)
     {
         Debug.Log("save");
         string CharacterDatas = JsonUtility.ToJson(characters);
-        File.WriteAllText(Application.persistentDataPath + "/CharacterData.json", CharacterDatas);
+        File.WriteAllText(path + "/CharacterData.json", CharacterDatas);
     }
     public CharacterDatas Load()
     {
         try
         {
-            characters = JsonUtility.FromJson<CharacterDatas>(File.ReadAllText((Application.persistentDataPath + "/CharacterData.json")));
+            characters = JsonUtility.FromJson<CharacterDatas>(File.ReadAllText(path+ "/CharacterData.json"));
         }
         catch (FileNotFoundException f)
         {
@@ -94,7 +93,7 @@ public class CharacterData : MonoBehaviour
     {
         try
         {
-            userItemDatas = JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((Application.persistentDataPath + "/UserItemData.json")));
+            userItemDatas = JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((path + "/UserItemData.json")));
         }
         catch (FileNotFoundException f)
         {
@@ -151,11 +150,11 @@ public class CharacterData : MonoBehaviour
     {
         Debug.Log("ItemSave");
         string itemDatas = JsonUtility.ToJson(Items);
-        File.WriteAllText(Application.persistentDataPath + "/UserItemData.json", itemDatas);
+        File.WriteAllText(path + "/UserItemData.json", itemDatas);
     }
     public void UserItemDataSave(string itemDatas)
     {
         Debug.Log("ItemSave");
-        File.WriteAllText(Application.persistentDataPath + "/UserItemData.json", itemDatas);
+        File.WriteAllText(path + "/UserItemData.json", itemDatas);
     }
 }

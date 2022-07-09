@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
                 if (gameData.EnemySet.Contains(EnemyPrefab.name))
                 {
                     enemySpawner.enemies.Add(EnemyPrefab);
+
                 }
             }
         }
