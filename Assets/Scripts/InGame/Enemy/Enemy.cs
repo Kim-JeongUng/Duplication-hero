@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using ThirteenPixels.Soda;
+using System.Collections;
+
 public class Enemy : Entity
 {
     [SerializeField] protected GlobalTransform player;
@@ -12,8 +14,13 @@ public class Enemy : Entity
     [SerializeField] protected int coinsToDrop = 100; // 킬을 위해 얼마나 많은 동전이 떨어질 것인지
     protected Player touchingPlayer; // 터치 공격 쿨다운 후 플레이어가 여전히 효과 범위에 있는지 확인하는 데 필요
 
+    public GameObject getSkill;  // 몬스터가 보유한 스킬구슬
+    public float skillcool;  // 스킬 쿨타임
+    private GameObject skill; // 스킬이펙트 오브젝트
 
     private Rigidbody rb;  // 아이템구슬
+
+    public bool canUseSkill = true;
 
     protected void OnEnable()
     {
@@ -45,6 +52,50 @@ public class Enemy : Entity
 
         rb = itemGo.GetComponent<Rigidbody>();
         rb.AddForce(transform.up * 5f, ForceMode.Impulse);
+    }
+
+    public void EnemySkill()
+    {
+        if (canUseSkill == true)
+        {
+            // 스킬 사용
+            atkSkill();
+            Debug.Log("몬스터 스킬 사용");
+
+            //StartCoroutine(CoolTime(skillcool));
+            StartCoroutine("CoolTime");
+
+            canUseSkill = false;  // 스킬을 사용하면 쿨타임으로 스킬을 사용할 수 없는 상태
+        }
+    }
+    IEnumerator CoolTime(float cool)
+    {
+        print("몬스터 스킬 쿨타임 실행");
+
+        while (cool > 0)
+        {
+            cool -= Time.deltaTime;
+            // fillAmount
+            yield return null;
+        }
+
+        canUseSkill = true;  // 스킬 쿨타임이 끝나면 스킬을 사용할 수 있는 상태
+
+        print("몬스터 스킬 쿨타입 종료");
+        yield break;
+    }
+    public void atkSkill()
+    {
+        int num = GameManager.instance.gameData.SkillNameSet.IndexOf(getSkill.name);
+        Debug.Log(num);
+        num = num == -1 ? 0 : num;
+        skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
+
+        Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제
+    }
+    public void DestroySkill()  // 사용한 스킬이펙트 삭제
+    {
+        Destroy(skill);
     }
 
     protected void OnTriggerEnter(Collider other)

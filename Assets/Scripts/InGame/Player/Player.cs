@@ -66,7 +66,7 @@ public class Player : Entity
 			//StartCoroutine(endskill());
 			//skill.SetActive(false);
 			
-			Invoke("DestroySkill", 1f);  // 사용한 스킬이팩트 삭제
+			Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제
 
 			//Invoke("Returnskillpool", 1f);
 		}

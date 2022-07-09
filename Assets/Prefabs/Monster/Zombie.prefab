@@ -1050,7 +1050,9 @@ MonoBehaviour:
   randomTime: 2
   touchDamageMultiplier: 1
   coinsToDrop: 10
-  multipleobjectpooling: {fileID: 0}
+  getSkill: {fileID: 7263099708958967464, guid: d6447c577786dde45ae19567fa75ce0d, type: 3}
+  skillcool: 5
+  isSkill: 0
 --- !u!1 &3882760515220934307
 GameObject:
   m_ObjectHideFlags: 0

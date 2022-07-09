@@ -7,9 +7,8 @@ public class Archer : WalkingEnemy
 	[SerializeField] EnemyAimer aimer;
 
 	float lastShootTime;
-
-	public GameObject getSkill;  // Archer가 보유한 스킬공격
-
+	float lastSkillTime;
+	
 	protected new void Awake()
 	{
 		base.Awake();
@@ -26,11 +25,14 @@ public class Archer : WalkingEnemy
 		{
 			walkingState = MovingState.STAYING;
 			aimer.FollowTarget();
-			if (Time.time - lastShootTime >= (1 / attackSpeed))
+
+			EnemySkill();
+
+			/*else if (Time.time - lastShootTime >= (1 / attackSpeed))  // 몬스터 일반공격
 			{
 				lastShootTime = Time.time;
 				shooter.Shoot(new DamageReport(damage, this));
-			}
+			}*/
 		}
 	}
 	protected new void FixedUpdate()
