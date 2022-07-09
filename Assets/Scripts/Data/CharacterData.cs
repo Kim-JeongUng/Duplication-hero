@@ -6,10 +6,10 @@ using System;
 
 public class CharacterDatas
 {
-    public int AD;
-    public int AP;
+    public float AD;
+    public float AP;
     public float AS;
-    public int Speed;
+    public float Speed;
     public int HP;
     public int Coin;
 }

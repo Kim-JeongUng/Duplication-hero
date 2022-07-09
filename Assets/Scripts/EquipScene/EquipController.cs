@@ -60,12 +60,12 @@ public class EquipController : MonoBehaviour
         CharacterData.instance.Save(characterDatas); 
     }
     public void RefreshState() {
-        texts.AD.text = characterDatas.AD.ToString();
-        texts.AP.text = characterDatas.AP.ToString();
-        texts.AS.text = characterDatas.AS.ToString("F1");
-        texts.Speed.text = characterDatas.Speed.ToString();
-        texts.HP.text = characterDatas.HP.ToString();
-        texts.Coin.text = characterDatas.Coin.ToString();
+        texts.AD.text = characterDatas.AD.ToString("+0.##;-0.##;0");
+        texts.AP.text = characterDatas.AP.ToString("+0.##;-0.##;0");
+        texts.AS.text = characterDatas.AS.ToString("+0.##;-0.##;0");
+        texts.Speed.text = characterDatas.Speed.ToString("+0.##;-0.##;0");
+        texts.HP.text = characterDatas.HP.ToString("+0.##;-0.##;0");
+        texts.Coin.text = characterDatas.Coin.ToString("+0.##;-0.##;0");
     }
     public void SetItems()
     {
@@ -76,7 +76,7 @@ public class EquipController : MonoBehaviour
             item.GetComponent<MyItems>().itemData = items.ItemRows[i];
             item.GetComponent<MyItems>().Check.SetActive(items.ItemRows[i].isEquip);
             item.GetComponent<MyItems>().ItemImageObject.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
-
+            item.GetComponent<MyItems>().reinForceLevelText.text = "LV."+items.ItemRows[i].reinForceLevel.ToString();
             //인벤토리 아이템 장착
             if (items.ItemRows[i].isEquip) { 
                 int varNum = 0;
