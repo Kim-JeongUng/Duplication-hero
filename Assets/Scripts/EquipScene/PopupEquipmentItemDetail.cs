@@ -84,7 +84,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         CharacterData.instance.Save(EquipController.instance.characterDatas);
         EquipController.instance.SaveData();
         Destroy(thisItemObject);
-        SceneManager.LoadScene("EquipScene");
+        SceneManager.LoadScene("EquipmentScene");
     }
     public void UpgradeItemButton()
     {
@@ -99,13 +99,13 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 EquipItemButton();
                 thisItem.value *= 1.1f; //´É·ÂÄ¡ 10%»ó½Â
                 thisItem.reinForceLevel++;
-                thisItemObject.reinForceLevelText.text = thisItem.reinForceLevel.ToString();
+                thisItemObject.reinForceLevelText.text = "LV." + thisItem.reinForceLevel.ToString();
                 EquipItemButton();
             }
             else
             {
                 thisItem.reinForceLevel++;
-                thisItemObject.reinForceLevelText.text = thisItem.reinForceLevel.ToString();
+                thisItemObject.reinForceLevelText.text = "LV." + thisItem.reinForceLevel.ToString();
                 thisItem.value *= 1.1f;
             }
 
@@ -123,6 +123,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
     {
         thisItemObject.Equip();
         thisItemObject.EquipCheck();
+        PlaceEquipText.text = thisItem.isEquip ? "UnEquip" : "Equip";
     }
 
 }

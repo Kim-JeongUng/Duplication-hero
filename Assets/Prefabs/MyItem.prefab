@@ -161,7 +161,7 @@ MonoBehaviour:
     isEquip: 0
   Check: {fileID: 2831829058040843709}
   ItemImageObject: {fileID: 2831829058863781763}
-  reinForceLevel: {fileID: 104154085483267225}
+  reinForceLevelText: {fileID: 104154085483267225}
 --- !u!1 &2831829057818736276
 GameObject:
   m_ObjectHideFlags: 0
