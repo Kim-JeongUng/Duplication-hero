@@ -46,6 +46,7 @@ public abstract class FlyingEnemy : Enemy
 
     protected new void OnTriggerEnter(Collider other)
     {
+        Debug.Log("tlqkf");
         base.OnTriggerEnter(other);
         if (other.tag == Tags.playerTag)
         {

@@ -233,7 +233,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &1614598818269502753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +341,6 @@ MonoBehaviour:
   randomTime: 2
   touchDamageMultiplier: 1
   coinsToDrop: 100
-  multipleobjectpooling: {fileID: 0}
 --- !u!1 &3738630275334420280
 GameObject:
   m_ObjectHideFlags: 0
