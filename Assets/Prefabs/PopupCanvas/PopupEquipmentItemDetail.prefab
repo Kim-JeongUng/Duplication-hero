@@ -541,10 +541,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 392604352000189701}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2291334893675421932}
+        m_TargetAssemblyTypeName: PopupEquipmentItemDetail, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2735,6 +2735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392604352000189700}
+  - component: {fileID: 2291334893675421932}
   m_Layer: 5
   m_Name: PopupEquipmentItemDetail
   m_TagString: Untagged
@@ -2762,6 +2763,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2291334893675421932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392604352000189701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44895cf4c4191449818be2499220db3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlaceItemImage: {fileID: 392604350371752818}
+  PlaceItemName: {fileID: 392604350057802167}
+  PlaceAbility: {fileID: 392604351336734271}
+  PlaceValue: {fileID: 392604351855279442}
+  PlaceSellCoin: {fileID: 392604351481267857}
+  PlaceUpgradeCoin: {fileID: 6672070875190815711}
+  PlaceReinForceLevel: {fileID: 392604350001986752}
+  thisItem:
+    ItemIndex: 0
+    ItemName: 
+    type: 
+    reinForceLevel: 0
+    value: 0
+    isEquip: 0
 --- !u!1 &1306407922835753595
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,10 +2909,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 392604352000189701}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2291334893675421932}
+        m_TargetAssemblyTypeName: PopupEquipmentItemDetail, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

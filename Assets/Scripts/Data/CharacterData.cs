@@ -19,8 +19,9 @@ public class UserItemData
     public int ItemIndex;
     public string ItemName;
     public string type;
+    public int reinForceLevel;
     public float value;
-    public bool isEquip;
+    public bool isEquip; 
 }
 
 [System.Serializable]

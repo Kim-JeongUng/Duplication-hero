@@ -33,7 +33,7 @@ public class EquipController : MonoBehaviour
     public static EquipController instance;
     public UIText texts;
     public EquipData equipData;
-    CharacterDatas characterDatas;
+    public CharacterDatas characterDatas;
     public static Action SaveAndReferesh;
 
     [SerializeField]

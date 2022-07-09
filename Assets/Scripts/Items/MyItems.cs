@@ -66,4 +66,10 @@ public class MyItems : MonoBehaviour
             EquipController.instance.equipData.EquipmentInfo[varNum] = null;
         }
     }
+    public void OpenEquipDeatilCanvas()
+    {
+        PopupEquipmentItemDetail.instance.thisItemObject = this;
+        PopupEquipmentItemDetail.instance.thisItem = itemData;
+        PopupEquipmentItemDetail.instance.Show();
+    }
 }
