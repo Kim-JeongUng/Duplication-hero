@@ -52,6 +52,7 @@ public abstract class WalkingEnemy : Enemy
             default:
                 break;
         }
+        EnemySkill();
     }
 
     protected new void OnTriggerEnter(Collider other)

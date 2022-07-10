@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
         GameManager.instance.gameData.nowProgressLevel++;
 
         //다음스테이지 나올 몬스터 ( 레벨 및 구현 필요 또는 랜덤? )
-        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "Bird" };
+        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat" };
 
         gameState.value = GameState.INIT;
         SceneManager.LoadScene("GameScene");

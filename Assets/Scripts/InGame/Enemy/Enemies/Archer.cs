@@ -26,7 +26,7 @@ public class Archer : WalkingEnemy
 			walkingState = MovingState.STAYING;
 			aimer.FollowTarget();
 
-			EnemySkill();
+			//EnemySkill();
 
 			/*else if (Time.time - lastShootTime >= (1 / attackSpeed))  // 몬스터 일반공격
 			{
@@ -49,7 +49,7 @@ public class Archer : WalkingEnemy
 	}
 	protected override void Death(Entity killer)
 	{
-		Debug.Log("------------Monster Dead-------------");
+		Debug.Log("------------Archer Dead-------------");
 		shooter.Dispose();
 		// 확률에따라 스킬구슬, 장비아이템, 꽝 3가지 중에서 랜덤 실행
 

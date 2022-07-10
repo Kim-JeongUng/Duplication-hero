@@ -46,6 +46,7 @@ public abstract class FlyingEnemy : Enemy
             default:
                 break;
         }
+        EnemySkill();
     }
 
     protected new void OnTriggerEnter(Collider other)

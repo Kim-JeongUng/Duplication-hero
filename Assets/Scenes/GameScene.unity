@@ -970,7 +970,7 @@ MonoBehaviour:
   enemySpawner: {fileID: 759118181}
   EnemyPrefabs:
   - {fileID: 3343400541712103999, guid: 4b96f1c68b5decd45af8e94c8a943039, type: 3}
-  - {fileID: 3343400541712103999, guid: ffbb99046d5feac459f07b7521a68fc7, type: 3}
+  - {fileID: 8596174083329394053, guid: 3c87164801bf0124d8f711eca84811e0, type: 3}
   - {fileID: 3343400541712103999, guid: d30fa9e0effe02f4aa76328243863b83, type: 3}
   - {fileID: 753785460207422148, guid: 2cadc766f57e10f4faee190a1e58de59, type: 3}
   player: {fileID: 7983287317589892047}
