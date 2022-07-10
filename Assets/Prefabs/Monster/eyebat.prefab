@@ -824,7 +824,7 @@ MonoBehaviour:
   randomTime: 2
   touchDamageMultiplier: 1
   coinsToDrop: 100
-  getSkill: {fileID: 2280925449003687311, guid: b682d7cc9c334544592d295160953116, type: 3}
+  getSkill: {fileID: 3427324384926251838, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
   skillcool: 6
   canUseSkill: 1
   anim: {fileID: 0}

@@ -8,8 +8,6 @@ public class Flower : StandEnemy
 
 	float lastShootTime;
 
-	public GameObject getSkill;  
-
 	protected new void Awake()
 	{
 		base.Awake();
