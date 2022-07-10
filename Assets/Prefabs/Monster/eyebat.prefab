@@ -112,7 +112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 70, y: -180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 88}
+  m_AnchoredPosition: {x: 0, y: 148.5}
   m_SizeDelta: {x: 1, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5393763740825132478
@@ -794,7 +794,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 50, y: 120, z: 40}
+  m_Size: {x: 50, y: 120, z: 100}
   m_Center: {x: 0, y: 30, z: 0}
 --- !u!114 &8641531077742561079
 MonoBehaviour:
@@ -824,6 +824,10 @@ MonoBehaviour:
   randomTime: 2
   touchDamageMultiplier: 1
   coinsToDrop: 100
+  getSkill: {fileID: 0}
+  skillcool: 0
+  canUseSkill: 1
+  anim: {fileID: 0}
 --- !u!1 &8596204189200441385
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8596233415616302549}
   m_LocalRotation: {x: -0.6371893, y: -0, z: -0, w: 0.77070737}
-  m_LocalPosition: {x: 0, y: 0.4811764, z: -4.325422}
+  m_LocalPosition: {x: 0, y: 61, z: -4.325422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8593212514169476791}
@@ -941,7 +945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8596241463774432029}
   m_LocalRotation: {x: 0.00000017977017, y: 0.6371893, z: 0.77070737, w: -0.00000021743958}
-  m_LocalPosition: {x: 0, y: 0, z: 31.632553}
+  m_LocalPosition: {x: 0, y: 60.5, z: 31.632553}
   m_LocalScale: {x: 3.7468355, y: 3.7468355, z: 3.7468355}
   m_Children: []
   m_Father: {fileID: 8592936906596634535}

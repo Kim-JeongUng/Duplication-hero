@@ -3,8 +3,9 @@ using UnityEngine.AI;
 
 public abstract class FlyingEnemy : Enemy
 {
-    float movingStateTimer = 0;
-
+    protected float movingStateTimer = 0;
+    public abstract void Animation_Run(bool isRun);
+    public abstract void Animation_Attack();
     protected void Update()
     {
         switch (walkingState)
@@ -14,9 +15,11 @@ public abstract class FlyingEnemy : Enemy
                 {
                     walkingState = MovingState.STAYING;
                     movingStateTimer = Time.time;
+                    Animation_Run(false);
                 }
                 else
                 {
+                    Animation_Run(true);
                     Vector3 dest = player.componentCache.position;
                     dest = new Vector3(dest.x, transform.position.y, dest.z);
                     transform.LookAt(dest);
@@ -28,6 +31,7 @@ public abstract class FlyingEnemy : Enemy
                 {
                     if (touchingPlayer != null)
                     {
+                        Animation_Attack();
                         if (touchingPlayer.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this)))
                             touchingPlayer = null;
                         movingStateTimer = Time.time;
