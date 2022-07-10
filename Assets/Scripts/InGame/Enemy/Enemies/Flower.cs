@@ -5,13 +5,15 @@ public class Flower : StandEnemy
 {
 	[SerializeField] Shooter shooter;
 	[SerializeField] EnemyAimer aimer;
+	[SerializeField] private Animator anim;
 
 	float lastShootTime;
 
 	protected new void Awake()
 	{
 		base.Awake();
-		
+		anim = GetComponent<Animator>();
+
 		if (shooter == null)
 			shooter = GetComponentInChildren<Shooter>();
 		if (aimer == null)
@@ -25,10 +27,14 @@ public class Flower : StandEnemy
 			aimer.FollowTarget();
 			if (Time.time - lastShootTime >= (1 / attackSpeed))
 			{
+				Invoke("AttackAnim", 0.8f);
 				lastShootTime = Time.time;
 				shooter.Shoot(new DamageReport(damage, this));
 			}
 		}
+	}
+	void AttackAnim(){
+		anim.SetTrigger("attack");
 	}
 	protected new void FixedUpdate()
 	{

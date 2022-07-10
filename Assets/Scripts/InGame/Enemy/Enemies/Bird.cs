@@ -3,7 +3,8 @@
 public class Bird : FlyingEnemy
 {
     [SerializeField] private Animator anim;
-    private void Start() {
+    private new void Awake() {
+        base.Awake();
         anim = GetComponent<Animator>();
     }
     
