@@ -1,0 +1,2256 @@
+fileFormatVersion: 2
+guid: 56a43891d7096154980be7ee12c2f78c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: BubbleLoop1_00000
+  - first:
+      213: 21300002
+    second: BubbleLoop1_00001
+  - first:
+      213: 21300004
+    second: BubbleLoop1_00002
+  - first:
+      213: 21300006
+    second: BubbleLoop1_00003
+  - first:
+      213: 21300008
+    second: BubbleLoop1_00004
+  - first:
+      213: 21300010
+    second: BubbleLoop1_00005
+  - first:
+      213: 21300012
+    second: BubbleLoop1_00006
+  - first:
+      213: 21300014
+    second: BubbleLoop1_00007
+  - first:
+      213: 21300016
+    second: BubbleLoop1_00008
+  - first:
+      213: 21300018
+    second: BubbleLoop1_00009
+  - first:
+      213: 21300020
+    second: BubbleLoop1_00010
+  - first:
+      213: 21300022
+    second: BubbleLoop1_00011
+  - first:
+      213: 21300024
+    second: BubbleLoop1_00012
+  - first:
+      213: 21300026
+    second: BubbleLoop1_00013
+  - first:
+      213: 21300028
+    second: BubbleLoop1_00014
+  - first:
+      213: 21300030
+    second: BubbleLoop1_00015
+  - first:
+      213: 21300032
+    second: BubbleLoop1_00016
+  - first:
+      213: 21300034
+    second: BubbleLoop1_00017
+  - first:
+      213: 21300036
+    second: BubbleLoop1_00018
+  - first:
+      213: 21300038
+    second: BubbleLoop1_00019
+  - first:
+      213: 21300040
+    second: BubbleLoop1_00020
+  - first:
+      213: 21300042
+    second: BubbleLoop1_00021
+  - first:
+      213: 21300044
+    second: BubbleLoop1_00022
+  - first:
+      213: 21300046
+    second: BubbleLoop1_00023
+  - first:
+      213: 21300048
+    second: BubbleLoop1_00024
+  - first:
+      213: 21300050
+    second: BubbleLoop1_00025
+  - first:
+      213: 21300052
+    second: BubbleLoop1_00026
+  - first:
+      213: 21300054
+    second: BubbleLoop1_00027
+  - first:
+      213: 21300056
+    second: BubbleLoop1_00028
+  - first:
+      213: 21300058
+    second: BubbleLoop1_00029
+  - first:
+      213: 21300060
+    second: BubbleLoop2_00000
+  - first:
+      213: 21300062
+    second: BubbleLoop2_00001
+  - first:
+      213: 21300064
+    second: BubbleLoop2_00002
+  - first:
+      213: 21300066
+    second: BubbleLoop2_00003
+  - first:
+      213: 21300068
+    second: BubbleLoop2_00004
+  - first:
+      213: 21300070
+    second: BubbleLoop2_00005
+  - first:
+      213: 21300072
+    second: BubbleLoop2_00006
+  - first:
+      213: 21300074
+    second: BubbleLoop2_00007
+  - first:
+      213: 21300076
+    second: BubbleLoop2_00008
+  - first:
+      213: 21300078
+    second: BubbleLoop2_00009
+  - first:
+      213: 21300080
+    second: BubbleLoop2_00010
+  - first:
+      213: 21300082
+    second: BubbleLoop2_00011
+  - first:
+      213: 21300084
+    second: BubbleLoop2_00012
+  - first:
+      213: 21300086
+    second: BubbleLoop2_00013
+  - first:
+      213: 21300088
+    second: BubbleLoop2_00014
+  - first:
+      213: 21300090
+    second: BubbleLoop2_00015
+  - first:
+      213: 21300092
+    second: BubbleLoop2_00016
+  - first:
+      213: 21300094
+    second: BubbleLoop2_00017
+  - first:
+      213: 21300096
+    second: BubbleLoop2_00018
+  - first:
+      213: 21300098
+    second: BubbleLoop2_00019
+  - first:
+      213: 21300100
+    second: BubbleLoop2_00020
+  - first:
+      213: 21300102
+    second: BubbleLoop2_00021
+  - first:
+      213: 21300104
+    second: BubbleLoop2_00022
+  - first:
+      213: 21300106
+    second: BubbleLoop2_00023
+  - first:
+      213: 21300108
+    second: BubbleLoop2_00024
+  - first:
+      213: 21300110
+    second: BubbleLoop2_00025
+  - first:
+      213: 21300112
+    second: BubbleLoop2_00026
+  - first:
+      213: 21300114
+    second: BubbleLoop2_00027
+  - first:
+      213: 21300116
+    second: BubbleLoop2_00028
+  - first:
+      213: 21300118
+    second: BubbleLoop2_00029
+  - first:
+      213: 21300120
+    second: BubbleLoop3_00000
+  - first:
+      213: 21300122
+    second: BubbleLoop3_00001
+  - first:
+      213: 21300124
+    second: BubbleLoop3_00002
+  - first:
+      213: 21300126
+    second: BubbleLoop3_00003
+  - first:
+      213: 21300128
+    second: BubbleLoop3_00004
+  - first:
+      213: 21300130
+    second: BubbleLoop3_00005
+  - first:
+      213: 21300132
+    second: BubbleLoop3_00006
+  - first:
+      213: 21300134
+    second: BubbleLoop3_00007
+  - first:
+      213: 21300136
+    second: BubbleLoop3_00008
+  - first:
+      213: 21300138
+    second: BubbleLoop3_00009
+  - first:
+      213: 21300140
+    second: BubbleLoop3_00010
+  - first:
+      213: 21300142
+    second: BubbleLoop3_00011
+  - first:
+      213: 21300144
+    second: BubbleLoop3_00012
+  - first:
+      213: 21300146
+    second: BubbleLoop3_00013
+  - first:
+      213: 21300148
+    second: BubbleLoop3_00014
+  - first:
+      213: 21300150
+    second: BubbleLoop3_00015
+  - first:
+      213: 21300152
+    second: BubbleLoop3_00016
+  - first:
+      213: 21300154
+    second: BubbleLoop3_00017
+  - first:
+      213: 21300156
+    second: BubbleLoop3_00018
+  - first:
+      213: 21300158
+    second: BubbleLoop3_00019
+  - first:
+      213: 21300160
+    second: BubbleLoop3_00020
+  - first:
+      213: 21300162
+    second: BubbleLoop3_00021
+  - first:
+      213: 21300164
+    second: BubbleLoop3_00022
+  - first:
+      213: 21300166
+    second: BubbleLoop3_00023
+  - first:
+      213: 21300168
+    second: BubbleLoop3_00024
+  - first:
+      213: 21300170
+    second: BubbleLoop3_00025
+  - first:
+      213: 21300172
+    second: BubbleLoop3_00026
+  - first:
+      213: 21300174
+    second: BubbleLoop3_00027
+  - first:
+      213: 21300176
+    second: BubbleLoop3_00028
+  - first:
+      213: 21300178
+    second: BubbleLoop3_00029
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BubbleLoop1_00000
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 1638
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00001
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 768
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00002
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 1424
+        width: 192
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00003
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 133
+        width: 192
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00004
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 152
+        width: 190
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00005
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1674
+        width: 190
+        height: 177
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50282484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00006
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1463
+        width: 188
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00007
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1226
+        width: 188
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5029586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00008
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 645
+        width: 187
+        height: 166
+      alignment: 9
+      pivot: {x: 0.5026738, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00009
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 835
+        width: 187
+        height: 166
+      alignment: 9
+      pivot: {x: 0.5026738, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00010
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 57
+        width: 186
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00011
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 834
+        width: 185
+        height: 167
+      alignment: 9
+      pivot: {x: 0.5027027, y: 0.502994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00012
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 780
+        width: 183
+        height: 168
+      alignment: 9
+      pivot: {x: 0.5027322, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00013
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 247
+        width: 181
+        height: 171
+      alignment: 9
+      pivot: {x: 0.50276244, y: 0.50292397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00014
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 846
+        width: 179
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.50289017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00015
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1025
+        width: 177
+        height: 176
+      alignment: 9
+      pivot: {x: 0.50282484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00016
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 442
+        width: 174
+        height: 179
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5027933}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00017
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1225
+        width: 172
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00018
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 972
+        width: 170
+        height: 185
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5027027}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00019
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 1056
+        width: 168
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00020
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1249
+        width: 168
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00021
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 1419
+        width: 168
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00022
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 1635
+        width: 170
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00023
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1853
+        width: 172
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00024
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 132
+        width: 174
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50256413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00025
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 992
+        width: 178
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50256413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00026
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 779
+        width: 182
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00027
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 561
+        width: 186
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00028
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 333
+        width: 190
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop1_00029
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1202
+        width: 192
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00000
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 1854
+        width: 193
+        height: 193
+      alignment: 9
+      pivot: {x: 0.50259066, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00001
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1853
+        width: 193
+        height: 194
+      alignment: 9
+      pivot: {x: 0.50259066, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00002
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 984
+        width: 191
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4973822, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 115
+        width: 189
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4973545, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00004
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 343
+        width: 185
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4972973, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00005
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 997
+        width: 182
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00006
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1211
+        width: 178
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00007
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 1655
+        width: 172
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00008
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 1850
+        width: 168
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5025381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00009
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 1627
+        width: 164
+        height: 198
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5050505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00010
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1404
+        width: 159
+        height: 199
+      alignment: 9
+      pivot: {x: 0.49685535, y: 0.5025126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00011
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1848
+        width: 156
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5025126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00012
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 833
+        width: 152
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5025126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00013
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 622
+        width: 150
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00014
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 1176
+        width: 148
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00015
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 421
+        width: 147
+        height: 200
+      alignment: 9
+      pivot: {x: 0.49659863, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00016
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 556
+        width: 148
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00017
+      rect:
+        serializedVersion: 2
+        x: 1870
+        y: 1400
+        width: 149
+        height: 200
+      alignment: 9
+      pivot: {x: 0.4966443, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00018
+      rect:
+        serializedVersion: 2
+        x: 1883
+        y: 1624
+        width: 152
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00019
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1025
+        width: 155
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5032258, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00020
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1181
+        width: 158
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00021
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 1452
+        width: 163
+        height: 198
+      alignment: 9
+      pivot: {x: 0.4969325, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00022
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1849
+        width: 168
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00023
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 351
+        width: 172
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5025381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00024
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 772
+        width: 176
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00025
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 560
+        width: 181
+        height: 195
+      alignment: 9
+      pivot: {x: 0.50276244, y: 0.4974359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00026
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1201
+        width: 186
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4974359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00027
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1421
+        width: 188
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00028
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 551
+        width: 191
+        height: 193
+      alignment: 9
+      pivot: {x: 0.4973822, y: 0.50259066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop2_00029
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1420
+        width: 193
+        height: 193
+      alignment: 9
+      pivot: {x: 0.4974093, y: 0.50259066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00000
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1854
+        width: 193
+        height: 193
+      alignment: 9
+      pivot: {x: 0.50259066, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00001
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1854
+        width: 194
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00002
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 1639
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00003
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 990
+        width: 194
+        height: 187
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5026738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00004
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1215
+        width: 195
+        height: 182
+      alignment: 9
+      pivot: {x: 0.4974359, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00005
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 572
+        width: 195
+        height: 176
+      alignment: 9
+      pivot: {x: 0.4974359, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00006
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1875
+        width: 196
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00007
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 1466
+        width: 196
+        height: 165
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5030303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00008
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1043
+        width: 196
+        height: 159
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5031447}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00009
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 657
+        width: 198
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5, y: 0.503268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00010
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 485
+        width: 198
+        height: 148
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5067568}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00011
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 82
+        width: 198
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5034965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00012
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 292
+        width: 198
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50359714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00013
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 326
+        width: 199
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5025126, y: 0.5037037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00014
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 10
+        width: 198
+        height: 133
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5037594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00015
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 243
+        width: 198
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50757575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00016
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 399
+        width: 198
+        height: 133
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5037594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00017
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 167
+        width: 198
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5037037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00018
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 130
+        width: 197
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5025381, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00019
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 455
+        width: 197
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5025381, y: 0.4965035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00020
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 249
+        width: 198
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00021
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 655
+        width: 197
+        height: 154
+      alignment: 9
+      pivot: {x: 0.49746192, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00022
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 1268
+        width: 197
+        height: 160
+      alignment: 9
+      pivot: {x: 0.49746192, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00023
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1659
+        width: 196
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00024
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1875
+        width: 196
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00025
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 358
+        width: 195
+        height: 178
+      alignment: 9
+      pivot: {x: 0.50256413, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00026
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1431
+        width: 194
+        height: 183
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49726775}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00027
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 779
+        width: 194
+        height: 187
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5026738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00028
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 1640
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleLoop3_00029
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1637
+        width: 194
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50259066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

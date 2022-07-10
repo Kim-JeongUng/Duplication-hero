@@ -1,0 +1,2256 @@
+fileFormatVersion: 2
+guid: 7ecc9387dbfa8d7479e44b3d3c3d6574
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Bubble2_00000
+  - first:
+      213: 21300002
+    second: Bubble2_00001
+  - first:
+      213: 21300004
+    second: Bubble2_00002
+  - first:
+      213: 21300006
+    second: Bubble2_00003
+  - first:
+      213: 21300008
+    second: Bubble2_00004
+  - first:
+      213: 21300010
+    second: Bubble2_00005
+  - first:
+      213: 21300012
+    second: Bubble2_00006
+  - first:
+      213: 21300014
+    second: Bubble2_00007
+  - first:
+      213: 21300016
+    second: Bubble2_00008
+  - first:
+      213: 21300018
+    second: Bubble2_00009
+  - first:
+      213: 21300020
+    second: Bubble2_00010
+  - first:
+      213: 21300022
+    second: Bubble2_00011
+  - first:
+      213: 21300024
+    second: Bubble2_00012
+  - first:
+      213: 21300026
+    second: Bubble2_00013
+  - first:
+      213: 21300028
+    second: Bubble2_00014
+  - first:
+      213: 21300030
+    second: Bubble2_00015
+  - first:
+      213: 21300032
+    second: Bubble2_00016
+  - first:
+      213: 21300034
+    second: Bubble2_00017
+  - first:
+      213: 21300036
+    second: Bubble2_00018
+  - first:
+      213: 21300038
+    second: Bubble2_00019
+  - first:
+      213: 21300040
+    second: Bubble2_00020
+  - first:
+      213: 21300042
+    second: Bubble2_00021
+  - first:
+      213: 21300044
+    second: Bubble2_00022
+  - first:
+      213: 21300046
+    second: Bubble2_00023
+  - first:
+      213: 21300048
+    second: Bubble2_00024
+  - first:
+      213: 21300050
+    second: Bubble2_00025
+  - first:
+      213: 21300052
+    second: Bubble2_00026
+  - first:
+      213: 21300054
+    second: Bubble2_00027
+  - first:
+      213: 21300056
+    second: Bubble2_00028
+  - first:
+      213: 21300058
+    second: Bubble2_00029
+  - first:
+      213: 21300060
+    second: BubbleAnimation-sq-hor_00000
+  - first:
+      213: 21300062
+    second: BubbleAnimation-sq-hor_00001
+  - first:
+      213: 21300064
+    second: BubbleAnimation-sq-hor_00002
+  - first:
+      213: 21300066
+    second: BubbleAnimation-sq-hor_00003
+  - first:
+      213: 21300068
+    second: BubbleAnimation-sq-hor_00004
+  - first:
+      213: 21300070
+    second: BubbleAnimation-sq-hor_00005
+  - first:
+      213: 21300072
+    second: BubbleAnimation-sq-hor_00006
+  - first:
+      213: 21300074
+    second: BubbleAnimation-sq-hor_00007
+  - first:
+      213: 21300076
+    second: BubbleAnimation-sq-hor_00008
+  - first:
+      213: 21300078
+    second: BubbleAnimation-sq-hor_00009
+  - first:
+      213: 21300080
+    second: BubbleAnimation-sq-hor_00010
+  - first:
+      213: 21300082
+    second: BubbleAnimation-sq-hor_00011
+  - first:
+      213: 21300084
+    second: BubbleAnimation-sq-hor_00012
+  - first:
+      213: 21300086
+    second: BubbleAnimation-sq-hor_00013
+  - first:
+      213: 21300088
+    second: BubbleAnimation-sq-hor_00014
+  - first:
+      213: 21300090
+    second: BubbleAnimation-sq-hor_00015
+  - first:
+      213: 21300092
+    second: BubbleAnimation-sq-hor_00016
+  - first:
+      213: 21300094
+    second: BubbleAnimation-sq-hor_00017
+  - first:
+      213: 21300096
+    second: BubbleAnimation-sq-hor_00018
+  - first:
+      213: 21300098
+    second: BubbleAnimation-sq-hor_00019
+  - first:
+      213: 21300100
+    second: BubbleAnimation-sq-hor_00020
+  - first:
+      213: 21300102
+    second: BubbleAnimation-sq-hor_00021
+  - first:
+      213: 21300104
+    second: BubbleAnimation-sq-hor_00022
+  - first:
+      213: 21300106
+    second: BubbleAnimation-sq-hor_00023
+  - first:
+      213: 21300108
+    second: BubbleAnimation-sq-hor_00024
+  - first:
+      213: 21300110
+    second: BubbleAnimation-sq-hor_00025
+  - first:
+      213: 21300112
+    second: BubbleAnimation-sq-hor_00026
+  - first:
+      213: 21300114
+    second: BubbleAnimation-sq-hor_00027
+  - first:
+      213: 21300116
+    second: BubbleAnimation-sq-hor_00028
+  - first:
+      213: 21300118
+    second: BubbleAnimation-sq-hor_00029
+  - first:
+      213: 21300120
+    second: BubbleAnimation-sq-vert_00000
+  - first:
+      213: 21300122
+    second: BubbleAnimation-sq-vert_00001
+  - first:
+      213: 21300124
+    second: BubbleAnimation-sq-vert_00002
+  - first:
+      213: 21300126
+    second: BubbleAnimation-sq-vert_00003
+  - first:
+      213: 21300128
+    second: BubbleAnimation-sq-vert_00004
+  - first:
+      213: 21300130
+    second: BubbleAnimation-sq-vert_00005
+  - first:
+      213: 21300132
+    second: BubbleAnimation-sq-vert_00006
+  - first:
+      213: 21300134
+    second: BubbleAnimation-sq-vert_00007
+  - first:
+      213: 21300136
+    second: BubbleAnimation-sq-vert_00008
+  - first:
+      213: 21300138
+    second: BubbleAnimation-sq-vert_00009
+  - first:
+      213: 21300140
+    second: BubbleAnimation-sq-vert_00010
+  - first:
+      213: 21300142
+    second: BubbleAnimation-sq-vert_00011
+  - first:
+      213: 21300144
+    second: BubbleAnimation-sq-vert_00012
+  - first:
+      213: 21300146
+    second: BubbleAnimation-sq-vert_00013
+  - first:
+      213: 21300148
+    second: BubbleAnimation-sq-vert_00014
+  - first:
+      213: 21300150
+    second: BubbleAnimation-sq-vert_00015
+  - first:
+      213: 21300152
+    second: BubbleAnimation-sq-vert_00016
+  - first:
+      213: 21300154
+    second: BubbleAnimation-sq-vert_00017
+  - first:
+      213: 21300156
+    second: BubbleAnimation-sq-vert_00018
+  - first:
+      213: 21300158
+    second: BubbleAnimation-sq-vert_00019
+  - first:
+      213: 21300160
+    second: BubbleAnimation-sq-vert_00020
+  - first:
+      213: 21300162
+    second: BubbleAnimation-sq-vert_00021
+  - first:
+      213: 21300164
+    second: BubbleAnimation-sq-vert_00022
+  - first:
+      213: 21300166
+    second: BubbleAnimation-sq-vert_00023
+  - first:
+      213: 21300168
+    second: BubbleAnimation-sq-vert_00024
+  - first:
+      213: 21300170
+    second: BubbleAnimation-sq-vert_00025
+  - first:
+      213: 21300172
+    second: BubbleAnimation-sq-vert_00026
+  - first:
+      213: 21300174
+    second: BubbleAnimation-sq-vert_00027
+  - first:
+      213: 21300176
+    second: BubbleAnimation-sq-vert_00028
+  - first:
+      213: 21300178
+    second: BubbleAnimation-sq-vert_00029
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bubble2_00000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 557
+        width: 193
+        height: 193
+      alignment: 9
+      pivot: {x: 0.50259066, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00001
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1856
+        width: 193
+        height: 192
+      alignment: 9
+      pivot: {x: 0.50259066, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00002
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1426
+        width: 193
+        height: 190
+      alignment: 9
+      pivot: {x: 0.4974093, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00003
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1430
+        width: 192
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00004
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 785
+        width: 191
+        height: 181
+      alignment: 9
+      pivot: {x: 0.4973822, y: 0.50276244}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00005
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1872
+        width: 190
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00006
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1430
+        width: 189
+        height: 172
+      alignment: 9
+      pivot: {x: 0.5026455, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00007
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 201
+        width: 188
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5029586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00008
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1218
+        width: 188
+        height: 167
+      alignment: 9
+      pivot: {x: 0.5, y: 0.502994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00009
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 1661
+        width: 188
+        height: 166
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5060241}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00010
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 1661
+        width: 187
+        height: 166
+      alignment: 9
+      pivot: {x: 0.4973262, y: 0.5060241}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00011
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 826
+        width: 185
+        height: 167
+      alignment: 9
+      pivot: {x: 0.5027027, y: 0.502994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00012
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 1464
+        width: 183
+        height: 169
+      alignment: 9
+      pivot: {x: 0.5027322, y: 0.5029586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00013
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 1656
+        width: 181
+        height: 171
+      alignment: 9
+      pivot: {x: 0.50276244, y: 0.50292397}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00014
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 1464
+        width: 179
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00015
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 1461
+        width: 176
+        height: 177
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50282484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00016
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 623
+        width: 174
+        height: 180
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50555557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00017
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 826
+        width: 171
+        height: 183
+      alignment: 9
+      pivot: {x: 0.50292397, y: 0.5027322}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00018
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 1009
+        width: 169
+        height: 186
+      alignment: 9
+      pivot: {x: 0.5029586, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00019
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 615
+        width: 169
+        height: 188
+      alignment: 9
+      pivot: {x: 0.5029586, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00020
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1658
+        width: 168
+        height: 191
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4973822}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00021
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 1855
+        width: 168
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50259066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00022
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 367
+        width: 169
+        height: 195
+      alignment: 9
+      pivot: {x: 0.49704143, y: 0.50256413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00023
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 992
+        width: 172
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00024
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 367
+        width: 174
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00025
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 1208
+        width: 179
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5027933, y: 0.4974359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00026
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 353
+        width: 183
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5027322, y: 0.4974359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00027
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 991
+        width: 187
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4973262, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00028
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 1639
+        width: 190
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble2_00029
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1421
+        width: 193
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4974093, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 773
+        width: 193
+        height: 193
+      alignment: 9
+      pivot: {x: 0.50259066, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1638
+        width: 194
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00002
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1642
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00003
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 781
+        width: 194
+        height: 187
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5026738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00004
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1002
+        width: 195
+        height: 182
+      alignment: 9
+      pivot: {x: 0.4974359, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00005
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 586
+        width: 194
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00006
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 1876
+        width: 196
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00007
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 615
+        width: 196
+        height: 165
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5030303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00008
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 421
+        width: 196
+        height: 159
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5031447}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00009
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 1032
+        width: 198
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5, y: 0.503268}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00010
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 826
+        width: 198
+        height: 148
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5067568}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00011
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 997
+        width: 198
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5034965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00012
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 37
+        width: 197
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5025381, y: 0.50359714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00013
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 199
+        width: 198
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5050505, y: 0.5037037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67305410000000000800000000000000
+      internalID: 21300086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00014
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 447
+        width: 198
+        height: 133
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5037594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00015
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 292
+        width: 198
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50757575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00016
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 43
+        width: 198
+        height: 133
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5037594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00017
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 357
+        width: 198
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5037037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00018
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 38
+        width: 197
+        height: 138
+      alignment: 9
+      pivot: {x: 0.5025381, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08305410000000000800000000000000
+      internalID: 21300096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00019
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 6
+        width: 197
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5025381, y: 0.4965035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28305410000000000800000000000000
+      internalID: 21300098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00020
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1067
+        width: 198
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00021
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 1208
+        width: 197
+        height: 154
+      alignment: 9
+      pivot: {x: 0.49746192, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68305410000000000800000000000000
+      internalID: 21300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00022
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 826
+        width: 197
+        height: 160
+      alignment: 9
+      pivot: {x: 0.49746192, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88305410000000000800000000000000
+      internalID: 21300104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00023
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 803
+        width: 196
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00024
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 172
+        width: 196
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00025
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 367
+        width: 195
+        height: 177
+      alignment: 9
+      pivot: {x: 0.50256413, y: 0.49717513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00026
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 148
+        width: 194
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00027
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 571
+        width: 194
+        height: 187
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5026738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00028
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1858
+        width: 194
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-hor_00029
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1855
+        width: 194
+        height: 193
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50259066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1205
+        width: 193
+        height: 193
+      alignment: 9
+      pivot: {x: 0.50259066, y: 0.4974093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1854
+        width: 193
+        height: 194
+      alignment: 9
+      pivot: {x: 0.50259066, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00002
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 191
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4973822, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00003
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1425
+        width: 189
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4973545, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00004
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1639
+        width: 185
+        height: 194
+      alignment: 9
+      pivot: {x: 0.4972973, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00005
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 567
+        width: 182
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00006
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 989
+        width: 177
+        height: 196
+      alignment: 9
+      pivot: {x: 0.50282484, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00007
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1211
+        width: 172
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00008
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 1851
+        width: 168
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5025381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00009
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1850
+        width: 164
+        height: 198
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5050505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00010
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 1436
+        width: 160
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5025126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00011
+      rect:
+        serializedVersion: 2
+        x: 1255
+        y: 199
+        width: 155
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5032258, y: 0.5025126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00012
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 1239
+        width: 152
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5025126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00013
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1627
+        width: 149
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5033557, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00014
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 1181
+        width: 147
+        height: 200
+      alignment: 9
+      pivot: {x: 0.50340134, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00015
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 603
+        width: 146
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00016
+      rect:
+        serializedVersion: 2
+        x: 1641
+        y: 603
+        width: 147
+        height: 200
+      alignment: 9
+      pivot: {x: 0.50340134, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00017
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1404
+        width: 148
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00018
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 1238
+        width: 151
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5033113, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00019
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 603
+        width: 155
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5032258, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00020
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 393
+        width: 159
+        height: 199
+      alignment: 9
+      pivot: {x: 0.5031447, y: 0.49748743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00021
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 1625
+        width: 162
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00022
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 1850
+        width: 168
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00023
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 147
+        width: 172
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5025381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00024
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 148
+        width: 176
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00025
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 784
+        width: 181
+        height: 195
+      alignment: 9
+      pivot: {x: 0.50276244, y: 0.4974359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00026
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1207
+        width: 185
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5027027, y: 0.4974359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00027
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1208
+        width: 188
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00028
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 191
+        height: 193
+      alignment: 9
+      pivot: {x: 0.4973822, y: 0.50259066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BubbleAnimation-sq-vert_00029
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 989
+        width: 193
+        height: 193
+      alignment: 9
+      pivot: {x: 0.4974093, y: 0.50259066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
