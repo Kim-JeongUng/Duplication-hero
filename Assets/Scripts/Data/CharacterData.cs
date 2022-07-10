@@ -16,7 +16,6 @@ public class CharacterDatas
 [System.Serializable]
 public class UserItemData
 {
-    public int ItemIndex;
     public string ItemName;
     public string type;
     public int reinForceLevel;
@@ -105,12 +104,12 @@ public class CharacterData : MonoBehaviour
     }
     public void NewItemData()
     {
-        userItemDatas = new UserItemDatas { ItemRows = { new UserItemData { ItemIndex = 0, ItemName = "Weapon0", type = "Weapon", value = 5.0f, isEquip = false } ,
-                                                         new UserItemData { ItemIndex = 1, ItemName = "Armor0", type = "Armor", value = 5.0f, isEquip = false }  ,
-                                                         new UserItemData { ItemIndex = 2, ItemName = "Helmet0", type = "Helmet", value = 5.0f, isEquip = false } ,
-                                                         new UserItemData { ItemIndex = 3, ItemName = "Helmet1", type = "Helmet", value = 10.0f, isEquip = false } ,
-                                                         new UserItemData { ItemIndex = 4, ItemName = "Helmet2", type = "Helmet", value = 15.0f, isEquip = false } ,
-                                                         new UserItemData { ItemIndex = 5, ItemName = "Shoes0", type = "Shoes", value = 5.0f, isEquip = false }}
+        userItemDatas = new UserItemDatas { ItemRows = { new UserItemData { ItemName = "Weapon0", type = "Weapon", value = 5.0f, isEquip = false } ,
+                                                         new UserItemData { ItemName = "Armor0", type = "Armor", value = 5.0f, isEquip = false }  ,
+                                                         new UserItemData { ItemName = "Helmet0", type = "Helmet", value = 5.0f, isEquip = false } ,
+                                                         new UserItemData { ItemName = "Helmet1", type = "Helmet", value = 10.0f, isEquip = false } ,
+                                                         new UserItemData { ItemName = "Helmet2", type = "Helmet", value = 15.0f, isEquip = false } ,
+                                                         new UserItemData { ItemName = "Shoes0", type = "Shoes", value = 5.0f, isEquip = false }}
         };
         UserItemDataSave(userItemDatas);
     }
@@ -118,7 +117,6 @@ public class CharacterData : MonoBehaviour
     {
         Debug.Log("ItemAdd");
         UserItemDatas UserItem = ItemDatasLoad();
-        NewItem.ItemIndex = UserItem.ItemRows.Count;
         UserItem.ItemRows.Add(NewItem);
         UserItemDataSave(UserItem);
     }
@@ -126,7 +124,6 @@ public class CharacterData : MonoBehaviour
     {
         Debug.Log("ItemAdd");
         UserItemDatas UserItem = ItemDatasLoad();
-        NewItem.ItemIndex = ItemIndex;
         UserItem.ItemRows.Add(NewItem);
         UserItemDataSave(UserItem);
     }

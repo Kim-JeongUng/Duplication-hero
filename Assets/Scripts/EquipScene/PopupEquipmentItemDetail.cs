@@ -79,7 +79,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         {
             EquipItemButton();
         }
-        CharacterData.instance.UserRemoveItem(thisItem.ItemIndex);
+        CharacterData.instance.UserRemoveItem(thisItemObject.ItemIndex);
         EquipController.instance.characterDatas.Coin += sellCoinValue;
         CharacterData.instance.Save(EquipController.instance.characterDatas);
         EquipController.instance.SaveData();
@@ -109,7 +109,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 thisItem.value *= 1.1f;
             }
 
-            CharacterData.instance.UserChangeItem(thisItem, thisItem.ItemIndex);
+            CharacterData.instance.UserChangeItem(thisItem, thisItemObject.ItemIndex);
             EquipController.instance.SaveData();
         }
         else

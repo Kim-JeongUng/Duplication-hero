@@ -74,6 +74,7 @@ public class EquipController : MonoBehaviour
         {
             var item = Instantiate(presetItem, Inventory);
             item.GetComponent<MyItems>().itemData = items.ItemRows[i];
+            item.GetComponent<MyItems>().ItemIndex = i;
             item.GetComponent<MyItems>().Check.SetActive(items.ItemRows[i].isEquip);
             item.GetComponent<MyItems>().ItemImageObject.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
             item.GetComponent<MyItems>().reinForceLevelText.text = "LV."+items.ItemRows[i].reinForceLevel.ToString();

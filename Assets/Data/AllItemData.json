@@ -1,56 +1,48 @@
 {
   "ItemRows": [
     {
-      "ItemIndex": 0,
       "ItemName": "Weapon0",
       "type": "Weapon",
       "value": 5.0,
       "isEquip": false
     },
     {
-      "ItemIndex": 0,
       "ItemName": "Weapon1",
       "type": "Weapon",
       "value": 10.0,
       "isEquip": false
     },
     {
-      "ItemIndex": 0,
       "ItemName": "Weapon2",
       "type": "Weapon",
       "value": 15.0,
       "isEquip": false
     },
     {
-      "ItemIndex": 0,
       "ItemName": "Weapon3",
       "type": "Weapon",
       "value": 20.0,
       "isEquip": false
     },
     {
-      "ItemIndex": 0,
       "ItemName": "Weapon4",
       "type": "Weapon",
       "value": 25.0,
       "isEquip": false
     },
     {
-      "ItemIndex": 1,
       "ItemName": "Shoes",
       "type": "Armor",
       "value": 20.0,
       "isEquip": true
     },
     {
-      "ItemIndex": 2,
       "ItemName": "asd",
       "type": "Armor",
       "value": 20.0,
       "isEquip": true
     },
     {
-      "ItemIndex": 3,
       "ItemName": "adddsd",
       "type": "Armor",
       "value": 20.0,

@@ -1,1 +1,61 @@
-{"ItemRows":[{"ItemIndex":0,"ItemName":"Armor0","type":"Armor","reinForceLevel":1,"value":5.0,"isEquip":false},{"ItemIndex":1,"ItemName":"Armor1","type":"Armor","reinForceLevel":1,"value":10.0,"isEquip":true},{"ItemIndex":2,"ItemName":"Helmet1","type":"Helmet","reinForceLevel":1,"value":0.20000000298023225,"isEquip":false},{"ItemIndex":3,"ItemName":"Helmet2","type":"Helmet","reinForceLevel":1,"value":0.30000001192092898,"isEquip":true},{"ItemIndex":4,"ItemName":"Helmet4","type":"Helmet","reinForceLevel":1,"value":0.4000000059604645,"isEquip":false},{"ItemIndex":5,"ItemName":"Shoes1","type":"Shoes","reinForceLevel":1,"value":1.0,"isEquip":true},{"ItemIndex":6,"ItemName":"Weapon0","type":"Weapon","reinForceLevel":1,"value":10.0,"isEquip":true},{"ItemIndex":7,"ItemName":"Weapon1","type":"Weapon","reinForceLevel":1,"value":15.0,"isEquip":false}]}
+{
+  "ItemRows": [
+    {
+      "ItemName": "Armor0",
+      "type": "Armor",
+      "reinForceLevel": 1,
+      "value": 5.0,
+      "isEquip": false
+    },
+    
+    {
+      "ItemName": "Armor1",
+      "type": "Armor",
+      "reinForceLevel": 1,
+      "value": 10.0,
+      "isEquip": true
+    },
+    {
+      "ItemName": "Helmet1",
+      "type": "Helmet",
+      "reinForceLevel": 1,
+      "value": 0.20000000298023225,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Helmet2",
+      "type": "Helmet",
+      "reinForceLevel": 1,
+      "value": 0.30000001192092898,
+      "isEquip": true
+    },
+    {
+      "ItemName": "Helmet4",
+      "type": "Helmet",
+      "reinForceLevel": 1,
+      "value": 0.4000000059604645,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Shoes1",
+      "type": "Shoes",
+      "reinForceLevel": 1,
+      "value": 1.0,
+      "isEquip": true
+    },
+    {
+      "ItemName": "Weapon0",
+      "type": "Weapon",
+      "reinForceLevel": 1,
+      "value": 10.0,
+      "isEquip": true
+    },
+    {
+      "ItemName": "Weapon1",
+      "type": "Weapon",
+      "reinForceLevel": 1,
+      "value": 15.0,
+      "isEquip": false
+    }
+  ]
+}

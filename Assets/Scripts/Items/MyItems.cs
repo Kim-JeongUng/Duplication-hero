@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MyItems : MonoBehaviour
 {
     public UserItemData itemData;
+    public int ItemIndex;
     public GameObject Check;
     public GameObject ItemImageObject;
 
@@ -47,7 +48,7 @@ public class MyItems : MonoBehaviour
                 break;
         }
 
-        CharacterData.instance.UserChangeItem(itemData, itemData.ItemIndex);
+        CharacterData.instance.UserChangeItem(itemData, ItemIndex);
         CharacterData.instance.Save(character);
         EquipController.SaveAndReferesh();
     }
