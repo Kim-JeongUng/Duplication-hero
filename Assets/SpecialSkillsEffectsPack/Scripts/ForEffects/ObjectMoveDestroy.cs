@@ -74,7 +74,6 @@ public class ObjectMoveDestroy : MonoBehaviour
     {
         if (hit.transform.CompareTag("Enemy"))
         {
-            Debug.Log("ASD222");
             hit.transform.GetComponent<Enemy>().TakeDamage(new DamageReport(GameManager.instance.player.Damage*0.2f * (GameManager.instance.player.Ap*0.01f+1) * SkillDamageMultipler, GameManager.instance.player));
         }
         if (isCheckHitTag)

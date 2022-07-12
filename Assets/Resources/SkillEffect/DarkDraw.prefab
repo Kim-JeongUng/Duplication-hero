@@ -122,6 +122,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 6824661675880899574}
     m_Modifications:
     - target: {fileID: 2016695748014712888, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695748014712888, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695748014712888, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
       propertyPath: RotationModule.y.scalar
       value: 8.377581
       objectReference: {fileID: 0}
@@ -133,8 +141,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2016695748134849005, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695748134849005, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2016695748813169741, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
       propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695748813169742, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.type
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2016695748813169742, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
@@ -147,7 +167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2016695749116439284, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
       propertyPath: CollisionModule.type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2016695749116439284, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
       propertyPath: CollisionModule.enabled
@@ -166,8 +186,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
       propertyPath: RotationModule.y.scalar
       value: 8.377581
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.collisionMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2016695749733547783, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4949811321002453185, guid: ad0c8304762626b4280dfd0cf4964ea4, type: 3}
       propertyPath: m_RootOrder
