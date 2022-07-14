@@ -1845,11 +1845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f86972f183e574eac86382209c46dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 12
+  enemyCount: 1
   enemies:
-  - {fileID: 3343400541712103999, guid: d30fa9e0effe02f4aa76328243863b83, type: 3}
-  - {fileID: 3343400541712103999, guid: 4b96f1c68b5decd45af8e94c8a943039, type: 3}
-  - {fileID: 8596174083329394053, guid: 3c87164801bf0124d8f711eca84811e0, type: 3}
+  - {fileID: 2157593041942259564, guid: 82cb52da06f4bee4198f0570ea3422e8, type: 3}
   multipleobjectpooling: {fileID: 1969683696}
 --- !u!114 &759118182
 MonoBehaviour:

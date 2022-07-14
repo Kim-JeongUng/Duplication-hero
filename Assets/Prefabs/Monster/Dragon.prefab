@@ -196,6 +196,9 @@ GameObject:
   - component: {fileID: 4981004732669687813}
   - component: {fileID: 1149993749185303373}
   - component: {fileID: 8917707943427879695}
+  - component: {fileID: 590836927264917896}
+  - component: {fileID: 4733921152123893396}
+  - component: {fileID: 7529941228988019584}
   m_Layer: 8
   m_Name: Dragon
   m_TagString: Enemy
@@ -267,6 +270,78 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8858929, y: 2.5848126, z: 2.2630005}
   m_Center: {x: -0.04659629, y: 1.3041217, z: -0.6315004}
+--- !u!114 &590836927264917896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157593041942259564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c95e5f4d664a948a46e5c4edb3f983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  player: {fileID: 11400000, guid: c114e99e45cdb4c4484290ea37e03d0b, type: 2}
+  onPlayerDeath: {fileID: 11400000, guid: 29380a14d0da7914dafb8a405f2918f4, type: 2}
+--- !u!114 &4733921152123893396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157593041942259564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a93a8773c1a5a429a397ab78adbcbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  maxHp: 1000
+  hp: 0
+  attackSpeed: 3
+  damage: 20
+  ap: 0
+  coin: 0
+  OnDie: 0
+  player: {fileID: 11400000, guid: c114e99e45cdb4c4484290ea37e03d0b, type: 2}
+  enemyHandler: {fileID: 11400000, guid: 844697ca1887009458f7eab66bdc9b91, type: 2}
+  onPlayerDeath: {fileID: 11400000, guid: 29380a14d0da7914dafb8a405f2918f4, type: 2}
+  movingTime: 0
+  waitingTime: 0
+  randomTime: 0
+  touchDamageMultiplier: 1
+  coinsToDrop: 100
+  getSkill: {fileID: 4780769704671215567, guid: cd0bdde961933094293755a7530c95e8, type: 3}
+  skillcool: 3
+  canUseSkill: 1
+  aimer: {fileID: 590836927264917896}
+--- !u!195 &7529941228988019584
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157593041942259564}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &2352668954980713375
 GameObject:
   m_ObjectHideFlags: 0
