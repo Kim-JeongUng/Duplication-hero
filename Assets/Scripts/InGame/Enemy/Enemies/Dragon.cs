@@ -5,10 +5,10 @@ using System.Collections;
 public class Dragon : WalkingEnemy
 {
 	[SerializeField] EnemyAimer aimer;
+	public GameObject Skill;
 
 	float lastShootTime;
 	float lastSkillTime;
-	
 	protected new void Awake()
 	{
 		base.Awake();
@@ -72,7 +72,7 @@ public class Dragon : WalkingEnemy
 				StartCoroutine(TeleportSkill());
 				break;
 			case 1:
-				MonsterSkill();
+				StartCoroutine(MonsterSkill());
 				break;
 			default:
 				break;
@@ -87,9 +87,10 @@ public class Dragon : WalkingEnemy
 		Destroy(Item);
 		this.transform.position = tempPlayerPos;
 	}
-	public void MonsterSkill()
+	IEnumerator MonsterSkill()
     {
-		Debug.Log("skill");
-		atkSkill();
+		Skill.SetActive(true);
+		yield return new WaitForSeconds(1f);
+		Skill.SetActive(false);
 	}
 }
