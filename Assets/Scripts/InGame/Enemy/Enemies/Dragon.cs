@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using UnityEngine;
+using System.Collections;
 
 public class Dragon : WalkingEnemy
 {
@@ -14,6 +15,7 @@ public class Dragon : WalkingEnemy
 		
 		if (aimer == null)
 			aimer = GetComponentInChildren<EnemyAimer>();
+		StartCoroutine(MonsterRoutine());
 	}
 
 	protected void Update()
@@ -25,12 +27,12 @@ public class Dragon : WalkingEnemy
 
 			//EnemySkill();
 
-			if (Time.time - lastShootTime >= (1 / attackSpeed))  // 몬스터 일반공격
+			/*if (Time.time - lastShootTime >= (1 / skillcool))  // 몬스터 일반공격
 			{
 				lastShootTime = Time.time;
 				RandomSkill();
 				//shooter.Shoot(new DamageReport(damage, this));
-			}
+			}*/
 		}
 	}
 	protected new void FixedUpdate()
@@ -43,7 +45,6 @@ public class Dragon : WalkingEnemy
 			else if (!aimer.IsVisible())
 				aimer.ResetTarget();
 		}
-		
 	}
 	protected override void Death(Entity killer)
 	{
@@ -54,30 +55,41 @@ public class Dragon : WalkingEnemy
 		if(OnDie == true)
 			DropItem(getSkill); // 스킬아이템 드랍
 	}
+	IEnumerator MonsterRoutine()
+    {
+		while (hp > 0)
+		{
+			yield return new WaitForSeconds(skillcool);
+			RandomSkill();
+		}
+    }
 	public void RandomSkill()
     {
 		int RanNum = Random.Range(0, 2);
-		Debug.Log(RanNum);
 		switch (RanNum)
         {
 			case 0:
-				TeleportSkill();
+				StartCoroutine(TeleportSkill());
 				break;
-			case 1:	
+			case 1:
 				MonsterSkill();
 				break;
 			default:
 				break;
 		}
     }
-	public void TeleportSkill()
+
+	IEnumerator TeleportSkill()
     {
-		Debug.Log("telpo");
-		this.transform.position = player.value.transform.position;
-    }
+		var tempPlayerPos = player.value.transform.position;
+		GameObject Item = Instantiate(Resources.Load<GameObject>(string.Format("Prefabs/Warning")), tempPlayerPos, Quaternion.identity);
+		yield return new WaitForSeconds(1f);
+		Destroy(Item);
+		this.transform.position = tempPlayerPos;
+	}
 	public void MonsterSkill()
     {
 		Debug.Log("skill");
-		EnemySkill();
-    }
+		atkSkill();
+	}
 }
