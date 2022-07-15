@@ -21,7 +21,9 @@ public class Player : Entity
 	[SerializeField] private GameController gameController;
 
 	float lastShootTime;
-	float tempTimer=0.0f;
+	public float m_DoubleClickSecond = 0.25f;
+	private bool m_IsOneClick = false;
+	private double m_Timer = 0;
 	//[SerializeField] protected MultipleObjectPooling skillPooling;  스킬 오브젝트 풀
 	private GameObject skill;
 
@@ -156,18 +158,24 @@ public class Player : Entity
 	private void Update()
 	{
 
+
+		if (m_IsOneClick && ((Time.time - m_Timer) > m_DoubleClickSecond))
+		{
+			m_IsOneClick = false;
+		}
+
 		if (Input.GetMouseButtonDown(0))
 		{
-			tempTimer += Time.deltaTime;
-			if (tempTimer<0.3f && Input.GetMouseButtonDown(0))
+			if (!m_IsOneClick)
 			{
-				UseSkill();
-				Debug.Log("SKILL");
+				m_Timer = Time.time;
+				m_IsOneClick = true;
 			}
-			else if (tempTimer >= 0.3f)
-            {
-				tempTimer = 0.0f;
-            }
+			else if (m_IsOneClick && ((Time.time - m_Timer) < m_DoubleClickSecond))
+			{
+				m_IsOneClick = false;
+				UseSkill();
+			}
 		}
 		if (walkingState == MovingState.STAYING)
 		{
