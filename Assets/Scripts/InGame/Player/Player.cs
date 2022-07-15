@@ -21,7 +21,7 @@ public class Player : Entity
 	[SerializeField] private GameController gameController;
 
 	float lastShootTime;
-
+	float tempTimer=0.0f;
 	//[SerializeField] protected MultipleObjectPooling skillPooling;  스킬 오브젝트 풀
 	private GameObject skill;
 
@@ -155,6 +155,20 @@ public class Player : Entity
 
 	private void Update()
 	{
+
+		if (Input.GetMouseButtonDown(0))
+		{
+			tempTimer += Time.deltaTime;
+			if (tempTimer<0.3f && Input.GetMouseButtonDown(0))
+			{
+				UseSkill();
+				Debug.Log("SKILL");
+			}
+			else if (tempTimer >= 0.3f)
+            {
+				tempTimer = 0.0f;
+            }
+		}
 		if (walkingState == MovingState.STAYING)
 		{
 			if (aimer.Target != null)
