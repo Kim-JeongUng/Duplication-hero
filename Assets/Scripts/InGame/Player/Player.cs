@@ -15,7 +15,7 @@ public class Player : Entity
 	[SerializeField][ReadOnly] long coins = 0;
 	public Image SkillImage;
 	public Sprite DefaultSkillImage;
-
+	
 	[SerializeField]
 	private Animator animator;
 	[SerializeField] private GameController gameController;
@@ -27,7 +27,7 @@ public class Player : Entity
 	//[SerializeField] protected MultipleObjectPooling skillPooling;  스킬 오브젝트 풀
 	private GameObject skill;
 
-	private void EditorMode() => hp = isEditorMode ? 10000 : hp; //체력 10000
+	private void EditorMode() => hp = isEditorMode ? 100000 : hp; //체력 10000
 
 	public void UseSkill()  // 스킬 버튼 입력 시
     {
@@ -40,6 +40,7 @@ public class Player : Entity
 					break;
 				case "Barrier":
 					Debug.Log("Barrier");
+					hp += 20;
 					break;
 				case "Water":
 					Debug.Log("Water");
@@ -120,7 +121,14 @@ public class Player : Entity
 			shooter = GetComponentInChildren<Shooter>();
 		if (aimer == null)
 			aimer = GetComponentInChildren<PlayerAimer>();
-
+        if (GameManager.instance.gameData.nowSkillName != "")
+        {
+			SkillImage.sprite = Resources.Load<Transform>(string.Format("SkillBubble/{0}", GameManager.instance.gameData.nowSkillName)).GetChild(0).GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
+		}
+        if (GameManager.instance.gameData.nowProgressLevel!=0)
+        {
+			hp = GameManager.instance.gameData.nowHP;
+		}
 		EditorMode();
 	}
 
@@ -220,6 +228,7 @@ public class Player : Entity
 			}
         }
 		else if(other.gameObject.CompareTag("Gate")){
+			GameManager.instance.gameData.nowHP = hp;
 			gameController.nextStage();
 		}
     }

@@ -944,6 +944,7 @@ MonoBehaviour:
     EnemySet: []
     SkillNameSet: []
     SkillResource: []
+    nowHP: 0
     nowProgressLevel: 0
   enemySpawner: {fileID: 759118181}
   EnemyPrefabs:
@@ -1922,7 +1923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCount: 1
   enemies:
-  - {fileID: 2157593041942259564, guid: 82cb52da06f4bee4198f0570ea3422e8, type: 3}
+  - {fileID: 3343400541712103999, guid: d30fa9e0effe02f4aa76328243863b83, type: 3}
   multipleobjectpooling: {fileID: 1969683696}
 --- !u!114 &759118182
 MonoBehaviour:
@@ -6423,7 +6424,7 @@ PrefabInstance:
       objectReference: {fileID: 2141232525}
     - target: {fileID: 7983287318220017035, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: isEditorMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7983287318220017035, guid: 79255aac330e88047bccabd52b5a8e51, type: 3}
       propertyPath: onPlayerDies

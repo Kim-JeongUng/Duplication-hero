@@ -10,6 +10,7 @@ public class GameData
     public List<string> EnemySet = new List<string> { };
     public List<string> SkillNameSet = new List<string> { };
     public GameObject[] SkillResource;
+    public int nowHP;
     public int nowProgressLevel;
 }
 public class GameManager : MonoBehaviour

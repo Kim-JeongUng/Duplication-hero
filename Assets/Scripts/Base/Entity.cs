@@ -9,8 +9,8 @@ public abstract class Entity : MonoBehaviour
 	}
 
 	[SerializeField] protected float speed;
-	[SerializeField] protected float maxHp;
-	[SerializeField] [ReadOnly] protected float hp;
+	[SerializeField] protected int maxHp;
+	[SerializeField] [ReadOnly] protected int hp;
 	[SerializeField] protected float attackSpeed;
 	[SerializeField] protected float damage;
 	[SerializeField] protected float ap;
@@ -56,7 +56,7 @@ public abstract class Entity : MonoBehaviour
 
 	public bool TakeDamage(DamageReport damageReport)  // 데미지 받음
 	{
-		hp -= damageReport.damage;
+		hp -= (int)damageReport.damage;
 		if (hp <= 0)  // 죽은경우
 		{
 			OnDie = true;
