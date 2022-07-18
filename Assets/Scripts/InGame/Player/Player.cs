@@ -40,10 +40,13 @@ public class Player : Entity
 					break;
 				case "Barrier":
 					Debug.Log("Barrier");
-					hp += 20;
 					break;
 				case "Water":
 					Debug.Log("Water");
+					break;
+				case "Healing":
+					Debug.Log("Healing");
+					hp += 30;
 					break;
 				default:
 					//Debug.Log("ERROR");
@@ -125,7 +128,7 @@ public class Player : Entity
         {
 			SkillImage.sprite = Resources.Load<Transform>(string.Format("SkillBubble/{0}", GameManager.instance.gameData.nowSkillName)).GetChild(0).GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
 		}
-        if (GameManager.instance.gameData.nowProgressLevel!=0)
+        if (GameManager.instance.gameData.nowProgressLevel!=0 || GameManager.instance.gameData.DeadCount > 0 )
         {
 			hp = GameManager.instance.gameData.nowHP;
 		}
@@ -136,6 +139,8 @@ public class Player : Entity
 	{
 		onPlayerDeath.Raise();
 		Debug.Log("Player is DEAD");
+		GameManager.instance.gameData.DeadCount++;
+		GameController.instance.OpenContinuePannel();
 		gameObject.SetActive(false);
 	}
 

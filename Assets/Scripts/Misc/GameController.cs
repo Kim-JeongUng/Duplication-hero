@@ -12,16 +12,21 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {
+    public static GameController instance;
+
     [SerializeField] GlobalGameState gameState;
     [SerializeField] private GlobalEnemySpawner enemySpawner;
     [SerializeField] private GameObject[] normalMaps;
     [SerializeField] private GameObject[] BossMaps;
     [SerializeField] private GameObject[] SpecialMaps;
     [SerializeField] private GameObject BaseMap;
+    [SerializeField] private GameObject continuePannel;
     private Vector3 MapPos;
     private GameObject curMap;
 
-    private void Awake() {
+    private void Awake()
+    {
+        instance = this;
         MapPos = BaseMap.transform.position;
     }
     private void Start()
@@ -63,7 +68,18 @@ public class GameController : MonoBehaviour
     public void GoMain()
     {
         GameManager.instance.gameData.nowProgressLevel = 0;
+        GameManager.instance.gameData.DeadCount = 0;
         gameState.value = GameState.INIT;
         SceneManager.LoadScene("MainScene");
+    }
+    public void OpenContinuePannel()
+    {
+        continuePannel.SetActive(true);
+    }
+    public void Continue()
+    {
+        GameManager.instance.player.gameObject.SetActive(true);
+        GameManager.instance.gameData.nowHP = 30;
+        SceneManager.LoadScene("GameScene");
     }
 }

@@ -12,6 +12,7 @@ public class GameData
     public GameObject[] SkillResource;
     public int nowHP;
     public int nowProgressLevel;
+    public int DeadCount=0;
 }
 public class GameManager : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
             if (instance != this)
                 Destroy(this.gameObject);
         }
-        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw" ,"PulseShot","FireBreath"}, nowProgressLevel = 0 };
+        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw" ,"PulseShot","FireBreath","Healing"}, nowProgressLevel = 0 };
         gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
         ResourceLoad();
     }
