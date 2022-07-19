@@ -51,11 +51,7 @@ public class Dragon : WalkingEnemy
 		Debug.Log("------------Boss Dead-------------");
 
 		base.Death(killer);
-		if (OnDie == false)
-		{
-			DropItem(getSkill); // 스킬아이템 드랍
-			OnDie = true;
-		}
+		DropItem(getSkill); // 스킬아이템 드랍
 	}
 	IEnumerator MonsterRoutine()
     {

@@ -57,10 +57,10 @@ public abstract class Entity : MonoBehaviour
 	public bool TakeDamage(DamageReport damageReport)  // 데미지 받음
 	{
 		hp -= (int)damageReport.damage;
-		if (hp <= 0)  // 죽은경우
+		if (hp <= 0 && OnDie==false)  // 죽은경우
 		{
 			Death(damageReport.attacker);
-			
+			OnDie = true;
 			return true;
 		}
 		return false;
