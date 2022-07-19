@@ -184,7 +184,7 @@ public class Player : Entity
 
 	private void Update()
 	{
-		if (m_IsOneClick && ((Time.time - m_Timer) > m_DoubleClickSecond))
+		if (m_IsOneClick && ((Time.time - m_Timer) > m_DoubleClickSecond) || Time.timeScale==0)
 		{
 			m_IsOneClick = false;
 		}

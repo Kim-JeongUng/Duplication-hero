@@ -27,9 +27,10 @@ public class CountdownUI : MonoBehaviour
 
     private IEnumerator StartTimerCoroutine()
     {
-        Time.timeScale = 0;
         if (GameManager.instance.gameData.isBossStage)
             GameController.instance.OpenBossPannel();
+        else
+            Time.timeScale = 0;
         canvas.SetActive(true);
         for (int i = 3; i > 0; i--)
         {
@@ -37,6 +38,7 @@ public class CountdownUI : MonoBehaviour
             yield return new WaitForSecondsRealtime(1);
             if (GameManager.instance.gameData.isBossStage)
                 GameController.instance.CloseBossPannel();
+            Time.timeScale = 0;
         }
         canvas.SetActive(false);
         Time.timeScale = 1;

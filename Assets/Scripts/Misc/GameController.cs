@@ -101,8 +101,6 @@ public class GameController : MonoBehaviour
     {
         GameManager.instance.player.GetComponent<Player>().Revive();
         GameManager.instance.player.gameObject.SetActive(true);
-        GameManager.instance.player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        GameManager.instance.player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
 
         StartCoroutine(GameManager.instance.player.GetComponent<Player>().Invincible());
     }

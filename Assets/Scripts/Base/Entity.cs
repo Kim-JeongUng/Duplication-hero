@@ -59,8 +59,6 @@ public abstract class Entity : MonoBehaviour
 		hp -= (int)damageReport.damage;
 		if (hp <= 0)  // 죽은경우
 		{
-			OnDie = true;
-
 			Death(damageReport.attacker);
 			
 			return true;
