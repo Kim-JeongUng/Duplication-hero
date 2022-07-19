@@ -104,8 +104,11 @@ public class Enemy : Entity
         var player = other.GetComponent<Player>();
         if (player != null)
         {
-            touchingPlayer = player;
-            player.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this));
+            if (!player.isInvincible)
+            {
+                touchingPlayer = player;
+                player.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this));
+            }
         }
 
         if (other.CompareTag("Weapon"))

@@ -19,7 +19,7 @@ public class Player : Entity
 	[SerializeField]
 	private Animator animator;
 	[SerializeField] private GameController gameController;
-
+	public bool isInvincible;
 	float lastShootTime;
 	public float m_DoubleClickSecond = 0.25f;
 	private bool m_IsOneClick = false;
@@ -87,6 +87,19 @@ public class Player : Entity
 		skill.SetActive(false);
 	}
 	*/
+	public void Revive()
+    {
+		hp = 30; 
+		skill = Instantiate(GameManager.instance.gameData.SkillResource[6], this.transform.position, this.transform.rotation);
+		Destroy(skill,1f);
+		//Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제
+	}
+	public IEnumerator Invincible(float time=1f) //무적
+    {
+		isInvincible = true;
+		yield return new WaitForSeconds(time);
+		isInvincible = false;
+	}
 	public void DestroySkill()  // 사용한 스킬이펙트 삭제
 	{
 		Destroy(skill);
@@ -139,6 +152,7 @@ public class Player : Entity
 	{
 		onPlayerDeath.Raise();
 		Debug.Log("Player is DEAD");
+		input.value = new Vector2(0, 0);
 		GameManager.instance.gameData.DeadCount++;
 		GameController.instance.OpenContinuePannel();
 		gameObject.SetActive(false);
@@ -170,8 +184,6 @@ public class Player : Entity
 
 	private void Update()
 	{
-
-
 		if (m_IsOneClick && ((Time.time - m_Timer) > m_DoubleClickSecond))
 		{
 			m_IsOneClick = false;
@@ -208,7 +220,7 @@ public class Player : Entity
 					aimer.ResetTarget();
 			}
 		}
-		// 가장 가까운 적
+		
 	}
 	private void FixedUpdate()
 	{
