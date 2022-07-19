@@ -12,7 +12,7 @@ public class Dragon : WalkingEnemy
 	protected new void Awake()
 	{
 		base.Awake();
-		
+		isBossMonster = true;
 		if (aimer == null)
 			aimer = GetComponentInChildren<EnemyAimer>();
 		StartCoroutine(MonsterRoutine());

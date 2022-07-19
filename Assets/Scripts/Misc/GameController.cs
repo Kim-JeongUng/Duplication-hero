@@ -21,6 +21,11 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject[] SpecialMaps;
     [SerializeField] private GameObject BaseMap;
     [SerializeField] private GameObject continuePannel;
+    [SerializeField] private GameObject resultPannel;
+    [SerializeField] private GameObject bossPannel;
+
+
+    private int finalStageNum = 5;
     private Vector3 MapPos;
     private GameObject curMap;
 
@@ -37,10 +42,11 @@ public class GameController : MonoBehaviour
         gameState.value = GameState.STARTED;
     }
     private void GenerateMapWithNavmesh(){
-        if(GameManager.instance.gameData.nowProgressLevel != 0 && 
-            GameManager.instance.gameData.nowProgressLevel % 10 == 0){
+        if(GameManager.instance.gameData.isBossStage){
             //boss stage
             curMap = BossMaps[Random.Range(0, BossMaps.Length)];
+            GameManager.instance.gameData.EnemyCount = 1;
+            GameManager.instance.gameData.EnemySet = new List<string>() { "Dragon" };
         }
         else{  //normal stage   (need add special stage - if needed)
             curMap = normalMaps[Random.Range(0, normalMaps.Length)];
@@ -58,10 +64,13 @@ public class GameController : MonoBehaviour
     public void nextStage()
     {   //다음 스테이지 값 수정 위치
         GameManager.instance.gameData.nowProgressLevel++;
-
+        if (GameManager.instance.gameData.nowProgressLevel != 0 && (GameManager.instance.gameData.nowProgressLevel + 1) % finalStageNum == 0)
+            GameManager.instance.gameData.isBossStage = true;
+        else
+            GameManager.instance.gameData.isBossStage = false;
         //다음스테이지 나올 몬스터 ( 레벨 및 구현 필요 또는 랜덤? )
-        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat" };
-
+        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Archer", "Golem" };
+        GameManager.instance.gameData.EnemyCount = 2;
         gameState.value = GameState.INIT;
         SceneManager.LoadScene("GameScene");
     }
@@ -75,6 +84,18 @@ public class GameController : MonoBehaviour
     public void OpenContinuePannel()
     {
         continuePannel.SetActive(true);
+    }
+    public void OpenResultPannel()
+    {
+        resultPannel.SetActive(true);
+    }
+    public void OpenBossPannel()
+    {
+        bossPannel.SetActive(true);
+    }
+    public void CloseBossPannel()
+    {
+        bossPannel.SetActive(false);
     }
     public void Continue()
     {

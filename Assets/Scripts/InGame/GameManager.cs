@@ -8,11 +8,14 @@ public class GameData
     public string nowSkillName = "";
     public bool haveSkill() => nowSkillName == "" ? false : true;  // 현재 스킬을 보유하고있는지
     public List<string> EnemySet = new List<string> { };
+    public int EnemyCount = 2;
+
     public List<string> SkillNameSet = new List<string> { };
     public GameObject[] SkillResource;
     public int nowHP;
     public int nowProgressLevel;
     public int DeadCount=0;
+    public bool isBossStage = false;
 }
 public class GameManager : MonoBehaviour
 {
@@ -55,6 +58,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartNextStage() // 다음스테이지
     {
+        enemySpawner.enemyCount = gameData.EnemyCount;
         //새로운 몬스터
         if (gameData.EnemySet.Count >= 1)
         {

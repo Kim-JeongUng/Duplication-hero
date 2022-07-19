@@ -28,11 +28,15 @@ public class CountdownUI : MonoBehaviour
     private IEnumerator StartTimerCoroutine()
     {
         Time.timeScale = 0;
+        if (GameManager.instance.gameData.isBossStage)
+            GameController.instance.OpenBossPannel();
         canvas.SetActive(true);
         for (int i = 3; i > 0; i--)
         {
             countdown.text = i.ToString();
             yield return new WaitForSecondsRealtime(1);
+            if (GameManager.instance.gameData.isBossStage)
+                GameController.instance.CloseBossPannel();
         }
         canvas.SetActive(false);
         Time.timeScale = 1;

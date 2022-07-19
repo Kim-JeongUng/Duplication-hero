@@ -19,7 +19,7 @@ public class Enemy : Entity
     private GameObject skill; // 스킬이펙트 오브젝트
 
     private Rigidbody rb;  // 아이템구슬
-
+    public bool isBossMonster = false;
     public bool canUseSkill = true;
 
     protected void OnEnable()
@@ -41,6 +41,11 @@ public class Enemy : Entity
         Player player = killer as Player;
         if(player!=null)
             player.AddCoins(coinsToDrop);
+        if (isBossMonster)
+        {
+            GameController.instance.OpenResultPannel();
+            Time.timeScale = 0;
+        }
         enemyHandler.componentCache.RemoveEnemy(this);
         Destroy(gameObject);
     }
