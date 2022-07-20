@@ -39,10 +39,10 @@ public class GameController : MonoBehaviour
     }
     private void Start()
     {
-        GenerateMapWithNavmesh();
-        GameManager.instance.StartNextStage();
-        enemySpawner.componentCache.SpawnEnemies();
-        gameState.value = GameState.STARTED;
+        Init();
+        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Archer", "Golem" };
+        GameManager.instance.gameData.EnemyCount = 2;
+        gameState.value = GameState.INIT;
     }
     private void GenerateMapWithNavmesh(){
         if(GameManager.instance.gameData.isBossStage){
@@ -63,7 +63,12 @@ public class GameController : MonoBehaviour
 
         
     }
-
+    public void Init()
+    {
+        GenerateMapWithNavmesh();
+        GameManager.instance.StartNextStage();
+        enemySpawner.componentCache.SpawnEnemies();
+    }
     public void nextStage()
     {   //다음 스테이지 값 수정 위치
         GameManager.instance.gameData.nowProgressLevel++;
@@ -81,6 +86,7 @@ public class GameController : MonoBehaviour
     {
         GameManager.instance.gameData.nowProgressLevel = 0;
         GameManager.instance.gameData.DeadCount = 0;
+        GameManager.instance.gameData.nowSkillName = "";
         gameState.value = GameState.INIT;
         SceneManager.LoadScene("MainScene");
     }

@@ -40,6 +40,7 @@ public class Player : Entity
 					break;
 				case "Barrier":
 					Debug.Log("Barrier");
+					StartCoroutine(Invincible());
 					break;
 				case "Water":
 					Debug.Log("Water");
@@ -89,6 +90,7 @@ public class Player : Entity
 	*/
 	public void Revive()
     {
+		OnDie = false;
 		hp = 30; 
 		skill = Instantiate(GameManager.instance.gameData.SkillResource[6], this.transform.position, this.transform.rotation);
 		Destroy(skill,1f);

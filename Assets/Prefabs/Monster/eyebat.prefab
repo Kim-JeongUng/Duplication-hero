@@ -781,7 +781,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &8843645210582102051
 BoxCollider:
@@ -825,7 +825,7 @@ MonoBehaviour:
   touchDamageMultiplier: 1
   coinsToDrop: 2
   getSkill: {fileID: 3427324384926251838, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
-  skillcool: 6
+  skillcool: 4
   isBossMonster: 0
   canUseSkill: 1
   anim: {fileID: 0}

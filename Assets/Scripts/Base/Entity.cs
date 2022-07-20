@@ -49,14 +49,14 @@ public abstract class Entity : MonoBehaviour
 		get { return coin; }
 	}
 
-	protected void Awake()
+	protected virtual void Awake()
 	{
 		hp = maxHp;
 	}
 
 	public bool TakeDamage(DamageReport damageReport)  // 데미지 받음
 	{
-		if (damageReport.attacker.CompareTag(this.gameObject.tag + "Skill"))
+		if (damageReport.attacker.CompareTag(this.gameObject.tag+"Skill"))
 		{
 			Debug.Log("같은팀");
 			return false;

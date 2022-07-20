@@ -20,7 +20,7 @@ public class Enemy : Entity
 
     private Rigidbody rb;  // 아이템구슬
     public bool isBossMonster = false;
-    public bool canUseSkill = true;
+    public bool canUseSkill = false;
 
     protected void OnEnable()
     {
@@ -35,7 +35,12 @@ public class Enemy : Entity
     {
         touchingPlayer = null;
     }
-
+    protected override void Awake()
+    {
+        base.Awake();
+        if(!isBossMonster) //보스몹은 스킬 여러개라 각자 스크립트에서 처리
+            StartCoroutine(UseEnemySkill());
+    }
     protected override void Death(Entity killer)  // 몬스터 Death 처리
     {
         Player player = killer as Player;
@@ -57,7 +62,16 @@ public class Enemy : Entity
         rb = itemGo.GetComponent<Rigidbody>();
         rb.AddForce(transform.up * 5f, ForceMode.Impulse);
     }
-
+    
+    public IEnumerator UseEnemySkill()
+    {
+        while (this.hp > 0)
+        {
+            yield return new WaitForSeconds(skillcool);
+            atkSkill();
+            Debug.Log("스킬사용");
+        }
+    }
     public void EnemySkill()
     {
         if (canUseSkill == true)
