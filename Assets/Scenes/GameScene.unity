@@ -2222,7 +2222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f86972f183e574eac86382209c46dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 2
+  enemyCount: 5
   enemies:
   - {fileID: 753785460207422148, guid: 2cadc766f57e10f4faee190a1e58de59, type: 3}
   - {fileID: 8596174083329394053, guid: 3c87164801bf0124d8f711eca84811e0, type: 3}

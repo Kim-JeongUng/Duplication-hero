@@ -58,7 +58,7 @@ public class Player : Entity
 			Debug.Log(num);
 			num = num == -1? 0 : num;
 			skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
-			
+			tag = "PlayerSkill";
 			/*
 			// 스킬오브젝트 오브젝트 풀에서 꺼내옴
 			skill = skillPooling.GetPooledObject(GameManager.instance.gameData.nowSkillName);

@@ -56,6 +56,12 @@ public abstract class Entity : MonoBehaviour
 
 	public bool TakeDamage(DamageReport damageReport)  // 데미지 받음
 	{
+		if (damageReport.attacker.CompareTag(this.gameObject.tag + "Skill"))
+		{
+			Debug.Log("같은팀");
+			return false;
+		}
+
 		hp -= (int)damageReport.damage;
 		if (hp <= 0 && OnDie==false)  // 죽은경우
 		{

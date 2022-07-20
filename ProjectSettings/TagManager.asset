@@ -10,6 +10,9 @@ TagManager:
   - Weapon
   - Gate
   - FireBullet
+  - PlayerSkill
+  - EnemySkill
+  - MonsterSkill
   layers:
   - Default
   - TransparentFX

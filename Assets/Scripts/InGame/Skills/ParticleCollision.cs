@@ -20,7 +20,7 @@ public class ParticleCollision : MonoBehaviour
         Debug.Log(other.tag);
         if (other.tag == "Player")
         {
-            other.transform.GetComponent<Player>().TakeDamage(new DamageReport(100, GameManager.instance.player));
+            other.transform.GetComponent<Player>().TakeDamage(new DamageReport(10, GameManager.instance.player));
         }
         if (other.tag == "Enemy")
         {
