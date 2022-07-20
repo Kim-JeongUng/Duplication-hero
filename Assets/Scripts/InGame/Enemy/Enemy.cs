@@ -44,7 +44,6 @@ public class Enemy : Entity
         if (isBossMonster)
         {
             GameController.instance.OpenResultPannel();
-            Time.timeScale = 0;
         }
         enemyHandler.componentCache.RemoveEnemy(this);
         Destroy(gameObject);

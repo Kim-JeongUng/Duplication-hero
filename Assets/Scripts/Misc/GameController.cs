@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using ThirteenPixels.Soda;
+using TMPro;
 using UnityEngine.AI;
 
 public enum GameState
@@ -22,6 +23,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject BaseMap;
     [SerializeField] private GameObject continuePannel;
     [SerializeField] private GameObject resultPannel;
+    [SerializeField] private GameObject progressPannel;
+    [SerializeField] private TextMeshProUGUI progressPannelText;
     [SerializeField] private GameObject bossPannel;
 
 
@@ -88,6 +91,15 @@ public class GameController : MonoBehaviour
     public void OpenResultPannel()
     {
         resultPannel.SetActive(true);
+    }
+    public void OpenProgressPannel()
+    {
+        progressPannelText.text = "Chapter 1-"+(GameManager.instance.gameData.nowProgressLevel + 1).ToString();
+        progressPannel.SetActive(true);
+    }
+    public void CloseProgressPannel()
+    {
+        progressPannel.SetActive(false);
     }
     public void OpenBossPannel()
     {

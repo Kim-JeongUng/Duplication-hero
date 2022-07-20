@@ -1282,9 +1282,10 @@ MonoBehaviour:
   waitingTime: 2
   randomTime: 1
   touchDamageMultiplier: 1
-  coinsToDrop: 100
+  coinsToDrop: 2
   getSkill: {fileID: 4780769704671215567, guid: 1cd01eb8184758c45aa1aec17c29a7cc, type: 3}
   skillcool: 5
+  isBossMonster: 0
   canUseSkill: 1
   shooter: {fileID: 5117843574253354938}
   aimer: {fileID: 5371552464047986266}

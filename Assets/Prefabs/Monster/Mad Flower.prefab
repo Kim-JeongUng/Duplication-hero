@@ -248,7 +248,7 @@ MonoBehaviour:
   maxHp: 100
   hp: 0
   attackSpeed: 0.5
-  damage: 30
+  damage: 20
   ap: 0
   coin: 0
   OnDie: 0
@@ -261,7 +261,8 @@ MonoBehaviour:
   touchDamageMultiplier: 1
   coinsToDrop: 100
   getSkill: {fileID: 8232703752499337199, guid: b32c883e0edd1d345abb0100f7150ae8, type: 3}
-  skillcool: 5
+  skillcool: 3
+  isBossMonster: 0
   canUseSkill: 1
   shooter: {fileID: 2457195889799994417}
   aimer: {fileID: 1835928313615387614}

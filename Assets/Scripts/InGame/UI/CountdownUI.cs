@@ -30,7 +30,9 @@ public class CountdownUI : MonoBehaviour
         if (GameManager.instance.gameData.isBossStage)
             GameController.instance.OpenBossPannel();
         else
-            Time.timeScale = 0;
+        {
+            GameController.instance.OpenProgressPannel();
+        }
         canvas.SetActive(true);
         for (int i = 3; i > 0; i--)
         {
@@ -38,6 +40,8 @@ public class CountdownUI : MonoBehaviour
             yield return new WaitForSecondsRealtime(1);
             if (GameManager.instance.gameData.isBossStage)
                 GameController.instance.CloseBossPannel();
+            else
+                GameController.instance.CloseProgressPannel();
             Time.timeScale = 0;
         }
         canvas.SetActive(false);
