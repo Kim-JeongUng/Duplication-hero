@@ -21,7 +21,6 @@ public class Enemy : Entity
     private Rigidbody rb;  // 아이템구슬
     public bool isBossMonster = false;
     public bool canUseSkill = false;
-
     protected void OnEnable()
     {
         onPlayerDeath.onRaise.AddResponse(ResetTouchingPlayer);
@@ -65,51 +64,32 @@ public class Enemy : Entity
     
     public IEnumerator UseEnemySkill()
     {
-        while (this.hp > 0)
+        while (true)
         {
             yield return new WaitForSeconds(skillcool);
-            atkSkill();
+            if (hp <= 0)
+                break;
+            EnemySkill();
             Debug.Log("스킬사용");
         }
     }
     public void EnemySkill()
     {
-        if (canUseSkill == true)
-        {
-            // 스킬 사용
-            atkSkill();
-            Debug.Log("몬스터 스킬 사용");
-
-            //StartCoroutine(CoolTime(skillcool));
-            StartCoroutine("CoolTime");
-
-            canUseSkill = false;  // 스킬을 사용하면 쿨타임으로 스킬을 사용할 수 없는 상태
-        }
-    }
-    IEnumerator CoolTime()
-    {
-        var cool = skillcool;
-        print("몬스터 스킬 쿨타임 실행");
-        
-        while (cool > 0)
-        {
-            cool -= Time.deltaTime;
-            // fillAmount
-            yield return null;
-        }
-
-        canUseSkill = true;  // 스킬 쿨타임이 끝나면 스킬을 사용할 수 있는 상태
-
-        print("몬스터 스킬 쿨타입 종료");
-        yield break;
-    }
-    public void atkSkill()
-    {
         int num = GameManager.instance.gameData.SkillNameSet.IndexOf(getSkill.name);
         Debug.Log(num);
         num = num == -1 ? 0 : num;
-        skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
-
+        skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform);
+        switch (GameManager.instance.gameData.SkillResource[num].name)  // 획득한 스킬의 이벤트 발생
+        {
+            case "Barrier":
+                StartCoroutine(Invincible());
+                break;
+            case "Healing":
+                hp += 30;
+                break;
+            default:
+                break;
+        }
         Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제
     }
     public void DestroySkill()  // 사용한 스킬이펙트 삭제
@@ -122,11 +102,9 @@ public class Enemy : Entity
         var player = other.GetComponent<Player>();
         if (player != null)
         {
-            if (!player.isInvincible)
-            {
-                touchingPlayer = player;
-                player.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this));
-            }
+            touchingPlayer = player;
+            player.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this));
+            
         }
 
         if (other.CompareTag("Weapon"))
@@ -139,5 +117,11 @@ public class Enemy : Entity
     {
         if (other.tag == Tags.playerTag)
             touchingPlayer = null;
+    }
+    public IEnumerator Invincible(float time = 1f) //무적
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(time);
+        isInvincible = false;
     }
 }

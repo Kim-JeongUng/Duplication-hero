@@ -15,6 +15,7 @@ public abstract class Entity : MonoBehaviour
 	[SerializeField] protected float damage;
 	[SerializeField] protected float ap;
 	[SerializeField] protected int coin;
+	public bool isInvincible = false;
 	protected MovingState walkingState = MovingState.STAYING;
 
 	//public GameObject itemPrefab;
@@ -56,20 +57,28 @@ public abstract class Entity : MonoBehaviour
 
 	public bool TakeDamage(DamageReport damageReport)  // 데미지 받음
 	{
-		if (damageReport.attacker.CompareTag(this.gameObject.tag+"Skill"))
+		if (!isInvincible)
 		{
-			Debug.Log("같은팀");
+			if (damageReport.attacker.CompareTag(this.gameObject.tag + "Skill"))
+			{
+				Debug.Log("같은팀");
+				return false;
+			}
+
+			hp -= (int)damageReport.damage;
+			if (hp <= 0 && OnDie == false)  // 죽은경우
+			{
+				Death(damageReport.attacker);
+				OnDie = true;
+				return true;
+			}
 			return false;
 		}
-
-		hp -= (int)damageReport.damage;
-		if (hp <= 0 && OnDie==false)  // 죽은경우
-		{
-			Death(damageReport.attacker);
-			OnDie = true;
-			return true;
-		}
-		return false;
+        else
+        {
+			Debug.Log("무적");
+			return false;
+        }
 	}
 
 	/// <summary>

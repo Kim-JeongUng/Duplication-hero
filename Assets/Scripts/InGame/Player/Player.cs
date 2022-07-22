@@ -19,7 +19,6 @@ public class Player : Entity
 	[SerializeField]
 	private Animator animator;
 	[SerializeField] private GameController gameController;
-	public bool isInvincible;
 	float lastShootTime;
 	public float m_DoubleClickSecond = 0.25f;
 	private bool m_IsOneClick = false;
@@ -58,7 +57,8 @@ public class Player : Entity
 			int num = GameManager.instance.gameData.SkillNameSet.IndexOf(GameManager.instance.gameData.nowSkillName);
 			Debug.Log(num);
 			num = num == -1? 0 : num;
-			skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation);
+			Debug.Log("playerskill");
+			skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation,this.transform);
 			tag = "PlayerSkill";
 			/*
 			// 스킬오브젝트 오브젝트 풀에서 꺼내옴
@@ -191,7 +191,7 @@ public class Player : Entity
 			m_IsOneClick = false;
 		}
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0)) //공격처리
 		{
 			if (!m_IsOneClick)
 			{
