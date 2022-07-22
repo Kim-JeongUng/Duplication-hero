@@ -1,12 +1,34 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthBar : MonoBehaviour
 {
-	[SerializeField] Image bar;
+	[SerializeField] Transform player;
 	[SerializeField] Entity entity;
-	private void Update() // Можно написать лучше структуру, которая будет работать на событиях по изменению hp
+	[SerializeField] Slider hpBar;
+	[SerializeField] GameObject HpLineFolder;
+	[SerializeField] TMP_Text playerHpText;
+	[SerializeField] float unitHp = 200f;
+	float defaultHp = 1000f;
+
+	private void Update()
 	{
-		bar.fillAmount = Mathf.Lerp(bar.fillAmount, entity.Hp / entity.MaxHp, 0.2f);
+		transform.position = player.position;
+        hpBar.value = entity.Hp / entity.MaxHp;
+        playerHpText.text = "" + entity.Hp;
 	}
+
+	public void GetHpBoost()
+    {
+        float scaleX = ( defaultHp / unitHp ) / ( entity.MaxHp / unitHp );
+        HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( false );
+
+        foreach ( Transform child in HpLineFolder.transform)
+        {
+            child.gameObject.transform.localScale = new Vector3 ( scaleX, 1, 1 );
+        }
+
+        HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( true );
+    }
 }
