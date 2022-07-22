@@ -53,6 +53,7 @@ MonoBehaviour:
   m_randomPos: {x: 0, y: 0, z: 0}
   m_randomRot: {x: 0, y: 0, z: 0}
   m_randomScale: {x: 0, y: 0, z: 0}
+  Attacker: {fileID: 0}
 --- !u!114 &-636042849686353924
 MonoBehaviour:
   m_ObjectHideFlags: 0
