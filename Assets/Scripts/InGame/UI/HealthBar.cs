@@ -11,7 +11,9 @@ public class HealthBar : MonoBehaviour
 	[SerializeField] TMP_Text playerHpText;
 	[SerializeField] float unitHp = 200f;
 	float defaultHp = 1000f;
-
+	private void Awake() {
+		GetHpBoost();
+	}
 	private void Update()
 	{
 		transform.position = player.position;
