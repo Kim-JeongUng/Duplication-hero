@@ -96,11 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30df8ace91f079a4c912b22552213b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8359969930465772254}
+  thisObject: {fileID: 0}
   entity: {fileID: 8912505609407075044}
   hpBar: {fileID: 0}
   HpLineFolder: {fileID: 0}
-  playerHpText: {fileID: 0}
+  thisObjectHpText: {fileID: 0}
   unitHp: 200
 --- !u!1 &235491100956105060
 GameObject:
@@ -269,6 +269,10 @@ MonoBehaviour:
   skillcool: 3
   isBossMonster: 0
   canUseSkill: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  DangerMarker: {fileID: 4969338509894549370, guid: 6a7c3032180bb8f40af48204c38b7d0f, type: 3}
   shooter: {fileID: 2457195889799994417}
   aimer: {fileID: 1835928313615387614}
   anim: {fileID: 0}

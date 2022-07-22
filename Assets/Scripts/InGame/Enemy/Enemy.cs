@@ -21,6 +21,14 @@ public class Enemy : Entity
     private Rigidbody rb;  // 아이템구슬
     public bool isBossMonster = false;
     public bool canUseSkill = false;
+
+    public LayerMask layerMask;  // 공격표시레이어
+    public GameObject DangerMarker;  // 트레일 렌더러
+
+    public GameObject LaserEffect;  // 라인렌더러
+    float attackTime = 5f;
+    float attackTimeCalc = 5f;
+
     protected void OnEnable()
     {
         onPlayerDeath.onRaise.AddResponse(ResetTouchingPlayer);
@@ -37,9 +45,14 @@ public class Enemy : Entity
     protected override void Awake()
     {
         base.Awake();
-        if(!isBossMonster) //보스몹은 스킬 여러개라 각자 스크립트에서 처리
+        if (!isBossMonster)
+        { //보스몹은 스킬 여러개라 각자 스크립트에서 처리
             StartCoroutine(UseEnemySkill());
+            //StartCoroutine(LaserOff());  // 스킬 사용 후 LaserEffect를 off시킨다
+        }
+            
     }
+
     protected override void Death(Entity killer)  // 몬스터 Death 처리
     {
         Player player = killer as Player;
@@ -61,7 +74,23 @@ public class Enemy : Entity
         rb = itemGo.GetComponent<Rigidbody>();
         rb.AddForce(transform.up * 5f, ForceMode.Impulse);
     }
-    
+    /*
+    IEnumerator LaserOff()  // 레이저가 켜져있다면 5초 후에 꺼지도록 코루틴
+    {
+        while (true)
+        {
+            yield return null;
+            if (LaserEffect.activeInHierarchy)
+            {
+                attackTimeCalc -= Time.deltaTime;
+                if(attackTimeCalc <= 0)
+                {
+                    attackTimeCalc = attackTime;
+                    LaserEffect.SetActive(false);
+                }
+            }
+        }
+    }*/
     public IEnumerator UseEnemySkill()
     {
         while (true)
@@ -69,10 +98,33 @@ public class Enemy : Entity
             yield return new WaitForSeconds(skillcool);
             if (hp <= 0)
                 break;
+
+            //yield return new WaitForSeconds(1f); // 스킬 쿨타임이 됐으면 1초뒤 dangermark를 활성화한다.
+            //StartCoroutine(SetTarget());  // LaserEffect를 활성화 한 다음에 플레이어를 바라보도록 한다
+
+            //yield return new WaitForSeconds(1.5f);  // dangermark 표시되고 1.5초뒤에 스킬을 발사
             EnemySkill();
+
             Debug.Log("스킬사용");
         }
     }
+    /*
+    IEnumerator SetTarget()
+    {
+        LaserEffect.SetActive(true);
+        yield return null;
+        while (true)
+        {
+            yield return null;
+            // 플레이어를 바랄보고 있지 않으면 break
+            if (!LookAtTarget) break;
+
+            // 플레이어의 위치를 바라보도록
+            transform.LookAt(player.transform.position);
+        }
+    }*/
+
+
     public void EnemySkill()
     {
         bool isPassive = false;
