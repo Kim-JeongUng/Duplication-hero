@@ -9973,11 +9973,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30df8ace91f079a4c912b22552213b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1722881603}
+  thisObject: {fileID: 1722881603}
   entity: {fileID: 1722881606}
   hpBar: {fileID: 2577879258134201974}
   HpLineFolder: {fileID: 684077110}
-  playerHpText: {fileID: 911844531}
+  thisObjectHpText: {fileID: 911844531}
   unitHp: 200
 --- !u!1 &2577879257110877240
 GameObject:

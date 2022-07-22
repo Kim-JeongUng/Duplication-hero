@@ -4,11 +4,11 @@ using TMPro;
 
 public class HealthBar : MonoBehaviour
 {
-	[SerializeField] Transform player;
+	[SerializeField] Transform thisObject;
 	[SerializeField] Entity entity;
 	[SerializeField] Slider hpBar;
 	[SerializeField] GameObject HpLineFolder;
-	[SerializeField] TMP_Text playerHpText;
+	[SerializeField] TMP_Text thisObjectHpText;
 	[SerializeField] float unitHp = 200f;
 	float defaultHp = 1000f;
 	private void Awake() {
@@ -16,9 +16,9 @@ public class HealthBar : MonoBehaviour
 	}
 	private void Update()
 	{
-		transform.position = player.position;
+		transform.position = thisObject.position;
         hpBar.value = Mathf.Lerp(hpBar.value, entity.Hp / entity.MaxHp, Time.deltaTime * 5f);
-        playerHpText.text = "" + entity.Hp;
+        thisObjectHpText.text = "" + entity.Hp;
 	}
 
 	public void GetHpBoost()
