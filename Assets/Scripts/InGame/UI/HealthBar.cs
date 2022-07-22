@@ -17,7 +17,7 @@ public class HealthBar : MonoBehaviour
 	private void Update()
 	{
 		transform.position = player.position;
-        hpBar.value = entity.Hp / entity.MaxHp;
+        hpBar.value = Mathf.Lerp(hpBar.value, entity.Hp / entity.MaxHp, Time.deltaTime * 5f);
         playerHpText.text = "" + entity.Hp;
 	}
 
