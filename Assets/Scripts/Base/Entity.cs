@@ -59,12 +59,6 @@ public abstract class Entity : MonoBehaviour
 	{
 		if (!isInvincible)
 		{
-			if (damageReport.attacker.CompareTag(this.gameObject.tag + "Skill"))
-			{
-				Debug.Log("같은팀");
-				return false;
-			}
-
 			hp -= (int)damageReport.damage;
 			if (hp <= 0 && OnDie == false)  // 죽은경우
 			{

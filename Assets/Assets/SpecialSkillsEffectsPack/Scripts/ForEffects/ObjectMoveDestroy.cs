@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectMoveDestroy : MonoBehaviour
 {
+    public Entity Parent; //누가 쐈는지
     public GameObject m_gameObjectMain;
     public GameObject m_gameObjectTail;
     GameObject m_makedObject;
@@ -31,7 +32,9 @@ public class ObjectMoveDestroy : MonoBehaviour
         m_scalefactor = VariousEffectsScene.m_gaph_scenesizefactor;//transform.parent.localScale.x;
         time = Time.time;
     }
-
+    private void Awake()
+    {
+    }
     void LateUpdate()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * MoveSpeed * m_scalefactor);
@@ -72,13 +75,15 @@ public class ObjectMoveDestroy : MonoBehaviour
 
     void HitObj(RaycastHit hit)
     {
-        if (hit.transform.CompareTag("Enemy"))
+        Parent = transform.parent.GetComponent<MultipleObjectsMake>().Attacker;
+        if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Player"))
         {
-            hit.transform.GetComponent<Enemy>().TakeDamage(new DamageReport(GameManager.instance.player.Damage*0.2f * (GameManager.instance.player.Ap*0.01f+1) * SkillDamageMultipler, GameManager.instance.player));
+            if (!hit.transform.CompareTag(Parent.transform.tag))
+                hit.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
         }
-        if (isCheckHitTag)
+        /*if (isCheckHitTag)
             if (hit.transform.tag != mtag)
-                return;
+                return;*/
         ishit = true;
         if(m_gameObjectTail)
             m_gameObjectTail.transform.parent = null;
@@ -86,7 +91,7 @@ public class ObjectMoveDestroy : MonoBehaviour
 
         if (isShieldActive)
         {
-            ShieldActivate m_sc = hit.transform.GetComponent<ShieldActivate>();
+           ShieldActivate m_sc = hit.transform.GetComponent<ShieldActivate>();
             if(m_sc)
                 m_sc.AddHitObject(hit.point);
         }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2280925449003687309}
   - component: {fileID: 2280925449003687308}
+  - component: {fileID: -636042849686353924}
   m_Layer: 0
   m_Name: PulseShot
   m_TagString: EnemySkill
@@ -52,3 +53,15 @@ MonoBehaviour:
   m_randomPos: {x: 0, y: 0, z: 0}
   m_randomRot: {x: 0, y: 0, z: 0}
   m_randomScale: {x: 0, y: 0, z: 0}
+--- !u!114 &-636042849686353924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2280925449003687311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6968d5f12a6d44d8cd6bd92f703c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

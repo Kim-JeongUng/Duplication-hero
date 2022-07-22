@@ -32,6 +32,7 @@ public class Player : Entity
     {
 		if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면
 		{
+			bool isPassive = false; //따라다니는 스킬
 			switch (GameManager.instance.gameData.nowSkillName)  // 획득한 스킬의 이벤트 발생
 			{
 				case "Fire":
@@ -39,6 +40,7 @@ public class Player : Entity
 					break;
 				case "Barrier":
 					Debug.Log("Barrier");
+					isPassive = true;
 					StartCoroutine(Invincible());
 					break;
 				case "Water":
@@ -46,6 +48,7 @@ public class Player : Entity
 					break;
 				case "Healing":
 					Debug.Log("Healing");
+					isPassive = true;
 					hp += 30;
 					break;
 				default:
@@ -53,12 +56,15 @@ public class Player : Entity
 					Debug.Log(GameManager.instance.gameData.nowSkillName);
 					break;
 			}
-			
 			int num = GameManager.instance.gameData.SkillNameSet.IndexOf(GameManager.instance.gameData.nowSkillName);
 			Debug.Log(num);
 			num = num == -1? 0 : num;
 			Debug.Log("playerskill");
-			skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation,this.transform);
+			skill = isPassive?Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation,this.transform): Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
+			foreach (MultipleObjectsMake c in skill.GetComponentsInChildren<MultipleObjectsMake>())
+            {
+				c.Attacker = this;
+            }
 			tag = "PlayerSkill";
 			/*
 			// 스킬오브젝트 오브젝트 풀에서 꺼내옴

@@ -75,20 +75,28 @@ public class Enemy : Entity
     }
     public void EnemySkill()
     {
+        bool isPassive = false;
         int num = GameManager.instance.gameData.SkillNameSet.IndexOf(getSkill.name);
         Debug.Log(num);
         num = num == -1 ? 0 : num;
-        skill = Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform);
         switch (GameManager.instance.gameData.SkillResource[num].name)  // 획득한 스킬의 이벤트 발생
         {
             case "Barrier":
                 StartCoroutine(Invincible());
+                isPassive = true;
                 break;
             case "Healing":
                 hp += 30;
+                isPassive = true;
                 break;
             default:
                 break;
+        }
+        skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
+
+        foreach (MultipleObjectsMake c in skill.GetComponentsInChildren<MultipleObjectsMake>())
+        {
+            c.Attacker = this;
         }
         Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제
     }

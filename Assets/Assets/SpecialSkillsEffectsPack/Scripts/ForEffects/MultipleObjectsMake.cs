@@ -16,6 +16,8 @@ public class MultipleObjectsMake : _ObjectsMakeBase
     float m_count;
     float m_scalefactor;
 
+    public Entity Attacker;
+
     void Start()
     {
         m_Time = m_Time2 = Time.time;
