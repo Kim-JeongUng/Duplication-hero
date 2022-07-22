@@ -75,8 +75,10 @@ public class ObjectMoveDestroy : MonoBehaviour
 
     void HitObj(RaycastHit hit)
     {
+        if (!hit.transform.CompareTag("Enemy") && !hit.transform.CompareTag("Player") && !hit.transform.CompareTag("Environment"))
+            return;
         Parent = transform.parent.GetComponent<MultipleObjectsMake>().Attacker;
-        if (hit.transform.CompareTag("Enemy") || hit.transform.CompareTag("Player"))
+        if (!hit.transform.CompareTag("Environment")) //적이거나 플레이어거나
         {
             if (!hit.transform.CompareTag(Parent.transform.tag))
                 hit.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
