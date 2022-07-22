@@ -12,7 +12,6 @@ TagManager:
   - FireBullet
   - PlayerSkill
   - EnemySkill
-  - MonsterSkill
   layers:
   - Default
   - TransparentFX
