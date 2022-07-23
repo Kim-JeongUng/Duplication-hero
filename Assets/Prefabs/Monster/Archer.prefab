@@ -1292,7 +1292,7 @@ MonoBehaviour:
   canUseSkill: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 8192
+    m_Bits: 0
   DangerMarker: {fileID: 4969338509894549370, guid: 6a7c3032180bb8f40af48204c38b7d0f, type: 3}
   LaserEffect: {fileID: 1447435588197194, guid: 8a154346dfde5564a9d3b6f5cf0a20a6, type: 3}
   shooter: {fileID: 5117843574253354938}
