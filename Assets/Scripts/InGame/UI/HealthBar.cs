@@ -33,7 +33,7 @@ public class HealthBar : MonoBehaviour
 
 		if(currentHp!=entity.Hp){
 			currentHp = entity.Hp;
-			Invoke("BackHp", 0.5f);
+			Invoke("BackHp", 0.8f);
 		}
 
 		if(backHpHit){

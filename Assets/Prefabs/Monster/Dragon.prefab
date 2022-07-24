@@ -1266,6 +1266,7 @@ MonoBehaviour:
   thisObject: {fileID: 0}
   entity: {fileID: 4733921152123893396}
   hpBar: {fileID: 0}
+  backHpBar: {fileID: 0}
   HpLineFolder: {fileID: 0}
   thisObjectHpText: {fileID: 0}
   unitHp: 200
@@ -1582,6 +1583,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912570427890476874, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.371875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912570427890476874, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.630164
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046656101980104056, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.371875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046656101980104056, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.630164
+      objectReference: {fileID: 0}
     - target: {fileID: 4693140872632737649, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
@@ -1615,6 +1632,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4733921152123893396}
     - target: {fileID: 7743300253771040163, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
+      propertyPath: backHpBar
+      value: 
+      objectReference: {fileID: 6497744037071467137}
+    - target: {fileID: 7743300253771040163, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
       propertyPath: thisObject
       value: 
       objectReference: {fileID: 3146352202046788991}
@@ -1625,6 +1646,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1601131054281307154, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
   m_PrefabInstance: {fileID: 1040173166132267556}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6497744037071467137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6071960870550485157, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
+  m_PrefabInstance: {fileID: 1040173166132267556}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5522413284969034199
 PrefabInstance:
   m_ObjectHideFlags: 0
