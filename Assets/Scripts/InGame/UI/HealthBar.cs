@@ -54,7 +54,7 @@ public class HealthBar : MonoBehaviour
     {
         float scaleX = ( defaultHp / unitHp ) / ( entity.MaxHp / unitHp );
         HpLineFolder.GetComponent<HorizontalLayoutGroup> ( ).gameObject.SetActive ( false );
-
+		Debug.Log(scaleX);
         foreach ( Transform child in HpLineFolder.transform)
         {
             child.gameObject.transform.localScale = new Vector3 ( scaleX, 1, 1 );
