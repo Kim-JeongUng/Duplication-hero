@@ -96,13 +96,15 @@ public class Enemy : Entity
         while (true)
         {
             yield return new WaitForSeconds(skillcool);
+            LaserEffect.SetActive(true);  // 위험표시 활성화
+
             if (hp <= 0)
                 break;
 
             //yield return new WaitForSeconds(1f); // 스킬 쿨타임이 됐으면 1초뒤 dangermark를 활성화한다.
             //StartCoroutine(SetTarget());  // LaserEffect를 활성화 한 다음에 플레이어를 바라보도록 한다
 
-            //yield return new WaitForSeconds(1.5f);  // dangermark 표시되고 1.5초뒤에 스킬을 발사
+            yield return new WaitForSeconds(2f);  // dangermark 표시되고 1.5초뒤에 스킬을 발사
             EnemySkill();
 
             Debug.Log("스킬사용");

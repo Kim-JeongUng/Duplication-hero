@@ -1144,7 +1144,6 @@ GameObject:
   - component: {fileID: 1533691677}
   - component: {fileID: 4611276839608745193}
   - component: {fileID: -5374402086359783633}
-  - component: {fileID: -4024540780996383522}
   m_Layer: 8
   m_Name: Archer
   m_TagString: Enemy
@@ -1294,28 +1293,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   DangerMarker: {fileID: 4969338509894549370, guid: 6a7c3032180bb8f40af48204c38b7d0f, type: 3}
-  LaserEffect: {fileID: 1447435588197194, guid: 8a154346dfde5564a9d3b6f5cf0a20a6, type: 3}
+  LaserEffect: {fileID: 3907974973184853693}
   shooter: {fileID: 5117843574253354938}
   aimer: {fileID: 5371552464047986266}
---- !u!95 &-4024540780996383522
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3343400541712103999}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e9eacf3ee5c95c47b69fb988422c1fd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3738630275334420280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,8 +1483,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3907974973184853693}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -1.2031322, y: 5, z: 3.3500767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7300110890477549191}
@@ -1856,6 +1836,7 @@ MonoBehaviour:
   thisObject: {fileID: 0}
   entity: {fileID: -5374402086359783633}
   hpBar: {fileID: 0}
+  backHpBar: {fileID: 0}
   HpLineFolder: {fileID: 0}
   thisObjectHpText: {fileID: 0}
   unitHp: 200
@@ -2347,6 +2328,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7300110890477549191}
   - component: {fileID: 1218974094316072042}
+  - component: {fileID: 2782047782503025299}
+  - component: {fileID: 6522573465445186339}
   m_Layer: 0
   m_Name: DangerMark
   m_TagString: Untagged
@@ -2467,3 +2450,35 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &2782047782503025299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905931587733293692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb650abd879b8c24da6c97e419a2a0da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaserEffect: {fileID: 3907974973184853693}
+--- !u!95 &6522573465445186339
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905931587733293692}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e9eacf3ee5c95c47b69fb988422c1fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

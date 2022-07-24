@@ -8,7 +8,7 @@ public class Archer : WalkingEnemy
 
 	float lastShootTime;
 	float lastSkillTime;
-	
+
 	protected new void Awake()
 	{
 		base.Awake();
