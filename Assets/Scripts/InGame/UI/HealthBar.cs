@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -15,16 +15,18 @@ public class HealthBar : MonoBehaviour
 	float yPos;
 	float currentHp;
 	bool backHpHit;
+	bool isPlayer;
 	private void Awake() {
 		yPos = transform.position.y;
 		currentHp = entity.Hp;
 		if(entity.CompareTag("Player")){
+			isPlayer = true;
 			GetHpBoost();
 		}
 	}
 	private void Update()
 	{
-		if(entity.CompareTag("Player"))
+		if(isPlayer)
 			transform.position = new Vector3(thisObject.position.x, yPos, thisObject.position.z);
 		else
 			transform.rotation = Quaternion.Euler(new Vector3(-90, -this.transform.root.rotation.y, 0));
