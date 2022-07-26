@@ -272,8 +272,9 @@ GameObject:
   - component: {fileID: 7529941228988019584}
   - component: {fileID: 4981004732669687813}
   - component: {fileID: 1149993749185303373}
-  - component: {fileID: 8917707943427879695}
   - component: {fileID: 4733921152123893396}
+  - component: {fileID: 8204417153172189481}
+  - component: {fileID: 8749307902366253855}
   m_Layer: 8
   m_Name: Dragon
   m_TagString: Enemy
@@ -356,19 +357,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &8917707943427879695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2157593041942259564}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.8858929, y: 2.5848126, z: 2.2630005}
-  m_Center: {x: -0.04659629, y: 1.3041217, z: -0.6315004}
 --- !u!114 &4733921152123893396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +397,34 @@ MonoBehaviour:
   LaserEffect: {fileID: 0}
   aimer: {fileID: 7784650714116788477}
   Skill: {fileID: 5523288845391227549}
+--- !u!136 &8204417153172189481
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157593041942259564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 5.2923813
+  m_Direction: 1
+  m_Center: {x: -0, y: 2.1461906, z: -0}
+--- !u!136 &8749307902366253855
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157593041942259564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.5
+  m_Height: 5.2923813
+  m_Direction: 1
+  m_Center: {x: -0, y: 2.1461906, z: -0}
 --- !u!1 &2352668954980713375
 GameObject:
   m_ObjectHideFlags: 0

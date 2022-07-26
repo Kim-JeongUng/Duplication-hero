@@ -33,8 +33,8 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager instance;
     public CharacterDatas characters;
-    public UserItemDatas userItemDatas;
-    public UserItemDatas AllItemDatas;
+    private UserItemDatas userItemDatas;
+    private UserItemDatas AllItemDatas;
     string path;
     // Start is called before the first frame update
     void Awake()
@@ -131,10 +131,8 @@ public class DataManager : MonoBehaviour
     }
     public void UserRemoveItem(int ItemIndex)
     {
-        //미완성
         Debug.Log("ItemRemove");
         UserItemDatas UserItem = ItemDatasLoad();
-        //인덱스로 찾아야 하나? -> 아이템 하나 삭제 후 나머지 인덱스는 어떻게 처리?
         UserItem.ItemRows.Remove(UserItem.ItemRows[ItemIndex]);
         UserItemDataSave(UserItem);
     }

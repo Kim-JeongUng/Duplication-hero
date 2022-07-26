@@ -3025,10 +3025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017f409ac3aac744d902503caff53f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userItemDatas:
-    ItemRows: []
-  AllItemDatas:
-    ItemRows: []
 --- !u!4 &1215584938
 Transform:
   m_ObjectHideFlags: 0
@@ -4390,6 +4386,7 @@ GameObject:
   - component: {fileID: 1722881601}
   - component: {fileID: 1722881605}
   - component: {fileID: 1722881600}
+  - component: {fileID: 1722881607}
   - component: {fileID: 1722881599}
   - component: {fileID: 1722881604}
   - component: {fileID: 1722881606}
@@ -4557,6 +4554,20 @@ MonoBehaviour:
   animator: {fileID: 2048500060529392617}
   gameController: {fileID: 1901318036}
   m_DoubleClickSecond: 0.25
+--- !u!136 &1722881607
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722881598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 6
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 2, z: -0.00000008940697}
 --- !u!1 &1728814290
 GameObject:
   m_ObjectHideFlags: 0

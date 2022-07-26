@@ -474,8 +474,9 @@ GameObject:
   - component: {fileID: 8592936906596634535}
   - component: {fileID: 8510276665184316609}
   - component: {fileID: 4657559543467406500}
-  - component: {fileID: 8843645210582102051}
   - component: {fileID: 8641531077742561079}
+  - component: {fileID: 8002621978388523958}
+  - component: {fileID: 7441172809648528454}
   m_Layer: 8
   m_Name: eyebat
   m_TagString: Enemy
@@ -535,19 +536,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &8843645210582102051
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8596174083329394053}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 50, y: 120, z: 100}
-  m_Center: {x: 0, y: 30, z: 0}
 --- !u!114 &8641531077742561079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,6 +575,34 @@ MonoBehaviour:
   DangerMarker: {fileID: 0}
   LaserEffect: {fileID: 0}
   anim: {fileID: 0}
+--- !u!136 &8002621978388523958
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596174083329394053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 20.31748
+  m_Height: 127.00813
+  m_Direction: 1
+  m_Center: {x: 0, y: 54.504047, z: 0}
+--- !u!136 &7441172809648528454
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596174083329394053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 127.00813
+  m_Direction: 1
+  m_Center: {x: 0, y: 54.504047, z: 0}
 --- !u!1 &8596204189200441385
 GameObject:
   m_ObjectHideFlags: 0

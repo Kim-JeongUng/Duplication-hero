@@ -84,10 +84,7 @@ public class GameController : MonoBehaviour
     }
     public void GoMain()
     {
-        GameManager.instance.gameData.nowProgressLevel = 0;
-        GameManager.instance.gameData.DeadCount = 0;
-        GameManager.instance.gameData.nowSkillName = "";
-        gameState.value = GameState.INIT;
+        Destroy(GameManager.instance.gameObject);
         SceneManager.LoadScene("MainScene");
     }
     public void GetResultReward()
