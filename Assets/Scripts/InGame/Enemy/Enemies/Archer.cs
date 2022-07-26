@@ -24,8 +24,11 @@ public class Archer : WalkingEnemy
 		if (aimer.Target != null)
 		{
 			walkingState = MovingState.STAYING;
-			aimer.FollowTarget();
 
+            if (base.isdanger == false)  // 위험표시 비 실행 중일때만 캐릭터 따라다님
+            { 
+				aimer.FollowTarget();
+			}
 			//EnemySkill();
 
 			/*else if (Time.time - lastShootTime >= (1 / attackSpeed))  // 몬스터 일반공격

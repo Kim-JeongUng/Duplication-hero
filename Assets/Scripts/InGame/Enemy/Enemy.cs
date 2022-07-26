@@ -22,12 +22,15 @@ public class Enemy : Entity
     public bool isBossMonster = false;
     public bool canUseSkill = false;
 
-    public LayerMask layerMask;  // 공격표시레이어
-    public GameObject DangerMarker;  // 트레일 렌더러
+    //public LayerMask layerMask;  // 공격표시레이어
+    //public GameObject DangerMarker;  // 트레일 렌더러
 
     public GameObject LaserEffect;  // 라인렌더러
-    float attackTime = 5f;
-    float attackTimeCalc = 5f;
+    public bool isDangerMark;  // 위험표시를 사용할 것인지
+    public bool isdanger = false;  // 현재위험표시 실행중인지 체크
+
+    //float attackTime = 5f;
+    //float attackTimeCalc = 5f;
 
     protected void OnEnable()
     {
@@ -107,8 +110,13 @@ public class Enemy : Entity
         while (true)
         {
             yield return new WaitForSeconds(skillcool);
-            if(LaserEffect!=null)
-                LaserEffect.SetActive(true);  // 위험표시 활성화
+            if (LaserEffect != null)
+                if (isDangerMark == true)
+                {
+                    LaserEffect.SetActive(true);  // 위험표시 활성화
+                    isdanger = true;
+                }
+
 
             if (hp <= 0)
                 break;
@@ -116,8 +124,10 @@ public class Enemy : Entity
             //yield return new WaitForSeconds(1f); // 스킬 쿨타임이 됐으면 1초뒤 dangermark를 활성화한다.
             //StartCoroutine(SetTarget());  // LaserEffect를 활성화 한 다음에 플레이어를 바라보도록 한다
 
-            yield return new WaitForSeconds(2f);  // dangermark 표시되고 1.5초뒤에 스킬을 발사
+            yield return new WaitForSeconds(1f);  // dangermark 표시되고 1.5초뒤에 스킬을 발사
             EnemySkill();
+
+            isdanger = false;
 
             Debug.Log("스킬사용");
         }
@@ -158,6 +168,7 @@ public class Enemy : Entity
             default:
                 break;
         }
+        // 스킬 이펙트 생성
         skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
 
         foreach (MultipleObjectsMake c in skill.GetComponentsInChildren<MultipleObjectsMake>())

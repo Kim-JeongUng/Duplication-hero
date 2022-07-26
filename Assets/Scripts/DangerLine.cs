@@ -13,9 +13,6 @@ public class DangerLine : MonoBehaviour
     void Start()
     {
         lr = GetComponent<LineRenderer>();
-
-        pos1 = gameObject.GetComponent<Transform>().position;
-
         //lr.SetPosition(0, pos1);
         //lr.SetPosition(1, GameObject.Find("Player").GetComponent<Transform>().position);
 
@@ -28,12 +25,13 @@ public class DangerLine : MonoBehaviour
 
     public IEnumerator SetTarget()
     {
-        pos1 = gameObject.GetComponent<Transform>().position;
-
+        pos1 = this.gameObject.GetComponent<Transform>().position;
+        pos2 = GameManager.instance.player.GetComponent<Transform>().position;
+        
         lr.SetPosition(0, pos1);
-        lr.SetPosition(1, GameObject.Find("Player").GetComponent<Transform>().position);
+        lr.SetPosition(1, pos2);
 
-        yield return new WaitForSeconds(3f); // 스킬 쿨타임이 됐으면 1초뒤 dangermark를 활성화한다.
+        yield return new WaitForSeconds(1f);  // 덴저마크 실행 1초뒤 비활성화
 
 
         transform.parent.gameObject.SetActive(false);

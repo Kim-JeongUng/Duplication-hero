@@ -3,11 +3,11 @@
 public class Bird : FlyingEnemy
 {
     [SerializeField] private Animator anim;
+
     private new void Awake() {
         base.Awake();
         anim = GetComponent<Animator>();
     }
-    
     public override void Animation_Run(bool isRun){
         anim.SetBool("isRun", isRun);
     }

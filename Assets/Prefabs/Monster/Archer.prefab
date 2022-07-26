@@ -1295,6 +1295,7 @@ MonoBehaviour:
     m_Bits: 0
   DangerMarker: {fileID: 4969338509894549370, guid: 6a7c3032180bb8f40af48204c38b7d0f, type: 3}
   LaserEffect: {fileID: 3907974973184853693}
+  isDangerMark: 1
   shooter: {fileID: 5117843574253354938}
   aimer: {fileID: 5371552464047986266}
 --- !u!1 &3738630275334420280
