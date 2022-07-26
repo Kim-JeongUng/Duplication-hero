@@ -12,6 +12,7 @@ TagManager:
   - FireBullet
   - PlayerSkill
   - EnemySkill
+  - Skill
   layers:
   - Default
   - TransparentFX

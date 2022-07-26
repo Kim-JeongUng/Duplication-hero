@@ -58,19 +58,28 @@ public class Enemy : Entity
         Player player = killer as Player;
         if(player!=null)
             player.AddCoins(coinsToDrop);
-        if (isBossMonster)
-        {
-            GameController.instance.OpenResultPannel();
-        }
         enemyHandler.componentCache.RemoveEnemy(this);
-        Destroy(gameObject);
+        //DeadAnim 실행
+        Destroy(gameObject,1f);
     }
 
-    public void DropItem(GameObject getSkill)  // 아이템 구슬 생성
+    public void DropItem(GameObject getSkill)  // 스킬 구슬 생성
     {
         var itemGo = MultipleObjectPooling.instance.GetPooledObject(getSkill.name);
-        itemGo.transform.position = this.gameObject.transform.position;  // 스킬구슬 생성 위치 설정
+        itemGo.transform.position = this.transform.position;  // 스킬구슬 생성 위치 설정
 
+        rb = itemGo.GetComponent<Rigidbody>();
+        rb.AddForce(transform.up * 5f, ForceMode.Impulse);
+    }
+    public void DropItem(UserItemData Randitem)  // 아이템 구슬 생성
+    {
+        GameObject Bubble = Resources.Load<GameObject>(string.Format("Bubble/{0}", "preset"));
+        var itemGo = Instantiate(Bubble);
+        Bubble.name = Randitem.ItemName;
+        Bubble.transform.GetChild(0).name = Randitem.ItemName;
+        Bubble.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite= Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", Randitem.type,Randitem.ItemName));
+        Bubble.tag = "Item";
+        itemGo.transform.position = this.transform.position;  // 스킬구슬 생성 위치 설정
         rb = itemGo.GetComponent<Rigidbody>();
         rb.AddForce(transform.up * 5f, ForceMode.Impulse);
     }

@@ -126,7 +126,7 @@ public class Player : Entity
 	{
 		base.Awake();
 		GameManager.instance.player = this;
-		CharacterDatas character = CharacterData.instance.Load();
+		CharacterDatas character = DataManager.instance.Load();
 
 		speed = character.Speed;
 		maxHp = character.HP;
@@ -240,7 +240,7 @@ public class Player : Entity
 
     public void OnTriggerEnter(Collider other)
     {
-       if(other.gameObject.CompareTag("Item"))
+       if(other.gameObject.CompareTag("Skill"))
         {
 			if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면 무시
 				return;
@@ -252,14 +252,26 @@ public class Player : Entity
 				other.transform.parent.gameObject.SetActive(false);  // 오브젝트 풀링
 			}
         }
-		else if(other.gameObject.CompareTag("Gate")){
-			GameManager.instance.gameData.nowHP = hp;
-			gameController.nextStage();
+		else if(other.gameObject.CompareTag("Gate"))
+		{
+			if (GameManager.instance.gameData.nowProgressLevel == GameManager.instance.gameData.EndProgressLevel) //게임종료
+			{
+				GameController.instance.OpenResultPannel();
+			}
+			else
+			{
+				GameManager.instance.gameData.nowHP = hp;
+				gameController.nextStage();
+			}
 		}
-    }
+		else if (other.gameObject.CompareTag("Item"))
+		{
+			Destroy(other.gameObject);
+		}
+	}
     public void OnTriggerStay(Collider other)
     {
-		if (other.gameObject.CompareTag("Item"))
+		if (other.gameObject.CompareTag("Skill"))
 		{
 			if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면 무시
 				return;

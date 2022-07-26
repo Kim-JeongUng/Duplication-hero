@@ -20,7 +20,7 @@ public class MyItems : MonoBehaviour
     }
     public void Equip()
     {
-        CharacterDatas character = CharacterData.instance.Load();
+        CharacterDatas character = DataManager.instance.Load();
         itemData.isEquip = itemData.isEquip ? false : true;
 
         Check.SetActive(itemData.isEquip);
@@ -48,8 +48,8 @@ public class MyItems : MonoBehaviour
                 break;
         }
 
-        CharacterData.instance.UserChangeItem(itemData, ItemIndex);
-        CharacterData.instance.Save(character);
+        DataManager.instance.UserChangeItem(itemData, ItemIndex);
+        DataManager.instance.Save(character);
         EquipController.SaveAndReferesh();
     }
     public void EquipCheck()

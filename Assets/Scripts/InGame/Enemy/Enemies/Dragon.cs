@@ -51,7 +51,10 @@ public class Dragon : WalkingEnemy
 		Debug.Log("------------Boss Dead-------------");
 
 		base.Death(killer);
-		DropItem(getSkill); // 스킬아이템 드랍
+		//랜덤아이템
+		UserItemData Randitem = DataManager.instance.PickRandomItem();
+		DataManager.instance.UserGetItem(Randitem);
+		DropItem(Randitem);
 	}
 	IEnumerator MonsterRoutine()
     {

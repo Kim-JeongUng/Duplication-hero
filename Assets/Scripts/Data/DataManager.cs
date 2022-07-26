@@ -29,11 +29,12 @@ public class UserItemDatas
     public List<UserItemData> ItemRows;
 }
 
-public class CharacterData : MonoBehaviour
+public class DataManager : MonoBehaviour
 {
-    public static CharacterData instance;
+    public static DataManager instance;
     public CharacterDatas characters;
     public UserItemDatas userItemDatas;
+    public UserItemDatas AllItemDatas;
     string path;
     // Start is called before the first frame update
     void Awake()
@@ -56,6 +57,7 @@ public class CharacterData : MonoBehaviour
                 Destroy(this.gameObject);
         }
         //Save();
+        AllItemPresetLoad();
         Load();
         ItemDatasLoad();
     }
@@ -102,7 +104,7 @@ public class CharacterData : MonoBehaviour
         }
         return userItemDatas;
     }
-    public void NewItemData()
+    public void NewItemData() //¿À·ù
     {
         userItemDatas = new UserItemDatas { ItemRows = { new UserItemData { ItemName = "Weapon0", type = "Weapon", value = 5.0f, isEquip = false } ,
                                                          new UserItemData { ItemName = "Armor0", type = "Armor", value = 5.0f, isEquip = false }  ,
@@ -154,5 +156,26 @@ public class CharacterData : MonoBehaviour
     {
         Debug.Log("ItemSave");
         File.WriteAllText(path + "/UserItemData.json", itemDatas);
+    }
+    public UserItemDatas AllItemPresetLoad()
+    {
+        try
+        {
+            AllItemDatas = JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((path + "/AllItemData.json")));
+        }
+        catch (FileNotFoundException f)
+        {
+            Debug.Log("File ERROR");
+            return null;
+        }
+        return AllItemDatas;
+    }
+
+    public UserItemData PickRandomItem()
+    {
+        UserItemData item;
+        int rand = UnityEngine.Random.Range(0, AllItemDatas.ItemRows.Count);
+        item = AllItemDatas.ItemRows[rand];
+        return item;
     }
 }

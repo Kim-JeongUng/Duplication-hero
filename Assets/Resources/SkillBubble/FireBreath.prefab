@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7859681538625783560}
   m_Layer: 0
   m_Name: FireBreath
-  m_TagString: Item
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!135 &7859681538625783560
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 4780769704671215566}
   m_Layer: 7
   m_Name: FireBreath
-  m_TagString: Item
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

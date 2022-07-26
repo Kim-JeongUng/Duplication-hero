@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6179435604348911372}
   m_Layer: 0
   m_Name: Barrier
-  m_TagString: Item
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 8232703752499337198}
   m_Layer: 7
   m_Name: Barrier
-  m_TagString: Item
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

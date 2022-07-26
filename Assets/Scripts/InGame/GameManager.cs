@@ -12,9 +12,13 @@ public class GameData
 
     public List<string> SkillNameSet = new List<string> { };
     public GameObject[] SkillResource;
+
     public int nowHP;
-    public int nowProgressLevel;
+    public int nowProgressLevel; //현재라운드
+    public int EndProgressLevel = 4 ; //최종라운드
     public int DeadCount=0;
+    public int acquiredCoins=0; //획득 코인 합
+
     public bool isBossStage = false;
 }
 public class GameManager : MonoBehaviour

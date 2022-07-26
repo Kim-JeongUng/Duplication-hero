@@ -1454,7 +1454,9 @@ MonoBehaviour:
     SkillResource: []
     nowHP: 0
     nowProgressLevel: 0
+    EndProgressLevel: 4
     DeadCount: 0
+    acquiredCoins: 0
     isBossStage: 0
   enemySpawner: {fileID: 759118181}
   EnemyPrefabs:
@@ -3023,6 +3025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userItemDatas:
+    ItemRows: []
+  AllItemDatas:
     ItemRows: []
 --- !u!4 &1215584938
 Transform:
@@ -5660,6 +5664,7 @@ MonoBehaviour:
   - {fileID: 7263099708958967464, guid: d6447c577786dde45ae19567fa75ce0d, type: 3}
   - {fileID: 4687248505416739568, guid: f538754753dfbd94e8c58cd1c3764308, type: 3}
   - {fileID: 3427324384926251838, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
+  - {fileID: 4780769704671215567, guid: cd0bdde961933094293755a7530c95e8, type: 3}
   poolingCount: 3
 --- !u!850595691 &1995969775
 LightingSettings:

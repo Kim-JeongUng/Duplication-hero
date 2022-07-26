@@ -46,7 +46,7 @@ public class EquipController : MonoBehaviour
     {
         instance = this;
         SaveAndReferesh = () => { SaveData(); };
-        characterDatas =CharacterData.instance.Load();
+        characterDatas =DataManager.instance.Load();
         RefreshState();
         SetItems();
     }
@@ -55,9 +55,9 @@ public class EquipController : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
     public void SaveData(){
-        characterDatas = CharacterData.instance.Load();
+        characterDatas = DataManager.instance.Load();
         RefreshState();
-        CharacterData.instance.Save(characterDatas); 
+        DataManager.instance.Save(characterDatas); 
     }
     public void RefreshState() {
         texts.AD.text = characterDatas.AD.ToString("+0.##;-0.##;0");
@@ -69,7 +69,7 @@ public class EquipController : MonoBehaviour
     }
     public void SetItems()
     {
-        UserItemDatas items = CharacterData.instance.ItemDatasLoad();
+        UserItemDatas items = DataManager.instance.ItemDatasLoad();
         for (int i = 0; i < items.ItemRows.Count; i++)
         {
             var item = Instantiate(presetItem, Inventory);

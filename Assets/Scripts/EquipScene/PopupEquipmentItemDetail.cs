@@ -79,9 +79,9 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         {
             EquipItemButton();
         }
-        CharacterData.instance.UserRemoveItem(thisItemObject.ItemIndex);
+        DataManager.instance.UserRemoveItem(thisItemObject.ItemIndex);
         EquipController.instance.characterDatas.Coin += sellCoinValue;
-        CharacterData.instance.Save(EquipController.instance.characterDatas);
+        DataManager.instance.Save(EquipController.instance.characterDatas);
         EquipController.instance.SaveData();
         Destroy(thisItemObject);
         SceneManager.LoadScene("EquipmentScene");
@@ -93,7 +93,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
             Debug.Log("Upgrade");
             EquipController.instance.characterDatas.Coin -= upgradeCoinValue;
 
-            CharacterData.instance.Save(EquipController.instance.characterDatas);
+            DataManager.instance.Save(EquipController.instance.characterDatas);
             if (thisItem.isEquip) // 장착중이면 해제 후 업그레이드 후 재장착
             {
                 EquipItemButton();
@@ -109,7 +109,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 thisItem.value *= 1.1f;
             }
 
-            CharacterData.instance.UserChangeItem(thisItem, thisItemObject.ItemIndex);
+            DataManager.instance.UserChangeItem(thisItem, thisItemObject.ItemIndex);
             EquipController.instance.SaveData();
         }
         else
