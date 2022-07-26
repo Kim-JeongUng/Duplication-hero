@@ -96,6 +96,7 @@ public class GameController : MonoBehaviour
             DataManager.instance.UserGetItem(GameManager.instance.gameData.acquiredItems[i]);
         }
         DataManager.instance.characters.Coin += GameManager.instance.gameData.acquiredCoins;
+        DataManager.instance.Save();
     }
     public void OpenContinuePannel()
     {

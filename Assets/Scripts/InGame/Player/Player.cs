@@ -172,7 +172,8 @@ public class Player : Entity
 	/// <param name="amount"></param>
 	public void AddCoins(int amount)
 	{
-		coins += amount;
+		//coins += amount;
+		GameManager.instance.gameData.acquiredCoins += amount;
 	}
 
 	/// <summary>

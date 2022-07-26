@@ -266,7 +266,7 @@ MonoBehaviour:
   waitingTime: 0
   randomTime: 0
   touchDamageMultiplier: 1
-  coinsToDrop: 100
+  coinsToDrop: 8
   getSkill: {fileID: 8232703752499337199, guid: b32c883e0edd1d345abb0100f7150ae8, type: 3}
   skillcool: 3
   isBossMonster: 0
