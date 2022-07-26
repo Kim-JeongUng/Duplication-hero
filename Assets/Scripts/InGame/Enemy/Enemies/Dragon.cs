@@ -53,7 +53,7 @@ public class Dragon : WalkingEnemy
 		base.Death(killer);
 		//랜덤아이템
 		UserItemData Randitem = DataManager.instance.PickRandomItem();
-		DataManager.instance.UserGetItem(Randitem);
+		//DataManager.instance.UserGetItem(Randitem); result에서 처리
 		DropItem(Randitem);
 	}
 	IEnumerator MonsterRoutine()

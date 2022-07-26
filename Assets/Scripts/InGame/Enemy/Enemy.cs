@@ -60,7 +60,7 @@ public class Enemy : Entity
             player.AddCoins(coinsToDrop);
         enemyHandler.componentCache.RemoveEnemy(this);
         //DeadAnim 실행
-        Destroy(gameObject,1f);
+        Destroy(gameObject,0.2f);
     }
 
     public void DropItem(GameObject getSkill)  // 스킬 구슬 생성
@@ -75,11 +75,13 @@ public class Enemy : Entity
     {
         GameObject Bubble = Resources.Load<GameObject>(string.Format("Bubble/{0}", "preset"));
         var itemGo = Instantiate(Bubble);
-        Bubble.name = Randitem.ItemName;
-        Bubble.transform.GetChild(0).name = Randitem.ItemName;
-        Bubble.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite= Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", Randitem.type,Randitem.ItemName));
-        Bubble.tag = "Item";
+        itemGo.name = Randitem.ItemName;
+        itemGo.transform.GetChild(0).name = Randitem.ItemName;
+        itemGo.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite= Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", Randitem.type,Randitem.ItemName));
+        itemGo.GetComponent<presetItemdata>().itemData = Randitem;
+
         itemGo.transform.position = this.transform.position;  // 스킬구슬 생성 위치 설정
+
         rb = itemGo.GetComponent<Rigidbody>();
         rb.AddForce(transform.up * 5f, ForceMode.Impulse);
     }

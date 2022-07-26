@@ -240,19 +240,19 @@ public class Player : Entity
 
     public void OnTriggerEnter(Collider other)
     {
-       if(other.gameObject.CompareTag("Skill"))
-        {
+		if (other.gameObject.CompareTag("Skill"))
+		{
 			if (GameManager.instance.gameData.haveSkill())  // 현재 스킬을 획득한 상태이면 무시
 				return;
 			else
 			{
 				GameManager.instance.gameData.nowSkillName = other.gameObject.name;  // 획득한 스킬구슬의 스킬이미지 이름 저장
 				SkillImage.sprite = other.gameObject.GetComponent<SpriteRenderer>().sprite;  // 스킬버튼 이미지 변경
-				//Destroy(other.transform.parent.gameObject);  // 드랍된 스킬구슬 파괴
+																							 //Destroy(other.transform.parent.gameObject);  // 드랍된 스킬구슬 파괴
 				other.transform.parent.gameObject.SetActive(false);  // 오브젝트 풀링
 			}
-        }
-		else if(other.gameObject.CompareTag("Gate"))
+		}
+		else if (other.gameObject.CompareTag("Gate"))
 		{
 			if (GameManager.instance.gameData.nowProgressLevel == GameManager.instance.gameData.EndProgressLevel) //게임종료
 			{
@@ -266,7 +266,15 @@ public class Player : Entity
 		}
 		else if (other.gameObject.CompareTag("Item"))
 		{
-			Destroy(other.gameObject);
+			if (other.transform.parent == null) { 
+				GameManager.instance.gameData.acquiredItems.Add(other.GetComponent<presetItemdata>().itemData);
+				Destroy(other.gameObject);
+			}
+			else
+			{
+				GameManager.instance.gameData.acquiredItems.Add(other.transform.parent.GetComponent<presetItemdata>().itemData);
+				Destroy(other.transform.parent.gameObject);
+			}
 		}
 	}
     public void OnTriggerStay(Collider other)

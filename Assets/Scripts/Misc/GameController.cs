@@ -90,6 +90,13 @@ public class GameController : MonoBehaviour
         gameState.value = GameState.INIT;
         SceneManager.LoadScene("MainScene");
     }
+    public void GetResultReward()
+    {
+        for (int i = 0; i < GameManager.instance.gameData.acquiredItems.Count; i++) {
+            DataManager.instance.UserGetItem(GameManager.instance.gameData.acquiredItems[i]);
+        }
+        DataManager.instance.characters.Coin += GameManager.instance.gameData.acquiredCoins;
+    }
     public void OpenContinuePannel()
     {
         continuePannel.SetActive(true);

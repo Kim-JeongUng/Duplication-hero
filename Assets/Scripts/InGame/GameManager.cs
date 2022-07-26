@@ -18,7 +18,7 @@ public class GameData
     public int EndProgressLevel = 4 ; //ÃÖÁ¾¶ó¿îµå
     public int DeadCount=0;
     public int acquiredCoins=0; //È¹µæ ÄÚÀÎ ÇÕ
-
+    public List<UserItemData> acquiredItems = new List<UserItemData> { }; //È¹µæÇÑ ¾ÆÀÌÅÛ
     public bool isBossStage = false;
 }
 public class GameManager : MonoBehaviour
@@ -72,7 +72,6 @@ public class GameManager : MonoBehaviour
                 if (gameData.EnemySet.Contains(EnemyPrefab.name))
                 {
                     enemySpawner.enemies.Add(EnemyPrefab);
-
                 }
             }
         }
