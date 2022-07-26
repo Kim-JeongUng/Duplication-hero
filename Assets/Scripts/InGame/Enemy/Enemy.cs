@@ -107,7 +107,8 @@ public class Enemy : Entity
         while (true)
         {
             yield return new WaitForSeconds(skillcool);
-            LaserEffect.SetActive(true);  // 위험표시 활성화
+            if(LaserEffect!=null)
+                LaserEffect.SetActive(true);  // 위험표시 활성화
 
             if (hp <= 0)
                 break;
