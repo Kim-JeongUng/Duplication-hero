@@ -1089,8 +1089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017f409ac3aac744d902503caff53f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userItemDatas:
-    ItemRows: []
 --- !u!4 &304480146
 Transform:
   m_ObjectHideFlags: 0
@@ -4529,6 +4527,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PopupEquipmentItemDetail, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3579097773656975902, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579097773656975902, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579097773656975902, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579097773656975902, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3579097773656975902, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987717577979951750, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987717577979951750, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987717577979951750, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987717577979951750, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987717577979951750, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6391543133871669058, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4572,6 +4610,26 @@ PrefabInstance:
     - target: {fileID: 6670382323773650960, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PopupEquipmentItemDetail, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320145467390941262, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320145467390941262, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320145467390941262, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320145467390941262, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8320145467390941262, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 888209f3a4903433f90ab5fa60ebbd4c, type: 3}

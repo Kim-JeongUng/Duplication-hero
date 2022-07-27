@@ -16,6 +16,8 @@ public class PopupEquipmentItemDetail : MonoBehaviour
     [SerializeField]
     private TMPro.TextMeshProUGUI PlaceValue;
     [SerializeField]
+    private TMPro.TextMeshProUGUI PlaceReinforcePercent;
+    [SerializeField]
     private TMPro.TextMeshProUGUI PlaceSellCoin;
     [SerializeField]
     private TMPro.TextMeshProUGUI PlaceUpgradeCoin;
@@ -29,12 +31,15 @@ public class PopupEquipmentItemDetail : MonoBehaviour
 
     protected private int sellCoinValue = 10;
     protected private int upgradeCoinValue = 10;
-
+    public float rangePercent = 1.0f;
     // Start is called before the first frame update
     public void Awake()
     {
         instance = this;
         Hide();
+    }
+    public void OnEnable()
+    {
     }
     public void Show()
     {
@@ -70,6 +75,9 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         upgradeCoinValue = thisItem.reinForceLevel * 15;
         PlaceUpgradeCoin.text = upgradeCoinValue.ToString();
         PlaceReinForceLevel.text = "LV."+thisItem.reinForceLevel.ToString();
+
+        rangePercent = this.thisItem.reinForceLevel < 20 ? 1 - (this.thisItem.reinForceLevel * 0.05f) : 0.05f;
+        PlaceReinforcePercent.text = ((1.0f - rangePercent) * 100).ToString("F0")+"%";
         PlaceEquipText.text = thisItem.isEquip ? "UnEquip" : "Equip";
 
     }
@@ -94,23 +102,45 @@ public class PopupEquipmentItemDetail : MonoBehaviour
             EquipController.instance.characterDatas.Coin -= upgradeCoinValue;
 
             DataManager.instance.Save(EquipController.instance.characterDatas);
-            if (thisItem.isEquip) // 장착중이면 해제 후 업그레이드 후 재장착
-            {
-                EquipItemButton();
-                thisItem.value *= 1.1f; //능력치 10%상승
-                thisItem.reinForceLevel++;
-                thisItemObject.reinForceLevelText.text = "LV." + thisItem.reinForceLevel.ToString();
-                EquipItemButton();
-            }
-            else
-            {
-                thisItem.reinForceLevel++;
-                thisItemObject.reinForceLevelText.text = "LV." + thisItem.reinForceLevel.ToString();
-                thisItem.value *= 1.1f;
-            }
 
-            DataManager.instance.UserChangeItem(thisItem, thisItemObject.ItemIndex);
-            EquipController.instance.SaveData();
+            float tempRand = Random.Range(0f, 1f);
+            rangePercent = this.thisItem.reinForceLevel < 20 ? 1 - (this.thisItem.reinForceLevel * 0.05f) : 0.05f;
+            PlaceReinforcePercent.text = ((1.0f - rangePercent) * 100).ToString("F0") + "%";
+
+            if (tempRand <= rangePercent)//강화성공
+            {
+                Debug.Log("강화완료");
+                if (thisItem.isEquip) // 장착중이면 해제 후 업그레이드 후 재장착
+                {
+                    EquipItemButton();
+                    thisItem.value *= 1.1f; //능력치 10%상승
+                    thisItem.reinForceLevel++;
+                    thisItemObject.reinForceLevelText.text = "LV." + thisItem.reinForceLevel.ToString();
+                    EquipItemButton();
+                }
+                else
+                {
+                    thisItem.reinForceLevel++;
+                    thisItemObject.reinForceLevelText.text = "LV." + thisItem.reinForceLevel.ToString();
+                    thisItem.value *= 1.1f;
+                }
+                DataManager.instance.UserChangeItem(thisItem, thisItemObject.ItemIndex);
+                EquipController.instance.SaveData();
+            }
+            else            //강화 실패(파괴)
+            {
+                if (thisItem.isEquip) // 장착중이면 해제 
+                    EquipItemButton();
+
+                DataManager.instance.UserRemoveItem(thisItemObject.ItemIndex);
+                DataManager.instance.Save(EquipController.instance.characterDatas);
+                EquipController.instance.SaveData();
+                Debug.Log("파괴됨");
+                Destroy(thisItemObject);
+                SceneManager.LoadScene("EquipmentScene");
+            }
+            rangePercent = this.thisItem.reinForceLevel < 20 ? 1 - (this.thisItem.reinForceLevel * 0.05f) : 0.05f;
+            PlaceReinforcePercent.text = ((1.0f - rangePercent) * 100).ToString("F0") + "%";
         }
         else
         {
