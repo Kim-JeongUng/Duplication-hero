@@ -61,11 +61,6 @@ public class DataManager : MonoBehaviour
         Load();
         ItemDatasLoad();
     }
-    public void NewData()
-    {
-        characters = new CharacterDatas { AD = 10, AP = 0, AS = 1.5f, Speed = 3, HP = 100, Coin = 0 };
-        Save();
-    }
     public void Save()
     {
         Debug.Log("save");
@@ -86,8 +81,9 @@ public class DataManager : MonoBehaviour
         }
         catch (FileNotFoundException f)
         {
-            NewData();
-            Load();
+            string CharacterData = Resources.Load<TextAsset>("PresetData/CharacterData").ToString();
+            File.WriteAllText(path + "/CharacterData.json", CharacterData);
+            characters = JsonUtility.FromJson<CharacterDatas>(File.ReadAllText(path + "/CharacterData.json"));
         }
         return characters;
     }
@@ -96,24 +92,15 @@ public class DataManager : MonoBehaviour
         try
         {
             userItemDatas = JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((path + "/UserItemData.json")));
+            return userItemDatas;
         }
         catch (FileNotFoundException f)
         {
-            NewItemData();
-            ItemDatasLoad();
+            string UserItemData = Resources.Load<TextAsset>("PresetData/UserItemData").ToString();
+            File.WriteAllText(path + "/UserItemData.json", UserItemData);
+            userItemDatas = JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((path + "/UserItemData.json")));
+            return userItemDatas;
         }
-        return userItemDatas;
-    }
-    public void NewItemData() //¿À·ù
-    {
-        userItemDatas = new UserItemDatas { ItemRows = { new UserItemData { ItemName = "Weapon0", type = "Weapon", value = 5.0f, isEquip = false } ,
-                                                         new UserItemData { ItemName = "Armor0", type = "Armor", value = 5.0f, isEquip = false }  ,
-                                                         new UserItemData { ItemName = "Helmet0", type = "Helmet", value = 5.0f, isEquip = false } ,
-                                                         new UserItemData { ItemName = "Helmet1", type = "Helmet", value = 10.0f, isEquip = false } ,
-                                                         new UserItemData { ItemName = "Helmet2", type = "Helmet", value = 15.0f, isEquip = false } ,
-                                                         new UserItemData { ItemName = "Shoes0", type = "Shoes", value = 5.0f, isEquip = false }}
-        };
-        UserItemDataSave(userItemDatas);
     }
     public void UserGetItem(UserItemData NewItem)
     {
@@ -152,7 +139,7 @@ public class DataManager : MonoBehaviour
     }
     public void UserItemDataSave(string itemDatas)
     {
-        Debug.Log("ItemSave");
+        Debug.Log("NewItemSave");
         File.WriteAllText(path + "/UserItemData.json", itemDatas);
     }
     public UserItemDatas AllItemPresetLoad()
@@ -160,13 +147,15 @@ public class DataManager : MonoBehaviour
         try
         {
             AllItemDatas = JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((path + "/AllItemData.json")));
+            return AllItemDatas;
         }
         catch (FileNotFoundException f)
         {
-            Debug.Log("File ERROR");
-            return null;
+            string AllItemData = Resources.Load<TextAsset>("PresetData/AllItemData").ToString();
+            File.WriteAllText(path + "/AllItemData.json", AllItemData);
+            AllItemDatas = JsonUtility.FromJson<UserItemDatas>(File.ReadAllText((path + "/AllItemData.json")));
+            return AllItemDatas;
         }
-        return AllItemDatas;
     }
 
     public UserItemData PickRandomItem()

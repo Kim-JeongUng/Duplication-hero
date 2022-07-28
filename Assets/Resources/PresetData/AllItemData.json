@@ -1,0 +1,109 @@
+{
+  "ItemRows": [
+    {
+      "ItemName": "Armor0",
+      "type": "Armor",
+      "reinForceLevel": 1,
+      "value": 5.0,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Armor1",
+      "type": "Armor",
+      "reinForceLevel": 1,
+      "value": 10.0,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Armor2",
+      "type": "Armor",
+      "reinForceLevel": 1,
+      "value": 15.0,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Armor3",
+      "type": "Armor",
+      "reinForceLevel": 1,
+      "value": 20.0,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Helmet0",
+      "type": "Helmet",
+      "reinForceLevel": 1,
+      "value": 0.1,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Helmet1",
+      "type": "Helmet",
+      "reinForceLevel": 1,
+      "value": 0.2,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Helmet2",
+      "type": "Helmet",
+      "reinForceLevel": 1,
+      "value": 0.3,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Helmet3",
+      "type": "Helmet",
+      "reinForceLevel": 1,
+      "value": 0.4,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Shoes0",
+      "type": "Shoes",
+      "reinForceLevel": 1,
+      "value": 1,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Shoes2",
+      "type": "Shoes",
+      "reinForceLevel": 1,
+      "value": 2,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Shoes3",
+      "type": "Shoes",
+      "reinForceLevel": 1,
+      "value": 3,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Weapon0",
+      "type": "Weapon",
+      "reinForceLevel": 1,
+      "value": 10.0,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Weapon1",
+      "type": "Weapon",
+      "reinForceLevel": 1,
+      "value": 15.0,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Weapon2",
+      "type": "Weapon",
+      "reinForceLevel": 1,
+      "value": 20.0,
+      "isEquip": false
+    },
+    {
+      "ItemName": "Weapon3",
+      "type": "Weapon",
+      "reinForceLevel": 1,
+      "value": 25.0,
+      "isEquip": false
+    }
+  ]
+}
