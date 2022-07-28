@@ -196,6 +196,8 @@ MonoBehaviour:
   HpLineFolder: {fileID: 9022790553643986454}
   thisObjectHpText: {fileID: 7406683821029234574}
   unitHp: 200
+  damageText: {fileID: 1538612826552822717, guid: 978829e020264ce439797a6227f2d83a, type: 3}
+  dmageShowCanvas: {fileID: 0}
 --- !u!1 &1284721171718054888
 GameObject:
   m_ObjectHideFlags: 0

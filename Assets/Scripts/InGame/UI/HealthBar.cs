@@ -11,18 +11,24 @@ public class HealthBar : MonoBehaviour
 	[SerializeField] GameObject HpLineFolder;
 	[SerializeField] TMP_Text thisObjectHpText;
 	[SerializeField] float unitHp = 200f;
+	[SerializeField] GameObject damageText;
+	[SerializeField] GameObject dmageShowCanvas;
 	float defaultHp = 1000f;
 	float yPos;
 	float currentHp;
 	bool backHpHit;
 	bool isPlayer;
+	float damage = 0f;
+	
 	private void Awake() {
 		yPos = transform.position.y;
-		currentHp = entity.Hp;
 		if(entity.CompareTag("Player")){
 			isPlayer = true;
 			GetHpBoost();
 		}
+	}
+	private void Start() {
+		currentHp = entity.Hp;
 	}
 	private void Update()
 	{
@@ -34,6 +40,11 @@ public class HealthBar : MonoBehaviour
         hpBar.value = Mathf.Lerp(hpBar.value, entity.Hp / entity.MaxHp, Time.deltaTime * 5f);
 
 		if(currentHp!=entity.Hp){
+			damage = currentHp - entity.Hp;
+			GameObject dT = Instantiate(damageText, new Vector3(entity.transform.position.x, dmageShowCanvas.transform.position.y, entity.transform.position.z), 
+											dmageShowCanvas.transform.rotation, dmageShowCanvas.transform);
+			dT.GetComponent<ShowDamage>().damage = this.damage;
+
 			currentHp = entity.Hp;
 			Invoke("BackHp", 0.8f);
 		}
