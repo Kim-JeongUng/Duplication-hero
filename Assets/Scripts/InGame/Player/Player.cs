@@ -277,6 +277,13 @@ public class Player : Entity
 				Destroy(other.transform.parent.gameObject);
 			}
 		}
+
+		// 몬스터의 공격에 맞으면 (골렘주먹에 콜라이더 달아서 골렘이 공격시 데미지 입게 하려는 중)
+		else if (other.gameObject.CompareTag("EnemySkill"))
+        {
+			// 데미지 입게
+			Debug.Log("골렘한테 맞음");
+        }
 	}
     public void OnTriggerStay(Collider other)
     {
