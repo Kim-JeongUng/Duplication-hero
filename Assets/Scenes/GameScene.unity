@@ -1467,7 +1467,6 @@ MonoBehaviour:
   - {fileID: 753785460207422148, guid: 2cadc766f57e10f4faee190a1e58de59, type: 3}
   - {fileID: 2157593041942259564, guid: 82cb52da06f4bee4198f0570ea3422e8, type: 3}
   player: {fileID: 1722881606}
-  DamageShowCanvas: {fileID: 1651673382}
 --- !u!4 &349648879
 Transform:
   m_ObjectHideFlags: 0
@@ -2715,7 +2714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3afc59afdcc67455087385c428400f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lensShift: {x: 0, y: 0.37}
+  lensShift: {x: 0, y: 0.4}
   lensShiftProportionalToAspect: 0
   lensTilt: {x: 0, y: 0}
   positionShift: {x: 0, y: 0.71}
@@ -2739,7 +2738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: c114e99e45cdb4c4484290ea37e03d0b, type: 2}
   cameraCatchUpDistance: 2
-  cameraSpeed: 0.004
+  cameraSpeed: 0.01
 --- !u!1 &974462911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1869879777736312206, guid: e2612a539d64d054e99ef1a20be78e90, type: 3}
@@ -4619,7 +4618,7 @@ CapsuleCollider:
   m_Radius: 0.7519398
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: 2, z: -0.00000008940697}
 --- !u!23 &1722881601
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4678,7 +4677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722881598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.501, z: -4.84}
+  m_LocalPosition: {x: 0, y: 0, z: -4.84}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 23635923038558854}
@@ -4761,7 +4760,7 @@ CapsuleCollider:
   m_Radius: 1
   m_Height: 6
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 2, z: -0.00000008940697}
+  m_Center: {x: 0.000000059604645, y: 3, z: -0.00000008940697}
 --- !u!1 &1728814290
 GameObject:
   m_ObjectHideFlags: 0
