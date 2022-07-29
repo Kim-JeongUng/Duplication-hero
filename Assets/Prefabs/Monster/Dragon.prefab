@@ -293,11 +293,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22a93a8773c1a5a429a397ab78adbcbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  maxHp: 200
+  speed: 1
+  maxHp: 1000
   hp: 0
   attackSpeed: 3
-  damage: 20
+  damage: 120
   ap: 0
   coin: 0
   isInvincible: 0
@@ -305,14 +305,14 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: c114e99e45cdb4c4484290ea37e03d0b, type: 2}
   enemyHandler: {fileID: 11400000, guid: 844697ca1887009458f7eab66bdc9b91, type: 2}
   onPlayerDeath: {fileID: 11400000, guid: 29380a14d0da7914dafb8a405f2918f4, type: 2}
-  movingTime: 0
-  waitingTime: 0
-  randomTime: 0
+  movingTime: 4
+  waitingTime: 2
+  randomTime: 2
   touchDamageMultiplier: 1
   coinsToDrop: 20
   getSkill: {fileID: 4780769704671215567, guid: cd0bdde961933094293755a7530c95e8, type: 3}
   skillcool: 3
-  isBossMonster: 0
+  isBossMonster: 1
   canUseSkill: 1
   LaserEffect: {fileID: 0}
   isDangerMark: 0
@@ -1351,6 +1351,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1.630164
       objectReference: {fileID: 0}
+    - target: {fileID: 3884402121315109030, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3884402121315109030, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4046656101980104056, guid: e806998e916b6e9469a8cf7786d8fc7b, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.371875
@@ -1496,7 +1504,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2149744061608126712, guid: 8a154346dfde5564a9d3b6f5cf0a20a6, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6179507808794064686, guid: 8a154346dfde5564a9d3b6f5cf0a20a6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a154346dfde5564a9d3b6f5cf0a20a6, type: 3}
 --- !u!1 &5523288845391227549 stripped
 GameObject:

@@ -84,8 +84,8 @@ public class Dragon : WalkingEnemy
     {
 		var tempPlayerPos = player.value.transform.position;
 		GameObject Item = Instantiate(Resources.Load<GameObject>(string.Format("Prefabs/Warning")), tempPlayerPos, Quaternion.identity);
+		Destroy(Item,1f);
 		yield return new WaitForSeconds(1f);
-		Destroy(Item);
 		this.transform.position = tempPlayerPos;
 	}
 	IEnumerator MonsterSkill()

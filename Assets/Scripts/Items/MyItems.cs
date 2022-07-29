@@ -28,7 +28,7 @@ public class MyItems : MonoBehaviour
         switch (itemData.type)
         {
             case "Weapon":
-                character.AD += itemData.isEquip ? (int)itemData.value:-(int)itemData.value;
+                character.AD += itemData.isEquip ? itemData.value:-itemData.value;
                 varNum = (int)Equipment.Weapon;
                 break; 
             case "Helmet":
@@ -40,7 +40,7 @@ public class MyItems : MonoBehaviour
                 varNum = (int)Equipment.Armor;
                 break;
             case "Shoes":
-                character.Speed += itemData.isEquip ? (int)itemData.value : -(int)itemData.value;
+                character.Speed += itemData.isEquip ? itemData.value : -itemData.value;
                 varNum = (int)Equipment.Shoes;
                 break;
             default:
