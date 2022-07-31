@@ -4832,7 +4832,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4ff7338c9a78ba94a966838a4cca0321, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24538,6 +24537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798360865802099030}
   - component: {fileID: 7100336878190872787}
+  - component: {fileID: 2393121400786010072}
   m_Layer: 0
   m_Name: SkillDamage
   m_TagString: EnemySkill
@@ -24569,10 +24569,22 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 3
-  m_Height: 5
+  m_Radius: 2.5
+  m_Height: 6
   m_Direction: 1
   m_Center: {x: 0, y: 3, z: 0}
+--- !u!114 &2393121400786010072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2629842381563757376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ba9e9ec70d0144b970e9d90d56cc8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7412315709901116221
 GameObject:
   m_ObjectHideFlags: 0
