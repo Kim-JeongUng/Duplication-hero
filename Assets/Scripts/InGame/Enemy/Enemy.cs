@@ -175,7 +175,7 @@ public class Enemy : Entity
         {
             c.Attacker = this;
         }
-        Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제
+        Invoke("DestroySkill", 3f);  // 사용한 스킬이펙트 삭제
     }
     public void DestroySkill()  // 사용한 스킬이펙트 삭제
     {
