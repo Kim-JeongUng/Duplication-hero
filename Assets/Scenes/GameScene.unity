@@ -5870,6 +5870,7 @@ MonoBehaviour:
   - {fileID: 4687248505416739568, guid: f538754753dfbd94e8c58cd1c3764308, type: 3}
   - {fileID: 3427324384926251838, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
   - {fileID: 4780769704671215567, guid: cd0bdde961933094293755a7530c95e8, type: 3}
+  - {fileID: 7229519407191696088, guid: e2a160cb329a0ca42a63a57f464bccb6, type: 3}
   poolingCount: 3
 --- !u!850595691 &1995969775
 LightingSettings:

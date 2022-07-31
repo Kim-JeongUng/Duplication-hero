@@ -2120,7 +2120,10 @@ MonoBehaviour:
     SkillResource: []
     nowHP: 0
     nowProgressLevel: 0
+    EndProgressLevel: 4
     DeadCount: 0
+    acquiredCoins: 0
+    acquiredItems: []
     isBossStage: 0
   enemySpawner: {fileID: 759118181}
   EnemyPrefabs:
@@ -4174,6 +4177,7 @@ MonoBehaviour:
   enemyCount: 5
   enemies:
   - {fileID: 3343400541712103999, guid: 4b96f1c68b5decd45af8e94c8a943039, type: 3}
+  - {fileID: 1349768927953945980, guid: 1d5467f991d06dd459b94d4700d92445, type: 3}
   multipleobjectpooling: {fileID: 1969683696}
 --- !u!114 &759118182
 MonoBehaviour:
@@ -6189,8 +6193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017f409ac3aac744d902503caff53f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userItemDatas:
-    ItemRows: []
 --- !u!4 &1215584938
 Transform:
   m_ObjectHideFlags: 0
@@ -11237,6 +11239,7 @@ MonoBehaviour:
   - {fileID: 7263099708958967464, guid: d6447c577786dde45ae19567fa75ce0d, type: 3}
   - {fileID: 4687248505416739568, guid: f538754753dfbd94e8c58cd1c3764308, type: 3}
   - {fileID: 3427324384926251838, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
+  - {fileID: 7229519407191696088, guid: e2a160cb329a0ca42a63a57f464bccb6, type: 3}
   poolingCount: 3
 --- !u!850595691 &1995969775
 LightingSettings:
@@ -14491,6 +14494,8 @@ MonoBehaviour:
   HpLineFolder: {fileID: 684077110}
   thisObjectHpText: {fileID: 911844531}
   unitHp: 200
+  damageText: {fileID: 0}
+  damageShowCanvas: {fileID: 0}
 --- !u!1 &2577879257110877240
 GameObject:
   m_ObjectHideFlags: 0
@@ -15485,6 +15490,8 @@ MonoBehaviour:
   HpLineFolder: {fileID: 0}
   thisObjectHpText: {fileID: 0}
   unitHp: 200
+  damageText: {fileID: 0}
+  damageShowCanvas: {fileID: 0}
 --- !u!4 &3342645656599348813
 Transform:
   m_ObjectHideFlags: 0
@@ -15964,11 +15971,9 @@ MonoBehaviour:
   skillcool: 5
   isBossMonster: 0
   canUseSkill: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  DangerMarker: {fileID: 4969338509894549370, guid: 6a7c3032180bb8f40af48204c38b7d0f, type: 3}
   LaserEffect: {fileID: 3907974972459766116}
+  isDangerMark: 0
+  isdanger: 0
   shooter: {fileID: 5117843575676790883}
   aimer: {fileID: 5371552464664019331}
 --- !u!1 &3882760514302908794
@@ -18313,6 +18318,8 @@ MonoBehaviour:
   HpLineFolder: {fileID: 0}
   thisObjectHpText: {fileID: 0}
   unitHp: 200
+  damageText: {fileID: 0}
+  damageShowCanvas: {fileID: 0}
 --- !u!23 &7296846668353066134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20376,10 +20383,8 @@ MonoBehaviour:
   skillcool: 5
   isBossMonster: 0
   canUseSkill: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  DangerMarker: {fileID: 0}
   LaserEffect: {fileID: 0}
+  isDangerMark: 0
+  isdanger: 0
   shooter: {fileID: 992061231762505136}
   aimer: {fileID: 20599845311304784}
