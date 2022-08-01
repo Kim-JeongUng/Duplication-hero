@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour
         Init();
         GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Archer", "Golem" };
         GameManager.instance.gameData.EnemyCount = 2;
-        gameState.value = GameState.INIT;
+        gameState.value = GameState.STARTED;
     }
     private void GenerateMapWithNavmesh(){
         if(GameManager.instance.gameData.isBossStage){
