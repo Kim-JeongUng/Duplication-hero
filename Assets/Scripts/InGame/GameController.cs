@@ -49,7 +49,8 @@ public class GameController : MonoBehaviour
             //boss stage
             curMap = BossMaps[Random.Range(0, BossMaps.Length)];
             GameManager.instance.gameData.EnemyCount = 1;
-            GameManager.instance.gameData.EnemySet = new List<string>() { "Dragon" };
+            //GameManager.instance.gameData.EnemySet = new List<string>() { "Dragon" };
+            GameManager.instance.gameData.EnemySet = new List<string>() { "DogKnight" };
         }
         else{  //normal stage   (need add special stage - if needed)
             curMap = normalMaps[Random.Range(0, normalMaps.Length)];

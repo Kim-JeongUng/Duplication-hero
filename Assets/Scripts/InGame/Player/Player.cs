@@ -166,20 +166,12 @@ public class Player : Entity
 		gameObject.SetActive(false);
 	}
 
-	/// <summary>
-	/// Adds coins on Enemy death
-	/// </summary>
-	/// <param name="amount"></param>
 	public void AddCoins(int amount)
 	{
 		//coins += amount;
 		GameManager.instance.gameData.acquiredCoins += amount;
 	}
 
-	/// <summary>
-	/// Called when Input Vector2 is changed
-	/// </summary>
-	/// <param name="direction"></param>
 	private void CheckMovementState(Vector2 direction)
 	{
 		if(walkingState == MovingState.STAYING && direction != Vector2.zero)

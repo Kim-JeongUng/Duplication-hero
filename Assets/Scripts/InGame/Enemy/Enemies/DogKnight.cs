@@ -6,16 +6,19 @@ public class DogKnight : WalkingEnemy
 {
 	[SerializeField] EnemyAimer aimer;
 	public GameObject Skill;
+	public Animator anim;
+	public GameObject Weapon;
 
-	float lastShootTime;
-	float lastSkillTime;
+	public float lastShootTime;
 	protected new void Awake()
 	{
 		base.Awake();
 		isBossMonster = true;
 		if (aimer == null)
 			aimer = GetComponentInChildren<EnemyAimer>();
-		StartCoroutine(MonsterRoutine());
+		if(anim == null)
+			anim = GetComponentInChildren<Animator>();
+		//StartCoroutine(MonsterRoutine());
 	}
 
 	protected void Update()
@@ -33,6 +36,24 @@ public class DogKnight : WalkingEnemy
 				RandomSkill();
 				//shooter.Shoot(new DamageReport(damage, this));
 			}*/
+		}
+		if (walkingState == MovingState.STAYING)
+		{
+			if (aimer.Target != null)
+			{
+				aimer.FollowTarget();
+				if (Vector3.Distance(aimer.Target.position, this.transform.position) < 2f)
+				{
+					if (Time.time - lastShootTime >= (1 / attackSpeed))
+					{
+						anim.PlayInFixedTime("Attack01");
+						lastShootTime = Time.time;
+						//shooter.Shoot(new DamageReport(damage, this)); (원거리)
+					}
+				}
+				else
+					aimer.ResetTarget();
+			}
 		}
 	}
 	protected new void FixedUpdate()
@@ -56,42 +77,6 @@ public class DogKnight : WalkingEnemy
 		//DataManager.instance.UserGetItem(Randitem); result에서 처리
 		DropItem(Randitem);
 	}
-	IEnumerator MonsterRoutine()
-    {
-		while (hp > 0)
-		{
-			yield return new WaitForSeconds(skillcool);
-			RandomSkill();
-		}
-    }
-	public void RandomSkill()
-    {
-		int RanNum = Random.Range(0, 2);
-		switch (RanNum)
-        {
-			case 0:
-				StartCoroutine(TeleportSkill());
-				break;
-			case 1:
-				StartCoroutine(MonsterSkill());
-				break;
-			default:
-				break;
-		}
-    }
-
-	IEnumerator TeleportSkill()
-    {
-		var tempPlayerPos = player.value.transform.position;
-		GameObject Item = Instantiate(Resources.Load<GameObject>(string.Format("Prefabs/Warning")), tempPlayerPos, Quaternion.identity);
-		Destroy(Item,1f);
-		yield return new WaitForSeconds(1f);
-		this.transform.position = tempPlayerPos;
-	}
-	IEnumerator MonsterSkill()
-    {
-		Skill.SetActive(true);
-		yield return new WaitForSeconds(1f);
-		Skill.SetActive(false);
-	}
+	public void isSlashStart() => Weapon.GetComponent<CapsuleCollider>().enabled = true;
+	public void isSlashStop() => Weapon.GetComponent<CapsuleCollider>().enabled = false;
 }
