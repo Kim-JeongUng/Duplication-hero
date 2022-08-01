@@ -33,6 +33,7 @@ public class HealthBar : MonoBehaviour
 	}
 	private void Start() {
 		currentHp = entity.Hp;
+		backHpBar.value = hpBar.value;
 	}
 	private void Update()
 	{
