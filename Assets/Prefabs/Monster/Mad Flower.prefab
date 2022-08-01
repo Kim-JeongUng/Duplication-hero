@@ -103,6 +103,8 @@ MonoBehaviour:
   HpLineFolder: {fileID: 0}
   thisObjectHpText: {fileID: 0}
   unitHp: 200
+  damageText: {fileID: 0}
+  damageShowCanvas: {fileID: 0}
 --- !u!1 &235491100956105060
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +179,8 @@ GameObject:
   - component: {fileID: 5955062696516179373}
   - component: {fileID: 2174055454068997561}
   - component: {fileID: 8912505609407075044}
+  - component: {fileID: 393354375589528001}
+  - component: {fileID: 7568584019100023394}
   m_Layer: 8
   m_Name: Mad Flower
   m_TagString: Enemy
@@ -271,14 +275,38 @@ MonoBehaviour:
   skillcool: 3
   isBossMonster: 0
   canUseSkill: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  DangerMarker: {fileID: 4969338509894549370, guid: 6a7c3032180bb8f40af48204c38b7d0f, type: 3}
   LaserEffect: {fileID: 0}
+  isDangerMark: 0
+  isdanger: 0
   shooter: {fileID: 2457195889799994417}
   aimer: {fileID: 1835928313615387614}
   anim: {fileID: 0}
+--- !u!65 &393354375589528001
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753785460207422148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 2, z: 1.5}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!65 &7568584019100023394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753785460207422148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &988080251341628858
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +531,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8359969930465772254}
   - component: {fileID: 1820034720307260131}
-  - component: {fileID: 1506101239519021047}
   m_Layer: 8
   m_Name: MadFlower
   m_TagString: Untagged
@@ -585,19 +612,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.016073465, y: 1.085171, z: 0.2767787}
     m_Extent: {x: 0.8810821, y: 1.1291664, z: 1.0036361}
   m_DirtyAABB: 0
---- !u!65 &1506101239519021047
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4173224375455201455}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7621642, y: 2.2583327, z: 2.0072722}
-  m_Center: {x: -0.016073465, y: 1.1088744, z: 0.37509957}
 --- !u!1 &4188492745523688352
 GameObject:
   m_ObjectHideFlags: 0
