@@ -25,35 +25,18 @@ public class DogKnight : WalkingEnemy
 	{
 		if (aimer.Target != null)
 		{
-			walkingState = MovingState.STAYING;
 			aimer.FollowTarget();
-
-			//EnemySkill();
-
-			/*if (Time.time - lastShootTime >= (1 / skillcool))  // 몬스터 일반공격
+			if (Vector3.Distance(aimer.Target.position, this.transform.position) < 2f)
 			{
-				lastShootTime = Time.time;
-				RandomSkill();
-				//shooter.Shoot(new DamageReport(damage, this));
-			}*/
-		}
-		if (walkingState == MovingState.STAYING)
-		{
-			if (aimer.Target != null)
-			{
-				aimer.FollowTarget();
-				if (Vector3.Distance(aimer.Target.position, this.transform.position) < 2f)
+				if (Time.time - lastShootTime >= (1 / attackSpeed))
 				{
-					if (Time.time - lastShootTime >= (1 / attackSpeed))
-					{
-						anim.PlayInFixedTime("Attack01");
-						lastShootTime = Time.time;
-						//shooter.Shoot(new DamageReport(damage, this)); (원거리)
-					}
+					anim.PlayInFixedTime("Attack01");
+					lastShootTime = Time.time;
+					//shooter.Shoot(new DamageReport(damage, this)); (원거리)
 				}
-				else
-					aimer.ResetTarget();
 			}
+			else
+				aimer.ResetTarget();
 		}
 	}
 	protected new void FixedUpdate()
