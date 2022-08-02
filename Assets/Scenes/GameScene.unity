@@ -1447,6 +1447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData:
+    nowChapter: 0
     nowSkillName: 
     EnemySet: []
     EnemyCount: 2

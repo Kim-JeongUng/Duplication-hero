@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
+    public int nowChapter;
     public string nowSkillName = "";
     public bool haveSkill() => nowSkillName == "" ? false : true;  // 현재 스킬을 보유하고있는지
     public List<string> EnemySet = new List<string> { };
@@ -43,7 +44,11 @@ public class GameManager : MonoBehaviour
             if (instance != this)
                 Destroy(this.gameObject);
         }
+        if(!PlayerPrefs.HasKey("nowChapter"))
+            PlayerPrefs.SetInt("nowChapter",0);
+
         gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw" ,"PulseShot","FireBreath","Healing","SteelStorm"}, nowProgressLevel = 0 };
+        gameData.nowChapter = PlayerPrefs.GetInt("nowChapter"); 
         gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
         ResourceLoad();
     }

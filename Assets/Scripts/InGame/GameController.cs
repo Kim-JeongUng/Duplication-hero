@@ -106,7 +106,7 @@ public class GameController : MonoBehaviour
     }
     public void OpenProgressPannel()
     {
-        progressPannelText.text = "Chapter 1-"+(GameManager.instance.gameData.nowProgressLevel + 1).ToString();
+        progressPannelText.text = "Chapter " + (GameManager.instance.gameData.nowChapter + 1).ToString() + " - " + (GameManager.instance.gameData.nowProgressLevel + 1).ToString();
         progressPannel.SetActive(true);
     }
     public void CloseProgressPannel()

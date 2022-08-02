@@ -9,7 +9,7 @@ public class PauseUI : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0;
-        chapter.text = "CHAPTER "+(GameManager.instance.gameData.nowProgressLevel + 1).ToString();
+        chapter.text = "CHAPTER "+ (GameManager.instance.gameData.nowChapter+1).ToString()+" - "+(GameManager.instance.gameData.nowProgressLevel + 1).ToString();
     }
 
     public void UnPause()

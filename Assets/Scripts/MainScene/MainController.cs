@@ -15,8 +15,9 @@ public class MainController : MonoBehaviour
     {
         SceneManager.LoadScene("EquipmentScene");
     }
-    public void GoGame()
+    public void GoGame(int nowChapter = 0)
     {
+        PlayerPrefs.SetInt("nowChapter", nowChapter);
         SceneManager.LoadScene("GameScene");
     }
 }
