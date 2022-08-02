@@ -20,9 +20,13 @@ public class UserItemData
     public string type;
     public int reinForceLevel;
     public float value;
-    public bool isEquip; 
+    public bool isEquip;
 }
-
+[System.Serializable]
+public class LevelData
+{
+    public int[] levelInfo;
+}
 [System.Serializable]
 public class UserItemDatas
 {
@@ -35,6 +39,7 @@ public class DataManager : MonoBehaviour
     public CharacterDatas characters;
     private UserItemDatas userItemDatas;
     private UserItemDatas AllItemDatas;
+    private LevelData levelData;
     string path;
     // Start is called before the first frame update
     void Awake()
@@ -60,6 +65,7 @@ public class DataManager : MonoBehaviour
         AllItemPresetLoad();
         Load();
         ItemDatasLoad();
+        LoadLevelData();
     }
     public void Save()
     {
@@ -102,6 +108,28 @@ public class DataManager : MonoBehaviour
             return userItemDatas;
         }
     }
+    public LevelData LoadLevelData()
+    {
+        LevelData TempLevel;
+        try
+        {
+            TempLevel = JsonUtility.FromJson<LevelData>(File.ReadAllText((path + "/LevelData.json")));
+        }
+        catch (FileNotFoundException f)
+        {
+            string Data = Resources.Load<TextAsset>("PresetData/LevelData").ToString();
+            File.WriteAllText(path + "/LevelData.json", Data);
+            TempLevel = JsonUtility.FromJson<LevelData>(File.ReadAllText((path + "/LevelData.json")));
+        }
+        levelData = TempLevel;
+        return levelData;
+    }
+    public void ChangeLevelData(int nowStageLevel, int getStars) { 
+        levelData.levelInfo[nowStageLevel] = levelData.levelInfo[nowStageLevel] > getStars ? levelData.levelInfo[nowStageLevel] : getStars;
+        string LevelDatas = JsonUtility.ToJson(levelData);
+        File.WriteAllText(path + "/LevelData.json", LevelDatas);
+    }
+
     public void UserGetItem(UserItemData NewItem)
     {
         Debug.Log("ItemAdd");
