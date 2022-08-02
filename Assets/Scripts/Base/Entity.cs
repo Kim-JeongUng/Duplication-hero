@@ -52,6 +52,12 @@ public abstract class Entity : MonoBehaviour
 
 	protected virtual void Awake()
 	{
+		if (CompareTag("Enemy"))
+		{
+			maxHp += (int)(maxHp * GameManager.instance.gameData.nowChapter * 0.1f);
+			damage += (int)(damage * GameManager.instance.gameData.nowChapter * 0.1f);
+			coin += (int)(coin * GameManager.instance.gameData.nowChapter * 0.1f);
+		}
 		hp = maxHp;
 	}
 
