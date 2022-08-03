@@ -9,9 +9,12 @@ public class LevelDataPanel : MonoBehaviour
     [SerializeField]
     private EachStage[] eachStages;
     [SerializeField]
-    private TMPro.TextMeshProUGUI MyStars;
+    private TextMeshProUGUI MyStars;
     [SerializeField]
-    private TMPro.TextMeshProUGUI AllStars;
+    private TextMeshProUGUI AllStars;
+    [SerializeField]
+    private GameObject popupInfo;
+
 
     // Start is called before the first frame update
     public void OnEnable()
@@ -35,5 +38,10 @@ public class LevelDataPanel : MonoBehaviour
             }
         }
         MyStars.text = sumStars.ToString();
+    }
+    public void onClickLock()
+    {
+        var popup = Instantiate(popupInfo.gameObject,this.transform);
+        popup.GetComponent<PopupInfo>().infoText.text = "You must clear the previous step with 3 stars.";
     }
 }
