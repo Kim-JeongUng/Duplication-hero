@@ -2481,7 +2481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &871933358 stripped
 Transform:
@@ -3072,7 +3072,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1215721105 stripped
 GameObject:
@@ -5272,7 +5272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1901318038
 MonoBehaviour:
@@ -5787,6 +5787,7 @@ MonoBehaviour:
   - {fileID: 3427324384926251838, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
   - {fileID: 4780769704671215567, guid: cd0bdde961933094293755a7530c95e8, type: 3}
   - {fileID: 7229519407191696088, guid: e2a160cb329a0ca42a63a57f464bccb6, type: 3}
+  - {fileID: 7240162086517326283, guid: d70a13fbf5328154287e6f5feee86110, type: 3}
   poolingCount: 3
 --- !u!850595691 &1995969775
 LightingSettings:
@@ -10248,7 +10249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8325230027860172463, guid: 3b5265fdfd065a4499024b310564e336, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8325230027860172463, guid: 3b5265fdfd065a4499024b310564e336, type: 3}
       propertyPath: m_AnchorMax.x

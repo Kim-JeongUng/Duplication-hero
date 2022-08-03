@@ -165,11 +165,18 @@ public class Enemy : Entity
                 hp += 30;
                 isPassive = true;
                 break;
+            case "Explosion":
+                StartCoroutine(Bomb()); // 폭탄 오브젝트 던짐
+                break;
             default:
                 break;
         }
         // 스킬 이펙트 생성
-        skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
+        // 폭탄이 아닐경우에만 스킬이펙트 생성 (폭탄은 폭탄오브젝트를 던지고 오브젝트에서 이펙트 생성)
+        if(GameManager.instance.gameData.SkillResource[num].name != "Explosion")
+        {
+            skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
+        }
 
         foreach (MultipleObjectsMake c in skill.GetComponentsInChildren<MultipleObjectsMake>())
         {
@@ -212,5 +219,10 @@ public class Enemy : Entity
         isInvincible = true;
         yield return new WaitForSeconds(time);
         isInvincible = false;
+    }
+    public IEnumerator Bomb()
+    {
+        // 폭탄 오브젝트 던짐
+        yield return new WaitForSeconds(1f);
     }
 }
