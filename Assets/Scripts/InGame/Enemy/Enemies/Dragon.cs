@@ -5,6 +5,7 @@ using System.Collections;
 public class Dragon : WalkingEnemy
 {
 	[SerializeField] EnemyAimer aimer;
+	[SerializeField] private Animator anim;
 	public GameObject Skill;
 
 	float lastShootTime;
@@ -12,10 +13,16 @@ public class Dragon : WalkingEnemy
 	protected new void Awake()
 	{
 		base.Awake();
+		anim = GetComponent<Animator>();
+
 		isBossMonster = true;
 		if (aimer == null)
 			aimer = GetComponentInChildren<EnemyAimer>();
 		StartCoroutine(MonsterRoutine());
+	}
+	public override void Animation_Run(bool isRun)
+	{
+		anim.SetBool("isRun", isRun);
 	}
 
 	protected void Update()

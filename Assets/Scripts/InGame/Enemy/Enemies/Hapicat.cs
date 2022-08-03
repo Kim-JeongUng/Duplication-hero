@@ -1,7 +1,8 @@
-ï»¿using System.IO;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Archer : WalkingEnemy
+public class Hapicat : WalkingEnemy
 {
 	[SerializeField] Shooter shooter;
 	[SerializeField] EnemyAimer aimer;
@@ -13,7 +14,7 @@ public class Archer : WalkingEnemy
 	protected new void Awake()
 	{
 		base.Awake();
-		anim = GetComponent<Animator>();
+		anim = this.gameObject.transform.GetChild(0).GetComponent<Animator>();
 
 		if (shooter == null)
 			shooter = GetComponentInChildren<Shooter>();
@@ -31,13 +32,17 @@ public class Archer : WalkingEnemy
 		{
 			walkingState = MovingState.STAYING;
 
-            if (base.isdanger == false)  // ìœ„í—˜í‘œì‹œ ë¹„ ì‹¤í–‰ ì¤‘ì¼ë•Œë§Œ ìºë¦­í„° ë”°ë¼ë‹¤ë‹˜
-            { 
+			if (base.isdanger == false)  // À§ÇèÇ¥½Ã ºñ ½ÇÇà ÁßÀÏ¶§¸¸ Ä³¸¯ÅÍ µû¶ó´Ù´Ô
+			{
 				aimer.FollowTarget();
+			}
+			if(isUseSkillState == true)
+            {
+				anim.SetTrigger("attack01");
 			}
 			//EnemySkill();
 
-			/*else if (Time.time - lastShootTime >= (1 / attackSpeed))  // ëª¬ìŠ¤í„° ì¼ë°˜ê³µê²©
+			/*else if (Time.time - lastShootTime >= (1 / attackSpeed))  // ¸ó½ºÅÍ ÀÏ¹İ°ø°İ
 			{
 				lastShootTime = Time.time;
 				shooter.Shoot(new DamageReport(damage, this));
@@ -47,23 +52,23 @@ public class Archer : WalkingEnemy
 	protected new void FixedUpdate()
 	{
 		base.FixedUpdate();
-		if(walkingState == MovingState.STAYING)
+		if (walkingState == MovingState.STAYING)
 		{
 			if (aimer.Target == null)
 				aimer.Aim();
 			else if (!aimer.IsVisible())
 				aimer.ResetTarget();
 		}
-		
+
 	}
 	protected override void Death(Entity killer)
 	{
 		Debug.Log("------------Archer Dead-------------");
 		shooter.Dispose();
-		// í™•ë¥ ì—ë”°ë¼ ìŠ¤í‚¬êµ¬ìŠ¬, ì¥ë¹„ì•„ì´í…œ, ê½ 3ê°€ì§€ ì¤‘ì—ì„œ ëœë¤ ì‹¤í–‰
+		// È®·ü¿¡µû¶ó ½ºÅ³±¸½½, Àåºñ¾ÆÀÌÅÛ, ²Î 3°¡Áö Áß¿¡¼­ ·£´ı ½ÇÇà
 
 		base.Death(killer);
 
-		DropItem(getSkill); // ìŠ¤í‚¬ì•„ì´í…œ ë“œë
+		DropItem(getSkill); // ½ºÅ³¾ÆÀÌÅÛ µå¶ø
 	}
 }

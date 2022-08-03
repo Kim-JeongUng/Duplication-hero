@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 5060352787750978441}
   m_Layer: 8
   m_Name: Golem
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1055,11 +1055,12 @@ MonoBehaviour:
   skillcool: 5
   isBossMonster: 0
   canUseSkill: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  DangerMarker: {fileID: 0}
   LaserEffect: {fileID: 0}
+  UseDangerMark: 0
+  isdanger: 0
+  isUseSkillState: 0
+  aimer: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &3882760515220934307
 GameObject:
   m_ObjectHideFlags: 0

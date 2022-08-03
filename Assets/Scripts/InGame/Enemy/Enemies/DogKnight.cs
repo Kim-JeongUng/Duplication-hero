@@ -20,6 +20,10 @@ public class DogKnight : WalkingEnemy
 			anim = GetComponentInChildren<Animator>();
 		//StartCoroutine(MonsterRoutine());
 	}
+	public override void Animation_Run(bool isRun)
+	{
+		anim.SetBool("isRun", isRun);
+	}
 
 	protected void Update()
 	{

@@ -26,8 +26,10 @@ public class Enemy : Entity
     //public GameObject DangerMarker;  // 트레일 렌더러
 
     public GameObject LaserEffect;  // 라인렌더러
-    public bool isDangerMark;  // 위험표시를 사용할 것인지
+    public bool UseDangerMark;  // 위험표시를 사용할 것인지
     public bool isdanger = false;  // 현재위험표시 실행중인지 체크
+
+    public bool isUseSkillState = false;  // 현재 스킬을 쓰고 있는 상태인지 체크
 
     //float attackTime = 5f;
     //float attackTimeCalc = 5f;
@@ -111,7 +113,7 @@ public class Enemy : Entity
         {
             yield return new WaitForSeconds(skillcool);
             if (LaserEffect != null)
-                if (isDangerMark == true)
+                if (UseDangerMark == true)
                 {
                     LaserEffect.SetActive(true);  // 위험표시 활성화
                     isdanger = true;
@@ -152,6 +154,7 @@ public class Enemy : Entity
     public void EnemySkill()
     {
         bool isPassive = false;
+        
         int num = GameManager.instance.gameData.SkillNameSet.IndexOf(getSkill.name);
         Debug.Log(num);
         num = num == -1 ? 0 : num;
@@ -177,6 +180,9 @@ public class Enemy : Entity
         {
             skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
         }
+
+        isUseSkillState = true;  // 스킬 사용상태 true
+        StartCoroutine(isUseSkillstate());  // 스킬 사용상태  - 일반몬스터의 공격 애니메이션 작동 관리 위함
 
         foreach (MultipleObjectsMake c in skill.GetComponentsInChildren<MultipleObjectsMake>())
         {
@@ -220,9 +226,14 @@ public class Enemy : Entity
         yield return new WaitForSeconds(time);
         isInvincible = false;
     }
+    public IEnumerator isUseSkillstate()  // 스킬 사용상태를 변경하여 몬스터의 공격애니메이션 작동을 관리
+    {
+        yield return new WaitForSeconds(0.05f);
+
+        isUseSkillState = false;  // 스킬 사용상태 false
+    }
     public IEnumerator Bomb()
     {
-        
         // 폭탄 오브젝트 던짐
         yield return new WaitForSeconds(1f);
     }

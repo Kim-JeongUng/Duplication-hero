@@ -4,6 +4,8 @@ using UnityEngine.AI;
 public abstract class WalkingEnemy : Enemy
 {
     float movingStateTimer = 0;
+    public abstract void Animation_Run(bool isRun);
+    //public abstract void Animation_Attack();
     NavMeshAgent agent;
 
     protected new void Awake()
@@ -23,17 +25,20 @@ public abstract class WalkingEnemy : Enemy
                 {
                     walkingState = MovingState.STAYING;
                     movingStateTimer = Time.time;
+                    Animation_Run(false);
                 }
                 else
                 {
+                    Animation_Run(true);
                     agent.destination = player.componentCache.position;
                 }
                 break;
             case MovingState.STAYING:
                 if(Time.time - movingStateTimer >= waitingTime)
                 {
-                    if (touchingPlayer != null)
+                    if (touchingPlayer != null)  // 캐릭터랑 근접했을 때
                     {
+                        //Animation_Attack();  근접 공격
                         if (touchingPlayer.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this)))
                             touchingPlayer = null;
                         movingStateTimer = Time.time;
@@ -52,7 +57,6 @@ public abstract class WalkingEnemy : Enemy
             default:
                 break;
         }
-        //EnemySkill();
     }
 
     protected new void OnTriggerEnter(Collider other)

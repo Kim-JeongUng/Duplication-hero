@@ -29,7 +29,7 @@ public abstract class FlyingEnemy : Enemy
             case MovingState.STAYING:
                 if (Time.time - movingStateTimer >= waitingTime)
                 {
-                    if (touchingPlayer != null)
+                    if (touchingPlayer != null)  // 캐릭터랑 근접한 상태 일 때
                     {
                         Animation_Attack();
                         if (touchingPlayer.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this)))
@@ -45,6 +45,10 @@ public abstract class FlyingEnemy : Enemy
                 break;
             default:
                 break;
+        }
+        if (isUseSkillState == true)
+        {
+            Animation_Attack();
         }
     }
 

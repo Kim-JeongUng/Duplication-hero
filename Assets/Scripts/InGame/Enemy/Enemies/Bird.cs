@@ -2,11 +2,15 @@
 
 public class Bird : FlyingEnemy
 {
+    [SerializeField] EnemyAimer aimer;
     [SerializeField] private Animator anim;
 
     private new void Awake() {
         base.Awake();
         anim = GetComponent<Animator>();
+
+        if (aimer == null)
+            aimer = GetComponent<EnemyAimer>();
     }
     public override void Animation_Run(bool isRun){
         anim.SetBool("isRun", isRun);
@@ -14,7 +18,7 @@ public class Bird : FlyingEnemy
 
     public override void Animation_Attack()
     {
-        anim.SetTrigger("attack_01");
+        anim.SetTrigger("attack01");
     }
 
     protected override void Death(Entity killer)

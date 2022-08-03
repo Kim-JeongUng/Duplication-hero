@@ -3539,7 +3539,7 @@ GameObject:
   - component: {fileID: 8583114641254972932}
   - component: {fileID: 3766210800445225684}
   - component: {fileID: 5768052495051226612}
-  - component: {fileID: 1954978948383978260}
+  - component: {fileID: 6599427605445242234}
   m_Layer: 8
   m_Name: Hapineko(casual) 1
   m_TagString: Enemy
@@ -3617,7 +3617,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 1
+  m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -3651,7 +3651,7 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.7, z: 0}
---- !u!114 &1954978948383978260
+--- !u!114 &6599427605445242234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3660,13 +3660,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1349768927953945980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f85c72cf97dc147af6c5d1b55222d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 61ca08737b1a5cb43875f3f23a36bb12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
   maxHp: 100
   hp: 0
-  attackSpeed: 0.5
+  attackSpeed: 1.5
   damage: 20
   ap: 0
   coin: 0
@@ -3679,16 +3679,17 @@ MonoBehaviour:
   waitingTime: 2
   randomTime: 1
   touchDamageMultiplier: 1
-  coinsToDrop: 2
+  coinsToDrop: 100
   getSkill: {fileID: 7229519407191696088, guid: e2a160cb329a0ca42a63a57f464bccb6, type: 3}
   skillcool: 5
   isBossMonster: 0
   canUseSkill: 1
   LaserEffect: {fileID: 3995112345380366481}
-  isDangerMark: 1
+  UseDangerMark: 1
   isdanger: 0
   shooter: {fileID: 0}
   aimer: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!1 &1349768927953945982
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,7 +4613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisObject: {fileID: 1349768927953656092}
-  entity: {fileID: 1954978948383978260}
+  entity: {fileID: 0}
   hpBar: {fileID: 8653774406795984693}
   backHpBar: {fileID: 3710401375620343851}
   HpLineFolder: {fileID: 7428571880046561181}
