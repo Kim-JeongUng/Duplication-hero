@@ -222,6 +222,7 @@ public class Enemy : Entity
     }
     public IEnumerator Bomb()
     {
+        
         // 폭탄 오브젝트 던짐
         yield return new WaitForSeconds(1f);
     }

@@ -76,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_makeObjs:
   - {fileID: 628825584466623256, guid: 2f81bf1907fec9b488e2b0185ea63bcc, type: 3}
-  m_startDelay: 0.5
+  m_startDelay: 0
   m_makeCount: 1
   m_makeDelay: 0
   m_randomPos: {x: 0, y: 0, z: 0}
