@@ -65,7 +65,8 @@ public class Player : Entity
             {
 				c.Attacker = this;
             }
-			tag = "PlayerSkill";
+			skill.tag = "PlayerSkill";
+
 			/*
 			// 스킬오브젝트 오브젝트 풀에서 꺼내옴
 			skill = skillPooling.GetPooledObject(GameManager.instance.gameData.nowSkillName);

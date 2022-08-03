@@ -16,6 +16,8 @@ public class ObjectMove : MonoBehaviour
     public float DestroyTime2;
     float m_scalefactor;
 
+    public Entity Attacker; //누가 쐈는지
+
     private void Start()
     {
         m_scalefactor = VariousEffectsScene.m_gaph_scenesizefactor;//transform.parent.localScale.x;
