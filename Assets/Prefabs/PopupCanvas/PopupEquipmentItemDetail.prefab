@@ -2791,6 +2791,8 @@ MonoBehaviour:
     value: 0
     isEquip: 0
   thisItemObject: {fileID: 0}
+  popupInfo: {fileID: 4610020714280243287, guid: 1fb328c1182925a48964e9e56028ce5a, type: 3}
+  rangePercent: 1
 --- !u!1 &544269881020281516
 GameObject:
   m_ObjectHideFlags: 0

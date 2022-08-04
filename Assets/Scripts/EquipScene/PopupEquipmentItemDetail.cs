@@ -29,6 +29,8 @@ public class PopupEquipmentItemDetail : MonoBehaviour
     public UserItemData thisItem;
     public MyItems thisItemObject;
 
+    public GameObject popupInfo;
+
     protected private int sellCoinValue = 10;
     protected private int upgradeCoinValue = 10;
     public float rangePercent = 1.0f;
@@ -144,7 +146,9 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         }
         else
         {
-            Debug.Log("돈없어요");
+            //코인부족
+            var popup = Instantiate(popupInfo.gameObject, this.transform);
+            popup.GetComponent<PopupInfo>().infoText.text = "You don't have enough coins.";
         }
 
         thisItemObject.OpenEquipDeatilCanvas();
