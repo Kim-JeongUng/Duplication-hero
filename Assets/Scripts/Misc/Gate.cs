@@ -4,7 +4,11 @@ using ThirteenPixels.Soda;
 public class Gate : MonoBehaviour
 {
     [SerializeField] GameEvent levelPassed;
-    [SerializeField] List<GameObject> gateDoor;
+    [SerializeField] GameObject gateEffect;
+    [SerializeField] GameObject gateDoorL;
+    [SerializeField] GameObject gateDoorR;
+    //[SerializeField] List<GameObject> disableThings;
+    
     private void OnEnable()
     {
         levelPassed.onRaise.AddResponse(OpenTheGate);
@@ -19,9 +23,12 @@ public class Gate : MonoBehaviour
     /// </summary>
     private void OpenTheGate()
     {
-        foreach (var block in gateDoor)
-        {
-            block.SetActive(false);
-        }
+        // foreach (var block in disableThings)
+        // {
+        //     block.SetActive(false);
+        // }
+        gateEffect.SetActive(true);
+        gateDoorL.GetComponent<GateDoor>().Ldoor = true;
+        gateDoorR.GetComponent<GateDoor>().Rdoor = true;
     }
 }
