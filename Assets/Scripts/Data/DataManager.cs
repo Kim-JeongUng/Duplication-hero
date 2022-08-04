@@ -67,6 +67,24 @@ public class DataManager : MonoBehaviour
         ItemDatasLoad();
         LoadLevelData();
     }
+    public void DeleteAllData()
+    {
+        File.SetAttributes(path, FileAttributes.Normal); //폴더 읽기 전용 해제
+
+        foreach (string _folder in Directory.GetDirectories(path)) //폴더 탐색
+        {
+            DeleteAllData(); //재귀 호출
+        }
+
+        foreach (string _file in Directory.GetFiles(path)) //파일 탐색
+        {
+            File.SetAttributes(_file, FileAttributes.Normal); //파일 읽기 전용 해제
+            File.Delete(_file); //파일 삭제
+        }
+
+        Directory.Delete(path); //폴더 삭제
+        Directory.CreateDirectory(path);
+    }
     public void Save()
     {
         Debug.Log("save");
