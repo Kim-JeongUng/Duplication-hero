@@ -8,13 +8,21 @@ public class SteelStorm : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))  // 회오리가 캐릭터에 맞으면
+        Parent = transform.parent.GetComponent<ObjectMove>().Attacker;
+        
+        // 몬스터가 공격 시
+        if (other.gameObject.CompareTag("Player") && Parent.CompareTag("Enemy"))  // 회오리가 캐릭터에 맞고 Attacker가 Enemy 이면
         {
             // 캐릭터 공중에 띄움
             StartCoroutine(UpPlayer(other));
 
             // 캐릭터에게 데미지 줌
-            Parent = transform.parent.GetComponent<ObjectMove>().Attacker;
+            other.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
+        }
+        // 캐릭터가 공격 시
+        else if (other.gameObject.CompareTag("Enemy") && Parent.CompareTag("Player"))  // 회오리가 몬스터에 맞고 Attacker가 Player 이면
+        {
+            // 몬스터에게 데미지
             other.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
         }
     }
