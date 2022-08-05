@@ -233,7 +233,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2157593041942259564}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -315,9 +315,11 @@ MonoBehaviour:
   isBossMonster: 1
   canUseSkill: 1
   LaserEffect: {fileID: 0}
-  isDangerMark: 0
+  UseDangerMark: 0
   isdanger: 0
+  isUseSkillState: 0
   aimer: {fileID: 7784650714116788477}
+  anim: {fileID: 0}
   Skill: {fileID: 5523288845391227549}
 --- !u!136 &8204417153172189481
 CapsuleCollider:

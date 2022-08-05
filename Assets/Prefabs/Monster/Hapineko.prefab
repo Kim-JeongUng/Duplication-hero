@@ -3541,7 +3541,7 @@ GameObject:
   - component: {fileID: 5768052495051226612}
   - component: {fileID: 6599427605445242234}
   m_Layer: 8
-  m_Name: Hapineko(casual) 1
+  m_Name: Hapineko
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

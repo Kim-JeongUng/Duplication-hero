@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         Init();
-        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Archer", "Golem" };
+        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Hapineko" };
         GameManager.instance.gameData.EnemyCount = 2;
         gameState.value = GameState.STARTED;
     }
@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
             curMap = BossMaps[Random.Range(0, BossMaps.Length)];
             GameManager.instance.gameData.EnemyCount = 1;
             //GameManager.instance.gameData.EnemySet = new List<string>() { "Dragon" };
-            GameManager.instance.gameData.EnemySet = new List<string>() { "DogKnight" };
+            GameManager.instance.gameData.EnemySet = new List<string>() { "Dragon", "DogKnight" };
         }
         else{  //normal stage   (need add special stage - if needed)
             curMap = normalMaps[Random.Range(0, normalMaps.Length)];
@@ -78,7 +78,7 @@ public class GameController : MonoBehaviour
         else
             GameManager.instance.gameData.isBossStage = false;
         //다음스테이지 나올 몬스터 ( 레벨 및 구현 필요 또는 랜덤? )
-        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Archer", "Golem" };
+        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Hapineko" };
         GameManager.instance.gameData.EnemyCount = 2;
         gameState.value = GameState.INIT;
         SceneManager.LoadScene("GameScene");

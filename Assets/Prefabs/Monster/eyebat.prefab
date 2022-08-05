@@ -640,6 +640,7 @@ GameObject:
   - component: {fileID: 8641531077742561079}
   - component: {fileID: 8002621978388523958}
   - component: {fileID: 7441172809648528454}
+  - component: {fileID: 4592974561048448009}
   m_Layer: 8
   m_Name: eyebat
   m_TagString: Enemy
@@ -734,8 +735,10 @@ MonoBehaviour:
   isBossMonster: 0
   canUseSkill: 1
   LaserEffect: {fileID: 9037786399871675487}
-  isDangerMark: 1
+  UseDangerMark: 0
   isdanger: 0
+  isUseSkillState: 0
+  aimer: {fileID: 0}
   anim: {fileID: 0}
 --- !u!136 &8002621978388523958
 CapsuleCollider:
@@ -765,6 +768,28 @@ CapsuleCollider:
   m_Height: 127.00813
   m_Direction: 1
   m_Center: {x: 0, y: 54.504047, z: 0}
+--- !u!195 &4592974561048448009
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596174083329394053}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 15
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 10
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &8596204189200441385
 GameObject:
   m_ObjectHideFlags: 0
