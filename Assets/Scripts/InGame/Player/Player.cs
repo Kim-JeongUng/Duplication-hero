@@ -65,6 +65,10 @@ public class Player : Entity
             {
 				c.Attacker = this;
             }
+			foreach (ObjectMove c in skill.GetComponentsInChildren<ObjectMove>())
+			{
+				c.Attacker = this;
+			}
 			skill.tag = "PlayerSkill";
 
 			/*
