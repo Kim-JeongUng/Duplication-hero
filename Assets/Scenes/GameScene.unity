@@ -1745,11 +1745,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4931468680677922105, guid: 7ff4ad318f88c2c4e92c6d8c0184a14c, type: 3}
   m_PrefabInstance: {fileID: 1072741117}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &455168827 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1369434334878381889, guid: a834bebdca97643438931679bd3df965, type: 3}
-  m_PrefabInstance: {fileID: 678550851}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &455168828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 972672281774995221, guid: a834bebdca97643438931679bd3df965, type: 3}
@@ -2637,7 +2632,7 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 0
+  m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
@@ -2751,11 +2746,6 @@ Transform:
   m_Father: {fileID: 323353805}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1034964434 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8051463319490473493, guid: a268becad96fe3943a7ea8645874e377, type: 3}
-  m_PrefabInstance: {fileID: 138606424}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1034964435 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1171698726697853423, guid: a268becad96fe3943a7ea8645874e377, type: 3}
@@ -5249,8 +5239,6 @@ MonoBehaviour:
   enemySpawner: {fileID: 11400000, guid: 6f4a83598651fbf439ba9b63920bf883, type: 2}
   normalMaps:
   - {fileID: 1367830014}
-  - {fileID: 455168827}
-  - {fileID: 1034964434}
   BossMaps:
   - {fileID: 171533525}
   SpecialMaps: []

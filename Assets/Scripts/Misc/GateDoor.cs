@@ -16,22 +16,22 @@ public class GateDoor : MonoBehaviour
     void Update()
     {
         if(Ldoor){
-            this.transform.Rotate(new Vector3(0, 60f, 0) * Time.deltaTime);
+            this.transform.Rotate(new Vector3(0, 40f, 0) * Time.deltaTime);
         }
         else if(Rdoor){
-            this.transform.Rotate(new Vector3(0, -60f, 0) * Time.deltaTime);
+            this.transform.Rotate(new Vector3(0, -40f, 0) * Time.deltaTime);
         }
         if((Ldoor || Rdoor) && !isFixDoor){
-            Invoke("FixDoor", 2.4f);
+            Invoke("FixDoor", 2f);
             isFixDoor = true;
         }
     }
 
     void FixDoor(){
         if(Ldoor)
-            this.transform.rotation = Quaternion.Euler(0, -40f, 0);
+            this.transform.rotation = Quaternion.Euler(0, -90f, 0);
         else if(Rdoor)
-            this.transform.rotation = Quaternion.Euler(0, -320f, 0);
+            this.transform.rotation = Quaternion.Euler(0, -270f, 0);
         Ldoor = false;
         Rdoor = false;
     }

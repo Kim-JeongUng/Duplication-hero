@@ -3687,6 +3687,7 @@ MonoBehaviour:
   LaserEffect: {fileID: 3995112345380366481}
   UseDangerMark: 1
   isdanger: 0
+  isUseSkillState: 0
   shooter: {fileID: 0}
   aimer: {fileID: 0}
   anim: {fileID: 0}
@@ -4613,7 +4614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisObject: {fileID: 1349768927953656092}
-  entity: {fileID: 0}
+  entity: {fileID: 6599427605445242234}
   hpBar: {fileID: 8653774406795984693}
   backHpBar: {fileID: 3710401375620343851}
   HpLineFolder: {fileID: 7428571880046561181}
