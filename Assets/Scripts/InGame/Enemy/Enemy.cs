@@ -154,7 +154,7 @@ public class Enemy : Entity
     public void EnemySkill()
     {
         bool isPassive = false;
-        
+
         int num = GameManager.instance.gameData.SkillNameSet.IndexOf(getSkill.name);
         Debug.Log(num);
         num = num == -1 ? 0 : num;
@@ -176,9 +176,9 @@ public class Enemy : Entity
         }
         // 스킬 이펙트 생성
         // 폭탄이 아닐경우에만 스킬이펙트 생성 (폭탄은 폭탄오브젝트를 던지고 오브젝트에서 이펙트 생성)
-        
+
         skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
-        
+
         if (GameManager.instance.gameData.SkillResource[num].name == "Bomb")
         {
             rb = skill.GetComponent<Rigidbody>();
@@ -187,7 +187,7 @@ public class Enemy : Entity
 
         isUseSkillState = true;  // 스킬 사용상태 true
         StartCoroutine(isUseSkillstate());  // 스킬 사용상태  - 일반몬스터의 공격 애니메이션 작동 관리 위함
-
+/*
         foreach (MultipleObjectsMake c in skill.GetComponentsInChildren<MultipleObjectsMake>())
         {
             c.Attacker = this;
@@ -195,6 +195,10 @@ public class Enemy : Entity
         foreach (ObjectMove c in skill.GetComponentsInChildren<ObjectMove>())
         {
             c.Attacker = this;
+        }*/
+        foreach (Skills s in skill.GetComponentsInChildren<Skills>())
+        {
+            s.Attacker = this;
         }
         Invoke("DestroySkill", 3f);  // 사용한 스킬이펙트 삭제
     }

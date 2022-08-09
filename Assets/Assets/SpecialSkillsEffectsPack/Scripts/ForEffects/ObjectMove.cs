@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectMove : MonoBehaviour
+public class ObjectMove : Skills
 {
     public float time;
     float m_time;
@@ -16,7 +16,7 @@ public class ObjectMove : MonoBehaviour
     public float DestroyTime2;
     float m_scalefactor;
 
-    public Entity Attacker; //누가 쐈는지
+    //public Entity Attacker; //누가 쐈는지
 
     private void Start()
     {

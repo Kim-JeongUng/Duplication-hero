@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _ObjectsMakeBase : MonoBehaviour
+public class _ObjectsMakeBase : Skills
 {
     public GameObject[] m_makeObjs;
 
