@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: b422d347f4d1a6346b9921e5326c4a04, type: 2}
 --- !u!1 &25428962
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2147483647
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.07333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 50b90b34964060b4599405cc033cab03, type: 2}
 --- !u!1 &171533525 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7010164774584957684, guid: cbccc64916baeff45a4de74b051b1b1d, type: 3}
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2147483647
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.07333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 5c963c0d464032142b7dc94bac0177bc, type: 2}
 --- !u!1 &225598414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6186348893139627353, guid: b07167fdfaace8a4b856e3ab4670e2e2, type: 3}
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2147483647
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.07333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 3947fbfb283029742af58bd93d41e1ae, type: 2}
 --- !u!224 &249487195 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5646587986763178019, guid: 6b5e32dc31431e044bdc395742bc103b, type: 3}
@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2147483647
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -1539,7 +1539,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.07333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: dcbb65120ef53ef4995909f744e579f7, type: 2}
 --- !u!1001 &428968031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3041,7 +3041,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2147483647
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -3051,7 +3051,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.07333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 1ef47aba66afa4741894f58cceaa5e88, type: 2}
 --- !u!4 &1228201002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3350980175549203366, guid: fe48d6c24f75a604aad55c07d3bd03dc, type: 3}
@@ -3442,7 +3442,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2147483647
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -3452,7 +3452,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.07333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 0ffe2065783f4a6499ae154b831be49c, type: 2}
 --- !u!1 &1494675309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3953,7 +3953,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2147483647
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -3963,7 +3963,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.07333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 14ba706012cfcb340b7ecd083d7c3e98, type: 2}
 --- !u!1 &1645747637
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,7 +4795,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2147483647
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -4805,7 +4805,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.07333333
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: d41a7c225732ced499c8de1b21f167d9, type: 2}
 --- !u!1001 &1861636978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4964,6 +4964,10 @@ PrefabInstance:
     - target: {fileID: 8957953695941212909, guid: fe48d6c24f75a604aad55c07d3bd03dc, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165496694879362206, guid: fe48d6c24f75a604aad55c07d3bd03dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9165496694879362206, guid: fe48d6c24f75a604aad55c07d3bd03dc, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5802,6 +5806,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 25428963}
     m_Modifications:
+    - target: {fileID: 1168970589, guid: e2612a539d64d054e99ef1a20be78e90, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: ed07149d75418f842bea7487a1757f56, type: 2}
     - target: {fileID: 8272328513102891454, guid: e2612a539d64d054e99ef1a20be78e90, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5849,6 +5857,10 @@ PrefabInstance:
     - target: {fileID: 8272328513102891455, guid: e2612a539d64d054e99ef1a20be78e90, type: 3}
       propertyPath: m_Name
       value: Environment (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272328513102891455, guid: e2612a539d64d054e99ef1a20be78e90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2612a539d64d054e99ef1a20be78e90, type: 3}
