@@ -64,15 +64,11 @@ public class Player : Entity
 			num = num == -1? 0 : num;
 			Debug.Log("playerskill");
 			skill = isPassive?Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation,this.transform): Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
-			foreach (MultipleObjectsMake c in skill.GetComponentsInChildren<MultipleObjectsMake>())
-            {
-				c.Attacker = this;
-            }
-			foreach (ObjectMove c in skill.GetComponentsInChildren<ObjectMove>())
+			
+			foreach (Skills s in skill.GetComponentsInChildren<Skills>())
 			{
-				c.Attacker = this;
+				s.Attacker = this;
 			}
-			skill.tag = "PlayerSkill";
 
 			/*
 			// 스킬오브젝트 오브젝트 풀에서 꺼내옴
@@ -286,12 +282,6 @@ public class Player : Entity
 			}
 		}
 
-		// 몬스터의 공격에 맞으면 (골렘주먹에 콜라이더 달아서 골렘이 공격시 데미지 입게 하려는 중)
-		else if (other.gameObject.CompareTag("EnemySkill"))
-        {
-			// 데미지 입게
-			Debug.Log("골렘한테 맞음");
-        }
 	}
     public void OnTriggerStay(Collider other)
     {

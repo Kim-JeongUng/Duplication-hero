@@ -165,11 +165,8 @@ public class Enemy : Entity
                 isPassive = true;
                 break;
             case "Healing":
-                hp += 30;
+                hp += 300;
                 isPassive = true;
-                break;
-            case "Bomb":
-                StartCoroutine(Bomb()); // 폭탄 오브젝트 던짐
                 break;
             default:
                 break;
@@ -187,15 +184,6 @@ public class Enemy : Entity
 
         isUseSkillState = true;  // 스킬 사용상태 true
         StartCoroutine(isUseSkillstate());  // 스킬 사용상태  - 일반몬스터의 공격 애니메이션 작동 관리 위함
-/*
-        foreach (MultipleObjectsMake c in skill.GetComponentsInChildren<MultipleObjectsMake>())
-        {
-            c.Attacker = this;
-        }
-        foreach (ObjectMove c in skill.GetComponentsInChildren<ObjectMove>())
-        {
-            c.Attacker = this;
-        }*/
         foreach (Skills s in skill.GetComponentsInChildren<Skills>())
         {
             s.Attacker = this;
@@ -239,14 +227,5 @@ public class Enemy : Entity
         yield return new WaitForSeconds(0.05f);
 
         isUseSkillState = false;  // 스킬 사용상태 false
-    }
-    public IEnumerator Bomb()
-    {
-        // 폭탄 오브젝트 던짐
-        //var b = this.GetComponent<Bomber>().bomb;
-        //var b = Instantiate(this.GetComponent<Bomber>().bomb, this.transform.position, this.transform.rotation);
-        //b.GetComponent<Rigidbody>().AddForce(this.transform.forward * 10f, ForceMode.Impulse);
-        Debug.Log("Enemy스크립트 Explosion 실행");
-        yield return new WaitForSeconds(0.5f);
     }
 }
