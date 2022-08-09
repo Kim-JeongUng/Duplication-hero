@@ -1348,7 +1348,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1420,8 +1420,9 @@ MonoBehaviour:
   isBossMonster: 1
   canUseSkill: 1
   LaserEffect: {fileID: 0}
-  isDangerMark: 0
+  UseDangerMark: 0
   isdanger: 0
+  isUseSkillState: 0
   aimer: {fileID: 0}
   Skill: {fileID: 0}
   anim: {fileID: 8422892626592999198}

@@ -202,7 +202,7 @@ public class Enemy : Entity
         {
             touchingPlayer = player;
             player.TakeDamage(new DamageReport(damage * touchDamageMultiplier, this));
-            
+            player.GetComponent<Player>().Invincible(0.3f);
         }
 
         if (other.CompareTag("Weapon"))
