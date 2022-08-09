@@ -7,7 +7,8 @@ public class Explosion : MonoBehaviour
     public GameObject bomb;
     public GameObject effect;
     public GameObject spark;
-    
+
+    public Entity Attacker;
 
     // Bomber스킬 스크립트
     void Start()

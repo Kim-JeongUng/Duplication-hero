@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         if(!PlayerPrefs.HasKey("nowChapter"))
             PlayerPrefs.SetInt("nowChapter",0);
 
-        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw" ,"PulseShot","FireBreath","Healing","SteelStorm","Explosion"}, nowProgressLevel = 0 };
+        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw" ,"PulseShot","FireBreath","Healing","SteelStorm","Bomb"}, nowProgressLevel = 0 };
         gameData.nowChapter = PlayerPrefs.GetInt("nowChapter"); 
         gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
         ResourceLoad();

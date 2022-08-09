@@ -51,6 +51,9 @@ public class Player : Entity
 					isPassive = true;
 					hp += 30;
 					break;
+				case "Bomb":
+					StartCoroutine(Bomb()); // 폭탄 오브젝트 던짐
+					break;
 				default:
 					//Debug.Log("ERROR");
 					Debug.Log(GameManager.instance.gameData.nowSkillName);
@@ -99,6 +102,14 @@ public class Player : Entity
 		skill.SetActive(false);
 	}
 	*/
+	public IEnumerator Bomb()
+	{
+		// 폭탄 오브젝트 던짐
+		//var b = Instantiate(this.GetComponent<Bomber>().bomb, this.transform.position, this.transform.rotation);
+		//b.GetComponent<Rigidbody>().AddForce(this.transform.up * 10f, ForceMode.Impulse);
+		Debug.Log("Player 스크립트 Explosion 실행");
+		yield return new WaitForSeconds(1f);
+	}
 	public void Revive()
     {
 		OnDie = false;

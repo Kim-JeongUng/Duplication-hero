@@ -168,7 +168,7 @@ public class Enemy : Entity
                 hp += 30;
                 isPassive = true;
                 break;
-            case "Explosion":
+            case "Bomb":
                 StartCoroutine(Bomb()); // 폭탄 오브젝트 던짐
                 break;
             default:
@@ -176,9 +176,13 @@ public class Enemy : Entity
         }
         // 스킬 이펙트 생성
         // 폭탄이 아닐경우에만 스킬이펙트 생성 (폭탄은 폭탄오브젝트를 던지고 오브젝트에서 이펙트 생성)
-        if(GameManager.instance.gameData.SkillResource[num].name != "Explosion")
+        
+        skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
+        
+        if (GameManager.instance.gameData.SkillResource[num].name == "Bomb")
         {
-            skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
+            rb = skill.GetComponent<Rigidbody>();
+            rb.AddForce(this.transform.forward * 15f, ForceMode.Impulse);
         }
 
         isUseSkillState = true;  // 스킬 사용상태 true
@@ -235,6 +239,10 @@ public class Enemy : Entity
     public IEnumerator Bomb()
     {
         // 폭탄 오브젝트 던짐
-        yield return new WaitForSeconds(1f);
+        //var b = this.GetComponent<Bomber>().bomb;
+        //var b = Instantiate(this.GetComponent<Bomber>().bomb, this.transform.position, this.transform.rotation);
+        //b.GetComponent<Rigidbody>().AddForce(this.transform.forward * 10f, ForceMode.Impulse);
+        Debug.Log("Enemy스크립트 Explosion 실행");
+        yield return new WaitForSeconds(0.5f);
     }
 }

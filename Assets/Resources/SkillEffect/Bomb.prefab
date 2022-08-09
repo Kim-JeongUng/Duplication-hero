@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1493654417699394709}
   - component: {fileID: 2528029373649738544}
   - component: {fileID: 356252882040107002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bomb_sketchfab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,6 +82,64 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3334682858169191098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228333246985494739}
+  - component: {fileID: 7805961694902478993}
+  - component: {fileID: 3731995294070616167}
+  m_Layer: 10
+  m_Name: trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1228333246985494739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3334682858169191098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8997430424684988071}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7805961694902478993
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3334682858169191098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3731995294070616167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3334682858169191098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b9f8aaa7d9ee5448889f78a4ad140b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent: {fileID: 0}
 --- !u!1 &8997430424684988068
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +151,7 @@ GameObject:
   - component: {fileID: 8997430424684988071}
   - component: {fileID: 8997430424684988073}
   - component: {fileID: 8997430424684988070}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: smoke_fx01
   m_TagString: EnemySkill
   m_Icon: {fileID: 0}
@@ -115,6 +173,7 @@ Transform:
   - {fileID: 8997430424892085527}
   - {fileID: 8997430425668771718}
   - {fileID: 8997430426232168733}
+  - {fileID: 1228333246985494739}
   m_Father: {fileID: 8997430426416788222}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -4917,7 +4976,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3e510647abf268f41aff0c8b86a89e5b, type: 2}
-  - {fileID: 2100000, guid: 3e510647abf268f41aff0c8b86a89e5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4974,7 +5032,7 @@ GameObject:
   - component: {fileID: 8997430424892085527}
   - component: {fileID: 8997430424892085529}
   - component: {fileID: 8997430424892085526}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: smoke_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9803,7 +9861,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 3ad3f0c83bf0e154fa9530fce89c221e, type: 2}
-  - {fileID: 2100000, guid: 3ad3f0c83bf0e154fa9530fce89c221e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9860,7 +9917,7 @@ GameObject:
   - component: {fileID: 8997430425544591605}
   - component: {fileID: 8997430425544591607}
   - component: {fileID: 8997430425544591604}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spark01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14679,7 +14736,7 @@ GameObject:
   - component: {fileID: 8997430425668771718}
   - component: {fileID: 8997430425668771720}
   - component: {fileID: 8997430425668771721}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19508,7 +19565,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 8efe150237ddb644bae4a607cbb06a34, type: 2}
-  - {fileID: 2100000, guid: 8efe150237ddb644bae4a607cbb06a34, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19565,7 +19621,7 @@ GameObject:
   - component: {fileID: 8997430425674285713}
   - component: {fileID: 8997430425674285715}
   - component: {fileID: 8997430425674285712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24394,7 +24450,7 @@ GameObject:
   - component: {fileID: 8997430426034137159}
   - component: {fileID: 8997430426034137161}
   - component: {fileID: 8997430426034137158}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: smoke_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29223,7 +29279,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f7011f71b4d03734aa82330b4c0a64ea, type: 2}
-  - {fileID: 2100000, guid: f7011f71b4d03734aa82330b4c0a64ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29280,7 +29335,7 @@ GameObject:
   - component: {fileID: 8997430426232168733}
   - component: {fileID: 8997430426232168735}
   - component: {fileID: 8997430426232168732}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34109,7 +34164,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 8a167f6ec39352540ab96a9ed7e9b9f6, type: 2}
-  - {fileID: 2100000, guid: 8a167f6ec39352540ab96a9ed7e9b9f6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34167,7 +34221,7 @@ GameObject:
   - component: {fileID: 8997430426416788223}
   - component: {fileID: 8997430426416788220}
   - component: {fileID: 8997430426416788193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bomb
   m_TagString: EnemySkill
   m_Icon: {fileID: 0}
@@ -34235,3 +34289,4 @@ MonoBehaviour:
   bomb: {fileID: 2301715905926270511}
   effect: {fileID: 8997430424684988068}
   spark: {fileID: 8997430425674285934}
+  Attacker: {fileID: 0}

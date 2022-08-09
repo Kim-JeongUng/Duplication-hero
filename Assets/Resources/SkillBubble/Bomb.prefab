@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9134773696481915622}
   - component: {fileID: 5418321894384466188}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: Bomb
   m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 7240162086517326285}
   - component: {fileID: 7240162086517326282}
   m_Layer: 7
-  m_Name: Explosion
+  m_Name: Bomb
   m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

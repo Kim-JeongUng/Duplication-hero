@@ -9,14 +9,14 @@ public class Bomber : WalkingEnemy
 
 	public GameObject bomb;  // 던질 폭탄 오브젝트
 
-
 	public float lastShootTime;
+
 	protected new void Awake()
 	{
 		base.Awake();
 
 		if (aimer == null)
-			aimer = GetComponent<EnemyAimer>();
+			aimer = GetComponentInChildren<EnemyAimer>();
 		if (anim == null)
 			anim = GetComponent<Animator>();
 		//StartCoroutine(MonsterRoutine());
@@ -30,14 +30,29 @@ public class Bomber : WalkingEnemy
 	{
 		if (aimer.Target != null)
 		{
-			walkingState = MovingState.STAYING;
 			aimer.FollowTarget();
+			/*
+			if (Vector3.Distance(aimer.Target.position, this.transform.position) < 10f)  // 캐릭터와의 거리가 10이하이면 폭탄 던짐
+			{
+				if (Time.time - lastShootTime >= (1 / attackSpeed))
+				{
+					anim.PlayInFixedTime("attack01");
+					lastShootTime = Time.time;
 
+					var b = Instantiate(bomb, this.transform.position, this.transform.rotation);
+					b.GetComponent<Rigidbody>().AddForce(Vector3.up * 50f);
+
+					//shooter.Shoot(new DamageReport(damage, this)); (원거리)
+				}
+			}
+			else
+				aimer.ResetTarget();*/
+			
 			if (isUseSkillState == true)
 			{
-				anim.SetTrigger("attack01");
+				//anim.SetTrigger("attack01");
 			}
-
+			
 			//EnemySkill();
 
 			/*if (Time.time - lastShootTime >= (1 / skillcool))  // 몬스터 일반공격
