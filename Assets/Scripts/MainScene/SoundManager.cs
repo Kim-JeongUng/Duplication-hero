@@ -65,16 +65,20 @@ public class SoundManager : MonoBehaviour
     //bgm(volume(option))
     public void PlayBGMSound(float volume = 1f){
         bgmPlayer.loop = true;  //loop
-        bgmPlayer.volume = volume * masterVolumeBGM;
 
         if(SceneManager.GetActiveScene().name == "MainScene"){
             bgmPlayer.clip = mainBgmAudioClip;
             bgmPlayer.Play();
         }
         else if(SceneManager.GetActiveScene().name == "GameScene"){
-            bgmPlayer.clip = gameBgmAudioClip;
-            bgmPlayer.Play();
+            volume = 0.1f;
+            if(bgmPlayer.clip.name != gameBgmAudioClip.name){
+                bgmPlayer.clip = gameBgmAudioClip;
+                bgmPlayer.Play();
+            }
         }
+
+        bgmPlayer.volume = volume * masterVolumeBGM;
     }
 
     void OnEnable(){ //델리게이트 체인 추가
