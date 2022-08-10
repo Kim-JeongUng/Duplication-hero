@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5287044573934210641}
   - component: {fileID: 1172879436709603922}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Effect_22_Bullet
   m_TagString: FireBullet
   m_Icon: {fileID: 0}
@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e17d10c4e020147ae8b5e49a85fd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Attacker: {fileID: 0}
+  Parent: {fileID: 0}
   m_gameObjectMain: {fileID: 1833216504575805730}
   m_gameObjectTail: {fileID: 0}
   m_hitObject: {fileID: 5647550033730678451, guid: 4d41c0adac48e9144b7e8729043ab678, type: 3}
@@ -58,7 +60,7 @@ MonoBehaviour:
   mtag: 
   isShieldActive: 0
   isHitMake: 1
-  damageMultipler: 1
+  SkillDamageMultipler: 1
 --- !u!1 &7997195828659953103
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,7 +72,7 @@ GameObject:
   - component: {fileID: 6342803789727474736}
   - component: {fileID: 51142195286186469}
   - component: {fileID: 800572931203184118}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Effect_22_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
