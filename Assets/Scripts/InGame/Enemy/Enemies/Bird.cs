@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Bird : FlyingEnemy
+public class Bird : WalkingEnemy
 {
     [SerializeField] EnemyAimer aimer;
     [SerializeField] private Animator anim;
@@ -15,11 +15,11 @@ public class Bird : FlyingEnemy
     public override void Animation_Run(bool isRun){
         anim.SetBool("isRun", isRun);
     }
-
+/*
     public override void Animation_Attack()
     {
         anim.SetTrigger("attack01");
-    }
+    }*/
 
     protected override void Death(Entity killer)
     {

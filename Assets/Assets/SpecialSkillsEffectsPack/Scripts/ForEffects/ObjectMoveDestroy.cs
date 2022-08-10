@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectMoveDestroy : MonoBehaviour
+public class ObjectMoveDestroy : Skills
 {
     public Entity Parent; //누가 쐈는지
     public GameObject m_gameObjectMain;
