@@ -76,4 +76,17 @@ public class SoundManager : MonoBehaviour
             bgmPlayer.Play();
         }
     }
+
+    void OnEnable(){ //델리게이트 체인 추가
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode){
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        //Debug.Log(mode);
+        PlayBGMSound();
+    }
+    void OnDisable(){  //델리게이트 체인 제거
+        Debug.Log("OnDisable");
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 }

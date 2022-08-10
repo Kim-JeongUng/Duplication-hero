@@ -26,8 +26,6 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject progressPannel;
     [SerializeField] private TextMeshProUGUI progressPannelText;
     [SerializeField] private GameObject bossPannel;
-
-
     private int finalStageNum = 5;
     private Vector3 MapPos;
     private GameObject curMap;
@@ -43,6 +41,8 @@ public class GameController : MonoBehaviour
         GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Hapineko" };
         GameManager.instance.gameData.EnemyCount = 2;
         gameState.value = GameState.STARTED;
+
+        
     }
     private void GenerateMapWithNavmesh(){
         if(GameManager.instance.gameData.isBossStage){
