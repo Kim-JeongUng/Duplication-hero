@@ -8,9 +8,10 @@ public class Explosion2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Parent = transform.parent.parent.GetComponent<Skills>().Attacker;
+        Parent = transform.parent.parent.GetComponent<Explosion>().Attacker;
 
-        other.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
+        if(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy"))
+            other.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
         /*
         if (Parent.CompareTag("Enemy") && other.gameObject.CompareTag("Player"))
         {

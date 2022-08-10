@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899820178569780437}
   - component: {fileID: 1899820178569780442}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Effect_22_BigShot_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7994742634f09eb4a88499d7e511671d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Attacker: {fileID: 0}
   m_makeObjs:
   - {fileID: 1833216504575805730, guid: d9a076befffa39240b7e7005200145ab, type: 3}
   m_startDelay: 0
@@ -61,7 +62,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899820178749177070}
   - component: {fileID: 1899820178749177071}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Effect_22_BigShot_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7994742634f09eb4a88499d7e511671d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Attacker: {fileID: 0}
   m_makeObjs:
   - {fileID: 1833216504575805730, guid: d9a076befffa39240b7e7005200145ab, type: 3}
   m_startDelay: 0
@@ -146,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899820180522316273}
   - component: {fileID: 1899820180522316278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Effect_22_BigShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7994742634f09eb4a88499d7e511671d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Attacker: {fileID: 0}
   m_makeObjs:
   - {fileID: 1833216504575805730, guid: d9a076befffa39240b7e7005200145ab, type: 3}
   m_startDelay: 0
@@ -230,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7994742634f09eb4a88499d7e511671d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Attacker: {fileID: 0}
   m_makeObjs:
   - {fileID: 9007713933085762792, guid: ba53c4193f8b8ba46af6d7b7054e956c, type: 3}
   m_startDelay: 0

@@ -81,7 +81,7 @@ public class ObjectMoveDestroy : Skills
         if (!hit.transform.CompareTag("Environment")) //적이거나 플레이어거나
         {
             if (!hit.transform.CompareTag(Parent.transform.tag)) { }
-                //hit.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
+                hit.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
         }
         /*if (isCheckHitTag)
             if (hit.transform.tag != mtag)
