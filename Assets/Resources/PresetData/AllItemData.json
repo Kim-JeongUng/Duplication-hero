@@ -4,28 +4,28 @@
       "ItemName": "Armor0",
       "type": "Armor",
       "reinForceLevel": 1,
-      "value": 5.0,
+      "value": 50.0,
       "isEquip": false
     },
     {
       "ItemName": "Armor1",
       "type": "Armor",
       "reinForceLevel": 1,
-      "value": 10.0,
+      "value": 100.0,
       "isEquip": false
     },
     {
       "ItemName": "Armor2",
       "type": "Armor",
       "reinForceLevel": 1,
-      "value": 15.0,
+      "value": 150.0,
       "isEquip": false
     },
     {
       "ItemName": "Armor3",
       "type": "Armor",
       "reinForceLevel": 1,
-      "value": 20.0,
+      "value": 200.0,
       "isEquip": false
     },
     {
