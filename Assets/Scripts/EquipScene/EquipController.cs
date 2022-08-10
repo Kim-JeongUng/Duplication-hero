@@ -111,4 +111,8 @@ public class EquipController : MonoBehaviour
         // 텍스쳐 변경
         
     }
+    public void onClickEquipPlace(int num)
+    {
+        equipData.EquipmentInfo[num].GetComponent<MyItems>().OpenEquipDeatilCanvas();
+    }
 }
