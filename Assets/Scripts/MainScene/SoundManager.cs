@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
             }
             return instance;
         }
-    }//ΩÃ±€≈Ê
+    }//singleTone
 
     [SerializeField] GameObject BGM;
     [SerializeField] GameObject SFX;
@@ -24,20 +24,27 @@ public class SoundManager : MonoBehaviour
     public float masterVolumeSFX = 1f;
 
     [SerializeField]
-    private AudioClip mainBgmAudioClip;   //∏ﬁ¿Œæ¿ bgm
+    private AudioClip mainBgmAudioClip;   //mainScene bgm
     [SerializeField]
-    private AudioClip gameBgmAudioClip; //∞‘¿”æ¿ bgm
+    private AudioClip gameBgmAudioClip; //gameScene bgm
     [SerializeField]
-    private AudioClip[] sfxAudioClips;    //»ø∞˙¿Ω
-    //»ø∞˙¿Ω µÒº≈≥ ∏Æ
+    private AudioClip[] sfxAudioClips;    //soundEffect 
+    //soundEffect Dictionary
     Dictionary<string, AudioClip> audioClipsDic = new Dictionary<string, AudioClip>();
     
     private void Awake() {
-        if(instance != this){
-            Destroy(this.gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            Debug.Log("SoundMgr");
+            DontDestroyOnLoad(gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);    //dontdestroy
-
+        else
+        {
+            if (instance != this)
+                Destroy(this.gameObject);
+        }
+        
         bgmPlayer = BGM.GetComponent<AudioSource>();
         sfxPlayer = SFX.GetComponent<AudioSource>();
 
@@ -46,21 +53,20 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    //»ø∞˙¿Ω ¿Áª˝(¿Ã∏ß « ºˆ, ∫º∑˝ ø…º«)
+    //soundEffect(name, volume(option))
     public void PlaySFXSound(string name, float volume = 1f){
         if(audioClipsDic.ContainsKey(name) == false){
-            Debug.Log(name + " ƒ¡≈◊¿Ã≥ ø° ∆˜«‘ æ»µ .");
+            Debug.Log(name + " √Ñ√Å√Ö√ó√Ä√å¬≥√ä¬ø¬° √Ü√∑√á√î ¬æ√à¬µ√ä.");
             return;
         }
         sfxPlayer.PlayOneShot(audioClipsDic[name], volume * masterVolumeSFX);
     }
 
-    //BGM ¿Áª˝(∫º∑˝ ø…º«)
+    //bgm(volume(option))
     public void PlayBGMSound(float volume = 1f){
-        bgmPlayer.loop = true;  //∞Ëº” π›∫π
+        bgmPlayer.loop = true;  //loop
         bgmPlayer.volume = volume * masterVolumeBGM;
 
-        //æ¿ø° ∏¬¥¬ bgm ¿Áª˝
         if(SceneManager.GetActiveScene().name == "MainScene"){
             bgmPlayer.clip = mainBgmAudioClip;
             bgmPlayer.Play();
@@ -69,16 +75,5 @@ public class SoundManager : MonoBehaviour
             bgmPlayer.clip = gameBgmAudioClip;
             bgmPlayer.Play();
         }
-    }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
