@@ -38,8 +38,7 @@ public class EquipController : MonoBehaviour
 
     [SerializeField]
     private GameObject presetItem;
-    [SerializeField]
-    private Transform Inventory;
+    public Transform Inventory;
 
     // Start is called before the first frame update
     public void Awake()

@@ -52,12 +52,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         SetCanvas();
         this.gameObject.SetActive(true);
     }
-    public void Hide()
-    {
-        FailParticle.SetActive(false);
-        SuccessParticle.SetActive(false); 
-        this.gameObject.SetActive(false); 
-    }
+    public void Hide() => this.gameObject.SetActive(false);
     public void SetCanvas()
     {
         PlaceItemImage.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", thisItem.type, thisItem.ItemName));
@@ -102,8 +97,8 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         EquipController.instance.characterDatas.Coin += sellCoinValue;
         DataManager.instance.Save(EquipController.instance.characterDatas);
         EquipController.instance.SaveData();
-        Destroy(thisItemObject.gameObject);
-        /*SceneManager.LoadScene("EquipmentScene");*/
+        ReloadItem();
+        Hide();
     }
     public void UpgradeItemButton()
     {
@@ -141,6 +136,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 DataManager.instance.UserChangeItem(thisItem, thisItemObject.ItemIndex);
                 EquipController.instance.SaveData();
 
+                thisItemObject.OpenEquipDeatilCanvas();
             }
             else            //°­È­ ½ÇÆÐ(ÆÄ±«)
             {
@@ -151,15 +147,13 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 DataManager.instance.Save(EquipController.instance.characterDatas);
                 EquipController.instance.SaveData();
                 Debug.Log("ÆÄ±«µÊ");
-                Destroy(thisItemObject.gameObject);
-
+                ReloadItem();
+                Hide();
                 FailParticle.SetActive(false);
                 FailParticle.SetActive(true);
+                Debug.Log("ASD");
                 //SoundManager.Instance.PlaySFXSound("FailUpgradeItem");
-                /*SceneManager.LoadScene("EquipmentScene");*/
             }
-            rangePercent = this.thisItem.reinForceLevel < 20 ? 1 - (this.thisItem.reinForceLevel * 0.05f) : 0.05f;
-            PlaceReinforcePercent.text = ((1.0f - rangePercent) * 100).ToString("F0") + "%";
         }
         else
         {
@@ -168,7 +162,14 @@ public class PopupEquipmentItemDetail : MonoBehaviour
             popup.GetComponent<PopupInfo>().infoText.text = "You don't have enough coins.";
         }
 
-        thisItemObject.OpenEquipDeatilCanvas();
+    }
+    public void ReloadItem()
+    {
+        for (int i = 0; i < EquipController.instance.Inventory.childCount; i++)
+        {
+            Destroy(EquipController.instance.Inventory.GetChild(i).gameObject);
+        }
+        EquipController.instance.SetItems();
     }
     public void EquipItemButton()
     {
