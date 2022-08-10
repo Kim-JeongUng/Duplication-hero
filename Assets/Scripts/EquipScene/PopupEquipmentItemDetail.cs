@@ -25,10 +25,6 @@ public class PopupEquipmentItemDetail : MonoBehaviour
     private TMPro.TextMeshProUGUI PlaceReinForceLevel;
     [SerializeField]
     private TMPro.TextMeshProUGUI PlaceEquipText;
-    [SerializeField]
-    private GameObject SuccessParticle;
-    [SerializeField]
-    private GameObject FailParticle;
 
     public UserItemData thisItem;
     public MyItems thisItemObject;
@@ -52,12 +48,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         SetCanvas();
         this.gameObject.SetActive(true);
     }
-    public void Hide()
-    {
-        FailParticle.SetActive(false);
-        SuccessParticle.SetActive(false); 
-        this.gameObject.SetActive(false); 
-    }
+    public void Hide() => this.gameObject.SetActive(false);
     public void SetCanvas()
     {
         PlaceItemImage.GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", thisItem.type, thisItem.ItemName));
@@ -102,8 +93,8 @@ public class PopupEquipmentItemDetail : MonoBehaviour
         EquipController.instance.characterDatas.Coin += sellCoinValue;
         DataManager.instance.Save(EquipController.instance.characterDatas);
         EquipController.instance.SaveData();
-        Destroy(thisItemObject.gameObject);
-        /*SceneManager.LoadScene("EquipmentScene");*/
+        Destroy(thisItemObject);
+        SceneManager.LoadScene("EquipmentScene");
     }
     public void UpgradeItemButton()
     {
@@ -120,9 +111,6 @@ public class PopupEquipmentItemDetail : MonoBehaviour
 
             if (tempRand <= rangePercent)//강화성공
             {
-                SuccessParticle.SetActive(false);
-                SuccessParticle.SetActive(true);
-                //SoundManager.Instance.PlaySFXSound("SuccessUpgradeItem");
                 Debug.Log("강화완료");
                 if (thisItem.isEquip) // 장착중이면 해제 후 업그레이드 후 재장착
                 {
@@ -140,7 +128,6 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 }
                 DataManager.instance.UserChangeItem(thisItem, thisItemObject.ItemIndex);
                 EquipController.instance.SaveData();
-
             }
             else            //강화 실패(파괴)
             {
@@ -151,12 +138,8 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 DataManager.instance.Save(EquipController.instance.characterDatas);
                 EquipController.instance.SaveData();
                 Debug.Log("파괴됨");
-                Destroy(thisItemObject.gameObject);
-
-                FailParticle.SetActive(false);
-                FailParticle.SetActive(true);
-                //SoundManager.Instance.PlaySFXSound("FailUpgradeItem");
-                /*SceneManager.LoadScene("EquipmentScene");*/
+                Destroy(thisItemObject);
+                SceneManager.LoadScene("EquipmentScene");
             }
             rangePercent = this.thisItem.reinForceLevel < 20 ? 1 - (this.thisItem.reinForceLevel * 0.05f) : 0.05f;
             PlaceReinforcePercent.text = ((1.0f - rangePercent) * 100).ToString("F0") + "%";
