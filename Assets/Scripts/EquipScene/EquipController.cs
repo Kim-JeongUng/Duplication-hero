@@ -98,8 +98,8 @@ public class EquipController : MonoBehaviour
                         Debug.Log("NoneType");
                         break;
                 }
-                if (null != equipData.EquipmentInfo[varNum])
-                    equipData.EquipmentInfo[varNum].GetComponent<MyItems>().Equip(); // 같은 타입 장착해제
+                /*if (null != equipData.EquipmentInfo[varNum])
+                    equipData.EquipmentInfo[varNum].GetComponent<MyItems>().Equip(); // 같은 타입 장착해제*/
                 equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", items.ItemRows[i].type, items.ItemRows[i].ItemName));
                 equipData.EquipmentPlace[varNum].SetActive(true);
                 equipData.EquipmentInfo[varNum] = item;

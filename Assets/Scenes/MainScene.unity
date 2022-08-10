@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BGM: {fileID: 1532530955}
   SFX: {fileID: 1351322823}
-  masterVolumeBGM: 1
+  masterVolumeBGM: 0
   masterVolumeSFX: 1
   mainBgmAudioClip: {fileID: 8300000, guid: ed0c0c828c2c4ba478d82c99bc97b04c, type: 3}
   gameBgmAudioClip: {fileID: 8300000, guid: 4ca2072c5e4abf54c8db75703111377d, type: 3}

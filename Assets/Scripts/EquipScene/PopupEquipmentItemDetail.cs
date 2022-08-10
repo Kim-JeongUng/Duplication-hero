@@ -151,7 +151,6 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 Hide();
                 FailParticle.SetActive(false);
                 FailParticle.SetActive(true);
-                Debug.Log("ASD");
                 //SoundManager.Instance.PlaySFXSound("FailUpgradeItem");
             }
         }
