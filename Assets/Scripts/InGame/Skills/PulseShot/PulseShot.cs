@@ -8,7 +8,7 @@ public class PulseShot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Parent = transform.parent.parent.parent.GetComponent<ObjectMove>().Attacker;
+        Parent = transform.parent.parent.parent.GetComponent<MultipleObjectsMake>().Attacker;
 
         // 몬스터가 공격 시
         if (other.gameObject.CompareTag("Player") && Parent.CompareTag("Enemy"))  // 회오리가 캐릭터에 맞고 Attacker가 Enemy 이면
