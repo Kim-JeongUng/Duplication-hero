@@ -44,7 +44,7 @@ public class SoundManager : MonoBehaviour
             if (instance != this)
                 Destroy(this.gameObject);
         }
-        
+
         bgmPlayer = BGM.GetComponent<AudioSource>();
         sfxPlayer = SFX.GetComponent<AudioSource>();
 
@@ -56,7 +56,7 @@ public class SoundManager : MonoBehaviour
     //soundEffect(name, volume(option))
     public void PlaySFXSound(string name, float volume = 1f){
         if(audioClipsDic.ContainsKey(name) == false){
-            Debug.Log(name + " ÄÁÅ×ÀÌ³Ê¿¡ Æ÷ÇÔ ¾ÈµÊ.");
+            Debug.Log(name + " is not contained.");
             return;
         }
         sfxPlayer.PlayOneShot(audioClipsDic[name], volume * masterVolumeSFX);
