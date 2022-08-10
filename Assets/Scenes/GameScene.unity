@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 4096
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -2493,8 +2493,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCount: 5
   enemies:
-  - {fileID: 1349768927953945980, guid: 1d5467f991d06dd459b94d4700d92445, type: 3}
   - {fileID: 5276449091242406473, guid: 8f537fc77ec7ca946ace0e2a51746bac, type: 3}
+  - {fileID: 8596174083329394053, guid: 3c87164801bf0124d8f711eca84811e0, type: 3}
   multipleobjectpooling: {fileID: 1969683696}
 --- !u!114 &759118182
 MonoBehaviour:

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1493654417699394709}
   - component: {fileID: 2528029373649738544}
   - component: {fileID: 356252882040107002}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: bomb_sketchfab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 8997430424684988071}
   - component: {fileID: 8997430424684988073}
   - component: {fileID: 8997430424684988070}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: smoke_fx01
   m_TagString: EnemySkill
   m_Icon: {fileID: 0}
@@ -5032,7 +5032,7 @@ GameObject:
   - component: {fileID: 8997430424892085527}
   - component: {fileID: 8997430424892085529}
   - component: {fileID: 8997430424892085526}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: smoke_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9917,7 +9917,7 @@ GameObject:
   - component: {fileID: 8997430425544591605}
   - component: {fileID: 8997430425544591607}
   - component: {fileID: 8997430425544591604}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: spark01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14736,7 +14736,7 @@ GameObject:
   - component: {fileID: 8997430425668771718}
   - component: {fileID: 8997430425668771720}
   - component: {fileID: 8997430425668771721}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19621,7 +19621,7 @@ GameObject:
   - component: {fileID: 8997430425674285713}
   - component: {fileID: 8997430425674285715}
   - component: {fileID: 8997430425674285712}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24450,7 +24450,7 @@ GameObject:
   - component: {fileID: 8997430426034137159}
   - component: {fileID: 8997430426034137161}
   - component: {fileID: 8997430426034137158}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: smoke_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29335,7 +29335,7 @@ GameObject:
   - component: {fileID: 8997430426232168733}
   - component: {fileID: 8997430426232168735}
   - component: {fileID: 8997430426232168732}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: spark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34221,7 +34221,7 @@ GameObject:
   - component: {fileID: 8997430426416788223}
   - component: {fileID: 8997430426416788220}
   - component: {fileID: 8997430426416788193}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Bomb
   m_TagString: EnemySkill
   m_Icon: {fileID: 0}
@@ -34286,7 +34286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce138a24ab1f4de4da41067af778d8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Attacker: {fileID: 0}
   bomb: {fileID: 2301715905926270511}
   effect: {fileID: 8997430424684988068}
   spark: {fileID: 8997430425674285934}
-  Attacker: {fileID: 0}
