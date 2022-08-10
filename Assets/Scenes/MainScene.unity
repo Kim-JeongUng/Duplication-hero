@@ -156,9 +156,14 @@ MonoBehaviour:
   SFX: {fileID: 1351322823}
   masterVolumeBGM: 1
   masterVolumeSFX: 1
-  mainBgmAudioClip: {fileID: 0}
-  gameBgmAudioClip: {fileID: 0}
-  sfxAudioClips: []
+  mainBgmAudioClip: {fileID: 8300000, guid: ed0c0c828c2c4ba478d82c99bc97b04c, type: 3}
+  gameBgmAudioClip: {fileID: 8300000, guid: 4ca2072c5e4abf54c8db75703111377d, type: 3}
+  sfxAudioClips:
+  - {fileID: 8300000, guid: db6d136f2edd9a34b86e9894645fe7f3, type: 3}
+  - {fileID: 8300000, guid: 10091c536829a934e828a15342d8ed0f, type: 3}
+  - {fileID: 8300000, guid: d1fe8d62cbb7dfa4498d88528d15fee9, type: 3}
+  - {fileID: 8300000, guid: 51d59bd713de1214394e1925ff4b5fbf, type: 3}
+  - {fileID: 8300000, guid: 7a0e3f923cdbaea4a8ffb21dd5fbfe52, type: 3}
 --- !u!4 &14762090
 Transform:
   m_ObjectHideFlags: 0
@@ -4752,7 +4757,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5037,7 +5042,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
