@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2280925449003687309}
   - component: {fileID: 2280925449003687308}
-  - component: {fileID: -636042849686353924}
   m_Layer: 0
   m_Name: PulseShot
   m_TagString: EnemySkill
@@ -44,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7994742634f09eb4a88499d7e511671d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Attacker: {fileID: 0}
   m_makeObjs:
   - {fileID: 7935417353228486464, guid: 4760895ce813d0448899ead78a75c134, type: 3}
   - {fileID: 5445495837483289063, guid: e1d1fc82343369140adc423fb3510865, type: 3}
@@ -53,16 +53,3 @@ MonoBehaviour:
   m_randomPos: {x: 0, y: 0, z: 0}
   m_randomRot: {x: 0, y: 0, z: 0}
   m_randomScale: {x: 0, y: 0, z: 0}
-  Attacker: {fileID: 0}
---- !u!114 &-636042849686353924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2280925449003687311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d6968d5f12a6d44d8cd6bd92f703c04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

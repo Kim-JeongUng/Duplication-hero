@@ -35,4 +35,5 @@ public class Explosion : Skills
         yield return new WaitForSeconds(3f);  // 3초뒤에 프리팹 제거
         Destroy(this.gameObject);
     }
+
 }

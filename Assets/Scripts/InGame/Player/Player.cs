@@ -26,6 +26,8 @@ public class Player : Entity
 	//[SerializeField] protected MultipleObjectPooling skillPooling;  스킬 오브젝트 풀
 	private GameObject skill;
 
+	private Rigidbody rb;
+
 	private void EditorMode() => hp = isEditorMode ? 100000 : hp; //체력 10000
 
 	public void UseSkill()  // 스킬 버튼 입력 시
@@ -51,9 +53,6 @@ public class Player : Entity
 					isPassive = true;
 					hp += 30;
 					break;
-				case "Bomb":
-					StartCoroutine(Bomb()); // 폭탄 오브젝트 던짐
-					break;
 				default:
 					//Debug.Log("ERROR");
 					Debug.Log(GameManager.instance.gameData.nowSkillName);
@@ -65,6 +64,12 @@ public class Player : Entity
 			Debug.Log("playerskill");
 			skill = isPassive?Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position,this.transform.rotation,this.transform): Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
 			
+			if (GameManager.instance.gameData.SkillResource[num].name == "Bomb")
+			{
+				rb = skill.GetComponent<Rigidbody>();
+				rb.AddForce(this.transform.forward * 10f, ForceMode.Impulse);
+			}
+
 			foreach (Skills s in skill.GetComponentsInChildren<Skills>())
 			{
 				s.Attacker = this;
@@ -83,7 +88,7 @@ public class Player : Entity
 			//StartCoroutine(endskill());
 			//skill.SetActive(false);
 			
-			Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제
+			Invoke("DestroySkill", 3f);  // 사용한 스킬이펙트 삭제
 
 			//Invoke("Returnskillpool", 1f);
 		}
@@ -98,14 +103,7 @@ public class Player : Entity
 		skill.SetActive(false);
 	}
 	*/
-	public IEnumerator Bomb()
-	{
-		// 폭탄 오브젝트 던짐
-		//var b = Instantiate(this.GetComponent<Bomber>().bomb, this.transform.position, this.transform.rotation);
-		//b.GetComponent<Rigidbody>().AddForce(this.transform.up * 10f, ForceMode.Impulse);
-		Debug.Log("Player 스크립트 Explosion 실행");
-		yield return new WaitForSeconds(1f);
-	}
+
 	public void Revive()
     {
 		OnDie = false;

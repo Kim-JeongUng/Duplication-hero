@@ -716,7 +716,7 @@ MonoBehaviour:
   speed: 2
   maxHp: 500
   hp: 0
-  attackSpeed: 0
+  attackSpeed: 1.5
   damage: 30
   ap: 0
   coin: 0

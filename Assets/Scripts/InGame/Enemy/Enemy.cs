@@ -175,11 +175,11 @@ public class Enemy : Entity
         // 폭탄이 아닐경우에만 스킬이펙트 생성 (폭탄은 폭탄오브젝트를 던지고 오브젝트에서 이펙트 생성)
 
         skill = isPassive ? Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation, this.transform) : Instantiate(GameManager.instance.gameData.SkillResource[num], this.transform.position, this.transform.rotation);
-
+        
         if (GameManager.instance.gameData.SkillResource[num].name == "Bomb")
         {
             rb = skill.GetComponent<Rigidbody>();
-            rb.AddForce(this.transform.forward * 15f, ForceMode.Impulse);
+            rb.AddForce(this.transform.forward * 14f, ForceMode.Impulse);
         }
 
         isUseSkillState = true;  // 스킬 사용상태 true
