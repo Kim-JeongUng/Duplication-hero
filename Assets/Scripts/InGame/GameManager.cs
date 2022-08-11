@@ -16,9 +16,9 @@ public class GameData
 
     public int nowHP;
     public int nowProgressLevel; //현재라운드
-    public int EndProgressLevel = 4 ; //최종라운드
-    public int DeadCount=0;
-    public int acquiredCoins=0; //획득 코인 합
+    public int EndProgressLevel = 4; //최종라운드
+    public int DeadCount = 0;
+    public int acquiredCoins = 0; //획득 코인 합
     public List<UserItemData> acquiredItems = new List<UserItemData> { }; //획득한 아이템
     public bool isBossStage = false;
 }
@@ -44,17 +44,18 @@ public class GameManager : MonoBehaviour
             if (instance != this)
                 Destroy(this.gameObject);
         }
-        if(!PlayerPrefs.HasKey("nowChapter"))
-            PlayerPrefs.SetInt("nowChapter",0);
+        if (!PlayerPrefs.HasKey("nowChapter"))
+            PlayerPrefs.SetInt("nowChapter", 0);
 
-        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw" ,"PulseShot","FireBreath","Healing","SteelStorm","Bomb"}, nowProgressLevel = 0 };
-        gameData.nowChapter = PlayerPrefs.GetInt("nowChapter"); 
+        gameData = new GameData { nowSkillName = "", SkillNameSet = { "Fire", "Barrier", "Water", "DarkDraw", "PulseShot", "FireBreath", "Healing", "SteelStorm", "Bomb" }, nowProgressLevel = 0 };
+        gameData.nowChapter = PlayerPrefs.GetInt("nowChapter");
         gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
+        gameData.EnemyCount = 3 + (int)(PlayerPrefs.GetInt("nowChapter") / 4);
         ResourceLoad();
     }
     public void LoadGameData(GameData gameData)
     {
-        this.gameData = gameData; 
+        this.gameData = gameData;
         gameData.SkillResource = new GameObject[gameData.SkillNameSet.Count];
         ResourceLoad();
     }
