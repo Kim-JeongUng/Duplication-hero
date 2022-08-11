@@ -8,10 +8,12 @@ public class panelSetting : MonoBehaviour
    
     public void onClickDELETE()
     {
+        SoundManager.instance.PlayBTNSound("Menu_Select_00");
         DataManager.instance.DeleteAllData();
     }
     public void onClickQuit()
     {
+        SoundManager.instance.PlayBTNSound("Menu_Select_00");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else

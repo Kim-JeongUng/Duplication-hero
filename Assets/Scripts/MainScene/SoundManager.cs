@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
-    private static SoundManager instance;
+    public static SoundManager instance;
     public static SoundManager Instance{
         get{
             if(instance == null){
@@ -43,7 +43,7 @@ public class SoundManager : MonoBehaviour
     //btn sound Dictionary
     Dictionary<string, AudioClip> btnAudioClipsDic = new Dictionary<string, AudioClip>();
 
-    private void Awake() {
+    void Awake() {        
         if (instance == null)
         {
             instance = this;
@@ -66,17 +66,17 @@ public class SoundManager : MonoBehaviour
         btnPlayer = BTN.GetComponent<AudioSource>(); 
         foreach(AudioClip audioClip in btnAudioClips){
             btnAudioClipsDic.Add(audioClip.name, audioClip);
-        } 
+        }
     }
 
-    private bool isGameScene;
-    public void PlayBGMSound(float volume = 1f){
+    public void PlayBGMSound(float volume = 0.5f){
         bgmPlayer.loop = true;  //loop
-
+        
         if(SceneManager.GetActiveScene().name == "MainScene"){
-            isGameScene = false;
-            bgmPlayer.clip = mainBgmAudioClip;
-            bgmPlayer.Play();
+            if(bgmPlayer.clip.name != mainBgmAudioClip.name){
+                bgmPlayer.clip = mainBgmAudioClip;
+                bgmPlayer.Play();
+            }
         }
         else if(SceneManager.GetActiveScene().name == "GameScene"){
             volume = 0.2f;

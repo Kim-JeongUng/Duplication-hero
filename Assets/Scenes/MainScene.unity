@@ -198,7 +198,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d1fe8d62cbb7dfa4498d88528d15fee9, type: 3}
   - {fileID: 8300000, guid: 51d59bd713de1214394e1925ff4b5fbf, type: 3}
   - {fileID: 8300000, guid: 7a0e3f923cdbaea4a8ffb21dd5fbfe52, type: 3}
-  btnAudioClips: []
+  btnAudioClips:
+  - {fileID: 8300000, guid: 4f13633ea56974e6dbf63eb99fa6c851, type: 3}
+  - {fileID: 8300000, guid: b7db7ff580d9848ed8f011953f466b66, type: 3}
+  - {fileID: 8300000, guid: d0841eebed9944dd3b27de3ee7e6eb88, type: 3}
 --- !u!4 &14762090
 Transform:
   m_ObjectHideFlags: 0
@@ -6594,7 +6597,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3c8e1b51a59b6da42b0823020f826bf1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

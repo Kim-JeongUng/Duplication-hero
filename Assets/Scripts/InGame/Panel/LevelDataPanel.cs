@@ -41,11 +41,13 @@ public class LevelDataPanel : MonoBehaviour
     }
     public void onClickLock()
     {
+        SoundManager.instance.PlayBTNSound("Menu_Select_00");
         var popup = Instantiate(popupInfo.gameObject,this.transform);
         popup.GetComponent<PopupInfo>().infoText.text = "You must clear the previous step at least 2 stars.";
     }
     public void onClickNextPage()
     {
+        SoundManager.instance.PlayBTNSound("Menu_Select_00");
         var popup = Instantiate(popupInfo.gameObject, this.transform);
         popup.GetComponent<PopupInfo>().infoText.text = "You need 50 stars.";
     }

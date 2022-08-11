@@ -51,6 +51,7 @@ public class EquipController : MonoBehaviour
     }
     public void GoHome()
     {
+        SoundManager.instance.PlayBTNSound("Menu_Select_00");
         SceneManager.LoadScene("MainScene");
         //LoadingSceneController.Instance.LoadScene("MainScene");
     }
@@ -114,6 +115,7 @@ public class EquipController : MonoBehaviour
     }
     public void onClickEquipPlace(int num)
     {
+        SoundManager.instance.PlayBTNSound("Menu_Select_00");
         equipData.EquipmentInfo[num].GetComponent<MyItems>().OpenEquipDeatilCanvas();
     }
 }

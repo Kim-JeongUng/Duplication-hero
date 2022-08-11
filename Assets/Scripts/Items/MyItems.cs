@@ -54,15 +54,16 @@ public class MyItems : MonoBehaviour
     }
     public void EquipCheck()
     {
-        if (itemData.isEquip) // ÀåÂø
+        SoundManager.instance.PlayBTNSound("Menu_Select_00");
+        if (itemData.isEquip) // ï¿½ï¿½ï¿½ï¿½
         {
             if (null != EquipController.instance.equipData.EquipmentInfo[varNum])
-                EquipController.instance.equipData.EquipmentInfo[varNum].GetComponent<MyItems>().Equip(); // °°Àº Å¸ÀÔ ÀåÂøÇØÁ¦
+                EquipController.instance.equipData.EquipmentInfo[varNum].GetComponent<MyItems>().Equip(); // ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             EquipController.instance.equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", itemData.type, itemData.ItemName));
             EquipController.instance.equipData.EquipmentPlace[varNum].SetActive(true);
             EquipController.instance.equipData.EquipmentInfo[varNum] = this.gameObject;
         }
-        else // ÀåÂø ÇØÁ¦
+        else // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         {
             EquipController.instance.equipData.EquipmentPlace[varNum].GetComponent<Image>().sprite = null;
             EquipController.instance.equipData.EquipmentPlace[varNum].SetActive(false);
@@ -71,6 +72,7 @@ public class MyItems : MonoBehaviour
     }
     public void OpenEquipDeatilCanvas()
     {
+        SoundManager.instance.PlayBTNSound("Menu_Select_00");
         PopupEquipmentItemDetail.instance.thisItemObject = this;
         PopupEquipmentItemDetail.instance.thisItem = itemData;
         PopupEquipmentItemDetail.instance.Show();
