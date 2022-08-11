@@ -4,16 +4,17 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 [System.Serializable]
 public class UIText
 {
-    public Text AD;
-    public Text AP;
-    public Text AS;
-    public Text Speed;
-    public Text HP;
-    public Text Coin;
+    public TextMeshProUGUI AD;
+    public TextMeshProUGUI AP;
+    public TextMeshProUGUI AS;
+    public TextMeshProUGUI Speed;
+    public TextMeshProUGUI HP;
+    public TextMeshProUGUI Coin;
 }
 [System.Serializable]
 public class EquipData
@@ -60,12 +61,12 @@ public class EquipController : MonoBehaviour
         DataManager.instance.Save(characterDatas); 
     }
     public void RefreshState() {
-        texts.AD.text = characterDatas.AD.ToString("+0.##;-0.##;0");
-        texts.AP.text = characterDatas.AP.ToString("+0.##;-0.##;0");
-        texts.AS.text = characterDatas.AS.ToString("+0.##;-0.##;0");
-        texts.Speed.text = characterDatas.Speed.ToString("+0.##;-0.##;0");
-        texts.HP.text = characterDatas.HP.ToString("+0.##;-0.##;0");
-        texts.Coin.text = characterDatas.Coin.ToString("+0.##;-0.##;0");
+        texts.AD.text = characterDatas.AD.ToString("0.##");
+        texts.AP.text = characterDatas.AP.ToString("0.##");
+        texts.AS.text = characterDatas.AS.ToString("0.##");
+        texts.Speed.text = characterDatas.Speed.ToString("0.##");
+        texts.HP.text = characterDatas.HP.ToString("0.##");
+        texts.Coin.text = characterDatas.Coin.ToString();
     }
     public void SetItems()
     {
