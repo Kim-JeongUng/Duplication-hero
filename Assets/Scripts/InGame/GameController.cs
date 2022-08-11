@@ -82,12 +82,14 @@ public class GameController : MonoBehaviour
         GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Hapineko" };
         GameManager.instance.gameData.EnemyCount = 2;
         gameState.value = GameState.INIT;
-        SceneManager.LoadScene("GameScene");
+        //SceneManager.LoadScene("GameScene");
+        LoadingSceneController.Instance.LoadScene("GameScene");
     }
     public void GoMain()
     {
         Destroy(GameManager.instance.gameObject);
-        SceneManager.LoadScene("MainScene");
+        //SceneManager.LoadScene("MainScene");
+        LoadingSceneController.Instance.LoadScene("MainScene");
     }
     public void GetResultReward()
     {
