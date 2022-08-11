@@ -233,12 +233,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 2157593041942259564}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1.1
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -294,10 +294,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  maxHp: 1000
+  maxHp: 800
   hp: 0
   attackSpeed: 3
-  damage: 120
+  damage: 70
   ap: 0
   coin: 0
   isInvincible: 0

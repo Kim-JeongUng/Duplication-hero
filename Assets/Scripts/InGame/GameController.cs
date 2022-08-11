@@ -42,27 +42,30 @@ public class GameController : MonoBehaviour
         GameManager.instance.gameData.EnemyCount = 2;
         gameState.value = GameState.STARTED;
 
-        
+
     }
-    private void GenerateMapWithNavmesh(){
-        if(GameManager.instance.gameData.isBossStage){
+    private void GenerateMapWithNavmesh()
+    {
+        if (GameManager.instance.gameData.isBossStage)
+        {
             //boss stage
             curMap = BossMaps[Random.Range(0, BossMaps.Length)];
             GameManager.instance.gameData.EnemyCount = 1;
             //GameManager.instance.gameData.EnemySet = new List<string>() { "Dragon" };
             GameManager.instance.gameData.EnemySet = new List<string>() { "Dragon", "DogKnight" };
         }
-        else{  //normal stage   (need add special stage - if needed)
+        else
+        {  //normal stage   (need add special stage - if needed)
             curMap = normalMaps[Random.Range(0, normalMaps.Length)];
         }
         curMap.transform.position = MapPos;
         curMap.SetActive(true);
-        
+
         NavMeshSurface navsurface = curMap.GetComponentInChildren<NavMeshSurface>();
         navsurface.RemoveData();
         navsurface.BuildNavMesh();
 
-        
+
     }
     public void Init()
     {
@@ -93,7 +96,8 @@ public class GameController : MonoBehaviour
     }
     public void GetResultReward()
     {
-        for (int i = 0; i < GameManager.instance.gameData.acquiredItems.Count; i++) {
+        for (int i = 0; i < GameManager.instance.gameData.acquiredItems.Count; i++)
+        {
             DataManager.instance.UserGetItem(GameManager.instance.gameData.acquiredItems[i]);
         }
         DataManager.instance.characters.Coin += GameManager.instance.gameData.acquiredCoins;
