@@ -38,11 +38,9 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         Init();
-        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Hapineko" };
-        GameManager.instance.gameData.EnemyCount = 2;
+        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Hapineko","Archer","Bomber" };
+        GameManager.instance.gameData.EnemyCount = 3 + (int)(PlayerPrefs.GetInt("nowChapter") / 4);
         gameState.value = GameState.STARTED;
-
-
     }
     private void GenerateMapWithNavmesh()
     {
@@ -82,8 +80,8 @@ public class GameController : MonoBehaviour
         else
             GameManager.instance.gameData.isBossStage = false;
         //다음스테이지 나올 몬스터 ( 레벨 및 구현 필요 또는 랜덤? )
-        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Hapineko" };
-        GameManager.instance.gameData.EnemyCount = 2;
+        GameManager.instance.gameData.EnemySet = new List<string>() { "Mad Flower", "eyebat", "Hapineko", "Archer", "Bomber" };
+        GameManager.instance.gameData.EnemyCount = 3 + (int)(PlayerPrefs.GetInt("nowChapter") / 4);
         gameState.value = GameState.INIT;
         //SceneManager.LoadScene("GameScene");
         LoadingSceneController.Instance.LoadScene("GameScene");
