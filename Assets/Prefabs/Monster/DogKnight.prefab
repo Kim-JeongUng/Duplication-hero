@@ -1401,7 +1401,7 @@ MonoBehaviour:
   speed: 1.5
   maxHp: 500
   hp: 0
-  attackSpeed: 3
+  attackSpeed: 2.5
   damage: 30
   ap: 0
   coin: 0
@@ -1414,9 +1414,9 @@ MonoBehaviour:
   waitingTime: 2
   randomTime: 2
   touchDamageMultiplier: 1
-  coinsToDrop: 30
+  coinsToDrop: 20
   getSkill: {fileID: 0}
-  skillcool: 3
+  skillcool: 2.5
   isBossMonster: 1
   canUseSkill: 1
   LaserEffect: {fileID: 0}

@@ -258,7 +258,7 @@ MonoBehaviour:
   maxHp: 100
   hp: 0
   attackSpeed: 0.5
-  damage: 20
+  damage: 50
   ap: 0
   coin: 0
   isInvincible: 0
@@ -276,8 +276,9 @@ MonoBehaviour:
   isBossMonster: 0
   canUseSkill: 1
   LaserEffect: {fileID: 0}
-  isDangerMark: 0
+  UseDangerMark: 0
   isdanger: 0
+  isUseSkillState: 0
   shooter: {fileID: 2457195889799994417}
   aimer: {fileID: 1835928313615387614}
   anim: {fileID: 0}

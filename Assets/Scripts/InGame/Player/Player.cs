@@ -88,9 +88,10 @@ public class Player : Entity
 			//StartCoroutine(endskill());
 			//skill.SetActive(false);
 			
-			Invoke("DestroySkill", 3f);  // 사용한 스킬이펙트 삭제
+			//Invoke("DestroySkill", 3f);  // 사용한 스킬이펙트 삭제
 
 			//Invoke("Returnskillpool", 1f);
+			Destroy(skill, 2f);
 		}
 		else
 		{
@@ -109,7 +110,7 @@ public class Player : Entity
 		OnDie = false;
 		hp = 100; 
 		skill = Instantiate(GameManager.instance.gameData.SkillResource[6], this.transform.position, this.transform.rotation);
-		Destroy(skill,1f);
+		Destroy(skill,2f);
 		//Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제
 	}
 	public IEnumerator Invincible(float time=1f) //무적

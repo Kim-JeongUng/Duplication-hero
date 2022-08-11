@@ -1490,7 +1490,7 @@ MonoBehaviour:
     nowChapter: 0
     nowSkillName: 
     EnemySet: []
-    EnemyCount: 2
+    EnemyCount: 3
     SkillNameSet: []
     SkillResource: []
     nowHP: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f86972f183e574eac86382209c46dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 5
+  enemyCount: 3
   enemies:
   - {fileID: 8596174083329394053, guid: 3c87164801bf0124d8f711eca84811e0, type: 3}
   - {fileID: 3343400541712103999, guid: 4b96f1c68b5decd45af8e94c8a943039, type: 3}
@@ -6029,6 +6029,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 457907182}
     m_Modifications:
+    - target: {fileID: 4780769704671215567, guid: 1cd01eb8184758c45aa1aec17c29a7cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4780769704671519729, guid: 1cd01eb8184758c45aa1aec17c29a7cc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9494,6 +9498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier
       objectReference: {fileID: 0}
+    - target: {fileID: 8232703752499337199, guid: b32c883e0edd1d345abb0100f7150ae8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b32c883e0edd1d345abb0100f7150ae8, type: 3}
 --- !u!4 &2767802174559018682 stripped
@@ -9864,6 +9872,10 @@ PrefabInstance:
     - target: {fileID: 3427324384926251838, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
       propertyPath: m_Name
       value: PulseShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3427324384926251838, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3427324384926590720, guid: 3cfd2665c7b8d094a8a86a0cb1fbced1, type: 3}
       propertyPath: m_RootOrder
@@ -11255,6 +11267,10 @@ PrefabInstance:
     - target: {fileID: 4687248505416739568, guid: f538754753dfbd94e8c58cd1c3764308, type: 3}
       propertyPath: m_Name
       value: DarkDraw
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687248505416739568, guid: f538754753dfbd94e8c58cd1c3764308, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4687248505417053902, guid: f538754753dfbd94e8c58cd1c3764308, type: 3}
       propertyPath: m_RootOrder

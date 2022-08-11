@@ -186,7 +186,7 @@ MonoBehaviour:
   BGM: {fileID: 1532530955}
   SFX: {fileID: 1351322823}
   BTN: {fileID: 645481755}
-  masterVolumeBGM: 1
+  masterVolumeBGM: 0.5
   masterVolumeSFX: 1
   masterVolumeBTN: 1
   mainBgmAudioClip: {fileID: 8300000, guid: ed0c0c828c2c4ba478d82c99bc97b04c, type: 3}
@@ -763,11 +763,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
---- !u!1 &117757992 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5337509658344242847, guid: 20df8a79b70eb554b80b3a0bdf9bf60b, type: 3}
-  m_PrefabInstance: {fileID: 117757991}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &121613477
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,7 +6248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038dd8f8429fcbf43b8f211927781159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 117757992}
+  character: {fileID: 1093728960}
 --- !u!114 &1411282664
 MonoBehaviour:
   m_ObjectHideFlags: 0

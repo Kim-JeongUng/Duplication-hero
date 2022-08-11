@@ -2608,7 +2608,7 @@ MonoBehaviour:
   maxHp: 250
   hp: 0
   attackSpeed: 1.5
-  damage: 20
+  damage: 40
   ap: 0
   coin: 0
   isInvincible: 0
