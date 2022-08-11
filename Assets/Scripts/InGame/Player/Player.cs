@@ -28,7 +28,7 @@ public class Player : Entity
 
 	private Rigidbody rb;
 
-	private void EditorMode() => hp = isEditorMode ? 100000 : hp; //체력 10000
+	private void EditorMode() => hp = isEditorMode ? 100000 : hp; //체력 100000
 
 	public void UseSkill()  // 스킬 버튼 입력 시
     {
@@ -51,7 +51,7 @@ public class Player : Entity
 				case "Healing":
 					Debug.Log("Healing");
 					isPassive = true;
-					hp += 30;
+					hp += 100;
 					break;
 				default:
 					//Debug.Log("ERROR");
@@ -107,7 +107,7 @@ public class Player : Entity
 	public void Revive()
     {
 		OnDie = false;
-		hp = 30; 
+		hp = 100; 
 		skill = Instantiate(GameManager.instance.gameData.SkillResource[6], this.transform.position, this.transform.rotation);
 		Destroy(skill,1f);
 		//Invoke("DestroySkill", 1f);  // 사용한 스킬이펙트 삭제

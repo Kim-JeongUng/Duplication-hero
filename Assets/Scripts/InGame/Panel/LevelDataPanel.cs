@@ -27,7 +27,7 @@ public class LevelDataPanel : MonoBehaviour
         int sumStars=0;
         for (int i = 0; i < levelData.levelInfo.Length; i++)
         {
-            if (i != 0 && levelData.levelInfo[i - 1] == 3) //이전 스테이지 3스타로 클리어
+            if (i != 0 && levelData.levelInfo[i - 1] >= 2) //이전 스테이지 2스타이상으로 클리어
             {
                 eachStages[i].StageLock.SetActive(false);
             }
@@ -42,6 +42,11 @@ public class LevelDataPanel : MonoBehaviour
     public void onClickLock()
     {
         var popup = Instantiate(popupInfo.gameObject,this.transform);
-        popup.GetComponent<PopupInfo>().infoText.text = "You must clear the previous step with 3 stars.";
+        popup.GetComponent<PopupInfo>().infoText.text = "You must clear the previous step at least 2 stars.";
+    }
+    public void onClickNextPage()
+    {
+        var popup = Instantiate(popupInfo.gameObject, this.transform);
+        popup.GetComponent<PopupInfo>().infoText.text = "You need 50 stars.";
     }
 }

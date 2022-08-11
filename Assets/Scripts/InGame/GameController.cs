@@ -69,6 +69,7 @@ public class GameController : MonoBehaviour
         GenerateMapWithNavmesh();
         GameManager.instance.StartNextStage();
         enemySpawner.componentCache.SpawnEnemies();
+        gameState.value = GameState.INIT;
     }
     public void nextStage()
     {   //다음 스테이지 값 수정 위치

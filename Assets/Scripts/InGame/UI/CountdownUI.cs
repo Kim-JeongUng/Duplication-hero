@@ -33,7 +33,7 @@ public class CountdownUI : MonoBehaviour
         {
             GameController.instance.OpenProgressPannel();
         }
-        canvas.SetActive(true);
+        /*canvas.SetActive(true);
         for (int i = 3; i > 0; i--)
         {
             countdown.text = i.ToString();
@@ -45,6 +45,11 @@ public class CountdownUI : MonoBehaviour
             Time.timeScale = 0;
         }
         canvas.SetActive(false);
-        Time.timeScale = 1;
+        Time.timeScale = 1;*/
+        yield return new WaitForSecondsRealtime(1);
+        if (GameManager.instance.gameData.isBossStage)
+            GameController.instance.CloseBossPannel();
+        else
+            GameController.instance.CloseProgressPannel();
     }
 }
