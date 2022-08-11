@@ -17,21 +17,32 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] GameObject BGM;
     [SerializeField] GameObject SFX;
+    [SerializeField] GameObject BTN;
     private AudioSource bgmPlayer;
     private AudioSource sfxPlayer;
+    private AudioSource btnPlayer;
 
     public float masterVolumeBGM = 1f;
     public float masterVolumeSFX = 1f;
+    public float masterVolumeBTN = 1f;
 
     [SerializeField]
     private AudioClip mainBgmAudioClip;   //mainScene bgm
     [SerializeField]
-    private AudioClip gameBgmAudioClip; //gameScene bgm
+    private AudioClip DesertNormalBgmAudioClip; //gameScene bgm desert normal
+    [SerializeField]
+    private AudioClip BossBgmAudioClip; //gameScene bgm boss
+    
     [SerializeField]
     private AudioClip[] sfxAudioClips;    //soundEffect 
     //soundEffect Dictionary
-    Dictionary<string, AudioClip> audioClipsDic = new Dictionary<string, AudioClip>();
+    Dictionary<string, AudioClip> sfxAudioClipsDic = new Dictionary<string, AudioClip>();
     
+    [SerializeField]
+    private AudioClip[] btnAudioClips;
+    //btn sound Dictionary
+    Dictionary<string, AudioClip> btnAudioClipsDic = new Dictionary<string, AudioClip>();
+
     private void Awake() {
         if (instance == null)
         {
@@ -46,40 +57,62 @@ public class SoundManager : MonoBehaviour
         }
 
         bgmPlayer = BGM.GetComponent<AudioSource>();
+
         sfxPlayer = SFX.GetComponent<AudioSource>();
-
         foreach(AudioClip audioClip in sfxAudioClips){
-            audioClipsDic.Add(audioClip.name, audioClip);
+            sfxAudioClipsDic.Add(audioClip.name, audioClip);
         }
+
+        btnPlayer = BTN.GetComponent<AudioSource>(); 
+        foreach(AudioClip audioClip in btnAudioClips){
+            btnAudioClipsDic.Add(audioClip.name, audioClip);
+        } 
     }
 
-    //soundEffect(name, volume(option))
-    public void PlaySFXSound(string name, float volume = 1f){
-        if(audioClipsDic.ContainsKey(name) == false){
-            Debug.Log(name + " is not contained.");
-            return;
-        }
-        sfxPlayer.PlayOneShot(audioClipsDic[name], volume * masterVolumeSFX);
-    }
-
-    //bgm(volume(option))
+    private bool isGameScene;
     public void PlayBGMSound(float volume = 1f){
         bgmPlayer.loop = true;  //loop
 
         if(SceneManager.GetActiveScene().name == "MainScene"){
+            isGameScene = false;
             bgmPlayer.clip = mainBgmAudioClip;
             bgmPlayer.Play();
         }
         else if(SceneManager.GetActiveScene().name == "GameScene"){
-            volume = 0.1f;
-            if(bgmPlayer.clip.name != gameBgmAudioClip.name){
-                bgmPlayer.clip = gameBgmAudioClip;
+            volume = 0.2f;
+            if(GameManager.instance.gameData.isBossStage){   //boss
+                volume = 0.3f;
+                bgmPlayer.clip = BossBgmAudioClip;
                 bgmPlayer.Play();
             }
+            else{
+                //desert normal
+                if(bgmPlayer.clip.name != DesertNormalBgmAudioClip.name){
+                    bgmPlayer.clip = DesertNormalBgmAudioClip;
+                    bgmPlayer.Play();
+                }
+            }
+            
         }
 
         bgmPlayer.volume = volume * masterVolumeBGM;
-    }
+    }//bgm(name, volume(option))
+    
+    public void PlaySFXSound(string name, float volume = 1f){
+        if(sfxAudioClipsDic.ContainsKey(name) == false){
+            Debug.Log(name + " is not contained.");
+            return;
+        }
+        sfxPlayer.PlayOneShot(sfxAudioClipsDic[name], volume * masterVolumeSFX);
+    }//soundEffect(name, volume(option))
+    
+    public void PlayBTNSound(string name, float volume = 1f){
+        if(btnAudioClipsDic.ContainsKey(name) == false){
+            Debug.Log(name + " is not contained.");
+            return;
+        }
+        btnPlayer.PlayOneShot(btnAudioClipsDic[name], volume * masterVolumeBTN);
+    }//btn sound(name, volume(option))
 
     void OnEnable(){ //델리게이트 체인 추가
         SceneManager.sceneLoaded += OnSceneLoaded;
