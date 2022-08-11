@@ -80,7 +80,7 @@ public class ObjectMoveDestroy : Skills
         Parent = transform.parent.GetComponent<Skills>().Attacker;
         if (!hit.transform.CompareTag("Environment")) //적이거나 플레이어거나
         {
-            if (!hit.transform.CompareTag(Parent.transform.tag)) { }
+            if (!hit.transform.CompareTag(Parent.transform.tag))
                 hit.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
         }
         /*if (isCheckHitTag)
