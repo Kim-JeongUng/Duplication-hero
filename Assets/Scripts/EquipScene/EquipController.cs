@@ -51,8 +51,8 @@ public class EquipController : MonoBehaviour
     }
     public void GoHome()
     {
-        //SceneManager.LoadScene("MainScene");
-        LoadingSceneController.Instance.LoadScene("MainScene");
+        SceneManager.LoadScene("MainScene");
+        //LoadingSceneController.Instance.LoadScene("MainScene");
     }
     public void SaveData(){
         characterDatas = DataManager.instance.Load();

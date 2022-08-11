@@ -13,8 +13,8 @@ public class MainController : MonoBehaviour
     // Start is called before the first frame update
     public void GoEquipment()
     {
-        //SceneManager.LoadScene("EquipmentScene");
-        LoadingSceneController.Instance.LoadScene("EquipmentScene");
+        SceneManager.LoadScene("EquipmentScene");
+        //LoadingSceneController.Instance.LoadScene("EquipmentScene");
     }
     public void GoGame(int nowChapter = 0)
     {
