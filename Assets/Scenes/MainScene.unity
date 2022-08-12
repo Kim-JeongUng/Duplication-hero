@@ -198,6 +198,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d1fe8d62cbb7dfa4498d88528d15fee9, type: 3}
   - {fileID: 8300000, guid: 51d59bd713de1214394e1925ff4b5fbf, type: 3}
   - {fileID: 8300000, guid: 7a0e3f923cdbaea4a8ffb21dd5fbfe52, type: 3}
+  - {fileID: 8300000, guid: ca6e7bc98f90e9346a0d7151c996637b, type: 3}
+  - {fileID: 8300000, guid: a37f44cbf8c2a7443a3c361efa2f233a, type: 3}
   btnAudioClips:
   - {fileID: 8300000, guid: 4f13633ea56974e6dbf63eb99fa6c851, type: 3}
   - {fileID: 8300000, guid: b7db7ff580d9848ed8f011953f466b66, type: 3}

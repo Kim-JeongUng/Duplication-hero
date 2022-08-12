@@ -207,6 +207,7 @@ public class Enemy : Entity
 
         if (other.CompareTag("Weapon"))
         {
+            SoundManager.instance.PlaySFXSound("Bloody punch", 0.6f);
             TakeDamage(new DamageReport(GameManager.instance.player.Damage * touchDamageMultiplier, GameManager.instance.player));
         }
     }

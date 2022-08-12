@@ -27,6 +27,7 @@ public class Gate : MonoBehaviour
         // {
         //     block.SetActive(false);
         // }
+        SoundManager.instance.PlaySFXSound("MS07entranceNL");
         gateEffect.SetActive(true);
         gateDoorL.GetComponent<GateDoor>().Ldoor = true;
         gateDoorR.GetComponent<GateDoor>().Rdoor = true;
