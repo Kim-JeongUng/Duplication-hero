@@ -16,6 +16,7 @@ public class ResultPanel : MonoBehaviour
     public void OnEnable()
     {
         SetPanel();
+        //SoundManager.instance.PlaySFXSound("EndScene");
     }
     public void SetPanel()
     {
