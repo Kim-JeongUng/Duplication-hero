@@ -193,7 +193,7 @@ MonoBehaviour:
   DesertNormalBgmAudioClip: {fileID: 8300000, guid: 4ca2072c5e4abf54c8db75703111377d, type: 3}
   BossBgmAudioClip: {fileID: 8300000, guid: 0b8e5bc1987eeb54896c6b398776db0c, type: 3}
   sfxAudioClips:
-  - {fileID: 8300000, guid: db6d136f2edd9a34b86e9894645fe7f3, type: 3}
+  - {fileID: 8300000, guid: 34f9cbd28a9740349b6cc2f5e280dda3, type: 3}
   - {fileID: 8300000, guid: 10091c536829a934e828a15342d8ed0f, type: 3}
   - {fileID: 8300000, guid: d1fe8d62cbb7dfa4498d88528d15fee9, type: 3}
   - {fileID: 8300000, guid: 51d59bd713de1214394e1925ff4b5fbf, type: 3}
