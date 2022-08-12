@@ -12,17 +12,18 @@ public class Archer : WalkingEnemy
 
     protected new void Awake()
     {
-        base.Awake();
-        anim = GetComponent<Animator>();
+        base.Awake();/*
+        anim = GetComponent<Animator>();*/
 
         if (shooter == null)
             shooter = GetComponentInChildren<Shooter>();
         if (aimer == null)
             aimer = GetComponentInChildren<EnemyAimer>();
     }
+    
     public override void Animation_Run(bool isRun)
     {
-        anim.SetBool("isRun", isRun);
+        //anim.SetBool("isRun", isRun);
     }
 
     protected void Update()
@@ -31,10 +32,10 @@ public class Archer : WalkingEnemy
         {
             //walkingState = MovingState.STAYING;
 
-            if (isUseSkillState == true)
+            /*if (isUseSkillState == true)
             {
                 anim.SetTrigger("attack01");
-            }
+            }*/
             //EnemySkill();
 
             /*else if (Time.time - lastShootTime >= (1 / attackSpeed))  // 몬스터 일반공격

@@ -1144,7 +1144,6 @@ GameObject:
   - component: {fileID: 1533691677}
   - component: {fileID: 4611276839608745193}
   - component: {fileID: -5374402086359783633}
-  - component: {fileID: 8337130837799076230}
   m_Layer: 8
   m_Name: Archer
   m_TagString: Enemy
@@ -1297,25 +1296,6 @@ MonoBehaviour:
   shooter: {fileID: 5117843574253354938}
   aimer: {fileID: 5371552464047986266}
   anim: {fileID: 0}
---- !u!95 &8337130837799076230
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3343400541712103999}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6be77a140122bb04eb0fdec9eb133a83, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3738630275334420280
 GameObject:
   m_ObjectHideFlags: 0
