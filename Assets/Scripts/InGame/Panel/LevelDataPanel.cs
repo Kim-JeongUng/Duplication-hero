@@ -19,6 +19,7 @@ public class LevelDataPanel : MonoBehaviour
     // Start is called before the first frame update
     public void OnEnable()
     {
+        SoundManager.instance.PlayBTNSound("SWORD_01");
         levelData = DataManager.instance.LoadLevelData();
         SetPanel();
     }

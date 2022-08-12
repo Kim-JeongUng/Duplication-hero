@@ -89,6 +89,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
     }
     public void SellItemButton()
     {
+        SoundManager.Instance.PlayBTNSound("Pickup_Gold_02");
         if (thisItem.isEquip) // 장착중이면 해제 후 제거
         {
             EquipItemButton();
@@ -117,7 +118,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
             {
                 SuccessParticle.SetActive(false);
                 SuccessParticle.SetActive(true);
-                //SoundManager.Instance.PlaySFXSound("SuccessUpgradeItem");
+                SoundManager.Instance.PlayBTNSound("JustImpacts-Extension2_Metal_Hit_Crash_200");
                 Debug.Log("강화완료");
                 if (thisItem.isEquip) // 장착중이면 해제 후 업그레이드 후 재장착
                 {
@@ -140,6 +141,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
             }
             else            //강화 실패(파괴)
             {
+                SoundManager.Instance.PlayBTNSound("Just_Impacts_Extension-I_171");
                 if (thisItem.isEquip) // 장착중이면 해제 
                     EquipItemButton();
 
@@ -151,7 +153,7 @@ public class PopupEquipmentItemDetail : MonoBehaviour
                 Hide();
                 FailParticle.SetActive(false);
                 FailParticle.SetActive(true);
-                //SoundManager.Instance.PlaySFXSound("FailUpgradeItem");
+                
             }
         }
         else

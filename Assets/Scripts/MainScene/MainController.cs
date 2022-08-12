@@ -20,6 +20,7 @@ public class MainController : MonoBehaviour
     }
     public void GoGame(int nowChapter = 0)
     {
+        SoundManager.instance.PlayBTNSound("SFX RPG_SKILL1_01");
         PlayerPrefs.SetInt("nowChapter", nowChapter);
         //SceneManager.LoadScene("GameScene");
         LoadingSceneController.Instance.LoadScene("GameScene");
