@@ -31,6 +31,7 @@ public class SteelStorm : MonoBehaviour
     }
     IEnumerator UpPlayer(Collider other)
     {
+        Debug.Log(other.name + " move UP");
         // À§·Î ¶ç¿ì°í
         other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 1000f, ForceMode.Force);
 
