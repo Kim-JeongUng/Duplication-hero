@@ -27,7 +27,7 @@ public class Gate : MonoBehaviour
         // {
         //     block.SetActive(false);
         // }
-        SoundManager.instance.PlaySFXSound("Magic Spell_Coins_2");
+        SoundManager.instance.PlaySFXSound("Magic Spell_Coins_2", 0.7f);
         gateEffect.SetActive(true);
         gateDoorL.GetComponent<GateDoor>().Ldoor = true;
         gateDoorR.GetComponent<GateDoor>().Rdoor = true;

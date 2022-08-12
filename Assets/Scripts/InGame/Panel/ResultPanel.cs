@@ -16,7 +16,7 @@ public class ResultPanel : MonoBehaviour
     public void OnEnable()
     {
         SetPanel();
-        //SoundManager.instance.PlaySFXSound("EndScene");
+        SoundManager.instance.PlaySFXSound("Jingle_Achievement_00");
     }
     public void SetPanel()
     {

@@ -69,7 +69,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayBGMSound(float volume = 0.5f){
+    public void PlayBGMSound(float volume = 0.8f){
         bgmPlayer.loop = true;  //loop
         
         if(SceneManager.GetActiveScene().name == "MainScene"){
