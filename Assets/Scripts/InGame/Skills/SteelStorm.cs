@@ -22,16 +22,19 @@ public class SteelStorm : MonoBehaviour
         // 캐릭터가 공격 시
         else if (other.gameObject.CompareTag("Enemy") && Parent.CompareTag("Player"))  // 회오리가 몬스터에 맞고 Attacker가 Player 이면
         {
+            // 몬스터 공중에 띄움
+            StartCoroutine(UpPlayer(other));
+
             // 몬스터에게 데미지
             other.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
         }
     }
     IEnumerator UpPlayer(Collider other)
     {
-        // 캐릭터 위로 띄우고
+        // 위로 띄우고
         other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 1000f, ForceMode.Force);
 
-        // 캐릭터 못움직이게 Position X,Y 프리즈
+        // 못움직이게 Position X,Y 프리즈
         other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
 
         yield return new WaitForSeconds(1f);
