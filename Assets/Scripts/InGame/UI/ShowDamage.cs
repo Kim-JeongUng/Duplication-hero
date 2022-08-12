@@ -23,6 +23,10 @@ public class ShowDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(damage < 0){
+            damage = -damage;
+            damageText.color = Color.green;
+        }
         damageText.text = damage.ToString();
     }
 }
