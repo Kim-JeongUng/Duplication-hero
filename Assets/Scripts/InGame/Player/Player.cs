@@ -91,7 +91,7 @@ public class Player : Entity
 			//Invoke("DestroySkill", 3f);  // 사용한 스킬이펙트 삭제
 
 			//Invoke("Returnskillpool", 1f);
-			Destroy(skill, 2f);
+			Destroy(skill, 3f);
 		}
 		else
 		{
