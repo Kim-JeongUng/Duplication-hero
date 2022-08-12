@@ -1,11 +1,15 @@
 # Duplication hero
- 스킬을 복제해 사용하며 싸우는 유니티 창작 게임
+ 한손으로 즐기는 캐주얼 액션 RPG   
+<img width="30%" src="https://user-images.githubusercontent.com/82865325/184373739-45dadc3e-b708-4b6e-9d40-2d7cb0c1dd25.png">
+[[Download APK v1.0]](https://drive.google.com/file/d/1Fi1Qjvj76ag2pwEErqK4mTbQU7kvWPdP/view?usp=sharing)<br>
+## 게임방식
+<img width="90%" src="https://user-images.githubusercontent.com/82865325/184373234-00bc23ed-518e-4b94-bad5-a4697edd0ded.gif">
 
-## 메인화면
-<img width="40%" src="https://user-images.githubusercontent.com/31684326/178380596-5330e454-6d82-4f35-a6fc-79f2933c53b3.jpg">   
+## 장비 강화 및 장착
+<img width="90%" src="https://user-images.githubusercontent.com/82865325/184373406-bc601d1b-9c97-4227-a764-1834274099dd.gif">
 
-## 장비화면
-<img width="40%" src="https://user-images.githubusercontent.com/31684326/178380697-765fc55a-1a64-4c45-9230-2bf65cf875a3.png">   
+## 레벨시스템 구현
+<img width="90%" src="https://user-images.githubusercontent.com/82865325/184373451-2d8a1730-6fc2-41d1-a6c2-72ee8555eb4d.gif"> 
 
-## 게임화면
-<img width="40%" src="https://user-images.githubusercontent.com/31684326/178380628-36b0e0e2-44b4-4fd2-b758-b64fc43a4905.jpg">   
+# FullVideo
+[[YouTube]](https://youtu.be/c4wElgBHXjE)<br>
