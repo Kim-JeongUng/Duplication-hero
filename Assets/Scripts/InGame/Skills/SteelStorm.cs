@@ -23,8 +23,15 @@ public class SteelStorm : MonoBehaviour
         // 캐릭터가 공격 시
         else if (other.gameObject.CompareTag("Enemy") && Parent.CompareTag("Player"))  // 회오리가 몬스터에 맞고 Attacker가 Player 이면
         {
-            // 몬스터 공중에 띄움
-            StartCoroutine(UpPlayer(other));
+            if (other.gameObject.name != "Archer(Clone)" && other.gameObject.name != "eyebat(Clone)" && other.gameObject.name != "Mad Flower(Clone)")
+            {
+                // 몬스터 공중에 띄움
+                StartCoroutine(UpPlayer(other));
+            }
+            else
+            {
+                Debug.Log(other.name + "공중에 안띄움");
+            }
             
             // 몬스터에게 데미지
             other.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
@@ -42,7 +49,7 @@ public class SteelStorm : MonoBehaviour
         {
             // 몬스터의 내비게이션 비활성화
             other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
-            other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 100f, ForceMode.Force);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 300f, ForceMode.Force);
         }
 
         // 못움직이게 Position X,Y 프리즈

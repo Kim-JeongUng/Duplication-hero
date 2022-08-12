@@ -29,8 +29,11 @@ public abstract class WalkingEnemy : Enemy
                 }
                 else
                 {
-                    Animation_Run(true);
-                    agent.destination = player.componentCache.position;
+                    if (this.GetComponent<NavMeshAgent>().enabled == true)
+                    {
+                        Animation_Run(true);
+                        agent.destination = player.componentCache.position;
+                    }
                 }
                 break;
             case MovingState.STAYING:
@@ -51,7 +54,8 @@ public abstract class WalkingEnemy : Enemy
                 }
                 else
                 {
-                    agent.destination = transform.position;
+                    if(this.GetComponent<NavMeshAgent>().enabled == true)
+                        agent.destination = transform.position;
                 }
                 break;
             default:
