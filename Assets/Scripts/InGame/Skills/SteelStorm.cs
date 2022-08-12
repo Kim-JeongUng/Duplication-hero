@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SteelStorm : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class SteelStorm : MonoBehaviour
         {
             // 몬스터 공중에 띄움
             StartCoroutine(UpPlayer(other));
-
+            
             // 몬스터에게 데미지
             other.transform.GetComponent<Entity>().TakeDamage(new DamageReport(Parent.Damage, Parent));
         }
@@ -32,16 +33,29 @@ public class SteelStorm : MonoBehaviour
     IEnumerator UpPlayer(Collider other)
     {
         Debug.Log(other.name + " move UP");
-        // 위로 띄우고
-        other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 1000f, ForceMode.Force);
+
+        // 캐릭터 위로 띄움
+        if (other.gameObject.CompareTag("Player"))
+            other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 1000f, ForceMode.Force);
+        // 몬스터 띄움
+        else
+        {
+            // 몬스터의 내비게이션 비활성화
+            other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            other.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * 100f, ForceMode.Force);
+        }
 
         // 못움직이게 Position X,Y 프리즈
         other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
 
         yield return new WaitForSeconds(1f);
 
+        if(other.gameObject.CompareTag("Enemy"))
+            other.gameObject.GetComponent<NavMeshAgent>().enabled = true;
+
         // 1초 뒤 프리즈 해제 및 Rotation X,Z 만 다시 잠금
         other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         other.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+    
     }
 }
