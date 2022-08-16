@@ -219,7 +219,7 @@ public class Player : Entity
 			if (aimer.Target != null)
 			{
 				aimer.FollowTarget();
-				if (Vector3.Distance(aimer.Target.position, this.transform.position) < 2f)
+				if (Vector3.Distance(aimer.Target.position, this.transform.position) < 3f) //공격 사거리
 				{
 					if (Time.time - lastShootTime >= (1 / attackSpeed))
 					{
