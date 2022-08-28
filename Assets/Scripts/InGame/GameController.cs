@@ -102,6 +102,7 @@ public class GameController : MonoBehaviour
     }
     public void OpenContinuePannel()
     {
+        Time.timeScale = 0;
         continuePannel.SetActive(true);
     }
     public void OpenResultPannel()
@@ -127,6 +128,7 @@ public class GameController : MonoBehaviour
     }
     public void Continue()
     {
+        Time.timeScale = 1;
         GameManager.instance.player.GetComponent<Player>().Revive();
         GameManager.instance.player.gameObject.SetActive(true);
 
