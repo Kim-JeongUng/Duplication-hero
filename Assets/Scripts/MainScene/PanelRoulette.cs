@@ -4,13 +4,23 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+[SerializeField]
+public struct PopupItemDetail
+{
+}
 public class PanelRoulette : MonoBehaviour
 {
     public GameObject Roulette;
-    public Transform ItemsParent;
     public TextMeshProUGUI coinText;
-    [SerializeField]
-    private int requireCoins=100;
+    public int requireCoins = 500;
+    public GameObject popupInfo;
+
+    public GameObject infoPanel;
+
+    public Image popupItemImage;
+    public TextMeshProUGUI popupItemName;
+    public TextMeshProUGUI popupItemValue;
+    public TextMeshProUGUI popupItemAbility;
 
     private static int itemCount = 8;
     [SerializeField]
@@ -34,31 +44,77 @@ public class PanelRoulette : MonoBehaviour
             ItemImage[i].sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", RandItems[i].type, RandItems[i].ItemName));
             //itemGo.GetComponent<presetItemdata>().itemData = Randitem;
         }
-        
+
     }
     public void OnClickSpin()
     {
         //µ· ºñ±³
-        //µ· ÀúÀå
-        randNum = Random.Range(0, 8);
-        //¾ÆÀÌÅÛ ÀúÀå
+        if (DataManager.instance.characters.Coin >= requireCoins)
+        {
+            //µ· ÀúÀå
+            DataManager.instance.characters.Coin -= requireCoins;
+            DataManager.instance.Save(DataManager.instance.characters);
 
-        //·ê·¿ ½Ã°¢È¿°ú
-        StartCoroutine(SpinRoulette(randNum));
+            randNum = Random.Range(0, itemCount);
+            //¾ÆÀÌÅÛ ÀúÀå
+            DataManager.instance.UserGetItem(RandItems[randNum]);
+
+            //·ê·¿ ½Ã°¢È¿°ú
+            StartCoroutine(SpinRoulette(randNum));
+        }
+        else
+        {
+            var popup = Instantiate(popupInfo.gameObject, this.transform);
+            popup.GetComponent<PopupInfo>().infoText.text = "You don't have enough coins.";
+        }
     }
     public IEnumerator SpinRoulette(int randNum)
     {
+        Roulette.transform.eulerAngles = Vector3.zero;
         int i = 0;
         int targetAnguler = randNum * 45 + 720; // 2¹ÙÄû µ¹°í Å¸°Ù °¢µµ±îÁö
-        Debug.Log(randNum);
         while (i < targetAnguler)
         {
-            Debug.Log("ASD");
-            i+=5;
+            i += 5;
             Roulette.transform.eulerAngles = new Vector3(0, 0, i);
             yield return new WaitForSeconds(0.01f);
         }
 
+        yield return new WaitForSeconds(0.5f);
         //º¸»óÆÇ³Ú
+        OpenRewardPanel();
+    }
+    public void OpenRewardPanel()
+    {
+        SetPopupPanel(randNum);
+    }
+    public void OpenInfoPanel(int index)
+    {
+        SetPopupPanel(index);
+    }
+    public void SetPopupPanel(int index)
+    {
+        infoPanel.SetActive(true);
+        popupItemImage.sprite = ItemImage[index].sprite;
+        popupItemName.text = RandItems[index].ItemName;
+        switch (RandItems[index].type)
+        {
+            case "Weapon":
+                popupItemAbility.text = "Attack Damage";
+                break;
+            case "Helmet":
+                popupItemAbility.text = "Attack Speed";
+                break;
+            case "Armor":
+                popupItemAbility.text = "Health";
+                break;
+            case "Shoes":
+                popupItemAbility.text = "Speed";
+                break;
+            default:
+                popupItemAbility.text = RandItems[index].type + "ERROR";
+                break;
+        }
+        popupItemValue.text = RandItems[index].value.ToString("+0.##;-0.##;0");
     }
 }
