@@ -9,7 +9,7 @@ public class PanelRoulette : MonoBehaviour
 {
     public GameObject Roulette;
     public TextMeshProUGUI coinText;
-    public int requireCoins = 100;
+    public int requireCoins = 500;
     public GameObject popupInfo;
 
     public GameObject infoPanel;

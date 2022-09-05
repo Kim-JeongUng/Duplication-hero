@@ -6026,6 +6026,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1562452376}
     m_Modifications:
+    - target: {fileID: 4242840291764827376, guid: e15de4290efcdd64ca311e7f8b0a11dd, type: 3}
+      propertyPath: requireCoins
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 5986467842221952004, guid: e15de4290efcdd64ca311e7f8b0a11dd, type: 3}
       propertyPath: m_Name
       value: Panel_Roulette

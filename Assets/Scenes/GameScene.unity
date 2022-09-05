@@ -3279,8 +3279,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isTestMode: 0
   FrontAdsBtn: {fileID: 0}
-  frontTestID: ca-app-pub-3940256099942544/1033173712
-  frontID: ca-app-pub-4992780716235419/6519522062
 --- !u!4 &1107715291
 Transform:
   m_ObjectHideFlags: 0

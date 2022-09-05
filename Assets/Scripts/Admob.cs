@@ -9,8 +9,6 @@ public class Admob : MonoBehaviour
 {
     public bool isTestMode;
     public Button FrontAdsBtn;
-    public string frontTestID;
-    public string frontID;
 
     void Start()
     {
@@ -20,13 +18,9 @@ public class Admob : MonoBehaviour
            .build();
 
         MobileAds.SetRequestConfiguration(requestConfiguration);
-
         LoadFrontAd();
     }
 
-    void Update()
-    {
-    }
 
     AdRequest GetAdRequest()
     {
@@ -34,8 +28,10 @@ public class Admob : MonoBehaviour
     }
 
 
-    InterstitialAd frontAd;
 
+    const string frontTestID = "ca-app-pub-3940256099942544/1033173712";
+    const string frontID = "ca-app-pub-4992780716235419/3478235803";
+    InterstitialAd frontAd;
 
     void LoadFrontAd()
     {
@@ -52,21 +48,21 @@ public class Admob : MonoBehaviour
     public void ShowFrontAd()
     {
         StartCoroutine(showInterstitial());
-        IEnumerator showInterstitial()
-        {
-            int cnt = 0;
-            while (!frontAd.IsLoaded() && cnt < 5)
-            {
-                cnt++;
-                yield return new WaitForSeconds(0.2f);
-            }
-            if (cnt >= 5)
-            {
-                GameController.instance.Continue();
-            }
-            frontAd.Show();
-            LoadFrontAd();
-        }
+        
     }
-
+    public IEnumerator showInterstitial()
+    {
+        int cnt = 0;
+        LoadFrontAd();
+        while (!frontAd.IsLoaded() && cnt < 10)
+        {
+            cnt++;
+            yield return new WaitForSeconds(0.2f);
+        }
+        if (frontAd.IsLoaded())
+        {
+            frontAd.Show();
+        }
+        GameController.instance.Continue();
+    }
 }

@@ -28,6 +28,7 @@ public class panelSetting : MonoBehaviour
         PlayerPrefs.SetFloat("BGM", value);
         SoundManager.instance.masterVolumeBGM = value;
         BGMText.text = ((int)(BGMSlider.value * 10)).ToString();
+        SoundManager.instance.PlayBGMSound();
     }
     public void onValueChangeSFX(float value)
     {
