@@ -36,7 +36,6 @@ public class PanelRoulette : MonoBehaviour
         {
             RandItems[i] = DataManager.instance.PickRandomItem();
             ItemImage[i].sprite = Resources.Load<Sprite>(string.Format("Icons/{0}/{1}", RandItems[i].type, RandItems[i].ItemName));
-            //itemGo.GetComponent<presetItemdata>().itemData = Randitem;
         }
 
     }

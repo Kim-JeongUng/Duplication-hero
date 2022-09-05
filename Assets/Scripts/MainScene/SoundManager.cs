@@ -15,9 +15,9 @@ public class SoundManager : MonoBehaviour
         }
     }//singleTone
 
-    [SerializeField] GameObject BGM;
-    [SerializeField] GameObject SFX;
-    [SerializeField] GameObject BTN;
+    public GameObject BGM;
+    public GameObject SFX;
+    public GameObject BTN;
     private AudioSource bgmPlayer;
     private AudioSource sfxPlayer;
     private AudioSource btnPlayer;
@@ -56,6 +56,15 @@ public class SoundManager : MonoBehaviour
                 Destroy(this.gameObject);
         }
 
+        if (!PlayerPrefs.HasKey("BGM"))
+        {
+            PlayerPrefs.SetFloat("BGM", 0.5f);
+            PlayerPrefs.SetFloat("SFX", 1f);
+            PlayerPrefs.SetFloat("BTN", 1f);
+        }
+        masterVolumeBGM = PlayerPrefs.GetFloat("BGM");
+        masterVolumeSFX = PlayerPrefs.GetFloat("SFX");
+        masterVolumeBTN = PlayerPrefs.GetFloat("BTN");
         bgmPlayer = BGM.GetComponent<AudioSource>();
 
         sfxPlayer = SFX.GetComponent<AudioSource>();
