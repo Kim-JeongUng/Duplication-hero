@@ -4184,10 +4184,11 @@ MonoBehaviour:
   requireCoins: 100
   popupInfo: {fileID: 4610020714280243287, guid: 1fb328c1182925a48964e9e56028ce5a, type: 3}
   infoPanel: {fileID: 8476117128040214232}
-  popupItemImage: {fileID: 8476117127845604311}
-  popupItemName: {fileID: 8476117129675942662}
-  popupItemValue: {fileID: 4156992225482508866}
-  popupItemAbility: {fileID: 7888708658736582141}
+  popupItemDetail:
+    name: {fileID: 8476117129675942662}
+    value: {fileID: 4156992225482508866}
+    ability: {fileID: 7888708658736582141}
+    image: {fileID: 8476117127845604311}
   RandItems:
   - ItemName: 
     type: 

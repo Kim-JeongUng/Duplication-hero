@@ -4,24 +4,18 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-[SerializeField]
-public struct PopupItemDetail
-{
-}
+
 public class PanelRoulette : MonoBehaviour
 {
     public GameObject Roulette;
     public TextMeshProUGUI coinText;
-    public int requireCoins = 500;
+    public int requireCoins = 100;
     public GameObject popupInfo;
 
     public GameObject infoPanel;
 
-    public Image popupItemImage;
-    public TextMeshProUGUI popupItemName;
-    public TextMeshProUGUI popupItemValue;
-    public TextMeshProUGUI popupItemAbility;
-
+    public PopupItemDetail popupItemDetail;
+    
     private static int itemCount = 8;
     [SerializeField]
     private UserItemData[] RandItems = new UserItemData[itemCount];
@@ -73,11 +67,16 @@ public class PanelRoulette : MonoBehaviour
         Roulette.transform.eulerAngles = Vector3.zero;
         int i = 0;
         int targetAnguler = randNum * 45 + 720; // 2¹ÙÄû µ¹°í Å¸°Ù °¢µµ±îÁö
+        float waitForSeconds = 0.01f;
         while (i < targetAnguler)
         {
             i += 5;
             Roulette.transform.eulerAngles = new Vector3(0, 0, i);
-            yield return new WaitForSeconds(0.01f);
+            if (i >= targetAnguler - 180)
+            {
+                waitForSeconds += 0.001f;
+            }
+            yield return new WaitForSeconds(waitForSeconds);
         }
 
         yield return new WaitForSeconds(0.5f);
@@ -95,26 +94,34 @@ public class PanelRoulette : MonoBehaviour
     public void SetPopupPanel(int index)
     {
         infoPanel.SetActive(true);
-        popupItemImage.sprite = ItemImage[index].sprite;
-        popupItemName.text = RandItems[index].ItemName;
+        popupItemDetail.image.sprite = ItemImage[index].sprite;
+        popupItemDetail.name.text = RandItems[index].ItemName;
         switch (RandItems[index].type)
         {
             case "Weapon":
-                popupItemAbility.text = "Attack Damage";
+                popupItemDetail.ability.text = "Attack Damage";
                 break;
             case "Helmet":
-                popupItemAbility.text = "Attack Speed";
+                popupItemDetail.ability.text = "Attack Speed";
                 break;
             case "Armor":
-                popupItemAbility.text = "Health";
+                popupItemDetail.ability.text = "Health";
                 break;
             case "Shoes":
-                popupItemAbility.text = "Speed";
+                popupItemDetail.ability.text = "Speed";
                 break;
             default:
-                popupItemAbility.text = RandItems[index].type + "ERROR";
+                popupItemDetail.ability.text = RandItems[index].type + "ERROR";
                 break;
         }
-        popupItemValue.text = RandItems[index].value.ToString("+0.##;-0.##;0");
+        popupItemDetail.value.text = RandItems[index].value.ToString("+0.##;-0.##;0");
+    }
+    [System.Serializable]
+    public struct PopupItemDetail
+    {
+        public TextMeshProUGUI name;
+        public TextMeshProUGUI value;
+        public TextMeshProUGUI ability;
+        public Image image;
     }
 }
