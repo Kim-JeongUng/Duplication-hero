@@ -43,26 +43,29 @@ public class Admob : MonoBehaviour
         {
             GameController.instance.Continue();
         };
+        Debug.Log("LoadAD");
     }
 
     public void ShowFrontAd()
     {
+        Debug.Log("HIAD");
         StartCoroutine(showInterstitial());
         
     }
     public IEnumerator showInterstitial()
     {
         int cnt = 0;
-        LoadFrontAd();
-        while (!frontAd.IsLoaded() && cnt < 10)
+        while (!frontAd.IsLoaded() && cnt <5)
         {
             cnt++;
+            Debug.Log(cnt);
+
             yield return new WaitForSeconds(0.2f);
         }
-        if (frontAd.IsLoaded())
-        {
-            frontAd.Show();
-        }
-        GameController.instance.Continue();
+        if (cnt >= 5)
+            GameController.instance.Continue();
+        Debug.Log("ShowAD");
+        frontAd.Show();
+        LoadFrontAd();
     }
 }

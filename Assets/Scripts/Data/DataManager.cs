@@ -47,13 +47,12 @@ public class DataManager : MonoBehaviour
 #if UNITY_EDITOR
         path = Application.dataPath+"/Data";
 #elif UNITY_ANDROID
-        path = Application.persistentDataPath;
+        path = Application.persistentDataPath+"/Data";
 #endif
 
         if (instance == null)
         {
             instance = this;
-            Debug.Log("HI");
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -62,6 +61,7 @@ public class DataManager : MonoBehaviour
                 Destroy(this.gameObject);
         }
         //Save();
+        CheckNewCreate();
         AllItemPresetLoad();
         Load();
         ItemDatasLoad();
@@ -71,17 +71,11 @@ public class DataManager : MonoBehaviour
     {
         File.SetAttributes(path, FileAttributes.Normal); //폴더 읽기 전용 해제
 
-        foreach (string _folder in Directory.GetDirectories(path)) //폴더 탐색
-        {
-            DeleteAllData(); //재귀 호출
-        }
-
         foreach (string _file in Directory.GetFiles(path)) //파일 탐색
         {
             File.SetAttributes(_file, FileAttributes.Normal); //파일 읽기 전용 해제
             File.Delete(_file); //파일 삭제
         }
-
         Directory.Delete(path); //폴더 삭제
         Directory.CreateDirectory(path);
     }
@@ -187,6 +181,11 @@ public class DataManager : MonoBehaviour
     {
         Debug.Log("NewItemSave");
         File.WriteAllText(path + "/UserItemData.json", itemDatas);
+    }
+    public void CheckNewCreate()
+    {
+        if(!Directory.Exists(path))
+            Directory.CreateDirectory(path);
     }
     public UserItemDatas AllItemPresetLoad()
     {
