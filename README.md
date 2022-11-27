@@ -1,7 +1,7 @@
 # Duplication hero
  한손으로 즐기는 캐주얼 액션 RPG   
 <img width="30%" src="https://user-images.githubusercontent.com/82865325/184373739-45dadc3e-b708-4b6e-9d40-2d7cb0c1dd25.png">
-[[Download APK v1.0]](https://drive.google.com/file/d/1Fi1Qjvj76ag2pwEErqK4mTbQU7kvWPdP/view?usp=sharing)<br>
+[[Download from PlayStore]](https://play.google.com/store/apps/details?id=com.UngCompany.DuplicationHero)<br>
 ## 게임방식
 <img width="90%" src="https://user-images.githubusercontent.com/82865325/184373234-00bc23ed-518e-4b94-bad5-a4697edd0ded.gif">
 
